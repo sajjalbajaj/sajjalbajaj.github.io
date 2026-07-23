@@ -7,8 +7,8 @@ description: "A plain-English introduction to ERP systems and the value they bri
 ---
 
 **ERP** stands for *Enterprise Resource Planning*. In plain English, it's a single
-system that runs the core of a business — finance, inventory, sales, purchasing, HR
-and more — on **one shared database**.
+system that runs the core of a business: finance, inventory, sales, purchasing, HR
+and more, on **one shared database**.
 
 ## Why one system?
 
@@ -28,5 +28,5 @@ The software is the easy part. The value comes from **clean processes and clean 
 Start with the workflows that hurt most, keep the first phase small, and get real users
 involved early.
 
-That last point is where most projects succeed or fail — technology follows process,
+That last point is where most projects succeed or fail. Technology follows process,
 not the other way around.

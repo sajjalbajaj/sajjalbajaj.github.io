@@ -15,7 +15,7 @@
       a: "Nearly <strong>10 years</strong> in IT (since June 2016) across development, team leadership, project management, business analysis and ERP consulting." },
     { q: 'What are his skills?',
       keywords: ['skill', 'stack', 'tech', 'technolog', 'tool', 'know', 'language', 'expert'],
-      a: "Leadership &amp; delivery (Agile/Scrum, PM, BA), ERP &amp; data (Odoo, Power BI, Data Warehousing, UiPath), and development (PHP, Python, JavaScript, jQuery, WordPress, AngularJS, Ionic) — plus AWS &amp; Google Cloud." },
+      a: "Leadership &amp; delivery (Agile/Scrum, PM, BA), ERP &amp; data (Odoo, Power BI, Data Warehousing, UiPath), and development (PHP, Python, JavaScript, jQuery, WordPress, AngularJS, Ionic), plus AWS &amp; Google Cloud." },
     { q: 'Certifications?',
       keywords: ['cert', 'csm', 'scrum master', 'power bi', 'pmi', 'qualif', 'odoo', 'ai for all'],
       a: "Certified ScrumMaster (CSM), Microsoft Power BI Data Analyst Associate, Odoo 19 Functional Certification, Kickoff PMI, and Intel's AI For All (AI Aware &amp; AI Appreciate)." },
@@ -30,7 +30,7 @@
       a: "Mohali (Sahibzada Ajit Singh Nagar), Punjab, India." }
   ];
   var SUGGESTED = [0, 4, 3, 5];
-  var GREETING = "Hi! 👋 I'm Sajjal's assistant. Ask me about his experience, skills, certifications, or the blog — or type your own question.";
+  var GREETING = "Hi! 👋 I'm Sajjal's assistant. Ask me about his experience, skills, certifications, or the blog, or type your own question.";
   var FALLBACK = "I'm a simple assistant, so I didn't quite catch that. Try a suggested question below, or reach Sajjal directly by <a href=\"mailto:sajjalbajaj@gmail.com\">email</a> or <a href=\"https://wa.me/919914089472\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.";
 
   // --- Build DOM ---

@@ -22,7 +22,7 @@ engine to compress and for measures to traverse than one giant flat table.
 ## 3. Measures over calculated columns
 
 Calculated columns are stored in the model and bloat it. Measures are computed at
-query time — use them for aggregations wherever possible.
+query time, so use them for aggregations wherever possible.
 
 ## 4. Turn off Auto date/time
 
@@ -34,5 +34,5 @@ shared, marked **Date dimension** instead.
 High-cardinality columns (like unique IDs and free text) compress poorly. Remove or
 reduce them where you can.
 
-Apply these and most reports get noticeably snappier — often without touching a single
+Apply these and most reports get noticeably snappier, often without touching a single
 visual.

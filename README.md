@@ -1,6 +1,6 @@
-# Sajjal Bajaj — Portfolio
+# Sajjal Bajaj Portfolio
 
-A single-page, interactive personal portfolio. **Plain HTML, CSS & JavaScript — no build step,
+A single-page, interactive personal portfolio. **Plain HTML, CSS & JavaScript, no build step,
 no frameworks, no dependencies.** Warm-minimal design with a light/dark theme, animated hero,
 scroll reveals, count-up stats, and a canned "Ask my portfolio" Q&A.
 
@@ -13,7 +13,7 @@ myPage/
 ├─ README.md
 └─ assets/
    ├─ favicon.svg
-   └─ profile.gif     # (optional) your avatar — see below
+   └─ profile.gif     # (optional) your avatar, see below
 ```
 
 ## View it
@@ -47,20 +47,20 @@ to the “SB” monogram automatically.
 
 ## Editing content
 Everything is straightforward HTML in `index.html`:
-- **Hero / headline** — the `.hero` section.
-- **Experience** — the `.exp-group` blocks (one per company; roles are `<li class="timeline__item">`).
-- **Skills** — the `.skillgroup` lists. Shown as tag pills (LinkedIn doesn't expose numeric
-  proficiency, so no percentages were invented — add/remove tags freely).
-- **Certifications** — the `.certgrid` list (expiration dates intentionally omitted).
-- **“Ask my portfolio” Q&A** — edit the `QA` array near the bottom of `script.js`.
-- **Contact links** — the phone is a `tel:` link and the email a `mailto:` link (Contact section
+- **Hero / headline**: the `.hero` section.
+- **Experience**: the `.exp-group` blocks (one per company; roles are `<li class="timeline__item">`).
+- **Skills**: the `.skillgroup` lists. Shown as tag pills (LinkedIn doesn't expose numeric
+  proficiency, so no percentages were invented; add/remove tags freely).
+- **Certifications**: the `.certgrid` list (expiration dates intentionally omitted).
+- **“Ask my portfolio” Q&A**: edit the `QA` array near the bottom of `script.js`.
+- **Contact links**: the phone is a `tel:` link and the email a `mailto:` link (Contact section
   + footer); the nav has a LinkedIn icon.
-- **WhatsApp button** — the floating green button (bottom-right) opens
+- **WhatsApp button**: the floating green button (bottom-right) opens
   `https://wa.me/919914089472?text=…`. To change the number or the prefilled message, search
   `index.html` for `wa.me`.
 
 ## Customise the look
-Open `styles.css` and tweak the tokens under `:root` (light) and `:root[data-theme="dark"]` (dark) —
+Open `styles.css` and tweak the tokens under `:root` (light) and `:root[data-theme="dark"]` (dark):
 colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in both blocks.
 
 ## Accessibility & performance
@@ -70,7 +70,7 @@ colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in b
 - No external JS/CSS except Google Fonts.
 
 ## Writing a new blog post (daily)
-The blog is powered by **Jekyll**, which GitHub Pages builds automatically — you don't
+The blog is powered by **Jekyll**, which GitHub Pages builds automatically, you don't
 need Ruby or any local tools to publish.
 
 1. Create a file in `_posts/` named `YYYY-MM-DD-title-with-dashes.md`.
