@@ -1,0 +1,47 @@
+---
+layout: default
+title: Services
+permalink: /services/
+description: "ERP (Odoo & Microsoft) implementation, Power BI analytics, Agile project management, business analysis, web development and AI consulting by Sajjal Bajaj."
+services:
+  - title: "ERP Implementation & Consulting (Odoo / Microsoft)"
+    desc: "I set up and configure ERP across sales, purchase, inventory, warehouse, CRM and accounting, so your whole business runs on one connected system instead of scattered spreadsheets."
+    ideal: "SMEs adopting, migrating to, or fixing an ERP."
+  - title: "Business Analysis & Process Automation"
+    desc: "I map how your business actually works, remove the bottlenecks, and automate the repetitive parts (including UiPath / RPA), turning messy workflows into clean, reliable ones."
+    ideal: "Teams buried in manual, disconnected processes."
+  - title: "Project & Delivery Management (Agile / Scrum)"
+    desc: "As a Certified ScrumMaster, I plan and deliver software and ERP projects on time and on scope, keeping teams aligned and clients informed at every step."
+    ideal: "Businesses that need a steady hand to actually ship."
+  - title: "Power BI & Data Analytics"
+    desc: "I turn scattered data into clear, interactive dashboards and reports (with data warehousing where needed), so you decide from live insight, not month-old exports."
+    ideal: "Leaders who want visibility instead of guesswork."
+  - title: "Web Development"
+    desc: "I build and maintain fast, reliable websites and web applications using PHP, WordPress and modern front-end tools."
+    ideal: "Businesses needing a solid web presence or a custom internal tool."
+  - title: "AI & Microservices Consulting"
+    desc: "I advise on practical, no-hype AI adoption and modern modular (microservices) architecture that scales."
+    ideal: "Teams modernizing their tech stack and exploring AI."
+---
+<section class="section">
+  <h1 class="section-title reveal"><span class="section-title__no">✦</span> Services</h1>
+  <p class="services__lead reveal">Nearly 10 years across development, delivery and ERP, focused on helping businesses
+  run better. Here is how I can help.</p>
+
+  <div class="services__grid">
+    {% for s in page.services %}
+    <article class="service-card reveal">
+      <span class="service-card__no">{{ forloop.index | prepend: '0' }}</span>
+      <h2 class="service-card__title">{{ s.title }}</h2>
+      <p class="service-card__desc">{{ s.desc }}</p>
+      <p class="service-card__ideal"><strong>Ideal for:</strong> {{ s.ideal }}</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="services__cta card reveal">
+    <h2>Have a project in mind?</h2>
+    <p>Whether it is an ERP rollout, a reporting overhaul, or a stalled project that needs delivering, let's talk.</p>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+  </div>
+</section>
