@@ -20,7 +20,7 @@ timezone: Asia/Kolkata
 # Comments (Disqus). Create a free site at https://disqus.com, then paste its
 # shortname here (e.g. sajjalbajaj). Leave blank to hide comments.
 comments:
-  disqus_shortname: ""
+  disqus_shortname: "sajjalbajaj"
 
 # Default social image + SEO metadata (jekyll-seo-tag)
 image: /assets/sajjalbajaj.png
