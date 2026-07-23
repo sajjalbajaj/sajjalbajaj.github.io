@@ -17,10 +17,14 @@ permalink: /blog/:year/:month/:day/:title/
 future: true
 timezone: Asia/Kolkata
 
-# Comments (Disqus). Create a free site at https://disqus.com, then paste its
-# shortname here (e.g. sajjalbajaj). Leave blank to hide comments.
+# Comments. provider: cusdis | disqus | "" (blank hides comments).
+# For Cusdis (free, no ads): sign up at https://cusdis.com, add a website,
+# then paste its App ID (a UUID) below.
 comments:
-  disqus_shortname: "sajjalbajaj"
+  provider: cusdis
+  cusdis_app_id: ""
+  cusdis_host: "https://cusdis.com"
+  disqus_shortname: ""
 
 # Default social image + SEO metadata (jekyll-seo-tag)
 image: /assets/sajjalbajaj.png

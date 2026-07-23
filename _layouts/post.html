@@ -23,7 +23,20 @@ layout: default
   </footer>
 </article>
 
-{% if site.comments.disqus_shortname and site.comments.disqus_shortname != "" %}
+{% assign c = site.comments %}
+{% if c.provider == "cusdis" and c.cusdis_app_id != "" %}
+<section class="comments reveal">
+  <h2 class="comments__title">Comments</h2>
+  <div id="cusdis_thread"
+    data-host="{{ c.cusdis_host | default: 'https://cusdis.com' }}"
+    data-app-id="{{ c.cusdis_app_id }}"
+    data-page-id="{{ page.id }}"
+    data-page-url="{{ page.url | absolute_url }}"
+    data-page-title="{{ page.title | xml_escape }}"
+    data-theme="auto"></div>
+  <script async defer src="{{ c.cusdis_host | default: 'https://cusdis.com' }}/js/cusdis.es.js"></script>
+</section>
+{% elsif c.provider == "disqus" and c.disqus_shortname != "" %}
 <section class="comments reveal">
   <h2 class="comments__title">Comments</h2>
   <div id="disqus_thread"></div>
@@ -34,11 +47,11 @@ layout: default
     };
     (function () {
       var d = document, s = d.createElement('script');
-      s.src = "https://{{ site.comments.disqus_shortname }}.disqus.com/embed.js";
+      s.src = "https://{{ c.disqus_shortname }}.disqus.com/embed.js";
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
 </section>
 {% endif %}
