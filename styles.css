@@ -682,8 +682,9 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 
 @media print {
   .cv { max-width: 100%; }
-  .cv__section, .cv__job { break-inside: avoid; }
+  .cv__job { break-inside: avoid; }
   .cv__head { border-bottom-color: #000; }
+  .cv__section { margin-bottom: 1rem; }
   .cv__section > h2 { color: #000; border-bottom-color: #999; }
 }
 
@@ -693,7 +694,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
   @page { size: A4; margin: 14mm; }
   body { background: #fff; color: #000; }
   .bg-blobs, .nav, .to-top, .no-print, .hero__cta, .avatar__ring, .avatar__badge,
-  .ask, #ask, .pulse { display: none !important; }
+  .ask, #ask, .pulse, .skip-link { display: none !important; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
   .container { width: 100%; }
   .hero { padding: 0 0 1rem; grid-template-columns: 1fr; }
