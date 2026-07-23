@@ -673,6 +673,12 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .cv__cert-item span:last-child, .cv__edu-item span:last-child { color: var(--faint); font-size: .85rem; white-space: nowrap; }
 .cv__edu-item strong { color: var(--text); }
 .cv__muted { color: var(--faint); font-style: italic; }
+.cv__section-lead { color: var(--muted); margin: 0 0 .8rem; font-size: .95rem; }
+.cv__projects { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .5rem; }
+.cv__projects li { position: relative; font-size: .92rem; color: var(--text); background: var(--surface-tint);
+                   border: 1px solid var(--hairline); border-radius: var(--radius-sm); padding: .5rem .8rem .5rem 1.6rem; }
+.cv__projects li::before { content: ""; position: absolute; left: .7rem; top: 50%; transform: translateY(-50%);
+                           width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 
 @media print {
   .cv { max-width: 100%; }
