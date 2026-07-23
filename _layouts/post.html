@@ -22,3 +22,23 @@ layout: default
     <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
   </footer>
 </article>
+
+{% if site.comments.disqus_shortname and site.comments.disqus_shortname != "" %}
+<section class="comments reveal">
+  <h2 class="comments__title">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "{{ page.url | absolute_url }}";
+      this.page.identifier = "{{ page.id }}";
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = "https://{{ site.comments.disqus_shortname }}.disqus.com/embed.js";
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>
+{% endif %}

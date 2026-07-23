@@ -17,6 +17,11 @@ permalink: /blog/:year/:month/:day/:title/
 future: true
 timezone: Asia/Kolkata
 
+# Comments (Disqus). Create a free site at https://disqus.com, then paste its
+# shortname here (e.g. sajjalbajaj). Leave blank to hide comments.
+comments:
+  disqus_shortname: ""
+
 # Default social image + SEO metadata (jekyll-seo-tag)
 image: /assets/sajjalbajaj.png
 social:
