@@ -1,0 +1,52 @@
+title: Sajjal Bajaj
+tagline: ERP Consultant & Project Manager
+description: >-
+  Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery from
+  Sajjal Bajaj — ERP Consultant, Project Manager and Certified ScrumMaster.
+author: Sajjal Bajaj
+email: sajjalbajaj@gmail.com
+lang: en
+
+url: "https://sajjalbajaj.github.io"
+baseurl: ""
+
+# Pretty per-post URLs, e.g. /blog/2026/07/23/welcome/
+permalink: /blog/:year/:month/:day/:title/
+
+# Show posts even if the build clock is behind your local date (handy for a daily blog)
+future: true
+timezone: Asia/Kolkata
+
+# Default social image + SEO metadata (jekyll-seo-tag)
+image: /assets/sajjalbajaj.png
+social:
+  name: Sajjal Bajaj
+  links:
+    - https://www.linkedin.com/in/sajjal-bajaj/
+    - https://github.com/sajjalbajaj
+
+# GitHub Pages-supported plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+markdown: kramdown
+
+# Give every post the post layout automatically
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

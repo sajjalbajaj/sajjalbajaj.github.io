@@ -69,8 +69,39 @@ colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in b
 - Theme preference persists via `localStorage` and respects your OS setting on first visit.
 - No external JS/CSS except Google Fonts.
 
+## Writing a new blog post (daily)
+The blog is powered by **Jekyll**, which GitHub Pages builds automatically — you don't
+need Ruby or any local tools to publish.
+
+1. Create a file in `_posts/` named `YYYY-MM-DD-title-with-dashes.md`.
+2. Start it with this header, then write in Markdown:
+   ```markdown
+   ---
+   layout: post
+   title: "Your post title"
+   date: 2026-07-24 09:00:00 +0530
+   tags: [ERP, Power BI]
+   description: "One-line summary used for SEO and social link previews."
+   ---
+
+   Your **Markdown** content here…
+   ```
+3. Commit and push:
+   ```bash
+   git add . && git commit -m "post: your title" && git push
+   ```
+
+GitHub rebuilds and publishes within a minute or two. The post appears on the **Blog**
+page (`/blog/`) with its date, reading time and tags, and is added to the **RSS feed**
+(`/feed.xml`) and `sitemap.xml` automatically.
+
+Tips:
+- Reuse the same tag spelling so the tag filter groups posts correctly.
+- The first paragraph becomes the card excerpt.
+- SEO / Open-Graph meta tags are generated per post for good Google + LinkedIn/X previews.
+
 ## Possible next steps
-- A **live** AI-powered “Ask my portfolio” (needs a small backend + API key — a follow-up).
+- A **live** AI-powered chatbot for the site/blog (needs a small serverless backend + API key).
 - A **⌘K command palette** for quick section jumps.
-- A **Projects / case-studies** section, or a **Writing/blog** section.
-- Deploy free on GitHub Pages, Netlify, or Vercel (drag-and-drop the folder).
+- A **Projects / case-studies** section.
+- A custom domain (e.g. `sajjalbajaj.com`) on the GitHub Pages site.

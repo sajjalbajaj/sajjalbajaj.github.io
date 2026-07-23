@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="post reveal">
+  <a class="post__back" href="{{ '/blog/' | relative_url }}">← All posts</a>
+  <h1 class="post__title">{{ page.title }}</h1>
+  <p class="post__meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <span class="dot">·</span>
+    {% assign words = content | number_of_words %}{{ words | divided_by: 200 | plus: 1 }} min read
+    {% if page.tags and page.tags.size > 0 %}<span class="dot">·</span>
+      {% for t in page.tags %}<span class="tag">{{ t }}</span> {% endfor %}
+    {% endif %}
+  </p>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <footer class="post__foot">
+    <a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">← Back to all posts</a>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+  </footer>
+</article>

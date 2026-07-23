@@ -522,6 +522,67 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
   .js .reveal { opacity: 1; transform: none; }
 }
 
+/* ---------- Blog ---------- */
+.blog__intro { color: var(--muted); margin-top: -.6rem; }
+.blog__rss { color: var(--accent-strong); font-weight: 600; text-decoration: none; font-size: .8rem;
+             border: 1px solid var(--hairline); padding: .1rem .5rem; border-radius: var(--radius-pill); }
+.blog__rss:hover { border-color: var(--accent); }
+
+.blog__controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;
+                  justify-content: space-between; margin: 1.4rem 0 1.8rem; }
+.blog__search { display: inline-flex; align-items: center; gap: .5rem; flex: 1 1 240px; max-width: 340px;
+                background: var(--surface); border: 1px solid var(--hairline);
+                border-radius: var(--radius-pill); padding: .5rem .9rem; }
+.blog__search svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--faint);
+                    stroke-width: 2; stroke-linecap: round; }
+.blog__search input { border: none; background: transparent; color: var(--text); font: inherit;
+                      font-size: .92rem; width: 100%; outline: none; }
+.blog__tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+
+.blog__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem;
+              list-style: none; padding: 0; margin: 0; }
+.blog-card { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius);
+             box-shadow: var(--shadow-sm); overflow: hidden;
+             transition: transform .2s var(--ease), box-shadow .2s, border-color .2s; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); }
+.blog-card > a { display: block; text-decoration: none; color: inherit; padding: 1.3rem; height: 100%; }
+.blog-card__meta { font-size: .8rem; color: var(--faint); margin: 0 0 .5rem; }
+.blog-card__title { font-size: 1.15rem; font-weight: 700; margin: 0 0 .5rem; line-height: 1.25; }
+.blog-card__excerpt { font-size: .92rem; color: var(--muted); margin: 0 0 .8rem; }
+.blog-card__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; }
+.blog__empty { text-align: center; color: var(--muted); padding: 2rem 0; }
+
+/* Post article */
+.post { max-width: 760px; margin-inline: auto; }
+.post__back { display: inline-block; color: var(--accent-strong); text-decoration: none; font-weight: 600;
+              font-size: .9rem; margin-bottom: 1rem; }
+.post__back:hover { text-decoration: underline; }
+.post__title { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; line-height: 1.15; margin-bottom: .6rem; }
+.post__meta { color: var(--faint); font-size: .9rem; display: flex; flex-wrap: wrap; align-items: center;
+              gap: .4rem; margin-bottom: 2rem; }
+.post__foot { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: space-between;
+              margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); }
+
+/* Prose (rendered Markdown) */
+.prose { font-size: 1.06rem; line-height: 1.75; color: var(--muted); }
+.prose > * + * { margin-top: 1.1rem; }
+.prose h2 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--text); margin-top: 2rem; }
+.prose h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 600; color: var(--text); margin-top: 1.6rem; }
+.prose strong { color: var(--text); }
+.prose a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 2px; }
+.prose ul, .prose ol { padding-left: 1.4rem; }
+.prose li { margin-top: .4rem; }
+.prose li::marker { color: var(--accent); }
+.prose blockquote { border-left: 3px solid var(--accent); padding: .2rem 0 .2rem 1rem; margin-left: 0;
+                    color: var(--muted); font-style: italic; }
+.prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em;
+              background: var(--surface-tint); border: 1px solid var(--hairline); border-radius: 6px; padding: .1em .4em; }
+.prose pre { background: var(--bg-2); border: 1px solid var(--hairline); border-radius: var(--radius-sm);
+             padding: 1rem 1.1rem; overflow-x: auto; }
+.prose pre code { background: none; border: none; padding: 0; }
+.prose img { border-radius: var(--radius-sm); }
+.prose hr { border: none; border-top: 1px solid var(--hairline); }
+
 /* ---------- Print (A4 résumé) ---------- */
 @media print {
   :root { --bg: #fff; --surface: #fff; --hairline: #ccc; }

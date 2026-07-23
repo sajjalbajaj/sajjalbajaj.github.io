@@ -1,0 +1,52 @@
+---
+layout: default
+permalink: /blog/
+title: Blog
+description: Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery by Sajjal Bajaj.
+---
+<section class="section blog">
+  <h1 class="section-title reveal"><span class="section-title__no">✎</span> Blog</h1>
+  <p class="blog__intro reveal">Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery.
+    <a class="blog__rss" href="{{ '/feed.xml' | relative_url }}" title="Subscribe via RSS">RSS</a>
+  </p>
+
+  <div class="blog__controls reveal">
+    <label class="blog__search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="blog-search" placeholder="Search posts…" aria-label="Search posts" />
+    </label>
+    <div class="blog__tags" id="blog-tags" role="group" aria-label="Filter by tag">
+      <button type="button" class="ask__q is-active" data-tag="all">All</button>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+      <button type="button" class="ask__q" data-tag="{{ tag[0] | slugify }}">{{ tag[0] }}</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if site.posts.size == 0 %}
+  <p class="blog__empty">No posts yet — check back soon!</p>
+  {% else %}
+  <ul class="blog__list" id="blog-list">
+    {% for post in site.posts %}
+    <li class="blog-card reveal"
+        data-title="{{ post.title | downcase | escape }}"
+        data-tags="{% for t in post.tags %}{{ t | slugify }} {% endfor %}">
+      <a href="{{ post.url | relative_url }}">
+        <p class="blog-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <span class="dot">·</span>
+          {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read
+        </p>
+        <h2 class="blog-card__title">{{ post.title }}</h2>
+        <p class="blog-card__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+        {% if post.tags and post.tags.size > 0 %}
+        <p class="blog-card__tags">{% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="blog__empty" id="blog-empty" hidden>No posts match your search.</p>
+  {% endif %}
+</section>
