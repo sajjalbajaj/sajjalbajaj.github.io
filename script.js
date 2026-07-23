@@ -58,6 +58,25 @@
     b.addEventListener('click', function () { window.print(); });
   });
 
+  /* ---------- Copy-link (blog share) ---------- */
+  $$('[data-copy-link]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = window.location.href;
+      var done = function () {
+        var note = btn.parentNode && btn.parentNode.querySelector('.share__copied');
+        if (note) { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1600); }
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, done);
+      } else {
+        var t = document.createElement('textarea');
+        t.value = url; document.body.appendChild(t); t.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(t); done();
+      }
+    });
+  });
+
   /* ---------- Footer year ---------- */
   var yearEl = $('#year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
