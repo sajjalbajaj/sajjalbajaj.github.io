@@ -3,6 +3,26 @@ layout: default
 title: CV
 permalink: /cv/
 description: "Curriculum vitae of Sajjal Bajaj: ERP Consultant, Project Manager, Scrum Master (CSM) and Power BI Developer with nearly 10 years of experience."
+erp_projects:
+  - GOOD as GOLD Coffee System
+  - Pine Hill MFG
+  - TK Steels
+  - Aquatech
+  - Propane Ninja
+  - Ninja Liquid
+  - Kaintal Schools
+  - Ascon Manufactures
+  - Cannaon Tools
+  - Neilson Tools
+other_projects:
+  - RealTime Audio
+  - Taylor RobinSon Music Lessons
+  - Quatnefied Ante
+  - CBRE
+  - Wooden Horse
+  - Wigomania
+  - Greenfield groves
+  - BizTech
 ---
 <article class="cv reveal">
   <header class="cv__head">
@@ -150,30 +170,18 @@ description: "Curriculum vitae of Sajjal Bajaj: ERP Consultant, Project Manager,
     <h2>ERP projects</h2>
     <p class="cv__section-lead">Selected ERP implementation projects (Odoo / Microsoft) delivered for clients:</p>
     <ul class="cv__projects">
-      <li>GOOD as GOLD Coffee System</li>
-      <li>Pine Hill MFG</li>
-      <li>TK Steels</li>
-      <li>Aquatech</li>
-      <li>Propane Ninja</li>
-      <li>Ninja Liquid</li>
-      <li>Kaintal Schools</li>
-      <li>Ascon Manufactures</li>
-      <li>Cannaon Tools</li>
-      <li>Neilson Tools</li>
+      {% for p in page.erp_projects %}
+      <li class="cv__project"><span class="cv__project-badge" aria-hidden="true">{{ p | slice: 0 | upcase }}</span><span class="cv__project-name">{{ p }}</span></li>
+      {% endfor %}
     </ul>
   </section>
 
   <section class="cv__section">
     <h2>Other projects</h2>
     <ul class="cv__projects">
-      <li>RealTime Audio</li>
-      <li>Taylor RobinSon Music Lessons</li>
-      <li>Quatnefied Ante</li>
-      <li>CBRE</li>
-      <li>Wooden Horse</li>
-      <li>Wigomania</li>
-      <li>Greenfield groves</li>
-      <li>BizTech</li>
+      {% for p in page.other_projects %}
+      <li class="cv__project"><span class="cv__project-badge" aria-hidden="true">{{ p | slice: 0 | upcase }}</span><span class="cv__project-name">{{ p }}</span></li>
+      {% endfor %}
     </ul>
   </section>
 </article>
