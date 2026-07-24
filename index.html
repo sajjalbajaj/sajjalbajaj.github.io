@@ -12,18 +12,18 @@
   <meta property="og:url" content="https://www.sajjalbajaj.in/" />
   <meta property="og:title" content="Sajjal Bajaj | ERP Consultant &amp; Project Manager" />
   <meta property="og:description" content="ERP Consultant, Project Manager, Scrum Master (CSM) and Power BI Developer with nearly 10 years across software delivery, ERP (Odoo) and BI." />
-  <meta property="og:image" content="https://www.sajjalbajaj.in/assets/sajjalbajaj.png" />
+  <meta property="og:image" content="https://www.sajjalbajaj.in/assets/sajjalbajaj.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sajjal Bajaj | ERP Consultant &amp; Project Manager" />
   <meta name="twitter:description" content="ERP Consultant &amp; Project Manager with nearly 10 years in software delivery, ERP (Odoo) and Power BI." />
-  <meta name="twitter:image" content="https://www.sajjalbajaj.in/assets/sajjalbajaj.png" />
+  <meta name="twitter:image" content="https://www.sajjalbajaj.in/assets/sajjalbajaj.jpg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sajjal Bajaj",
     "url": "https://www.sajjalbajaj.in",
-    "image": "https://www.sajjalbajaj.in/assets/sajjalbajaj.png",
+    "image": "https://www.sajjalbajaj.in/assets/sajjalbajaj.jpg",
     "jobTitle": "ERP Consultant & Project Manager",
     "worksFor": { "@type": "Organization", "name": "Master Software Solutions" },
     "address": { "@type": "PostalAddress", "addressLocality": "Mohali", "addressRegion": "Punjab", "addressCountry": "IN" },
@@ -149,8 +149,11 @@
         <div class="avatar">
           <span class="avatar__ring" aria-hidden="true"></span>
           <div class="avatar__frame">
-            <img class="avatar__img" src="assets/sajjalbajaj.png" alt="Sajjal Bajaj"
-                 onerror="this.style.display='none'; this.nextElementSibling.hidden = false;" />
+            <picture>
+              <source srcset="assets/sajjalbajaj.webp" type="image/webp" />
+              <img class="avatar__img" src="assets/sajjalbajaj.jpg" alt="Sajjal Bajaj" width="600" height="600"
+                   onerror="this.closest('picture').style.display='none'; this.closest('.avatar__frame').querySelector('.avatar__monogram').hidden = false;" />
+            </picture>
             <span class="avatar__monogram" aria-hidden="true" hidden>SB</span>
           </div>
         </div>

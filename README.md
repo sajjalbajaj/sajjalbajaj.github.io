@@ -30,11 +30,11 @@ Click **“Save PDF”** in the hero (or press `Ctrl/Cmd + P`). A print styleshe
 cleanly on A4, hides the nav / animations / “Ask” section, and drops shadows and background.
 
 ## Add your avatar (photo or animated GIF)
-The hero avatar is **wired to `assets/sajjalbajaj.png`** and is animated with a spinning ring,
+The hero avatar is **wired to `assets/sajjalbajaj.webp`** (with a `.jpg` fallback) and is animated with a spinning ring,
 a gentle float, a slow Ken-Burns zoom, and a light shine sweep. If the file is missing it falls back
 to the “SB” monogram automatically.
 
-1. To swap it, replace `assets/sajjalbajaj.png` (or change the `src` of `avatar__img` in
+1. To swap it, replace `assets/sajjalbajaj.webp` and `.jpg` (or change the `src` of `avatar__img` in
    `index.html` to your file) and reload the page.
 2. To fine-tune the crop, tweak `object-position` on `.avatar__img` in `styles.css`.
 3. Want a moving **GIF/MP4** avatar (a “live portrait”)? Save it into `assets/` and point the
