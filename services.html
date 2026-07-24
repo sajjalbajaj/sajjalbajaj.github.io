@@ -37,6 +37,19 @@ industries:
   - Professional Services
   - Education
   - Healthcare
+faqs:
+  - q: "Which ERP is right for me, Odoo or Microsoft Business Central?"
+    a: "It depends on your business. Odoo is a flexible, cost-effective, all-in-one suite that fits most SMEs and many industries. Business Central is the natural choice if you are already invested in Microsoft 365. I implement both and can give you a straight, vendor-neutral recommendation."
+  - q: "How long does an Odoo implementation take?"
+    a: "A focused first phase often goes live in a few weeks to a few months, depending on the modules, data and customizations involved. I keep the first phase small so you see value quickly, then expand from there."
+  - q: "How much does Odoo cost?"
+    a: "Odoo has an open-source Community edition plus paid plans priced per user and per app, so it scales with you. The bigger cost driver is usually the implementation and customization scope, not the licensing, and I help you keep both lean."
+  - q: "Can you migrate our data from our current system?"
+    a: "Yes. I handle migration onto Odoo, or upgrades to a newer Odoo version, bringing your data, customizations and integrations across cleanly."
+  - q: "Do you provide support after go-live?"
+    a: "Yes. I offer ongoing Odoo support, maintenance, enhancements and user training, so your ERP keeps delivering after launch."
+  - q: "Can the ERP integrate with our other tools?"
+    a: "Absolutely. I connect Odoo with e-commerce, payment, shipping, accounting and other third-party systems through its APIs, so your data stays in one place."
 ---
 <section class="section">
   <h1 class="section-title reveal"><span class="section-title__no">✦</span> ERP &amp; Odoo Services</h1>
@@ -62,6 +75,18 @@ industries:
     </ul>
   </div>
 
+  <div class="faq reveal">
+    <h2 class="section-title"><span class="section-title__no">?</span> Frequently asked questions</h2>
+    <div class="faq__list">
+      {% for f in page.faqs %}
+      <details class="faq__item">
+        <summary>{{ f.q }}</summary>
+        <div class="faq__a"><p>{{ f.a }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+
   <div class="services__cta card reveal">
     <h2>Planning an ERP project?</h2>
     <p>Whether it is a fresh Odoo implementation, a migration, or getting more from the ERP you already
@@ -69,3 +94,33 @@ industries:
     <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ERP & Odoo Consulting Services",
+  "url": "https://www.sajjalbajaj.in/services/",
+  "image": "https://www.sajjalbajaj.in/assets/sajjalbajaj.jpg",
+  "areaServed": "Worldwide",
+  "provider": { "@type": "Person", "name": "Sajjal Bajaj", "url": "https://www.sajjalbajaj.in" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ERP & Odoo Services",
+    "itemListElement": [
+      {% for s in page.services %}{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": {{ s.title | jsonify }}, "description": {{ s.desc | jsonify }} } }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for f in page.faqs %}{ "@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | jsonify }} } }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
