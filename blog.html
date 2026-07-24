@@ -3,6 +3,7 @@ layout: default
 permalink: /blog/
 title: Blog
 description: Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery by Sajjal Bajaj.
+primary_tags: [ERP, Odoo, Inventory, Warehouse, Power BI, AI, Microsoft]
 ---
 <section class="section blog">
   <h1 class="section-title reveal"><span class="section-title__no">✎</span> Blog</h1>
@@ -17,10 +18,14 @@ description: Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery 
     </label>
     <div class="blog__tags" id="blog-tags" role="group" aria-label="Filter by tag">
       <button type="button" class="ask__q is-active" data-tag="all">All</button>
-      {% assign tags = site.tags | sort %}
-      {% for tag in tags %}
-      <button type="button" class="ask__q" data-tag="{{ tag[0] | slugify }}">{{ tag[0] }}</button>
+      {% for t in page.primary_tags %}
+      <button type="button" class="ask__q" data-tag="{{ t | slugify }}">{{ t }}</button>
       {% endfor %}
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}{% unless page.primary_tags contains tag[0] %}
+      <button type="button" class="ask__q blog__tag-extra" data-tag="{{ tag[0] | slugify }}">{{ tag[0] }}</button>
+      {% endunless %}{% endfor %}
+      <button type="button" class="blog__more" data-more-tags aria-expanded="false">More +</button>
     </div>
   </div>
 

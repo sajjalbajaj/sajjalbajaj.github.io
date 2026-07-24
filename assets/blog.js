@@ -43,4 +43,13 @@
       apply();
     });
   }
+
+  var moreBtn = document.querySelector('[data-more-tags]');
+  if (moreBtn && tagBar) {
+    moreBtn.addEventListener('click', function () {
+      var open = tagBar.classList.toggle('show-all');
+      moreBtn.textContent = open ? 'Less −' : 'More +';
+      moreBtn.setAttribute('aria-expanded', String(open));
+    });
+  }
 })();

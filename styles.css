@@ -537,7 +537,13 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
                     stroke-width: 2; stroke-linecap: round; }
 .blog__search input { border: none; background: transparent; color: var(--text); font: inherit;
                       font-size: .92rem; width: 100%; outline: none; }
-.blog__tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.blog__tags { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; }
+.blog__tag-extra { display: none; }
+.blog__tags.show-all .blog__tag-extra { display: inline-block; }
+.blog__more { font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer; color: var(--accent-strong);
+              background: transparent; border: 1px dashed var(--hairline); padding: .38rem .8rem;
+              border-radius: var(--radius-pill); transition: border-color .2s; }
+.blog__more:hover { border-color: var(--accent); }
 
 .blog__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem;
               list-style: none; padding: 0; margin: 0; }
