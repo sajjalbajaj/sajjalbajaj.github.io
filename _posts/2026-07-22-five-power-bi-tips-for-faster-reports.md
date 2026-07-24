@@ -2,7 +2,7 @@
 layout: post
 title: "Five Power BI tips for faster reports"
 date: 2026-07-22 09:00:00 +0530
-tags: [Power BI, Data]
+tags: [Power BI, Data, Analytics, Business Intelligence, Reporting]
 description: "Practical ways to make Power BI reports load faster and stay maintainable."
 ---
 

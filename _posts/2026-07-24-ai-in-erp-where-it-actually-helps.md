@@ -2,7 +2,7 @@
 layout: post
 title: "AI in ERP: Where It Actually Helps"
 date: 2026-07-24 09:00:00 +0530
-tags: [AI, ERP]
+tags: [AI, ERP, Automation, Odoo, Digital Transformation]
 description: "A practical look at where AI genuinely adds value in ERP, from forecasting and document automation to natural-language reporting, plus where to be careful."
 ---
 

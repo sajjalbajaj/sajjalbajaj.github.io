@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Inventory Management Right with ERP"
 date: 2026-07-24 13:00:00 +0530
-tags: [ERP, Inventory, Odoo]
+tags: [ERP, Inventory, Odoo, Supply Chain, Stock Control]
 description: "Practical inventory management with ERP: real-time stock, reorder rules, multi-location and lot tracking, and the common mistakes to avoid."
 ---
 
