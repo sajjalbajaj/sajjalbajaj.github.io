@@ -665,6 +665,9 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 
 /* ---------- Services page ---------- */
 .services__lead { color: var(--muted); max-width: 62ch; margin: -.4rem 0 1.8rem; font-size: 1.05rem; }
+.services__lead strong { color: var(--text); }
+.services__industries { margin-top: 2rem; }
+.services__ind-title { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; margin-bottom: .8rem; }
 .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
 .service-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hairline);
                 border-radius: var(--radius); padding: 1.6rem 1.5rem; box-shadow: var(--shadow-sm);

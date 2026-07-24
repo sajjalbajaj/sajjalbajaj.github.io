@@ -1,32 +1,48 @@
 ---
 layout: default
-title: Services
+title: "ERP & Odoo Consulting Services"
 permalink: /services/
-description: "ERP (Odoo & Microsoft) implementation, Power BI analytics, Agile project management, business analysis, web development and AI consulting by Sajjal Bajaj."
+description: "Odoo ERP implementation, customization, migration, integration, module development and support, plus Microsoft 365 Business Central, business process automation and Power BI, by Sajjal Bajaj."
 services:
-  - title: "ERP Implementation & Consulting (Odoo / Microsoft)"
-    desc: "I set up and configure ERP across sales, purchase, inventory, warehouse, CRM and accounting, so your whole business runs on one connected system instead of scattered spreadsheets."
-    ideal: "SMEs adopting, migrating to, or fixing an ERP."
-  - title: "Business Analysis & Process Automation"
-    desc: "I map how your business actually works, remove the bottlenecks, and automate the repetitive parts (including UiPath / RPA), turning messy workflows into clean, reliable ones."
-    ideal: "Teams buried in manual, disconnected processes."
-  - title: "Project & Delivery Management (Agile / Scrum)"
-    desc: "As a Certified ScrumMaster, I plan and deliver software and ERP projects on time and on scope, keeping teams aligned and clients informed at every step."
-    ideal: "Businesses that need a steady hand to actually ship."
-  - title: "Power BI & Data Analytics"
-    desc: "I turn scattered data into clear, interactive dashboards and reports (with data warehousing where needed), so you decide from live insight, not month-old exports."
-    ideal: "Leaders who want visibility instead of guesswork."
-  - title: "Web Development"
-    desc: "I build and maintain fast, reliable websites and web applications using PHP, WordPress and modern front-end tools."
-    ideal: "Businesses needing a solid web presence or a custom internal tool."
-  - title: "AI & Microservices Consulting"
-    desc: "I advise on practical, no-hype AI adoption and modern modular (microservices) architecture that scales."
-    ideal: "Teams modernizing their tech stack and exploring AI."
+  - title: "Odoo Implementation"
+    desc: "End-to-end Odoo ERP implementation across Sales, CRM, Inventory, Purchase, Accounting, Manufacturing and POS, configured to the way your business actually runs."
+    ideal: "Businesses adopting Odoo for the first time."
+  - title: "Odoo Customization & Module Development"
+    desc: "Custom Odoo modules, tailored workflows and features built on Odoo's framework, for the requirements that standard functionality does not cover."
+    ideal: "Teams with unique or industry-specific needs."
+  - title: "Odoo Migration & Upgrades"
+    desc: "Safe migration onto Odoo, or upgrades to a newer Odoo version, with your data, customizations and integrations carried across cleanly."
+    ideal: "Businesses on legacy systems or older Odoo versions."
+  - title: "Odoo Integration Services"
+    desc: "Connect Odoo with the tools around it: e-commerce, payments, shipping, QuickBooks and third-party APIs, so your data lives in one place."
+    ideal: "Businesses running Odoo alongside other systems."
+  - title: "Microsoft 365 Business Central"
+    desc: "Implementation and consulting for Microsoft Dynamics 365 Business Central, for teams standardizing on the Microsoft stack."
+    ideal: "Companies invested in Microsoft 365."
+  - title: "ERP Support & Maintenance"
+    desc: "Ongoing Odoo support, maintenance, enhancements and user training, so your ERP keeps delivering long after go-live."
+    ideal: "Live ERP users who want a reliable partner."
+  - title: "Business Process Automation"
+    desc: "Digital transformation done properly: map, streamline and automate processes (including UiPath and RPA) so the ERP delivers real efficiency, not just software."
+    ideal: "Teams buried in manual, disconnected work."
+  - title: "Power BI & ERP Analytics"
+    desc: "Dashboards, reporting and data warehousing on top of your ERP, turning day-to-day data into decisions."
+    ideal: "Leaders who want live visibility, not month-old exports."
+industries:
+  - Manufacturing
+  - Retail & E-commerce
+  - Food & Beverage
+  - Logistics & Warehousing
+  - Distribution & FMCG
+  - Professional Services
+  - Education
+  - Healthcare
 ---
 <section class="section">
-  <h1 class="section-title reveal"><span class="section-title__no">✦</span> Services</h1>
-  <p class="services__lead reveal">Nearly 10 years across development, delivery and ERP, focused on helping businesses
-  run better. Here is how I can help.</p>
+  <h1 class="section-title reveal"><span class="section-title__no">✦</span> ERP &amp; Odoo Services</h1>
+  <p class="services__lead reveal">ERP consulting and app development focused on <strong>Odoo</strong> and
+  <strong>Microsoft 365 Business Central</strong>. From implementation and customization to migration,
+  integration and support, I help businesses run on one connected system.</p>
 
   <div class="services__grid">
     {% for s in page.services %}
@@ -39,9 +55,17 @@ services:
     {% endfor %}
   </div>
 
+  <div class="services__industries reveal">
+    <h2 class="services__ind-title">Industries I work with</h2>
+    <ul class="tags">
+      {% for i in page.industries %}<li>{{ i }}</li>{% endfor %}
+    </ul>
+  </div>
+
   <div class="services__cta card reveal">
-    <h2>Have a project in mind?</h2>
-    <p>Whether it is an ERP rollout, a reporting overhaul, or a stalled project that needs delivering, let's talk.</p>
+    <h2>Planning an ERP project?</h2>
+    <p>Whether it is a fresh Odoo implementation, a migration, or getting more from the ERP you already
+    run, let's talk about it.</p>
     <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
   </div>
 </section>
