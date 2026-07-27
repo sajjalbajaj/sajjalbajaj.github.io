@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-label="SAP versus Odoo ERP comparison by Sajjal Bajaj">
+  <rect width="1000" height="380" rx="22" fill="#FFFDF8"/>
+  <rect x="1.5" y="1.5" width="997" height="377" rx="20.5" fill="none" stroke="#ECE4D7" stroke-width="3"/>
+  <rect x="0" y="0" width="1000" height="8" fill="#F2A81D"/>
+  <text x="500" y="62" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#3A342E">Choosing your ERP</text>
+
+  <text x="265" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="86" font-weight="800" fill="#0a6ed1">SAP</text>
+  <text x="265" y="248" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#7A736A">Enterprise-grade ERP</text>
+  <text x="265" y="278" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#A99F92">Large, complex organisations</text>
+
+  <circle cx="500" cy="195" r="44" fill="#F2A81D"/>
+  <text x="500" y="207" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="800" fill="#2a2114">VS</text>
+
+  <text x="735" y="205" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="86" font-weight="800" fill="#714B67">Odoo</text>
+  <text x="735" y="248" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" fill="#7A736A">Flexible, all-in-one ERP</text>
+  <text x="735" y="278" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#A99F92">SMEs and mid-market</text>
+
+  <text x="980" y="360" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#A99F92">Sajjal Bajaj · sajjalbajaj.in</text>
+</svg>

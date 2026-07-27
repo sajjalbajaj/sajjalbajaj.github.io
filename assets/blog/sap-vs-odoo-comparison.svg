@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-label="SAP vs Odoo comparison table by Sajjal Bajaj">
+  <rect width="1000" height="620" rx="22" fill="#FFFDF8"/>
+  <rect x="1.5" y="1.5" width="997" height="617" rx="20.5" fill="none" stroke="#ECE4D7" stroke-width="3"/>
+  <rect x="0" y="0" width="1000" height="8" fill="#F2A81D"/>
+  <text x="500" y="56" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#3A342E">SAP vs Odoo at a glance</text>
+
+  <text x="515" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#0a6ed1">SAP</text>
+  <text x="830" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#714B67">Odoo</text>
+  <line x1="40" y1="132" x2="960" y2="132" stroke="#ECE4D7" stroke-width="2"/>
+
+  <line x1="40" y1="220" x2="960" y2="220" stroke="#ECE4D7" stroke-width="1.5"/>
+  <line x1="40" y1="308" x2="960" y2="308" stroke="#ECE4D7" stroke-width="1.5"/>
+  <line x1="40" y1="396" x2="960" y2="396" stroke="#ECE4D7" stroke-width="1.5"/>
+  <line x1="40" y1="484" x2="960" y2="484" stroke="#ECE4D7" stroke-width="1.5"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="40" y="182" font-size="19" font-weight="600" fill="#3A342E">Best for</text>
+    <text x="515" y="182" text-anchor="middle" font-size="18" fill="#7A736A">Large enterprises</text>
+    <text x="830" y="182" text-anchor="middle" font-size="18" fill="#7A736A">SMEs and mid-market</text>
+
+    <text x="40" y="270" font-size="19" font-weight="600" fill="#3A342E">Cost</text>
+    <text x="515" y="270" text-anchor="middle" font-size="18" fill="#7A736A">High</text>
+    <text x="830" y="270" text-anchor="middle" font-size="18" fill="#7A736A">Low to moderate</text>
+
+    <text x="40" y="358" font-size="19" font-weight="600" fill="#3A342E">Implementation</text>
+    <text x="515" y="358" text-anchor="middle" font-size="18" fill="#7A736A">Months to years</text>
+    <text x="830" y="358" text-anchor="middle" font-size="18" fill="#7A736A">Weeks to months</text>
+
+    <text x="40" y="446" font-size="19" font-weight="600" fill="#3A342E">Customization</text>
+    <text x="515" y="446" text-anchor="middle" font-size="18" fill="#7A736A">Powerful, complex</text>
+    <text x="830" y="446" text-anchor="middle" font-size="18" fill="#7A736A">Flexible, developer-friendly</text>
+
+    <text x="40" y="534" font-size="19" font-weight="600" fill="#3A342E">Licensing</text>
+    <text x="515" y="534" text-anchor="middle" font-size="18" fill="#7A736A">Enterprise licensing</text>
+    <text x="830" y="534" text-anchor="middle" font-size="18" fill="#7A736A">Open source plus per app</text>
+  </g>
+
+  <text x="980" y="600" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#A99F92">Sajjal Bajaj · sajjalbajaj.in</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" role="img" aria-label="When to choose Odoo versus SAP, by Sajjal Bajaj">
+  <rect width="1000" height="450" rx="22" fill="#FFFDF8"/>
+  <rect x="1.5" y="1.5" width="997" height="447" rx="20.5" fill="none" stroke="#ECE4D7" stroke-width="3"/>
+  <rect x="0" y="0" width="1000" height="8" fill="#F2A81D"/>
+  <text x="500" y="56" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#3A342E">When to choose which</text>
+
+  <!-- Odoo panel -->
+  <rect x="45" y="90" width="430" height="315" rx="16" fill="#FFFFFF" stroke="#ECE4D7"/>
+  <rect x="45" y="90" width="430" height="50" rx="16" fill="#714B67"/>
+  <text x="260" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Choose Odoo if</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#3A342E">
+    <circle cx="78" cy="185" r="4" fill="#F2A81D"/><text x="94" y="190">You are an SME or mid-market business</text>
+    <circle cx="78" cy="230" r="4" fill="#F2A81D"/><text x="94" y="235">Budget and flexibility matter</text>
+    <circle cx="78" cy="275" r="4" fill="#F2A81D"/><text x="94" y="280">You want an all-in-one suite</text>
+    <circle cx="78" cy="320" r="4" fill="#F2A81D"/><text x="94" y="325">Fast, affordable customization</text>
+    <circle cx="78" cy="365" r="4" fill="#F2A81D"/><text x="94" y="370">Website, e-commerce or POS included</text>
+  </g>
+
+  <!-- SAP panel -->
+  <rect x="525" y="90" width="430" height="315" rx="16" fill="#FFFFFF" stroke="#ECE4D7"/>
+  <rect x="525" y="90" width="430" height="50" rx="16" fill="#0a6ed1"/>
+  <text x="740" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Choose SAP if</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#3A342E">
+    <circle cx="558" cy="185" r="4" fill="#0a6ed1"/><text x="574" y="190">You are a large or complex enterprise</text>
+    <circle cx="558" cy="230" r="4" fill="#0a6ed1"/><text x="574" y="235">Deep, industry-specific processes</text>
+    <circle cx="558" cy="275" r="4" fill="#0a6ed1"/><text x="574" y="280">You have budget and IT resources</text>
+    <circle cx="558" cy="320" r="4" fill="#0a6ed1"/><text x="574" y="325">Global scale and compliance</text>
+    <circle cx="558" cy="365" r="4" fill="#0a6ed1"/><text x="574" y="370">Very high transaction volumes</text>
+  </g>
+
+  <text x="980" y="435" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#A99F92">Sajjal Bajaj · sajjalbajaj.in</text>
+</svg>
