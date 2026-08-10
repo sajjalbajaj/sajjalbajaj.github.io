@@ -10,6 +10,15 @@ With Odoo 20 on the way, a lot of businesses on older versions are asking the sa
 we actually move to it? A version upgrade is very doable, but it is a proper project, not a button
 you press. Here is the practical migration playbook I use.
 
+<div class="post-download">
+  <span class="post-download__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+  <div class="post-download__body">
+    <p class="post-download__title">Free download: Odoo 20 Upgrade Checklist (PDF)</p>
+    <p class="post-download__text">A printable, step-by-step checklist to plan and deliver your Odoo 20 migration.</p>
+  </div>
+  <a class="post-download__btn" href="/assets/downloads/Odoo-20-Upgrade-Checklist.pdf" download>Download PDF</a>
+</div>
+
 ## First, a timing note
 
 Odoo 20 is expected to be released at **Odoo Experience 2026** in late September, with general

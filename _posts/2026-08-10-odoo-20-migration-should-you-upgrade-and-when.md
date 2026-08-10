@@ -10,6 +10,15 @@ Every time Odoo ships a new version, I get the same question: should we upgrade?
 arriving, it is worth answering properly. A new release is exciting, but "should we move, and when"
 deserves more thought than "yes, it is new." Here is how I would decide.
 
+<div class="post-download">
+  <span class="post-download__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
+  <div class="post-download__body">
+    <p class="post-download__title">Free download: Odoo 20 Upgrade Checklist (PDF)</p>
+    <p class="post-download__text">A printable, step-by-step checklist to plan and deliver your Odoo 20 migration.</p>
+  </div>
+  <a class="post-download__btn" href="/assets/downloads/Odoo-20-Upgrade-Checklist.pdf" download>Download PDF</a>
+</div>
+
 ## The honest timing picture
 
 Odoo 20 is expected to launch at **Odoo Experience 2026** in late September, with general availability

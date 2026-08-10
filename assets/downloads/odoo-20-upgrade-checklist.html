@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odoo 20 Upgrade Checklist - Sajjal Bajaj</title>
+<style>
+  :root{
+    --accent:#B8770A;
+    --accent-soft:#F6EAD0;
+    --text:#2b2621;
+    --muted:#6b645b;
+    --hairline:#e2d8c6;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--text);
+    font-size:11px;
+    line-height:1.45;
+    background:#fff;
+  }
+  .page{max-width:780px;margin:0 auto;padding:24px 30px;}
+  a{color:var(--accent);text-decoration:none;}
+
+  .head{border-bottom:2px solid var(--accent);padding-bottom:12px;margin-bottom:16px;}
+  .brand{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 6px;}
+  h1{font-size:23px;font-weight:800;margin:0;letter-spacing:.2px;}
+  .sub{font-size:10.5px;color:var(--muted);margin:6px 0 0;max-width:64ch;}
+
+  .group{margin-top:14px;break-inside:avoid;}
+  .group h2{
+    font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);
+    margin:0 0 7px;font-weight:700;display:flex;align-items:center;gap:8px;
+  }
+  .group h2 .n{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:18px;height:18px;border-radius:50%;background:var(--accent-soft);
+    color:var(--accent);font-size:10px;font-weight:800;
+  }
+  ul{list-style:none;margin:0;padding:0;}
+  li{display:flex;align-items:flex-start;gap:9px;padding:3px 0;}
+  .box{
+    flex:0 0 auto;width:12px;height:12px;margin-top:2px;
+    border:1.5px solid var(--accent);border-radius:3px;
+  }
+  .item{color:#39332c;}
+
+  .note{
+    margin-top:18px;padding:11px 13px;border-left:3px solid var(--accent);
+    background:var(--accent-soft);border-radius:4px;font-size:10px;color:#5a5147;
+  }
+  .foot{
+    margin-top:16px;padding-top:10px;border-top:1px solid var(--hairline);
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    font-size:10px;color:var(--muted);
+  }
+  .foot strong{color:var(--text);}
+  .cta{color:var(--accent);font-weight:700;}
+
+  @page{size:A4;margin:11mm 0;}
+  @media print{ .page{padding:0 16mm;max-width:none;} .group{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <p class="brand">Sajjal Bajaj · ERP &amp; CRM Consultant</p>
+    <h1>Odoo 20 Upgrade Checklist</h1>
+    <p class="sub">A practical, step-by-step checklist to prepare for and deliver your Odoo 20 migration
+    without surprises. Work through it roughly in order, and test everything on a copy before you touch
+    production.</p>
+  </header>
+
+  <div class="group">
+    <h2><span class="n">1</span> Assess where you are</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Record your current Odoo version, edition (Community or Enterprise) and hosting (Odoo Online, Odoo.sh or on-premise).</span></li>
+      <li><span class="box"></span><span class="item">List every app and module you actually use.</span></li>
+      <li><span class="box"></span><span class="item">Mark which processes are business-critical and must not break.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">2</span> Inventory customizations and integrations</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">List every custom module and tweak in your system.</span></li>
+      <li><span class="box"></span><span class="item">List all integrations: website, payments, shipping, bank feeds, CRM and any other connected tools.</span></li>
+      <li><span class="box"></span><span class="item">Identify third-party apps and confirm their Odoo 20 compatibility.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">3</span> Get your data ready</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Deduplicate master data: customers, products and suppliers.</span></li>
+      <li><span class="box"></span><span class="item">Archive records you no longer need.</span></li>
+      <li><span class="box"></span><span class="item">Fix known data issues before migrating.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">4</span> Run a test upgrade</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Upgrade a copy of your database, never production first.</span></li>
+      <li><span class="box"></span><span class="item">Adapt your custom modules to Odoo 20.</span></li>
+      <li><span class="box"></span><span class="item">Load the adapted custom modules into the test database.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">5</span> Test properly (UAT)</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Build test scripts from your real, everyday processes.</span></li>
+      <li><span class="box"></span><span class="item">Have actual end users test their daily tasks, not just the project team.</span></li>
+      <li><span class="box"></span><span class="item">Log issues, fix them, and retest until the critical path is solid.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">6</span> Plan the cut-over</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Choose a quiet business window, never your busiest period.</span></li>
+      <li><span class="box"></span><span class="item">Freeze changes and run the final production upgrade.</span></li>
+      <li><span class="box"></span><span class="item">Load final data and verify every critical process before reopening.</span></li>
+    </ul>
+  </div>
+
+  <div class="group">
+    <h2><span class="n">7</span> After go-live</h2>
+    <ul>
+      <li><span class="box"></span><span class="item">Provide hands-on support for the first busy days.</span></li>
+      <li><span class="box"></span><span class="item">Monitor adoption and fix friction fast.</span></li>
+      <li><span class="box"></span><span class="item">Hold a short review and plan your next steps.</span></li>
+    </ul>
+  </div>
+
+  <p class="note"><strong>Timing note:</strong> Odoo 20 is expected to launch at Odoo Experience 2026 in
+  late September 2026, with general availability in the weeks after. Use this checklist to prepare now,
+  and do the actual move once the release has settled and your critical apps are confirmed compatible.</p>
+
+  <div class="foot">
+    <span><strong>Sajjal Bajaj</strong> · ERP &amp; CRM Consultant · <a href="https://www.sajjalbajaj.in">sajjalbajaj.in</a></span>
+    <span class="cta">Need help with your upgrade? Get in touch.</span>
+  </div>
+
+</div>
+</body>
+</html>
