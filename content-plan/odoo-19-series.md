@@ -36,13 +36,15 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
   pricelists & agreements [done: 08-17], automated purchasing [done: 08-17]
 - TODO: Maintenance, Barcode, PLM (smaller MRP apps)
 
-### Sales
-- Sales (overview), quotations to orders, pricelists & discounts, products & variants,
-  invoicing policies, subscriptions, rental, amazon/ebay connectors
+### Sales  [BATCH 3 - DONE]
+- Quotation to sales order [done: 08-18], variants & optional products [done: 08-18],
+  pricelists & discounts [done: 08-18], invoicing policies [done: 08-19],
+  subscriptions [done: 08-19]
+- TODO: rental, amazon/ebay connectors
 
-### CRM
-- CRM (overview), pipeline & stages, lead mining & scoring, activities & follow-ups,
-  reporting & forecasting
+### CRM  [BATCH 3 - DONE]
+- Pipeline management [done: 08-19], lead generation & mining [done: 08-20],
+  predictive lead scoring [done: 08-20], activities/forecasting/reporting [done: 08-20]
 
 ### Finance / Accounting
 - Accounting (overview), customer invoicing, vendor bills, taxes & fiscal positions,
@@ -68,5 +70,6 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 ## Batch log
 - Batch 1: Inventory pillar, 9 posts, dated 08-12 to 08-14 (3/day). Cron publishes them.
 - Batch 2: Manufacturing + Quality + Purchase, 9 posts, dated 08-15 to 08-17 (3/day).
-- Next batches: Sales + CRM, then Accounting/Finance, then Website/eCommerce, HR, Marketing, Services, etc.
-  Queue is filled through 08-17. Add the next batch before then to avoid a gap.
+- Batch 3: Sales + CRM, 9 posts, dated 08-18 to 08-20 (3/day).
+- Next batches: Accounting/Finance, then Website/eCommerce, HR, Marketing, Services, Productivity.
+  Queue is filled through 08-20. Add the next batch before then to avoid a gap.
