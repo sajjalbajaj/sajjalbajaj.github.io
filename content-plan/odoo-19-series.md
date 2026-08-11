@@ -29,8 +29,12 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Shipping & receiving (inbound/outbound flows) [done: 08-14]
 - Removal strategies: FIFO, LIFO, FEFO [done: 08-14]
 - Inventory valuation & landed costs [done: 08-14]
-- TODO: Manufacturing (BoM, work orders, routings), Purchase (RFQ, vendor bills, agreements),
-  Quality, Maintenance, Barcode, PLM
+- Manufacturing: BoM/kits/variants [done: 08-15], work centers & work orders [done: 08-15],
+  manufacturing orders workflow [done: 08-15], subcontracting [done: 08-16]
+- Quality control: control points & alerts [done: 08-16]
+- Purchase: RFQ to PO [done: 08-16], vendor bills & 3-way match [done: 08-17],
+  pricelists & agreements [done: 08-17], automated purchasing [done: 08-17]
+- TODO: Maintenance, Barcode, PLM (smaller MRP apps)
 
 ### Sales
 - Sales (overview), quotations to orders, pricelists & discounts, products & variants,
@@ -62,5 +66,7 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
   general settings, users & companies, multi-company
 
 ## Batch log
-- Batch 1 (this session): Inventory pillar, 9 posts, dated 08-12 to 08-14 (3/day). Cron publishes them.
-- Next batches: continue with Manufacturing + Purchase, then Sales/CRM, then Accounting, etc.
+- Batch 1: Inventory pillar, 9 posts, dated 08-12 to 08-14 (3/day). Cron publishes them.
+- Batch 2: Manufacturing + Quality + Purchase, 9 posts, dated 08-15 to 08-17 (3/day).
+- Next batches: Sales + CRM, then Accounting/Finance, then Website/eCommerce, HR, Marketing, Services, etc.
+  Queue is filled through 08-17. Add the next batch before then to avoid a gap.
