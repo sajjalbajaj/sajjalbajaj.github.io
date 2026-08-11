@@ -42,6 +42,7 @@ layout: default
   </footer>
 </article>
 
+{% comment %} Similar posts for internal linking / crawlability, scored by shared-tag overlap. {% endcomment %}
 {% assign related = "" | split: "" %}
 {% for tag in page.tags %}{% assign related = related | concat: site.tags[tag] %}{% endfor %}
 {% assign related = related | uniq | where_exp: "item", "item.url != page.url" %}
@@ -49,11 +50,39 @@ layout: default
 <section class="related no-print" aria-label="Related posts">
   <h2 class="related__title">Related posts</h2>
   <ul class="related__list">
-    {% for p in related limit: 3 %}
+    {% assign maxRelated = 6 %}
+    {% assign relatedCount = 0 %}
+    {% assign seen = "" %}
+    {% comment %} Pass 1: most similar (2+ shared tags). {% endcomment %}
+    {% for p in site.posts %}
+      {% if relatedCount < maxRelated and p.url != page.url %}
+        {% assign shared = 0 %}
+        {% for tag in p.tags %}{% if page.tags contains tag %}{% assign shared = shared | plus: 1 %}{% endif %}{% endfor %}
+        {% if shared >= 2 %}
     <li><a href="{{ p.url | relative_url }}">
       <span class="related__date">{{ p.date | date: "%b %-d, %Y" }}</span>
       <span class="related__name">{{ p.title }}</span>
     </a></li>
+          {% assign seen = seen | append: p.url | append: "|" %}
+          {% assign relatedCount = relatedCount | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% comment %} Pass 2: fill remaining slots with 1+ shared tag, skipping ones already shown. {% endcomment %}
+    {% for p in site.posts %}
+      {% if relatedCount < maxRelated and p.url != page.url %}
+        {% unless seen contains p.url %}
+        {% assign shared = 0 %}
+        {% for tag in p.tags %}{% if page.tags contains tag %}{% assign shared = shared | plus: 1 %}{% endif %}{% endfor %}
+        {% if shared >= 1 %}
+    <li><a href="{{ p.url | relative_url }}">
+      <span class="related__date">{{ p.date | date: "%b %-d, %Y" }}</span>
+      <span class="related__name">{{ p.title }}</span>
+    </a></li>
+          {% assign relatedCount = relatedCount | plus: 1 %}
+        {% endif %}
+        {% endunless %}
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
