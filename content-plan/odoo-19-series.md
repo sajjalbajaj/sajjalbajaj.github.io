@@ -46,9 +46,11 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Pipeline management [done: 08-19], lead generation & mining [done: 08-20],
   predictive lead scoring [done: 08-20], activities/forecasting/reporting [done: 08-20]
 
-### Finance / Accounting
-- Accounting (overview), customer invoicing, vendor bills, taxes & fiscal positions,
-  bank reconciliation, payments, analytic accounting, reporting, assets & deferred
+### Finance / Accounting  [BATCH 4 - DONE]
+- Accounting overview [done: 08-21], customer invoicing [done: 08-21], vendor bills & payments [done: 08-21],
+  taxes & fiscal positions [done: 08-22], bank reconciliation [done: 08-22], chart of accounts & journals [done: 08-22],
+  analytic accounting [done: 08-23], financial reporting [done: 08-23], assets & deferrals [done: 08-23]
+- TODO: expenses, spreadsheet/dashboards, sign, documents (finance-adjacent apps)
 
 ### Website / eCommerce
 - Website builder, eCommerce (products, checkout, payments, delivery), blog, forum,
@@ -71,5 +73,6 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Batch 1: Inventory pillar, 9 posts, dated 08-12 to 08-14 (3/day). Cron publishes them.
 - Batch 2: Manufacturing + Quality + Purchase, 9 posts, dated 08-15 to 08-17 (3/day).
 - Batch 3: Sales + CRM, 9 posts, dated 08-18 to 08-20 (3/day).
-- Next batches: Accounting/Finance, then Website/eCommerce, HR, Marketing, Services, Productivity.
-  Queue is filled through 08-20. Add the next batch before then to avoid a gap.
+- Batch 4: Accounting/Finance, 9 posts, dated 08-21 to 08-23 (3/day).
+- Next batches: Website/eCommerce, then HR, Marketing, Services, Productivity.
+  Queue is filled through 08-23. Add the next batch before then to avoid a gap.
