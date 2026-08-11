@@ -13,8 +13,9 @@ baseurl: ""
 # Pretty per-post URLs, e.g. /blog/2026/07/23/welcome/
 permalink: /blog/:year/:month/:day/:title/
 
-# Show posts even if the build clock is behind your local date (handy for a daily blog)
-future: true
+# Posts publish only on/after their date. A daily GitHub Action rebuilds the site,
+# so date-scheduled posts go live on their day (the drip-publish mechanism).
+future: false
 timezone: Asia/Kolkata
 
 # Comments. provider: cusdis | disqus | "" (blank hides comments).
@@ -60,3 +61,5 @@ exclude:
   - vendor
   - .gitignore
   - blog-post-template.md
+  - content-plan
+  - cv-pdf
