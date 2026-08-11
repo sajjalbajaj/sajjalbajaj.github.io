@@ -832,3 +832,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
   .post-download { flex-direction: column; align-items: flex-start; }
 }
 @media print { .post-download { display: none; } }
+
+/* Author byline link in post meta */
+.post__author { color: var(--text); font-weight: 600; text-decoration: none; }
+.post__author:hover { color: var(--accent-strong); text-decoration: underline; }
