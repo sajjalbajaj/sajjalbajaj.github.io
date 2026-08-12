@@ -2,7 +2,7 @@
 layout: post
 title: "Vendor Pricelists and Purchase Agreements in Odoo"
 date: 2026-08-17 09:00:00 +0530
-tags: [Odoo, Odoo 19, Purchase, ERP]
+tags: [Odoo, Odoo 19, Purchase, ERP, Inventory Management, Stock Control, Procurement, Supply Chain]
 description: "How Odoo manages vendor pricelists and purchase agreements like blanket orders and calls for tenders, to buy at better, agreed prices."
 ---
 

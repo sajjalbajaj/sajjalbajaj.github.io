@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20 Migration: Should You Upgrade, and When?"
 date: 2026-08-10 11:00:00 +0530
-tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation]
+tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation, ERP Migration, ERP Cost, Odoo ERP]
 description: "A new Odoo version is exciting, but should you upgrade to Odoo 20, and when? A practical guide to the decision and the right timing."
 ---
 

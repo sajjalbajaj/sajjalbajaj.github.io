@@ -2,7 +2,7 @@
 layout: post
 title: "Chart of Accounts and Journals in Odoo Explained"
 date: 2026-08-22 10:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Stock Control, Procurement, Supply Chain]
 description: "A plain-English explanation of the chart of accounts and journals in Odoo, the backbone that organises every financial transaction."
 ---
 

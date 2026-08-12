@@ -2,7 +2,7 @@
 layout: post
 title: "Data Scattered Across Systems? How Odoo Brings It Together"
 date: 2026-08-12 10:30:00 +0530
-tags: [ERP, Odoo, Digital Transformation, Integration, SME]
+tags: [ERP, Odoo, Digital Transformation, Integration, SME, Inventory Management, Stock Control, Procurement]
 description: "A common business problem: your data lives in separate tools and spreadsheets that do not agree. Here is how Odoo brings it into one connected system."
 ---
 

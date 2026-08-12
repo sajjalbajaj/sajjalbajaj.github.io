@@ -2,7 +2,7 @@
 layout: post
 title: "SAP vs Odoo: Which ERP Fits Your Business?"
 date: 2026-07-27 09:00:00 +0530
-tags: [ERP, Odoo, SAP, ERP Comparison, Digital Transformation]
+tags: [ERP, Odoo, SAP, ERP Comparison, Digital Transformation, Procurement, Supply Chain, ERP Migration]
 description: "A practical, vendor-neutral comparison of SAP and Odoo from an ERP consultant, with clear guidance on which one fits your business."
 ---
 

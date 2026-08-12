@@ -2,7 +2,7 @@
 layout: post
 title: "Removal Strategies in Odoo: FIFO, LIFO and FEFO Explained"
 date: 2026-08-14 09:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "What removal strategies are in Odoo and how FIFO, LIFO and FEFO decide which stock to pick first, with plain examples of when to use each."
 ---
 

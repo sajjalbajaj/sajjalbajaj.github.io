@@ -2,7 +2,7 @@
 layout: post
 title: "Warehouse Management with ERP: From Chaos to Control"
 date: 2026-07-24 15:00:00 +0530
-tags: [ERP, Warehouse, Odoo, WMS, Logistics, Supply Chain]
+tags: [ERP, Warehouse, Odoo, WMS, Logistics, Supply Chain, Inventory Management, Stock Control]
 description: "What a warehouse management system (WMS) actually does, and how ERP turns receiving, put-away, picking and packing into a smooth, accurate operation."
 ---
 

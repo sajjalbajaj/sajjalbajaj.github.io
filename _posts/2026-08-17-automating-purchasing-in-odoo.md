@@ -2,7 +2,7 @@
 layout: post
 title: "Automating Purchasing in Odoo: Reordering Rules and Lead Times"
 date: 2026-08-17 10:00:00 +0530
-tags: [Odoo, Odoo 19, Purchase, Inventory, ERP]
+tags: [Odoo, Odoo 19, Purchase, Inventory, ERP, Inventory Management, Stock Control, Manufacturing]
 description: "How Odoo automates purchasing with reordering rules, make-to-order and vendor lead times, so you reorder the right amounts at the right time."
 ---
 

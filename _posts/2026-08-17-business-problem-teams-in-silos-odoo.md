@@ -2,7 +2,7 @@
 layout: post
 title: "Teams Working in Silos? How Odoo Connects Your Business"
 date: 2026-08-17 14:00:00 +0530
-tags: [ERP, Odoo, Digital Transformation, SME]
+tags: [ERP, Odoo, Digital Transformation, SME, Inventory Management, Stock Control, Warehouse Management, Invoicing]
 description: "A business problem that grows with you: departments working in silos that do not share information. Here is how Odoo connects your whole business."
 ---
 

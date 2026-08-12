@@ -2,7 +2,7 @@
 layout: post
 title: "Assets, Deferred Revenue and Expenses in Odoo"
 date: 2026-08-23 10:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Procurement, Supply Chain, Bookkeeping]
 description: "How Odoo handles assets, depreciation, deferred revenue and deferred expenses, spreading big costs and income over time so profit reflects reality."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started with AI in Odoo: Where It Pays Off First"
 date: 2026-08-11 11:00:00 +0530
-tags: [Odoo, AI, ERP, Digital Transformation]
+tags: [Odoo, AI, ERP, Digital Transformation, Procurement, Supply Chain, Invoicing, Bookkeeping]
 description: "A practical guide to getting started with AI in Odoo: which feature to turn on first, how to keep a human in control, and how to measure the payoff."
 ---
 

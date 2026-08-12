@@ -2,7 +2,7 @@
 layout: post
 title: "How Much Does Odoo Cost? A Straight Answer"
 date: 2026-07-28 11:00:00 +0530
-tags: [ERP, Odoo, ERP Implementation, SME, Digital Transformation]
+tags: [ERP, Odoo, ERP Implementation, SME, Digital Transformation, Recurring Revenue, Cloud ERP, ERP Migration]
 description: "A clear, honest breakdown of what Odoo actually costs: licensing, implementation and ongoing costs, and what really drives the number."
 ---
 

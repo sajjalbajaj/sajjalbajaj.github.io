@@ -2,7 +2,7 @@
 layout: post
 title: "Upgrading to Odoo 20: A Practical Migration Guide"
 date: 2026-08-10 09:00:00 +0530
-tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation]
+tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation, Inventory Management, Stock Control, Business Automation]
 description: "A practical, step-by-step guide to planning your Odoo 20 migration: how Odoo upgrades work, what to test, and how to reach go-live without surprises."
 ---
 

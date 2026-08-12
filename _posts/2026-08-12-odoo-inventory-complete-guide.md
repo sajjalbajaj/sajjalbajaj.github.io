@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Inventory: A Complete Guide to Warehouse Management"
 date: 2026-08-12 08:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "A plain-English overview of Odoo Inventory: what it does, how the pieces fit together, and why it is both a stock system and a full warehouse management tool."
 ---
 

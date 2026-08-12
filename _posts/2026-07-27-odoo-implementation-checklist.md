@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Implementation Checklist: A Practical Guide"
 date: 2026-07-27 11:00:00 +0530
-tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME]
+tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME, Inventory Management, Stock Control, Procurement]
 description: "A practical, step-by-step Odoo implementation checklist from an ERP consultant, from first conversation to a smooth go-live."
 ---
 

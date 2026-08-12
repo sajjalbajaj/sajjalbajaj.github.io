@@ -2,7 +2,7 @@
 layout: post
 title: "Quality Control in Odoo: Checks and Control Points"
 date: 2026-08-16 09:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, Quality, ERP]
+tags: [Odoo, Odoo 19, Manufacturing, Quality, ERP, Inventory Management, Stock Control, Production Planning]
 description: "How Odoo builds quality control into your operations with quality control points, check types and alerts, so quality is a step, not an afterthought."
 ---
 

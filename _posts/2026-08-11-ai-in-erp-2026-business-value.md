@@ -2,7 +2,7 @@
 layout: post
 title: "AI in ERP: From Buzzword to Business Value in 2026"
 date: 2026-08-11 13:00:00 +0530
-tags: [ERP, AI, Automation, Digital Transformation]
+tags: [ERP, AI, Automation, Digital Transformation, Inventory Management, Stock Control, Invoicing, Bank Reconciliation]
 description: "Where AI in ERP has actually reached in 2026: the real use cases, the shift toward AI agents, and how to turn the hype into measurable value."
 ---
 

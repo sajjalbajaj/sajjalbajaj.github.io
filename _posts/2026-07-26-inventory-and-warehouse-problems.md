@@ -2,7 +2,7 @@
 layout: post
 title: "Common Inventory and Warehouse Problems (and How ERP Fixes Them)"
 date: 2026-07-26 09:00:00 +0530
-tags: [ERP, Inventory, Warehouse, Odoo, Supply Chain, Stock Control, WMS]
+tags: [ERP, Inventory, Warehouse, Odoo, Supply Chain, Stock Control, WMS, Inventory Management]
 description: "The inventory and warehouse problems that quietly cost businesses money, what really causes them, and how a well-configured ERP and WMS fix them."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo vs Microsoft Business Central: How to Choose"
 date: 2026-07-24 11:00:00 +0530
-tags: [ERP, Odoo, Microsoft, Business Central, ERP Comparison]
+tags: [ERP, Odoo, Microsoft, Business Central, ERP Comparison, Inventory Management, Stock Control, Manufacturing]
 description: "A practical, vendor-neutral comparison of Odoo and Microsoft 365 Business Central from someone who implements both, to help you pick the right ERP."
 ---
 

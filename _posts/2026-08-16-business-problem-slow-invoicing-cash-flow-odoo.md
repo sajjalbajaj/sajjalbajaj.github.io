@@ -2,7 +2,7 @@
 layout: post
 title: "Slow Invoicing Hurting Cash Flow? How Odoo Speeds It Up"
 date: 2026-08-16 14:00:00 +0530
-tags: [ERP, Odoo, Accounting, Finance, SME]
+tags: [ERP, Odoo, Accounting, Finance, SME, Invoicing, Cash Flow, Bookkeeping]
 description: "A business problem that quietly strangles cash flow: slow, manual, error-prone invoicing. Here is how Odoo speeds it up so you get paid faster."
 ---
 

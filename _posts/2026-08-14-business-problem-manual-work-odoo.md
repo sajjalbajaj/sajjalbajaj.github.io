@@ -2,7 +2,7 @@
 layout: post
 title: "Drowning in Manual Work? How Odoo Automates the Busywork"
 date: 2026-08-14 14:00:00 +0530
-tags: [ERP, Odoo, Automation, Digital Transformation, SME]
+tags: [ERP, Odoo, Automation, Digital Transformation, SME, Stock Control, Procurement, Supply Chain]
 description: "A business problem that quietly drains time and money: endless manual, repetitive work. Here is how Odoo automates the busywork so your team can focus."
 ---
 

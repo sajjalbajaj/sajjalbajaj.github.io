@@ -2,7 +2,7 @@
 layout: post
 title: "Claude's Latest Updates and What They Mean for Business"
 date: 2026-07-29 09:00:00 +0530
-tags: [AI, Automation, Digital Transformation]
+tags: [AI, Automation, Digital Transformation, Procurement, Supply Chain, Customer Management, Business Automation, Artificial Intelligence]
 description: "A plain-English summary of Anthropic's latest Claude updates, including Claude Opus 5 and the new MCP spec, and what they actually mean for businesses."
 ---
 

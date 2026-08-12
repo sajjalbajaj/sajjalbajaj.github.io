@@ -2,7 +2,7 @@
 layout: post
 title: "Inventory Adjustments and Cycle Counts in Odoo"
 date: 2026-08-13 10:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo keeps physical and system stock in sync with inventory adjustments and cycle counts, and why regular counting beats one big year-end count."
 ---
 

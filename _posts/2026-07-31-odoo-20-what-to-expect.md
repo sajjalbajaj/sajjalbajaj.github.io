@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20: What to Expect and How to Prepare"
 date: 2026-07-31 09:00:00 +0530
-tags: [ERP, Odoo, AI, Digital Transformation]
+tags: [ERP, Odoo, AI, Digital Transformation, Bookkeeping, Business Intelligence, Data Analytics, Business Automation]
 description: "A grounded preview of Odoo 20, based on the official roadmap: the AI direction, the features being discussed, and how businesses should prepare for the upgrade."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Accounting: An Overview for Business Owners"
 date: 2026-08-21 08:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Inventory Management, Stock Control, Procurement]
 description: "A plain-English overview of Odoo Accounting: what it does, how it connects to the rest of your business, and why it needs so little manual work."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Product Types, Units of Measure and Packaging in Odoo"
 date: 2026-08-12 09:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, ERP]
+tags: [Odoo, Odoo 19, Inventory, ERP, Inventory Management, Stock Control, Warehouse Management, ERP Cost]
 description: "How Odoo handles product configuration: product types, units of measure and packaging, and why getting these right keeps your inventory accurate."
 ---
 

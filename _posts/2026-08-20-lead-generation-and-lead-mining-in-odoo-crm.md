@@ -2,7 +2,7 @@
 layout: post
 title: "Lead Generation and Lead Mining in Odoo CRM"
 date: 2026-08-20 08:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, ERP]
+tags: [Odoo, Odoo 19, CRM, ERP, Customer Management, Lead Management, Sales Management, Business Automation]
 description: "How Odoo CRM captures leads from your website, email and forms, and how lead mining helps you find new prospects to fill the pipeline."
 ---
 

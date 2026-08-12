@@ -2,7 +2,7 @@
 layout: post
 title: "Losing Leads and Customers? How Odoo CRM Keeps Them"
 date: 2026-08-15 14:00:00 +0530
-tags: [ERP, Odoo, CRM, Digital Transformation, SME]
+tags: [ERP, Odoo, CRM, Digital Transformation, SME, Customer Management, Lead Management, Sales Management]
 description: "A costly business problem: leads slip through the cracks and customers drift away. Here is how Odoo CRM helps you capture, follow up and keep them."
 ---
 

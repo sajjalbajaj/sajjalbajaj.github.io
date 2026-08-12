@@ -2,7 +2,7 @@
 layout: post
 title: "Taxes and Fiscal Positions in Odoo"
 date: 2026-08-22 08:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Procurement, Supply Chain, Invoicing]
 description: "How Odoo handles taxes and fiscal positions so the right tax is applied automatically to every transaction, at home and across borders."
 ---
 

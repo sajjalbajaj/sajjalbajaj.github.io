@@ -2,7 +2,7 @@
 layout: post
 title: "Bank Reconciliation in Odoo"
 date: 2026-08-22 09:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Procurement, Supply Chain, Invoicing]
 description: "How Odoo makes bank reconciliation fast with statement imports and smart matching, so your books always agree with your bank."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Invoicing Policies in Odoo Sales: Ordered vs Delivered"
 date: 2026-08-19 08:00:00 +0530
-tags: [Odoo, Odoo 19, Sales, Accounting, ERP]
+tags: [Odoo, Odoo 19, Sales, Accounting, ERP, Warehouse Management, Invoicing, Cash Flow]
 description: "How Odoo's invoicing policies decide when you can bill a customer, on ordered or delivered quantities, and how to choose the right one."
 ---
 

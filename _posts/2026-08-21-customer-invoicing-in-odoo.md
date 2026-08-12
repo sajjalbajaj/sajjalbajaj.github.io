@@ -2,7 +2,7 @@
 layout: post
 title: "Customer Invoicing in Odoo: From Invoice to Payment"
 date: 2026-08-21 09:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Procurement, Supply Chain, Invoicing]
 description: "How Odoo handles customer invoicing end to end: raising invoices from orders, sending them, and tracking payment so you get paid faster."
 ---
 

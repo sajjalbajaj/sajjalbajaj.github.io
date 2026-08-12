@@ -2,7 +2,7 @@
 layout: post
 title: "Subcontracting in Odoo Manufacturing"
 date: 2026-08-16 08:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, Subcontracting, ERP]
+tags: [Odoo, Odoo 19, Manufacturing, Subcontracting, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo handles subcontracting: outsourcing production to a partner while keeping full control of components, stock and costs."
 ---
 

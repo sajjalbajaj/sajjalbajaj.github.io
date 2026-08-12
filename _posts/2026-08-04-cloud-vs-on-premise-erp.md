@@ -2,7 +2,7 @@
 layout: post
 title: "Cloud vs On-Premise ERP: Which Is Right for Your Business?"
 date: 2026-08-04 09:00:00 +0530
-tags: [ERP, Odoo, Cloud, Digital Transformation, SME]
+tags: [ERP, Odoo, Cloud, Digital Transformation, SME, Procurement, Supply Chain, Recurring Revenue]
 description: "A clear, practical comparison of cloud and on-premise ERP hosting: cost, control, security and maintenance, and how to choose the right option for your business."
 ---
 

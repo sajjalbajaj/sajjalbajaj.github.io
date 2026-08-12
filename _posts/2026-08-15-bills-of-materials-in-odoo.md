@@ -2,7 +2,7 @@
 layout: post
 title: "Bills of Materials in Odoo: Kits, Variants and Multi-Level BoMs"
 date: 2026-08-15 08:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP]
+tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, Inventory Management, Stock Control, Production Planning]
 description: "A plain-English guide to Bills of Materials in Odoo: what a BoM is, plus kits, product variants, multi-level BoMs and by-products explained."
 ---
 

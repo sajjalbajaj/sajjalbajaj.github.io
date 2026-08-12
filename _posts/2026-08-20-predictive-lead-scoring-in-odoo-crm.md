@@ -2,7 +2,7 @@
 layout: post
 title: "Predictive Lead Scoring in Odoo CRM"
 date: 2026-08-20 09:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, AI, ERP]
+tags: [Odoo, Odoo 19, CRM, AI, ERP, Business Intelligence, Data Analytics, Customer Management]
 description: "How Odoo CRM uses predictive lead scoring to rank your leads by likelihood to convert, so your sales team spends time on the deals that matter."
 ---
 

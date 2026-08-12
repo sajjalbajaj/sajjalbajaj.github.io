@@ -2,7 +2,7 @@
 layout: post
 title: "Vendor Bills and Payments in Odoo Accounting"
 date: 2026-08-21 10:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Procurement, Supply Chain, Invoicing]
 description: "How Odoo manages vendor bills and supplier payments, including reading bills automatically and paying accurately, so money out stays under control."
 ---
 

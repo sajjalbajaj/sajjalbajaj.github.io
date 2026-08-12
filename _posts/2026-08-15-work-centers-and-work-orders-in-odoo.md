@@ -2,7 +2,7 @@
 layout: post
 title: "Work Centers and Work Orders in Odoo Manufacturing"
 date: 2026-08-15 09:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP]
+tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, Inventory Management, Stock Control, Production Planning]
 description: "How Odoo models the shop floor with work centers, operations and work orders, giving you real-time production tracking and capacity planning."
 ---
 

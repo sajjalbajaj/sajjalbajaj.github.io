@@ -2,7 +2,7 @@
 layout: post
 title: "No Real-Time View of Your Business? How Odoo Fixes That"
 date: 2026-08-13 14:00:00 +0530
-tags: [ERP, Odoo, Power BI, Data, Digital Transformation]
+tags: [ERP, Odoo, Power BI, Data, Digital Transformation, Stock Control, Procurement, Supply Chain]
 description: "A business problem worth solving: you can never see how you are doing right now. Here is how Odoo gives you a live, real-time view of your business."
 ---
 

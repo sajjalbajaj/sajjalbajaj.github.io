@@ -2,7 +2,7 @@
 layout: post
 title: "Financial Reporting in Odoo: P&L, Balance Sheet and More"
 date: 2026-08-23 09:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Stock Control, Invoicing, Bookkeeping]
 description: "The key financial reports in Odoo, the profit and loss, balance sheet and cash view, explained simply, and why real-time reporting changes decisions."
 ---
 

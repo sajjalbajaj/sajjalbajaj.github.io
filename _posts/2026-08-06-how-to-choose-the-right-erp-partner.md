@@ -2,7 +2,7 @@
 layout: post
 title: "How to Choose the Right ERP Partner"
 date: 2026-08-06 09:00:00 +0530
-tags: [ERP, ERP Implementation, Digital Transformation, SME]
+tags: [ERP, ERP Implementation, Digital Transformation, SME, Procurement, Supply Chain, Sales Management, ERP Cost]
 description: "Choosing an ERP partner matters more than choosing the software. Here is what to look for, what to avoid, and the questions that reveal a good fit."
 ---
 

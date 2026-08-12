@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo for Manufacturing: A Practical Introduction to MRP"
 date: 2026-07-30 09:00:00 +0530
-tags: [ERP, Odoo, Manufacturing, MRP, Inventory]
+tags: [ERP, Odoo, Manufacturing, MRP, Inventory, Inventory Management, Stock Control, Production Planning]
 description: "A plain-English introduction to Odoo Manufacturing (MRP): bills of materials, work orders, routings and how it connects to inventory, for businesses that actually make things."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Subscriptions and Recurring Revenue in Odoo"
 date: 2026-08-19 09:00:00 +0530
-tags: [Odoo, Odoo 19, Sales, ERP]
+tags: [Odoo, Odoo 19, Sales, ERP, Invoicing, Customer Management, Sales Management, Recurring Revenue]
 description: "How Odoo Subscriptions manages recurring revenue, automatic invoicing and renewals, and why predictable income changes a business."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Lot and Serial Number Tracking in Odoo Inventory"
 date: 2026-08-12 10:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo tracks individual items with lot and serial numbers, when to use each, and how it powers traceability and recalls."
 ---
 

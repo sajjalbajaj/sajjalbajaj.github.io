@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo vs Salesforce vs Microsoft Dynamics 365: Which CRM Is Right for You?"
 date: 2026-08-07 09:00:00 +0530
-tags: [CRM, Odoo, Microsoft, Salesforce, Digital Transformation]
+tags: [CRM, Odoo, Microsoft, Salesforce, Digital Transformation, Inventory Management, Stock Control, Bookkeeping]
 description: "A balanced, plain-English comparison of Odoo CRM, Salesforce and Microsoft Dynamics 365 to help you choose the right CRM for your business."
 ---
 

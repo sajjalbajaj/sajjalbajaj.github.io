@@ -2,7 +2,7 @@
 layout: post
 title: "Inventory Valuation and Landed Costs in Odoo"
 date: 2026-08-14 10:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, ERP, Accounting]
+tags: [Odoo, Odoo 19, Inventory, ERP, Accounting, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo values your stock, the difference between costing methods, and how landed costs capture the true cost of getting goods to your door."
 ---
 

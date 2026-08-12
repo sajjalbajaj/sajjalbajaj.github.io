@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo CRM: Managing Your Sales Pipeline"
 date: 2026-08-19 10:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, ERP]
+tags: [Odoo, Odoo 19, CRM, ERP, Customer Management, Lead Management, Sales Management, Odoo ERP]
 description: "How Odoo CRM organises leads and opportunities into a visual pipeline, so your sales team always knows what to work on next."
 ---
 

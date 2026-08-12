@@ -2,7 +2,7 @@
 layout: post
 title: "ERP Integrations: Connecting Your Systems So They Actually Talk"
 date: 2026-08-08 09:00:00 +0530
-tags: [ERP, Odoo, Integration, Automation, Digital Transformation]
+tags: [ERP, Odoo, Integration, Automation, Digital Transformation, Inventory Management, Stock Control, Bookkeeping]
 description: "A plain-English guide to ERP integrations: why they matter, what to connect first, and how to link your systems without creating a fragile mess."
 ---
 

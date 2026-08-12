@@ -2,7 +2,7 @@
 layout: post
 title: "AI in Power BI: Smarter Reports, Faster Insights"
 date: 2026-08-11 15:00:00 +0530
-tags: [Power BI, AI, Data, Digital Transformation]
+tags: [Power BI, AI, Data, Digital Transformation, Business Intelligence, Data Analytics, Sales Management, Business Automation]
 description: "A practical tour of the AI features in Power BI, from Copilot and natural-language Q&A to key influencers and smart narratives, and how to use them well."
 ---
 

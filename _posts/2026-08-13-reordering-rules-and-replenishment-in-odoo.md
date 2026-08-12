@@ -2,7 +2,7 @@
 layout: post
 title: "Reordering Rules and Replenishment in Odoo Inventory"
 date: 2026-08-13 09:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo automates restocking with reordering rules, make-to-order and lead times, so you avoid stockouts without over-ordering."
 ---
 

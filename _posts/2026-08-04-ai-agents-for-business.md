@@ -2,7 +2,7 @@
 layout: post
 title: "AI Agents for Business: From Chatbots to Doing Real Work"
 date: 2026-08-04 11:00:00 +0530
-tags: [AI, Automation, Digital Transformation]
+tags: [AI, Automation, Digital Transformation, Stock Control, Invoicing, Sales Management, Business Automation, Artificial Intelligence]
 description: "A plain-English guide to AI agents for business: what they are, how they differ from chatbots, where they help, and how to start safely."
 ---
 

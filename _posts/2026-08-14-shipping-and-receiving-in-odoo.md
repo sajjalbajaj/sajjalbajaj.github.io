@@ -2,7 +2,7 @@
 layout: post
 title: "Shipping and Receiving in Odoo: Inbound and Outbound Flows"
 date: 2026-08-14 08:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo handles goods coming in and going out, from simple one-step flows to multi-step receiving and dispatch, plus carriers and reservations."
 ---
 

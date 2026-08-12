@@ -2,7 +2,7 @@
 layout: post
 title: "Analytic Accounting in Odoo: Tracking Profitability"
 date: 2026-08-23 08:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Invoicing, Bookkeeping, Business Intelligence]
 description: "How analytic accounting in Odoo lets you track profitability by project, department or product, beyond what standard accounts show."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Product Variants and Optional Products in Odoo Sales"
 date: 2026-08-18 09:00:00 +0530
-tags: [Odoo, Odoo 19, Sales, ERP]
+tags: [Odoo, Odoo 19, Sales, ERP, Stock Control, Sales Management, Business Automation, ERP Cost]
 description: "How Odoo handles product variants and optional products in Sales, so you can offer choices and upsells without a messy product list."
 ---
 

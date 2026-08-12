@@ -2,7 +2,7 @@
 layout: post
 title: "Warehouses, Locations and Operation Types in Odoo"
 date: 2026-08-13 08:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP]
+tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo structures physical stock with warehouses, locations and operation types, and why this structure powers everything from picking to reporting."
 ---
 

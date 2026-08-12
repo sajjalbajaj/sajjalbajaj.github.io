@@ -2,7 +2,7 @@
 layout: post
 title: "AI in Odoo: What It Can Actually Do Today"
 date: 2026-08-11 09:00:00 +0530
-tags: [Odoo, AI, ERP, Automation]
+tags: [Odoo, AI, ERP, Automation, Stock Control, Procurement, Supply Chain, Invoicing]
 description: "A grounded look at what Odoo's AI can really do today, from invoice digitisation and lead scoring to content generation and natural-language queries."
 ---
 

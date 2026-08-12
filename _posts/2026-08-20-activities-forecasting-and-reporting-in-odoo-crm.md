@@ -2,7 +2,7 @@
 layout: post
 title: "Activities, Forecasting and Reporting in Odoo CRM"
 date: 2026-08-20 10:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, ERP]
+tags: [Odoo, Odoo 19, CRM, ERP, Cash Flow, Bookkeeping, Business Intelligence, Data Analytics]
 description: "How Odoo CRM keeps deals moving with scheduled activities, and how forecasting and reporting turn your pipeline into reliable numbers."
 ---
 

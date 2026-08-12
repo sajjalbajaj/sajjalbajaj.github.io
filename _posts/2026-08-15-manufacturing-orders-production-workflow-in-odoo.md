@@ -2,7 +2,7 @@
 layout: post
 title: "Manufacturing Orders: The Production Workflow in Odoo"
 date: 2026-08-15 10:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP]
+tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, Inventory Management, Stock Control, Production Planning]
 description: "How a manufacturing order works in Odoo from draft to done, how it consumes components and produces finished goods, and how it keeps stock accurate."
 ---
 

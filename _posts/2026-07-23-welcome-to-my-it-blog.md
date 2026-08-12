@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to my IT blog"
 date: 2026-07-23 09:00:00 +0530
-tags: [General]
+tags: [General, Power BI, Business Intelligence, Business Automation, Artificial Intelligence, ERP Implementation]
 description: "Kicking off a daily blog on IT, ERP, BI, AI and software delivery."
 ---
 

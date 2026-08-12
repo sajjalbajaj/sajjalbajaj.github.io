@@ -2,7 +2,7 @@
 layout: post
 title: "5 Dashboards Every Growing Business Should Have"
 date: 2026-08-07 11:00:00 +0530
-tags: [Power BI, Data, ERP, Digital Transformation]
+tags: [Power BI, Data, ERP, Digital Transformation, Inventory Management, Stock Control, Invoicing, Cash Flow]
 description: "Five practical dashboards every growing business should have, and how tools like Power BI turn scattered data into decisions you can act on."
 ---
 

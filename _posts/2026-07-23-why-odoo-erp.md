@@ -2,7 +2,7 @@
 layout: post
 title: "Why Odoo ERP?"
 date: 2026-07-23 10:00:00 +0530
-tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME]
+tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME, Inventory Management, Stock Control, Manufacturing]
 description: "Why I recommend Odoo ERP to many small and mid-sized businesses: the honest pros, the trade-offs, and when to pick something else."
 ---
 

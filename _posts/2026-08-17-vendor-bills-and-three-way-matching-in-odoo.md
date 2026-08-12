@@ -2,7 +2,7 @@
 layout: post
 title: "Vendor Bills and Three-Way Matching in Odoo"
 date: 2026-08-17 08:00:00 +0530
-tags: [Odoo, Odoo 19, Purchase, Accounting, ERP]
+tags: [Odoo, Odoo 19, Purchase, Accounting, ERP, Inventory Management, Stock Control, Warehouse Management]
 description: "How Odoo handles vendor bills and three-way matching between purchase order, receipt and invoice, so you never overpay a supplier."
 ---
 
