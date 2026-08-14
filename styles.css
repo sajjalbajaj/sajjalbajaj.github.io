@@ -836,3 +836,10 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 /* Author byline link in post meta */
 .post__author { color: var(--text); font-weight: 600; text-decoration: none; }
 .post__author:hover { color: var(--accent-strong); text-decoration: underline; }
+
+/* 404 page */
+.error404 { text-align: center; padding: 3rem 0 4rem; }
+.error404__code { font-family: var(--font-display, inherit); font-size: clamp(3.5rem, 14vw, 7rem); font-weight: 800; color: var(--accent); line-height: 1; margin: 0; opacity: .9; }
+.error404__lead { max-width: 58ch; margin: 1rem auto 2rem; color: var(--muted); }
+.error404__actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.error404__hint { color: var(--muted); font-size: .9rem; }

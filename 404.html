@@ -1,0 +1,21 @@
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+sitemap: false
+description: "The page you were looking for could not be found. Explore the ERP and Odoo blog, services, or get in touch with Sajjal Bajaj."
+---
+<section class="section error404">
+  <p class="error404__code" aria-hidden="true">404</p>
+  <h1 class="section-title"><span class="section-title__no">!</span> Page not found</h1>
+  <p class="error404__lead">Sorry, the page you were looking for does not exist or may have moved.
+  Here are some helpful places to go instead.</p>
+  <div class="error404__actions">
+    <a class="btn btn--primary" href="{{ '/' | relative_url }}">Go to homepage</a>
+    <a class="btn btn--ghost" href="{{ '/blog/' | relative_url }}">Read the ERP &amp; Odoo blog</a>
+    <a class="btn btn--ghost" href="{{ '/services/' | relative_url }}">ERP &amp; Odoo services</a>
+    <a class="btn btn--ghost" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+  </div>
+  <p class="error404__hint">Looking for something specific? Try the <a href="{{ '/blog/' | relative_url }}">blog</a>,
+  where you can search and filter posts by topic.</p>
+</section>
