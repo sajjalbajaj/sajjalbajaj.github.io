@@ -4,6 +4,15 @@ title: "Odoo Implementation Checklist: A Practical Guide"
 date: 2026-07-27 11:00:00 +0530
 tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME, Inventory Management, Stock Control, Procurement]
 description: "A practical, step-by-step Odoo implementation checklist from an ERP consultant, from first conversation to a smooth go-live."
+faqs:
+  - q: "How long does an Odoo implementation take?"
+    a: "A focused first phase often goes live in a few weeks to a few months, depending on modules, data and customizations. Keeping the first phase small means you see value quickly, then expand."
+  - q: "What are the steps of an Odoo implementation?"
+    a: "In short: define the outcome, map your processes, clean your data, choose the right setup, configure before you customize, plan integrations early, test properly with real users, train your team, go live with a plan, and support closely afterward."
+  - q: "Why do Odoo implementations fail?"
+    a: "Usually because the unglamorous parts get skipped: process mapping, data cleanup and testing. Do those well, keep customization lean, and go-live becomes a non-event."
+  - q: "Should I customize Odoo or use standard features?"
+    a: "Configure Odoo's standard features first, because they are proven and upgrade-safe. Only build custom modules for genuine gaps, and document every one."
 ---
 
 An Odoo implementation succeeds or fails long before you touch the software. After running

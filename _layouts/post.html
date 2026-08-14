@@ -19,6 +19,30 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.faqs %}
+  <section class="faq post-faq" aria-label="Frequently asked questions">
+    <h2 class="section-title"><span class="section-title__no">?</span> Frequently asked questions</h2>
+    <div class="faq__list">
+      {% for f in page.faqs %}
+      <details class="faq__item">
+        <summary>{{ f.q }}</summary>
+        <div class="faq__a"><p>{{ f.a }}</p></div>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for f in page.faqs %}{ "@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | jsonify }} } }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
   <div class="share no-print" aria-label="Share this article">
     <span class="share__label">Share</span>
     <a class="share__btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener" title="Share on LinkedIn" aria-label="Share on LinkedIn">

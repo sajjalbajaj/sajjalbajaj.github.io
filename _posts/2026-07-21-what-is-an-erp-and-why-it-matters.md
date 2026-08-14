@@ -4,6 +4,15 @@ title: "What is an ERP, and why it matters"
 date: 2026-07-21 09:00:00 +0530
 tags: [ERP, Inventory Management, Stock Control, Invoicing, Sales Management, Business Automation, ERP Cost, Spreadsheets]
 description: "A plain-English introduction to ERP systems and the value they bring."
+faqs:
+  - q: "What is an ERP system?"
+    a: "An ERP (Enterprise Resource Planning) system is one connected platform that runs the core of your business, finance, inventory, sales, purchasing and more, with a single source of truth, so information lives in one place instead of scattered spreadsheets."
+  - q: "What does an ERP do?"
+    a: "It connects and automates your core operations: it records sales, updates stock, handles purchasing and accounting, and gives you real-time, trustworthy data to run the business, reducing manual re-keying and errors."
+  - q: "Do small businesses need an ERP?"
+    a: "Many do, once spreadsheets start to crack: when nobody trusts the numbers, there is too much manual copying, or you cannot get a real-time picture. You do not have to start big; begin with the process that hurts most."
+  - q: "What is the difference between ERP and accounting software?"
+    a: "Accounting software handles your books. An ERP goes wider, connecting finance with inventory, sales, purchasing and operations in one system, so the whole business runs on shared, real-time data."
 ---
 
 **ERP** stands for *Enterprise Resource Planning*. In plain English, it's a single

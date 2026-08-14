@@ -836,6 +836,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 /* Author byline link in post meta */
 .post__author { color: var(--text); font-weight: 600; text-decoration: none; }
 .post__author:hover { color: var(--accent-strong); text-decoration: underline; }
+.post-faq { margin-top: 2.5rem; }
 
 /* Service sub-page breadcrumb + related links */
 .breadcrumb { font-size: .85rem; color: var(--muted); margin: 0 0 1.25rem; }
