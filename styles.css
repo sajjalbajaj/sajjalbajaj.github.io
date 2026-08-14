@@ -837,6 +837,15 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .post__author { color: var(--text); font-weight: 600; text-decoration: none; }
 .post__author:hover { color: var(--accent-strong); text-decoration: underline; }
 
+/* Service sub-page breadcrumb + related links */
+.breadcrumb { font-size: .85rem; color: var(--muted); margin: 0 0 1.25rem; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent-strong); text-decoration: underline; }
+.svc-related { margin: 2rem 0; }
+.svc-related ul { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .45rem; }
+.svc-related a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.svc-related a:hover { color: var(--accent-strong); text-decoration: underline; }
+
 /* Hero greeting (supporting line above the keyword H1) */
 .hero__greeting { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin: 0 0 .4rem; font-size: clamp(1.05rem, 2.4vw, 1.4rem); font-weight: 600; color: var(--muted); }
 .hero__greeting .grad { font-weight: 800; }

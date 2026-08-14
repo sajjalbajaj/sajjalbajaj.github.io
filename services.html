@@ -5,18 +5,22 @@ permalink: /services/
 description: "Odoo ERP implementation, customization, migration, integration, module development and support, plus Microsoft 365 Business Central, business process automation and Power BI, by Sajjal Bajaj."
 services:
   - title: "Odoo Implementation"
+    url: /services/odoo-implementation/
     desc: "End-to-end Odoo ERP implementation across Sales, CRM, Inventory, Purchase, Accounting, Manufacturing and POS, configured to the way your business actually runs."
     ideal: "Businesses adopting Odoo for the first time."
   - title: "Odoo Customization & Module Development"
+    url: /services/odoo-customization/
     desc: "Custom Odoo modules, tailored workflows and features built on Odoo's framework, for the requirements that standard functionality does not cover."
     ideal: "Teams with unique or industry-specific needs."
   - title: "Odoo Migration & Upgrades"
+    url: /services/odoo-migration/
     desc: "Safe migration onto Odoo, or upgrades to a newer Odoo version, with your data, customizations and integrations carried across cleanly."
     ideal: "Businesses on legacy systems or older Odoo versions."
   - title: "Odoo Integration Services"
     desc: "Connect Odoo with the tools around it: e-commerce, payments, shipping, QuickBooks and third-party APIs, so your data lives in one place."
     ideal: "Businesses running Odoo alongside other systems."
   - title: "Microsoft 365 Business Central"
+    url: /services/business-central/
     desc: "Implementation and consulting for Microsoft Dynamics 365 Business Central, for teams standardizing on the Microsoft stack."
     ideal: "Companies invested in Microsoft 365."
   - title: "ERP Support & Maintenance"
@@ -26,6 +30,7 @@ services:
     desc: "Digital transformation done properly: map, streamline and automate processes (including UiPath and RPA) so the ERP delivers real efficiency, not just software."
     ideal: "Teams buried in manual, disconnected work."
   - title: "Power BI & ERP Analytics"
+    url: /services/power-bi/
     desc: "Dashboards, reporting and data warehousing on top of your ERP, turning day-to-day data into decisions."
     ideal: "Leaders who want live visibility, not month-old exports."
 industries:
@@ -53,15 +58,16 @@ faqs:
 ---
 <section class="section">
   <h1 class="section-title reveal"><span class="section-title__no">✦</span> ERP &amp; Odoo Services</h1>
-  <p class="services__lead reveal">ERP consulting and app development focused on <strong>Odoo</strong> and
+  <p class="services__lead reveal">ERP consulting and app development focused on
+  <strong><a href="{{ '/services/odoo-consulting/' | relative_url }}">Odoo</a></strong> and
   <strong>Microsoft 365 Business Central</strong>. From implementation and customization to migration,
-  integration and support, I help businesses run on one connected system.</p>
+  integration and support, I help businesses run on one connected system. Explore each service below.</p>
 
   <div class="services__grid">
     {% for s in page.services %}
     <article class="service-card reveal">
       <span class="service-card__no">{{ forloop.index | prepend: '0' }}</span>
-      <h2 class="service-card__title">{{ s.title }}</h2>
+      <h2 class="service-card__title">{% if s.url %}<a href="{{ s.url | relative_url }}">{{ s.title }}</a>{% else %}{{ s.title }}{% endif %}</h2>
       <p class="service-card__desc">{{ s.desc }}</p>
       <p class="service-card__ideal"><strong>Ideal for:</strong> {{ s.ideal }}</p>
     </article>
