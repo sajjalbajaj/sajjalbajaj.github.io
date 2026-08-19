@@ -43,6 +43,7 @@ plugins:
 
 feed:
   path: feed.xml
+  posts_limit: 20
 
 markdown: kramdown
 
