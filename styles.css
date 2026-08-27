@@ -838,6 +838,14 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .post__author:hover { color: var(--accent-strong); text-decoration: underline; }
 .post-faq { margin-top: 2.5rem; }
 
+/* Case studies */
+.case-study .services__ind-title { margin-top: 2rem; }
+.cs-meta { margin: 0 0 1.5rem; }
+.cs-results { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem; }
+.cs-metric { flex: 1 1 140px; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-sm); padding: 1rem 1.1rem; }
+.cs-metric__num { display: block; font-size: 1.9rem; font-weight: 800; color: var(--accent); line-height: 1.1; }
+.cs-metric__label { display: block; color: var(--muted); font-size: .85rem; margin-top: .2rem; }
+
 /* Service sub-page breadcrumb + related links */
 .breadcrumb { font-size: .85rem; color: var(--muted); margin: 0 0 1.25rem; }
 .breadcrumb a { color: var(--muted); text-decoration: none; }

@@ -1,0 +1,42 @@
+---
+layout: default
+permalink: /case-studies/
+title: "Case Studies | ERP, Odoo & Power BI Projects"
+description: "Real-world ERP, Odoo and Power BI project case studies: the problems faced, the solutions delivered, and the results achieved by Sajjal Bajaj."
+---
+<section class="section">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a> ›
+    <span>Case Studies</span>
+  </nav>
+
+  <h1 class="section-title"><span class="section-title__no">✦</span> Case Studies</h1>
+  <p class="services__lead">Selected ERP, Odoo and Power BI projects: the real problem, the approach taken,
+  and the results delivered. Details are anonymized where confidentiality requires it.</p>
+
+  {% assign cs = site.case_studies %}
+  {% if cs and cs.size > 0 %}
+  <div class="services__grid">
+    {% for c in cs %}
+    <article class="service-card">
+      <h2 class="service-card__title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
+      <p class="service-card__desc">{{ c.summary }}</p>
+      {% if c.industry %}<p class="service-card__ideal"><strong>Industry:</strong> {{ c.industry }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="services__lead">Detailed project case studies are being prepared. In the meantime, you can explore
+  the <a href="{{ '/services/' | relative_url }}">services</a> I offer across Odoo, ERP and Power BI, read the
+  <a href="{{ '/odoo/' | relative_url }}">Odoo Knowledge Hub</a>, or see the range of projects on my
+  <a href="{{ '/cv/' | relative_url }}">CV</a>. I have delivered across steel, construction, coffee, water,
+  milk, trading, manufacturing, subcontracting and dropshipping.</p>
+  {% endif %}
+
+  <div class="services__cta card">
+    <h2>Want results like these for your business?</h2>
+    <p>Tell me about your project and the problem you are trying to solve, and I will show you how I can help.</p>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+    <a class="btn btn--ghost" href="{{ '/services/' | relative_url }}">View services</a>
+  </div>
+</section>

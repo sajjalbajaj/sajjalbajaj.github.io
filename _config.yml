@@ -45,6 +45,12 @@ feed:
   path: feed.xml
   posts_limit: 20
 
+# Case studies collection: one file per project in _case_studies/
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+
 markdown: kramdown
 
 # Give every post the post layout automatically
@@ -54,6 +60,11 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case-study
 
 exclude:
   - README.md

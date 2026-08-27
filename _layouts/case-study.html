@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<article class="section case-study">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a> ›
+    <a href="{{ '/case-studies/' | relative_url }}">Case Studies</a> ›
+    <span>{{ page.title }}</span>
+  </nav>
+
+  <h1 class="section-title">{{ page.title }}</h1>
+  {% if page.summary %}<p class="services__lead">{{ page.summary }}</p>{% endif %}
+
+  {% if page.industry or page.duration or page.services %}
+  <ul class="tags cs-meta">
+    {% if page.industry %}<li>Industry: {{ page.industry }}</li>{% endif %}
+    {% if page.duration %}<li>Duration: {{ page.duration }}</li>{% endif %}
+    {% for s in page.services %}<li>{{ s }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.metrics %}
+  <div class="cs-results">
+    {% for m in page.metrics %}
+    <div class="cs-metric"><span class="cs-metric__num">{{ m.value }}</span><span class="cs-metric__label">{{ m.label }}</span></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.problem %}<h2 class="services__ind-title">The problem</h2><p>{{ page.problem }}</p>{% endif %}
+  {% if page.existing_process %}<h2 class="services__ind-title">The existing process</h2><p>{{ page.existing_process }}</p>{% endif %}
+  {% if page.requirements %}<h2 class="services__ind-title">Business requirements</h2><ul>{% for r in page.requirements %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.solution %}<h2 class="services__ind-title">The solution</h2><p>{{ page.solution }}</p>{% endif %}
+  {% if page.modules %}<h2 class="services__ind-title">Odoo modules used</h2><ul class="tags">{% for m in page.modules %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.customizations %}<h2 class="services__ind-title">Customizations</h2><ul>{% for c in page.customizations %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.integrations %}<h2 class="services__ind-title">Integrations</h2><ul>{% for i in page.integrations %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.implementation %}<h2 class="services__ind-title">Implementation</h2><p>{{ page.implementation }}</p>{% endif %}
+  {% if page.challenges %}<h2 class="services__ind-title">Challenges</h2><ul>{% for c in page.challenges %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.results %}<h2 class="services__ind-title">Results</h2><ul>{% for r in page.results %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+
+  {% if content != "" %}<div class="prose">{{ content }}</div>{% endif %}
+
+  <div class="services__cta card">
+    <h2>{{ page.cta_title | default: "Have a similar project?" }}</h2>
+    <p>{{ page.cta_text | default: "If this sounds like a challenge you are facing, I would be glad to help. Let's talk about your project." }}</p>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+    <a class="btn btn--ghost" href="{{ '/services/' | relative_url }}">View services</a>
+  </div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.summary | default: page.description | jsonify }},
+  "author": { "@type": "Person", "name": "Sajjal Bajaj", "url": "{{ '/' | absolute_url }}" },
+  "publisher": { "@type": "Organization", "name": "Sajjal Bajaj", "logo": { "@type": "ImageObject", "url": "{{ site.image | absolute_url }}" } },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
+    { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "{{ '/case-studies/' | absolute_url }}" },
+    { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+  ]
+}
+</script>
