@@ -74,5 +74,7 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Batch 2: Manufacturing + Quality + Purchase, 9 posts, dated 08-15 to 08-17 (3/day).
 - Batch 3: Sales + CRM, 9 posts, dated 08-18 to 08-20 (3/day).
 - Batch 4: Accounting/Finance, 9 posts, dated 08-21 to 08-23 (3/day).
-- Next batches: Website/eCommerce, then HR, Marketing, Services, Productivity.
-  Queue is filled through 08-23. Add the next batch before then to avoid a gap.
+- Batch 5: Website + eCommerce, 9 posts, dated 08-24 to 08-26 (3/day, morning slot).
+- Next batches: HR/People, then Marketing, Services/Project, Productivity.
+  Doc series queue filled through 08-26. (Note: separate "ERP for [Industry]" series
+  runs afternoons 08-20 to 08-28.) Add the next batch before the queue runs dry.
