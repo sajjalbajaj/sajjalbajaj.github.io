@@ -80,6 +80,8 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Batch 7: Marketing, 9 posts, dated 08-31 to 09-02 (3/day, morning slot).
   Covers Email, SMS, Social, Marketing Automation, Events, Surveys, plus audience/segmentation,
   marketing-to-CRM and measuring marketing.
-- Next batches: Services/Project (Project, Timesheets, Helpdesk, Field Service, Planning,
-  Appointments), then Productivity (Discuss, Knowledge, Sign, Documents, Studio).
-  Doc series queue filled through 09-02.
+- Batch 8: Services & Project, 9 posts, dated 09-03 to 09-05 (3/day, morning slot).
+  Covers Project, Timesheets, Planning, Helpdesk, Field Service, Appointments, plus billing,
+  project profitability and running a services business on Odoo.
+- Next batch: Productivity (Discuss, Knowledge, Sign, Documents, Approvals, Studio, general settings).
+  Doc series queue filled through 09-05. This is the final planned batch of the doc series.
