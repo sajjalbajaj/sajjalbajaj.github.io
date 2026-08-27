@@ -77,6 +77,9 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Batch 5: Website + eCommerce, 9 posts, dated 08-24 to 08-26 (3/day, morning slot).
 - Batch 6: HR & People, 9 posts, dated 08-28 to 08-30 (3/day, morning slot).
   Covers Employees, Recruitment, Time Off, Attendances, Appraisals, Payroll, Expenses, Fleet, Referrals.
-- Next batches: Marketing (Email/SMS/Events/Social/Marketing Automation), then Services/Project
-  (Project, Timesheets, Helpdesk, Field Service, Planning, Appointments), then Productivity
-  (Discuss, Knowledge, Sign, Documents, Studio). Doc series queue filled through 08-30.
+- Batch 7: Marketing, 9 posts, dated 08-31 to 09-02 (3/day, morning slot).
+  Covers Email, SMS, Social, Marketing Automation, Events, Surveys, plus audience/segmentation,
+  marketing-to-CRM and measuring marketing.
+- Next batches: Services/Project (Project, Timesheets, Helpdesk, Field Service, Planning,
+  Appointments), then Productivity (Discuss, Knowledge, Sign, Documents, Studio).
+  Doc series queue filled through 09-02.
