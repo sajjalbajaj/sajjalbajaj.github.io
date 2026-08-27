@@ -83,5 +83,14 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - Batch 8: Services & Project, 9 posts, dated 09-03 to 09-05 (3/day, morning slot).
   Covers Project, Timesheets, Planning, Helpdesk, Field Service, Appointments, plus billing,
   project profitability and running a services business on Odoo.
-- Next batch: Productivity (Discuss, Knowledge, Sign, Documents, Approvals, Studio, general settings).
-  Doc series queue filled through 09-05. This is the final planned batch of the doc series.
+- Batch 9: Productivity, 9 posts, dated 09-06 to 09-08 (3/day, morning slot).
+  Covers Discuss, Knowledge, Documents, Sign, Spreadsheet, Studio, WhatsApp, Users/Companies/Access,
+  plus a series wrap-up post ("One Connected Business").
+
+## SERIES COMPLETE
+The Odoo 19 documentation series is finished: 9 batches, 81 posts, dated 08-12 to 09-08.
+All original, plain-English guides citing the official Odoo 19 docs. Covered: Inventory,
+Manufacturing/Purchase/Quality, Sales/CRM, Accounting, Website/eCommerce, HR, Marketing,
+Services/Project, Productivity.
+Possible future extensions (not yet written): POS deep-dive, eLearning, Frontdesk, Lunch,
+Data Cleaning, VoIP, IoT, Barcode, developer/API topics.
