@@ -105,10 +105,15 @@ Production: MANUAL batches when the user asks (no automated agent).
 - Batch 11: More new modules + essentials, 9 posts, dated 09-12 to 09-14 (3/day, morning slot).
   Covers Lunch, Data Cleaning, VoIP, Calendar, To-do, Contacts, In-App Purchases, Activities,
   and data import/export. All doc URLs verified 200.
+- Batch 12: ANGLE SERIES "Common Odoo Mistakes", 9 posts, dated 09-15 to 09-17 (3/day, morning slot).
+  Original experience-based posts (not doc-derived): Implementation, Inventory, Accounting,
+  Manufacturing, CRM/Sales, Purchase, Data import/migration, Over-customisation, Go-live.
+  Each cross-links a relevant official doc + a service page CTA. Fresh angle, strong search intent.
 
 Ideas for future Round 2 batches:
 - Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails,
   reporting/search essentials, WhatsApp deep-dive.
-- Angle series: "Common Odoo mistakes" per area; "Odoo setup/how-to" guides; "Odoo tips".
+- More angle series: "Odoo setup/how-to" guides; "Odoo tips & tricks"; "Odoo mistakes" per more areas
+  (Website/eCommerce, HR/Payroll, Project, Marketing).
 - Odoo 20: feature deep-dives as they are confirmed at Odoo Experience 2026 (late Sep).
 - More industries (retail, hospitality, healthcare, education) and more case studies.
