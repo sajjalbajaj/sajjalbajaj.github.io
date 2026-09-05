@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Purchase"
 date: 2026-09-16 10:00:00 +0530
-tags: [Odoo, Odoo 19, Purchase, Procurement, ERP]
+tags: [Odoo, Odoo 19, Purchase, Procurement, ERP, Data Quality, Contacts, Customer Management]
 description: "The purchasing mistakes that cost money in Odoo, from skipping the three-way match to ignoring vendor pricelists, and how to buy smarter."
 ---
 

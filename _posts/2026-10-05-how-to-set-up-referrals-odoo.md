@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Referrals in Odoo"
 date: 2026-10-05 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Referrals, HR]
+tags: [Odoo, Odoo 19, Setup, Referrals, HR, CRM, Lead Management, Employees]
 description: "A plain-English guide to setting up Odoo Referrals, so your employees help you hire great people by recommending candidates, with rewards to match."
 ---
 

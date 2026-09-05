@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Your Company in Odoo: First Steps"
 date: 2026-09-21 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Implementation, ERP]
+tags: [Odoo, Odoo 19, Setup, Implementation, ERP, Taxes, Compliance, ERP Implementation]
 description: "A plain-English guide to the very first steps of setting up Odoo: your company details, currency, logo and the basics that everything else builds on."
 ---
 

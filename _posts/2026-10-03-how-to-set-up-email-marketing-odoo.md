@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Email Marketing in Odoo"
 date: 2026-10-03 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Email Marketing, Marketing]
+tags: [Odoo, Odoo 19, Setup, Email Marketing, Marketing, Contacts, Customer Management, Best Practices]
 description: "A plain-English guide to setting up Odoo Email Marketing, so you can send targeted campaigns to the right people and see what actually works."
 ---
 

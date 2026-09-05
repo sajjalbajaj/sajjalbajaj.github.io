@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20: Release Date, Global and India Availability, and What's New (2026 Preview)"
 date: 2026-09-05 15:00:00 +0530
-tags: [Odoo, Odoo 20, Upgrade, ERP, India]
+tags: [Odoo, Odoo 20, Upgrade, ERP, India, Migration, ERP Migration, Accounting]
 description: "A complete preview of Odoo 20: when it launches, when it is available globally and in India, the new features expected, and what is getting upgraded from Odoo 19."
 ---
 

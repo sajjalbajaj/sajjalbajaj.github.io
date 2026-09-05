@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Website and eCommerce"
 date: 2026-09-18 08:00:00 +0530
-tags: [Odoo, Odoo 19, Website, eCommerce, ERP]
+tags: [Odoo, Odoo 19, Website, eCommerce, ERP, Inventory Management, Stock Control, Purchase]
 description: "The website and eCommerce mistakes that cost sales in Odoo, from a disconnected shop to neglected product data, and how to build a store that actually converts."
 ---
 

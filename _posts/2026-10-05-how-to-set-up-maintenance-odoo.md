@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Maintenance in Odoo"
 date: 2026-10-05 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Maintenance, Manufacturing]
+tags: [Odoo, Odoo 19, Setup, Maintenance, Manufacturing, Asset Management, Repairs, After Sales]
 description: "A plain-English guide to setting up Odoo Maintenance, so your equipment is looked after with planned upkeep and breakdowns are handled without chaos."
 ---
 

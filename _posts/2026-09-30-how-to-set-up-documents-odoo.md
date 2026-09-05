@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Documents in Odoo"
 date: 2026-09-30 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Documents, Productivity]
+tags: [Odoo, Odoo 19, Setup, Documents, Productivity, Procurement, Document Management, How To]
 description: "A plain-English guide to setting up Odoo Documents, so your files are organised, shared and connected to your business instead of scattered across drives."
 ---
 

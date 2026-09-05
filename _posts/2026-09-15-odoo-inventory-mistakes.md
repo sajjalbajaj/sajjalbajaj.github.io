@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Inventory (and How to Avoid Them)"
 date: 2026-09-15 09:00:00 +0530
-tags: [Odoo, Odoo 19, Inventory, ERP, Warehouse]
+tags: [Odoo, Odoo 19, Inventory, ERP, Warehouse, Inventory Management, Stock Control, Warehouse Management]
 description: "The inventory mistakes that quietly wreck stock accuracy in Odoo, from ignoring units of measure to skipping reordering rules, and how to fix them."
 ---
 

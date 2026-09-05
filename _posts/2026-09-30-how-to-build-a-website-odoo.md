@@ -2,7 +2,7 @@
 layout: post
 title: "How to Build a Website in Odoo"
 date: 2026-09-30 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Website, ERP]
+tags: [Odoo, Odoo 19, Setup, Website, ERP, Web Design, Events, Marketing]
 description: "A plain-English guide to building a website in Odoo, from pages to design blocks, so you get a professional site connected to the rest of your business."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20 in India: Availability, GST and What Indian Businesses Can Expect"
 date: 2026-09-05 13:00:00 +0530
-tags: [Odoo, Odoo 20, India, GST, ERP]
+tags: [Odoo, Odoo 20, India, GST, ERP, Accounting, Finance, Taxes]
 description: "When is Odoo 20 available in India, and what does it mean for GST, e-invoicing, TDS and Indian payroll? A clear guide for Indian businesses on Odoo."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Reordering Rules in Odoo"
 date: 2026-09-23 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Inventory, Purchase]
+tags: [Odoo, Odoo 19, Setup, Inventory, Purchase, Inventory Management, Stock Control, Procurement]
 description: "A plain-English guide to setting up reordering rules in Odoo, so the system tells you what to buy and when, ending both stockouts and overstocking."
 ---
 

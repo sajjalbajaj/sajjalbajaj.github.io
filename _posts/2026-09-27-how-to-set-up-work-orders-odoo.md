@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Work Orders and the Shop Floor in Odoo"
 date: 2026-09-27 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP]
+tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP, Production Planning, Planning, Scheduling]
 description: "A plain-English guide to setting up work orders and the shop floor in Odoo, so your manufacturing steps, work centers and operators all stay in sync."
 ---
 

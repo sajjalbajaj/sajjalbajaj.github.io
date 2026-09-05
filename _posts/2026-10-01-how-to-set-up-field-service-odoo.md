@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Field Service in Odoo"
 date: 2026-10-01 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Field Service, Services]
+tags: [Odoo, Odoo 19, Setup, Field Service, Services, Maintenance, Asset Management, Repairs]
 description: "A plain-English guide to setting up Odoo Field Service, so on-site jobs are scheduled, dispatched and invoiced smoothly, from the office to the technician."
 ---
 

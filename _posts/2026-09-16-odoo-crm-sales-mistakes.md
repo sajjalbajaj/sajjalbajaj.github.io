@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo CRM and Sales"
 date: 2026-09-16 09:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, Sales, ERP]
+tags: [Odoo, Odoo 19, CRM, Sales, ERP, Data Cleaning, Data Quality, Activities]
 description: "The CRM and sales mistakes that quietly cost deals in Odoo, from an overcomplicated pipeline to neglected follow-ups, and how to fix them."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Timesheets in Odoo"
 date: 2026-09-27 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Timesheets, Project]
+tags: [Odoo, Odoo 19, Setup, Timesheets, Project, Project Management, Services, Planning]
 description: "A plain-English guide to setting up timesheets in Odoo, so time is recorded easily, projects show their true cost, and billable work gets invoiced."
 ---
 

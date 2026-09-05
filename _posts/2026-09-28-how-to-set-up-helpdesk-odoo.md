@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up a Helpdesk in Odoo"
 date: 2026-09-28 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Helpdesk, Support]
+tags: [Odoo, Odoo 19, Setup, Helpdesk, Support, CRM, Lead Management, Website]
 description: "A plain-English guide to setting up Odoo Helpdesk, with teams, ticket channels and stages, so customer requests are captured and nothing gets lost."
 ---
 

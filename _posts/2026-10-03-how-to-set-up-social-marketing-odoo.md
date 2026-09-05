@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Social Marketing in Odoo"
 date: 2026-10-03 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Social Marketing, Marketing]
+tags: [Odoo, Odoo 19, Setup, Social Marketing, Marketing, How To, Business Automation, Digital Transformation]
 description: "A plain-English guide to setting up Odoo Social Marketing, so you can manage your social posts and monitor engagement from one place inside your business."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Point of Sale in Odoo: Selling in Person, Connected to Everything"
 date: 2026-09-09 08:00:00 +0530
-tags: [Odoo, Odoo 19, Point of Sale, Retail, ERP]
+tags: [Odoo, Odoo 19, Point of Sale, Retail, ERP, Accounting, Finance, Inventory Management]
 description: "How Odoo Point of Sale runs your shop or counter and stays connected to inventory, sales and accounting, so in-person selling is part of one system."
 ---
 

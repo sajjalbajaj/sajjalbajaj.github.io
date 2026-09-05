@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Project"
 date: 2026-09-19 08:00:00 +0530
-tags: [Odoo, Odoo 19, Project, Timesheets, ERP]
+tags: [Odoo, Odoo 19, Project, Timesheets, ERP, Project Management, Services, Planning]
 description: "The project management mistakes that quietly erode margins in Odoo, from untracked time to disconnected billing, and how to run projects that stay profitable."
 ---
 

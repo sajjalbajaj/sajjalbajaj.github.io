@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Recruitment in Odoo"
 date: 2026-09-26 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Recruitment, HR]
+tags: [Odoo, Odoo 19, Setup, Recruitment, HR, ERP Implementation, Manufacturing, MRP]
 description: "A plain-English guide to setting up Odoo Recruitment, so you can post jobs, manage candidates through clear stages, and hire without losing track of anyone."
 ---
 

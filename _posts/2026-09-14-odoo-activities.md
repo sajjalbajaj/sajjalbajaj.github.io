@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Activities: Never Drop a Follow-Up Again"
 date: 2026-09-14 09:00:00 +0530
-tags: [Odoo, Odoo 19, CRM, Productivity, ERP]
+tags: [Odoo, Odoo 19, CRM, Productivity, ERP, To-do, Task Management, Activities]
 description: "How Odoo Activities let you schedule follow-ups, calls and to-dos against any record, so the next step is always clear and nothing gets forgotten."
 ---
 

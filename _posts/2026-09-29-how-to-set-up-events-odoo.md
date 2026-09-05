@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Events in Odoo"
 date: 2026-09-29 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Events, Marketing]
+tags: [Odoo, Odoo 19, Setup, Events, Marketing, CRM, Sales Management, Lead Management]
 description: "A plain-English guide to setting up Odoo Events, from registration to tickets, so you can run events online and in person without the usual chaos."
 ---
 

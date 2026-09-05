@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Marketing"
 date: 2026-09-19 09:00:00 +0530
-tags: [Odoo, Odoo 19, Marketing, Email Marketing, ERP]
+tags: [Odoo, Odoo 19, Marketing, Email Marketing, ERP, Data Quality, Contacts, Customer Management]
 description: "The marketing mistakes that waste effort in Odoo, from blasting one message to everyone to ignoring the results, and how to market smarter with connected data."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Barcode in Odoo: Faster, More Accurate Warehouse Operations"
 date: 2026-09-10 09:00:00 +0530
-tags: [Odoo, Odoo 19, Barcode, Inventory Management, Warehouse Management, ERP]
+tags: [Odoo, Odoo 19, Barcode, Inventory Management, Warehouse Management, ERP, Stock Control, Logistics]
 description: "How the Odoo Barcode app speeds up and de-errors warehouse work, letting staff scan to receive, pick, pack and count instead of typing."
 ---
 

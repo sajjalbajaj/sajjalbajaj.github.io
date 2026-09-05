@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up a Warehouse and Locations in Odoo"
 date: 2026-09-23 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Inventory, Warehouse]
+tags: [Odoo, Odoo 19, Setup, Inventory, Warehouse, Inventory Management, Stock Control, Warehouse Management]
 description: "A plain-English guide to setting up warehouses and locations in Odoo, so you always know where your stock is and your operations run smoothly."
 ---
 

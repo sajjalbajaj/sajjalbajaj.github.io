@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Products in Odoo"
 date: 2026-09-22 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Products, ERP]
+tags: [Odoo, Odoo 19, Setup, Products, ERP, Accounting, Finance, Inventory Management]
 description: "A plain-English guide to setting up products in Odoo, from product types to units of measure and variants, so sales, stock and accounting all behave."
 ---
 

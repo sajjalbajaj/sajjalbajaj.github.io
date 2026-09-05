@@ -2,7 +2,7 @@
 layout: post
 title: "The Mistake of Over-Customising Odoo"
 date: 2026-09-17 09:00:00 +0530
-tags: [Odoo, Odoo 19, Customization, Implementation, ERP]
+tags: [Odoo, Odoo 19, Customization, Implementation, ERP, ERP Implementation, Expenses, Finance]
 description: "Why over-customising is one of the costliest Odoo mistakes, how it inflates cost and complicates upgrades, and how to know when customising is actually right."
 ---
 

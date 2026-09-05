@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes When Importing Data Into Odoo"
 date: 2026-09-17 08:00:00 +0530
-tags: [Odoo, Odoo 19, Migration, Implementation, ERP]
+tags: [Odoo, Odoo 19, Migration, Implementation, ERP, Data Quality, Contacts, Customer Management]
 description: "The data import and migration mistakes that haunt Odoo projects, from importing dirty data to bad field mapping, and how to get it right the first time."
 ---
 

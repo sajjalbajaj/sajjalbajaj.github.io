@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Knowledge in Odoo"
 date: 2026-10-02 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Knowledge, Productivity]
+tags: [Odoo, Odoo 19, Setup, Knowledge, Productivity, ERP Implementation, Project Management, Services]
 description: "A plain-English guide to setting up Odoo Knowledge, so your company's know-how lives in one organised, searchable place instead of in people's heads."
 ---
 

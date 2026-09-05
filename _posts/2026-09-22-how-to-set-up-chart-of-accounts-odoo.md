@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Your Chart of Accounts in Odoo"
 date: 2026-09-22 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Accounting, ERP]
+tags: [Odoo, Odoo 19, Setup, Accounting, ERP, Finance, Expenses, How To]
 description: "A plain-English guide to setting up your chart of accounts in Odoo, the backbone of your books, so your financial reporting is right from day one."
 ---
 

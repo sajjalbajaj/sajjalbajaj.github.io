@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Time Off in Odoo"
 date: 2026-09-28 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Time Off, HR]
+tags: [Odoo, Odoo 19, Setup, Time Off, HR, Calendar, Scheduling, Employees]
 description: "A plain-English guide to setting up Odoo Time Off, with leave types, allocations and approvals, so leave is requested, approved and tracked without the paperwork."
 ---
 

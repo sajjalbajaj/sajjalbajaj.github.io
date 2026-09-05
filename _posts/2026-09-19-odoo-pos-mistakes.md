@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Point of Sale"
 date: 2026-09-19 10:00:00 +0530
-tags: [Odoo, Odoo 19, Point of Sale, Retail, ERP]
+tags: [Odoo, Odoo 19, Point of Sale, Retail, ERP, Barcode, Warehouse Management, Accounting]
 description: "The point-of-sale mistakes that cause pain in Odoo retail, from a disconnected till to messy product setup, and how to run a shop floor that just works."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up SMS Marketing in Odoo"
 date: 2026-10-03 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, SMS Marketing, Marketing]
+tags: [Odoo, Odoo 19, Setup, SMS Marketing, Marketing, Contacts, Customer Management, In-App Purchase]
 description: "A plain-English guide to setting up Odoo SMS Marketing, so you can reach customers directly on their phones with short, timely, high-open-rate messages."
 ---
 

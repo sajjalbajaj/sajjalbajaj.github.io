@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Contacts: The Address Book Behind Everything"
 date: 2026-09-13 10:00:00 +0530
-tags: [Odoo, Odoo 19, Contacts, CRM, ERP]
+tags: [Odoo, Odoo 19, Contacts, CRM, ERP, Customer Management, Accounting, Finance]
 description: "How Odoo Contacts acts as the shared address book for your whole system, so customers, vendors and people are recorded once and used everywhere."
 ---
 

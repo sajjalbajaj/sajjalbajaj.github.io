@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes with Odoo Multi-Company and Access Rights"
 date: 2026-09-20 10:00:00 +0530
-tags: [Odoo, Odoo 19, Multi-Company, Security, ERP]
+tags: [Odoo, Odoo 19, Multi-Company, Security, ERP, Warehouse Management, Logistics, Manufacturing]
 description: "The multi-company and access-rights mistakes that cause confusion and risk in Odoo, from giving everyone admin to muddled company setup, and how to get it right."
 ---
 

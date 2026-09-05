@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20 and Agentic AI: The Headline of This Release"
 date: 2026-09-05 10:00:00 +0530
-tags: [Odoo, Odoo 20, AI, Automation, ERP]
+tags: [Odoo, Odoo 20, AI, Automation, ERP, Upgrade, Business Automation, Digital Transformation]
 description: "Agentic AI is the flagship of Odoo 20. What does it actually mean, how is it different from earlier AI, and what could it do for your business? A plain-English guide."
 ---
 

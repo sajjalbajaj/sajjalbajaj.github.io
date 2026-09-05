@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Accounting"
 date: 2026-09-15 10:00:00 +0530
-tags: [Odoo, Odoo 19, Accounting, Finance, ERP]
+tags: [Odoo, Odoo 19, Accounting, Finance, ERP, Bank Reconciliation, Taxes, Compliance]
 description: "The accounting mistakes that cause the most pain in Odoo, from a rushed chart of accounts to skipping bank reconciliation, and how to keep your books clean."
 ---
 

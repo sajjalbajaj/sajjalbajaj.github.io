@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20 Release Date and Global Availability"
 date: 2026-09-05 14:00:00 +0530
-tags: [Odoo, Odoo 20, Upgrade, ERP]
+tags: [Odoo, Odoo 20, Upgrade, ERP, Migration, ERP Migration, Planning, Scheduling]
 description: "When does Odoo 20 launch, when is it available globally, and when is it actually ready for production? A clear, plain-English guide to the Odoo 20 timeline."
 ---
 

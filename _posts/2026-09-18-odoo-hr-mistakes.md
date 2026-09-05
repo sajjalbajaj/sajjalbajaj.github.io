@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo HR"
 date: 2026-09-18 09:00:00 +0530
-tags: [Odoo, Odoo 19, HR, Employees, ERP]
+tags: [Odoo, Odoo 19, HR, Employees, ERP, Payroll, Appraisals, Performance Management]
 description: "The HR mistakes that undermine Odoo's people apps, from incomplete employee records to unused self-service, and how to run HR that people actually trust."
 ---
 

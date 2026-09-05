@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Taxes and Fiscal Positions in Odoo"
 date: 2026-09-22 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Accounting, ERP]
+tags: [Odoo, Odoo 19, Setup, Accounting, ERP, Data Import, Migration, Finance]
 description: "A plain-English guide to configuring taxes and fiscal positions in Odoo, so the right tax is applied automatically on every invoice and bill."
 ---
 

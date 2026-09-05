@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20: What's Getting Upgraded From Odoo 19"
 date: 2026-09-05 11:00:00 +0530
-tags: [Odoo, Odoo 20, Upgrade, ERP]
+tags: [Odoo, Odoo 20, Upgrade, ERP, Migration, ERP Migration, Accounting, Finance]
 description: "Beyond the brand-new features, what existing parts of Odoo are getting better in Odoo 20? A preview of the upgrades to payroll, accounting, CRM, inventory and more."
 ---
 

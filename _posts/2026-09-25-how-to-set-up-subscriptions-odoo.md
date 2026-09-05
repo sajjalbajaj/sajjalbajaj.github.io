@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Subscriptions in Odoo"
 date: 2026-09-25 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Subscriptions, Sales]
+tags: [Odoo, Odoo 19, Setup, Subscriptions, Sales, Recurring Revenue, How To, Business Automation]
 description: "A plain-English guide to setting up recurring billing in Odoo Subscriptions, so you can charge customers automatically and manage renewals with ease."
 ---
 

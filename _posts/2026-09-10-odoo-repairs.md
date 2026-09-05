@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Repairs: Managing Repair Jobs End to End"
 date: 2026-09-10 08:00:00 +0530
-tags: [Odoo, Odoo 19, Repairs, Inventory Management, ERP]
+tags: [Odoo, Odoo 19, Repairs, Inventory Management, ERP, After Sales, Stock Control, Business Automation]
 description: "How Odoo Repairs helps you manage repair jobs, from logging the item and parts used to tracking status and billing, all connected to inventory."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up a Bill of Materials in Odoo"
 date: 2026-09-24 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP]
+tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Stock Control, Production Planning]
 description: "A plain-English guide to setting up a bill of materials in Odoo, the recipe behind everything you make, so manufacturing, stock and costing all work."
 ---
 

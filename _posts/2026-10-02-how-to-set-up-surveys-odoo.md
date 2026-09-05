@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Surveys in Odoo"
 date: 2026-10-02 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Surveys, Marketing]
+tags: [Odoo, Odoo 19, Setup, Surveys, Marketing, Contacts, Customer Management, Website]
 description: "A plain-English guide to setting up Odoo Surveys, so you can gather feedback, run quizzes and collect data with results that flow into your business."
 ---
 

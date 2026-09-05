@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Payroll"
 date: 2026-09-18 10:00:00 +0530
-tags: [Odoo, Odoo 19, Payroll, HR, ERP]
+tags: [Odoo, Odoo 19, Payroll, HR, ERP, Taxes, Compliance, Employees]
 description: "The payroll mistakes that cause the most trouble in Odoo, from wrong salary structures to disconnected inputs, and how to run payroll people can trust."
 ---
 

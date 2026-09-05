@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes with Odoo Reporting and Dashboards"
 date: 2026-09-20 09:00:00 +0530
-tags: [Odoo, Odoo 19, Reporting, Dashboards, ERP]
+tags: [Odoo, Odoo 19, Reporting, Dashboards, ERP, Data Quality, Contacts, Customer Management]
 description: "The reporting mistakes that leave Odoo users flying blind, from never using built-in reports to trusting dashboards built on dirty data, and how to fix them."
 ---
 

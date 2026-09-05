@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Bank Reconciliation in Odoo"
 date: 2026-09-26 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Accounting, Finance]
+tags: [Odoo, Odoo 19, Setup, Accounting, Finance, Bank Reconciliation, How To, Business Automation]
 description: "A plain-English guide to setting up bank reconciliation in Odoo, so your records match your actual bank balance and your books stay accurate."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Point of Sale in Odoo"
 date: 2026-09-25 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Point of Sale, Retail]
+tags: [Odoo, Odoo 19, Setup, Point of Sale, Retail, Barcode, Warehouse Management, Stock Control]
 description: "A plain-English guide to setting up Odoo Point of Sale, from products and payment to hardware and offline mode, so your shop floor runs smoothly."
 ---
 

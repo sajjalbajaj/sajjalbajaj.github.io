@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20: The New Features Launching"
 date: 2026-09-05 12:00:00 +0530
-tags: [Odoo, Odoo 20, Features, ERP, AI]
+tags: [Odoo, Odoo 20, Features, ERP, AI, Automation, Upgrade, Business Automation]
 description: "What genuinely new features is Odoo 20 launching? A plain-English preview of the fresh additions, from agentic AI to a redesigned mobile app and new industries."
 ---
 

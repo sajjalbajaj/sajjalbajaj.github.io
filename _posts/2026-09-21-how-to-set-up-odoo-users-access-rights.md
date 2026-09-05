@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Users and Access Rights in Odoo"
 date: 2026-09-21 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Security, ERP]
+tags: [Odoo, Odoo 19, Setup, Security, ERP, Accounting, Finance, Inventory Management]
 description: "A plain-English guide to adding users and setting access rights in Odoo, so everyone can do their job and nobody can see or change what they should not."
 ---
 

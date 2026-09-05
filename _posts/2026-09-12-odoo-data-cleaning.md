@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Data Cleaning: Keeping Your Records Tidy"
 date: 2026-09-12 09:00:00 +0530
-tags: [Odoo, Odoo 19, Data Cleaning, Productivity, ERP]
+tags: [Odoo, Odoo 19, Data Cleaning, Productivity, ERP, Data Quality, Contacts, Customer Management]
 description: "How Odoo Data Cleaning finds duplicate contacts, merges records and standardises formatting, so your database stays trustworthy over time."
 ---
 

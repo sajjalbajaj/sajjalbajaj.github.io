@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Expense Management in Odoo"
 date: 2026-09-26 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Expenses, HR]
+tags: [Odoo, Odoo 19, Setup, Expenses, HR, Accounting, Finance, Employees]
 description: "A plain-English guide to setting up Odoo Expenses, so employees can submit costs easily, managers approve them, and everything flows into your accounts."
 ---
 

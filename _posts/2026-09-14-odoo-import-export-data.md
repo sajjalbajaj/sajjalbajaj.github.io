@@ -2,7 +2,7 @@
 layout: post
 title: "Importing and Exporting Data in Odoo"
 date: 2026-09-14 10:00:00 +0530
-tags: [Odoo, Odoo 19, Migration, Productivity, ERP]
+tags: [Odoo, Odoo 19, Migration, Productivity, ERP, Contacts, Customer Management, Data Import]
 description: "How Odoo lets you import your existing data from spreadsheets and export records back out, which matters most when you are getting started or moving systems."
 ---
 

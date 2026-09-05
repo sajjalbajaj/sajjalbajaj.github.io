@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo In-App Purchases: Paid Services When You Need Them"
 date: 2026-09-14 08:00:00 +0530
-tags: [Odoo, Odoo 19, Productivity, ERP]
+tags: [Odoo, Odoo 19, Productivity, ERP, In-App Purchase, Purchase, Procurement, Website]
 description: "How Odoo In-App Purchases let you use paid external services like SMS, lead enrichment and document scanning on a pay-per-use basis, without contracts."
 ---
 

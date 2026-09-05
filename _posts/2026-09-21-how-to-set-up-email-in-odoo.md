@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Email in Odoo"
 date: 2026-09-21 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Email, ERP]
+tags: [Odoo, Odoo 19, Setup, Email, ERP, Documents, Document Management, How To]
 description: "A plain-English guide to configuring outgoing and incoming email in Odoo, so quotations, invoices and notifications actually reach people reliably."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Sign for Electronic Signatures in Odoo"
 date: 2026-09-30 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Sign, Productivity]
+tags: [Odoo, Odoo 19, Setup, Sign, Productivity, E-Signature, Documents, Document Management]
 description: "A plain-English guide to setting up Odoo Sign, so you can send documents for electronic signature and get contracts signed in minutes, not days."
 ---
 

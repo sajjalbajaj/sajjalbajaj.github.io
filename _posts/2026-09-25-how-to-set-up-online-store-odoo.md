@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up an Online Store in Odoo"
 date: 2026-09-25 08:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, eCommerce, Website]
+tags: [Odoo, Odoo 19, Setup, eCommerce, Website, Accounting, Finance, Inventory Management]
 description: "A plain-English guide to setting up your online store in Odoo eCommerce, from products to payment and delivery, so you can start selling online properly."
 ---
 

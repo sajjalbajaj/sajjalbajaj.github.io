@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Rental: Renting Out Products the Simple Way"
 date: 2026-09-09 09:00:00 +0530
-tags: [Odoo, Odoo 19, Rental, Sales, ERP]
+tags: [Odoo, Odoo 19, Rental, Sales, ERP, Leasing, Stock Control, Fleet]
 description: "How Odoo Rental manages renting products out, from availability and pricing to pickup and return, so a rental business runs on one connected system."
 ---
 

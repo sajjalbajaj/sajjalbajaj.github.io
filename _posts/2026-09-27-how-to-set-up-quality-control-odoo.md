@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Quality Control in Odoo"
 date: 2026-09-27 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Quality, Manufacturing]
+tags: [Odoo, Odoo 19, Setup, Quality, Manufacturing, MRP, Quality Control, How To]
 description: "A plain-English guide to setting up quality control in Odoo, with control points and checks that catch problems before they reach your customers."
 ---
 

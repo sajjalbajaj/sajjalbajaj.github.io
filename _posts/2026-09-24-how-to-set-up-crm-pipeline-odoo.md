@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Your CRM Pipeline in Odoo"
 date: 2026-09-24 09:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, CRM, Sales]
+tags: [Odoo, Odoo 19, Setup, CRM, Sales, Sales Management, Lead Management, Website]
 description: "A plain-English guide to setting up your sales pipeline in Odoo CRM, with stages that fit how you really sell, so opportunities move and nothing stalls."
 ---
 

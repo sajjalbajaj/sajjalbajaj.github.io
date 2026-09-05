@@ -2,7 +2,7 @@
 layout: post
 title: "The Most Common Odoo Implementation Mistakes"
 date: 2026-09-15 08:00:00 +0530
-tags: [Odoo, Odoo 19, Implementation, ERP, Project Management]
+tags: [Odoo, Odoo 19, Implementation, ERP, Project Management, Data Quality, ERP Implementation, Best Practices]
 description: "The mistakes that most often derail an Odoo implementation, from over-customising to skipping training, and how to avoid them from the start."
 ---
 

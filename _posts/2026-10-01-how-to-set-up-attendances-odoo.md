@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Attendances in Odoo"
 date: 2026-10-01 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Attendances, HR]
+tags: [Odoo, Odoo 19, Setup, Attendances, HR, Warehouse Management, Logistics, Employees]
 description: "A plain-English guide to setting up Odoo Attendances, so employees can check in and out easily and you have an accurate record of hours worked."
 ---
 

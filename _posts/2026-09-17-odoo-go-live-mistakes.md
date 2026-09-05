@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes at Odoo Go-Live"
 date: 2026-09-17 10:00:00 +0530
-tags: [Odoo, Odoo 19, Implementation, Project Management, ERP]
+tags: [Odoo, Odoo 19, Implementation, Project Management, ERP, ERP Implementation, Best Practices, Services]
 description: "The go-live mistakes that turn a good Odoo project rocky, from launching without testing to pulling support too soon, and how to land it smoothly."
 ---
 

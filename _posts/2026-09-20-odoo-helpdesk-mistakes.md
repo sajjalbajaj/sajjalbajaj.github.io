@@ -2,7 +2,7 @@
 layout: post
 title: "Common Mistakes in Odoo Helpdesk"
 date: 2026-09-20 08:00:00 +0530
-tags: [Odoo, Odoo 19, Helpdesk, Support, ERP]
+tags: [Odoo, Odoo 19, Helpdesk, Support, ERP, Contacts, Customer Management, Customer Support]
 description: "The helpdesk mistakes that frustrate customers in Odoo, from lost tickets to no clear ownership, and how to run support that keeps people happy."
 ---
 

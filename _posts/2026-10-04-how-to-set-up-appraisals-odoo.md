@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Appraisals in Odoo"
 date: 2026-10-04 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Appraisals, HR]
+tags: [Odoo, Odoo 19, Setup, Appraisals, HR, Employees, Performance Management, Discuss]
 description: "A plain-English guide to setting up Odoo Appraisals, so performance reviews are structured, fair and actually happen, instead of being forgotten."
 ---
 

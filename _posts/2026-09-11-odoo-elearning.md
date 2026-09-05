@@ -2,7 +2,7 @@
 layout: post
 title: "eLearning in Odoo: Courses and Training That Scale"
 date: 2026-09-11 08:00:00 +0530
-tags: [Odoo, Odoo 19, eLearning, Website, ERP]
+tags: [Odoo, Odoo 19, eLearning, Website, ERP, Training, Contacts, Customer Management]
 description: "How Odoo eLearning lets you build and deliver online courses, for training staff, onboarding customers, or selling knowledge as a product."
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Calendar: Scheduling That Connects to Your Work"
 date: 2026-09-13 08:00:00 +0530
-tags: [Odoo, Odoo 19, Calendar, Productivity, ERP]
+tags: [Odoo, Odoo 19, Calendar, Productivity, ERP, Scheduling, Contacts, Customer Management]
 description: "How Odoo Calendar keeps meetings and activities in one place, connected to your contacts and work, and syncs with Google and Outlook."
 ---
 

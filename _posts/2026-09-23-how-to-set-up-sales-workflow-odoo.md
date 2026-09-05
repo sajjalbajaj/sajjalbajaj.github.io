@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up Your Sales Workflow in Odoo: Quotation to Invoice"
 date: 2026-09-23 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Sales, ERP]
+tags: [Odoo, Odoo 19, Setup, Sales, ERP, Accounting, Finance, Taxes]
 description: "A plain-English guide to setting up the sales flow in Odoo, from quotation to sales order to invoice, so selling is smooth and nothing is lost along the way."
 ---
 
