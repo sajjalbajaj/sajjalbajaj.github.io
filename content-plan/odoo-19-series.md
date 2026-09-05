@@ -112,17 +112,18 @@ Production: MANUAL batches when the user asks (no automated agent).
 - Batch 13: "Common Odoo Mistakes" pt.2, 9 posts, dated 09-18 to 09-20 (3/day, morning).
   Website/eCommerce, HR, Payroll, Project, Marketing, Point of Sale, Helpdesk, Reporting/Dashboards,
   Multi-company/Access rights. Same format (doc + service CTA). Mistakes angle now covers all major areas.
-- Batch 14: ANGLE SERIES "Odoo Setup / How-To", 9 posts, dated 09-21 to 09-23 (3/day, morning).
-  Step-by-step "how to set up X in Odoo" following a real implementation order: company basics, users &
-  access rights, email, chart of accounts, taxes & fiscal positions, products, warehouse & locations,
-  reordering rules, sales workflow (quote to invoice). Each cross-links a verified doc + service CTA.
-  High-intent "how to set up" search coverage.
+- Batch 14: "Odoo Setup / How-To" pt.1, 9 posts, dated 09-21 to 09-23 (3/day, morning).
+  Company basics, users & access rights, email, chart of accounts, taxes & fiscal positions, products,
+  warehouse & locations, reordering rules, sales workflow (quote to invoice). Verified doc + service CTA.
+- Batch 15: "Odoo Setup / How-To" pt.2, 9 posts, dated 09-24 to 09-26 (3/day, morning).
+  Bill of materials, CRM pipeline, project, online store/eCommerce, point of sale, subscriptions,
+  bank reconciliation, expense management, recruitment. Each cross-links a verified doc + service CTA.
 
 Ideas for future Round 2 batches:
 - Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails,
   reporting/search essentials, WhatsApp deep-dive.
-- More how-to guides: manufacturing (BoM/work centers), CRM pipeline, subscriptions, website/eCommerce,
-  bank reconciliation, expenses, recruitment, project setup.
+- More how-to guides: work centers/work orders, quality control, timesheets, helpdesk, email marketing,
+  events, appointments, time off, fleet, documents/sign, multi-company setup.
 - "Odoo tips & tricks" shorter posts.
 - Odoo 20 feature deep-dives once confirmed at Odoo Experience (late Sep 2026).
 - More industries + case studies.
