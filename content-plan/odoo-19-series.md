@@ -102,9 +102,13 @@ Production: MANUAL batches when the user asks (no automated agent).
 
 - Batch 10: New modules, 9 posts, dated 09-09 to 09-11 (3/day, morning slot).
   Covers Point of Sale, Rental, Maintenance, Repairs, Barcode, PLM, eLearning, IoT, Frontdesk.
+- Batch 11: More new modules + essentials, 9 posts, dated 09-12 to 09-14 (3/day, morning slot).
+  Covers Lunch, Data Cleaning, VoIP, Calendar, To-do, Contacts, In-App Purchases, Activities,
+  and data import/export. All doc URLs verified 200.
 
 Ideas for future Round 2 batches:
-- Remaining new modules: Lunch, Data Cleaning, VoIP, Members, Calendar, Approvals, To-do.
+- Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails,
+  reporting/search essentials, WhatsApp deep-dive.
 - Angle series: "Common Odoo mistakes" per area; "Odoo setup/how-to" guides; "Odoo tips".
 - Odoo 20: feature deep-dives as they are confirmed at Odoo Experience 2026 (late Sep).
 - More industries (retail, hospitality, healthcare, education) and more case studies.
