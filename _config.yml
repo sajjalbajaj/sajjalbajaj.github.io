@@ -75,3 +75,4 @@ exclude:
   - blog-post-template.md
   - content-plan
   - cv-pdf
+  - .cocoindex

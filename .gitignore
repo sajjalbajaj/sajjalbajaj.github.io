@@ -18,3 +18,9 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
+
+# CocoIndex (local dev-only semantic search tooling; never published)
+.cocoindex/
+
+# Local-only CV PDF (not published)
+cv-pdf/
