@@ -124,14 +124,19 @@ Production: MANUAL batches when the user asks (no automated agent).
 - Batch 17: "Odoo Setup / How-To" pt.4, 9 posts, dated 09-30 to 10-02 (3/day, morning).
   Website builder, documents, sign, field service, planning, attendances, surveys, knowledge, fleet.
   Each cross-links a verified doc + service CTA.
-  How-To angle now = 36 posts (batches 14-17) covering most of the product.
+- Batch 18: "Odoo Setup / How-To" pt.5, 9 posts, dated 10-03 to 10-05 (3/day, morning).
+  Email marketing, SMS marketing, social marketing, live chat, discuss, appraisals, referrals,
+  maintenance, studio. Each cross-links a verified doc + service CTA.
+  How-To angle now = 45 posts (batches 14-18). NOTE: how-to well is now largely exhausted; nearly
+  every major app is covered. Strongly consider off-site (LinkedIn/backlinks), real case studies,
+  or Odoo 20 posts over yet more how-to batches.
 
 Ideas for future Round 2 batches:
-- Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails,
-  reporting/search essentials, WhatsApp deep-dive.
-- Remaining how-to guides: email marketing, SMS, social marketing, appraisals, studio, discuss,
-  live chat, referrals, spreadsheet/dashboards, IoT setup, barcode setup, maintenance.
-- "Odoo tips & tricks" shorter posts.
+- Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails.
+- Remaining how-to guides (thin pickings): spreadsheet/dashboards, IoT setup, barcode setup,
+  repairs, rental, PLM, POS restaurant, elearning, frontdesk, lunch, data cleaning, VoIP, calendar.
+- "Odoo tips & tricks" shorter posts (fresh angle if continuing on-site).
+- PRIORITY: off-site distribution (LinkedIn drafts), real case studies, Odoo 20 features (late Sep launch).
 - Odoo 20 feature deep-dives once confirmed at Odoo Experience (late Sep 2026).
 - More industries + case studies.
 - Odoo 20: feature deep-dives as they are confirmed at Odoo Experience 2026 (late Sep).
