@@ -92,5 +92,19 @@ The Odoo 19 documentation series is finished: 9 batches, 81 posts, dated 08-12 t
 All original, plain-English guides citing the official Odoo 19 docs. Covered: Inventory,
 Manufacturing/Purchase/Quality, Sales/CRM, Accounting, Website/eCommerce, HR, Marketing,
 Services/Project, Productivity.
-Possible future extensions (not yet written): POS deep-dive, eLearning, Frontdesk, Lunch,
-Data Cleaning, VoIP, IoT, Barcode, developer/API topics.
+Possible future extensions (not yet written): Lunch, Data Cleaning, VoIP, developer/API topics.
+
+## ROUND 2 - fresh angles / new modules (decided 2026-08-27)
+Strategy chosen with the user: NO rewording of existing posts (duplicate-content / cannibalization risk).
+Instead, write GENUINELY NEW content: modules not yet covered, new angles (how-to/setup, common mistakes,
+tips, advanced), and Odoo 20 feature posts once confirmed (Odoo 20 launches late Sep 2026).
+Production: MANUAL batches when the user asks (no automated agent).
+
+- Batch 10: New modules, 9 posts, dated 09-09 to 09-11 (3/day, morning slot).
+  Covers Point of Sale, Rental, Maintenance, Repairs, Barcode, PLM, eLearning, IoT, Frontdesk.
+
+Ideas for future Round 2 batches:
+- Remaining new modules: Lunch, Data Cleaning, VoIP, Members, Calendar, Approvals, To-do.
+- Angle series: "Common Odoo mistakes" per area; "Odoo setup/how-to" guides; "Odoo tips".
+- Odoo 20: feature deep-dives as they are confirmed at Odoo Experience 2026 (late Sep).
+- More industries (retail, hospitality, healthcare, education) and more case studies.
