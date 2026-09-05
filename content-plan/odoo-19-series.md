@@ -118,12 +118,16 @@ Production: MANUAL batches when the user asks (no automated agent).
 - Batch 15: "Odoo Setup / How-To" pt.2, 9 posts, dated 09-24 to 09-26 (3/day, morning).
   Bill of materials, CRM pipeline, project, online store/eCommerce, point of sale, subscriptions,
   bank reconciliation, expense management, recruitment. Each cross-links a verified doc + service CTA.
+- Batch 16: "Odoo Setup / How-To" pt.3, 9 posts, dated 09-27 to 09-29 (3/day, morning).
+  Work orders/shop floor, quality control, timesheets, helpdesk, time off, appointments, events,
+  marketing automation, multi-company. Each cross-links a verified doc + service CTA.
+  How-To angle now = 27 posts (batches 14-16) covering most of the product.
 
 Ideas for future Round 2 batches:
 - Remaining new modules: Members (no dedicated 19.0 doc), Approvals, Appraisal goals, digest emails,
   reporting/search essentials, WhatsApp deep-dive.
-- More how-to guides: work centers/work orders, quality control, timesheets, helpdesk, email marketing,
-  events, appointments, time off, fleet, documents/sign, multi-company setup.
+- More how-to guides: fleet, documents/sign, field service, email marketing, SMS, social marketing,
+  surveys, attendances, appraisals, planning, knowledge, studio, website builder.
 - "Odoo tips & tricks" shorter posts.
 - Odoo 20 feature deep-dives once confirmed at Odoo Experience (late Sep 2026).
 - More industries + case studies.
