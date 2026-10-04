@@ -3,6 +3,7 @@ layout: post
 title: "Pricelists and Discounts in Odoo Sales"
 date: 2026-08-18 10:00:00 +0530
 tags: [Odoo, Odoo 19, Sales, ERP, Invoicing, Sales Management, Business Automation, ERP Cost]
+hub: sales
 description: "How Odoo pricelists and discounts let you price the right way for each customer, quantity or period, without constant manual overrides."
 ---
 

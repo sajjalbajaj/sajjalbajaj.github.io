@@ -1,0 +1,150 @@
+{%- comment -%}
+  Single source of SEO metadata for every page: title, description, canonical, robots,
+  Open Graph, Twitter and one JSON-LD graph. Replaces {% raw %}{% seo %}{% endraw %} so each page
+  carries exactly one page-level entity (no duplicate BlogPosting/Article blocks).
+
+  Front matter it understands (all optional):
+    seo_title       full <title> override (otherwise "Title | Sajjal Bajaj")
+    description     meta description (keep under ~160 characters)
+    image / image_alt   social image (defaults to the site portrait)
+    robots          e.g. "noindex, follow"
+    schema_type     WebPage | CollectionPage | ProfilePage | Article (posts default to BlogPosting)
+    last_modified_at  truthful "updated" date, used for dateModified and the sitemap
+    about_event     a short object describing an Event the page is about
+{%- endcomment -%}
+{%- assign site_url = site.url | append: site.baseurl -%}
+{%- assign person_id = site_url | append: '/#person' -%}
+{%- assign website_id = site_url | append: '/#website' -%}
+{%- assign canonical = page.canonical_url | default: page.url | replace: 'index.html', '' | absolute_url -%}
+
+{%- if page.seo_title -%}
+  {%- assign seo_title = page.seo_title -%}
+{%- elsif page.title and page.title contains site.title -%}
+  {%- assign seo_title = page.title -%}
+{%- elsif page.title and page.title.size > 55 -%}
+  {%- assign seo_title = page.title -%}
+{%- elsif page.title -%}
+  {%- assign seo_title = page.title | append: ' | ' | append: site.title -%}
+{%- else -%}
+  {%- assign seo_title = site.title | append: ' | ' | append: site.tagline -%}
+{%- endif -%}
+
+{%- assign seo_desc = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | strip -%}
+{%- assign seo_desc = seo_desc | truncate: 200 -%}
+{%- assign seo_image = page.image | default: site.image | absolute_url -%}
+{%- assign seo_image_alt = page.image_alt | default: 'Portrait of Sajjal Bajaj' -%}
+{%- assign is_article = false -%}
+{%- if page.collection == 'posts' or page.layout == 'case-study' or page.schema_type == 'Article' -%}{%- assign is_article = true -%}{%- endif -%}
+{%- assign modified = page.last_modified_at | default: page.date -%}
+
+<title>{{ seo_title | escape }}</title>
+<meta name="description" content="{{ seo_desc | escape }}" />
+<meta name="author" content="{{ site.author }}" />
+<link rel="canonical" href="{{ canonical }}" />
+<meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:large, max-snippet:-1' }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:type" content="{% if is_article %}article{% else %}website{% endif %}" />
+<meta property="og:title" content="{{ page.title | default: seo_title | escape }}" />
+<meta property="og:description" content="{{ seo_desc | escape }}" />
+<meta property="og:url" content="{{ canonical }}" />
+<meta property="og:image" content="{{ seo_image }}" />
+<meta property="og:image:alt" content="{{ seo_image_alt | escape }}" />
+{%- if is_article and page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+<meta property="article:modified_time" content="{{ modified | date_to_xmlschema }}" />
+<meta property="article:author" content="{{ site_url }}/" />
+{%- endif %}
+<meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}" />
+<meta name="twitter:title" content="{{ page.title | default: seo_title | escape }}" />
+<meta name="twitter:description" content="{{ seo_desc | escape }}" />
+<meta name="twitter:image" content="{{ seo_image }}" />
+
+{%- comment -%} JSON-LD: one graph per page. The Person and WebSite nodes are identical on every page. {%- endcomment -%}
+{%- capture person_node -%}
+{
+  "@type": "Person",
+  "@id": "{{ person_id }}",
+  "name": "Sajjal Bajaj",
+  "url": "{{ site_url }}/",
+  "image": "{{ site.image | absolute_url }}",
+  "jobTitle": "Odoo ERP Consultant and Project Manager",
+  "worksFor": { "@type": "Organization", "name": "Master Software Solutions", "url": "https://www.mastersoftwaresolutions.com/" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Mohali", "addressRegion": "Punjab", "addressCountry": "IN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Kurukshetra University" },
+  "knowsAbout": ["Odoo", "ERP implementation", "Business analysis", "Inventory management", "Manufacturing (MRP)", "Distribution", "Project management", "Agile and Scrum", "Power BI"],
+  "sameAs": ["https://www.linkedin.com/in/sajjal-bajaj/", "https://github.com/sajjalbajaj"]
+}
+{%- endcapture -%}
+{%- capture website_node -%}
+{
+  "@type": "WebSite",
+  "@id": "{{ website_id }}",
+  "url": "{{ site_url }}/",
+  "name": "{{ site.title }}",
+  "inLanguage": "en",
+  "publisher": { "@id": "{{ person_id }}" }
+}
+{%- endcapture -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ person_node }},
+    {{ website_node }},
+    {%- if page.collection == 'posts' or page.layout == 'case-study' or page.schema_type == 'Article' %}
+    {
+      "@type": "{% if page.collection == 'posts' %}BlogPosting{% else %}Article{% endif %}",
+      "@id": "{{ canonical }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ seo_desc | jsonify }},
+      "image": "{{ seo_image }}",
+      {%- if page.date %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ modified | date_to_xmlschema }}",
+      {%- elsif page.last_modified_at %}
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      {%- endif %}
+      "author": { "@id": "{{ person_id }}" },
+      "publisher": { "@id": "{{ person_id }}" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ canonical }}" },
+      "isPartOf": { "@id": "{{ website_id }}" },
+      {%- if page.tags and page.tags.size > 0 %}
+      "keywords": {{ page.tags | join: ", " | jsonify }},
+      {%- endif %}
+      {%- if page.about_event %}
+      "about": {
+        "@type": "Event",
+        "name": {{ page.about_event.name | jsonify }},
+        "startDate": "{{ page.about_event.start }}",
+        "endDate": "{{ page.about_event.end }}",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": { "@type": "Place", "name": {{ page.about_event.venue | jsonify }}, "address": { "@type": "PostalAddress", "addressLocality": {{ page.about_event.city | jsonify }}, "addressRegion": {{ page.about_event.region | jsonify }}, "addressCountry": "IN" } },
+        "organizer": { "@type": "Organization", "name": {{ page.about_event.organizer | jsonify }}, "url": {{ page.about_event.organizer_url | jsonify }} },
+        "url": {{ page.about_event.url | jsonify }}
+      },
+      {%- endif %}
+      "inLanguage": "en",
+      "url": "{{ canonical }}"
+    }
+    {%- else %}
+    {
+      "@type": "{{ page.schema_type | default: 'WebPage' }}",
+      "@id": "{{ canonical }}",
+      "url": "{{ canonical }}",
+      "name": {{ page.title | default: seo_title | jsonify }},
+      "description": {{ seo_desc | jsonify }},
+      "isPartOf": { "@id": "{{ website_id }}" },
+      {%- if page.schema_type == 'ProfilePage' %}
+      "mainEntity": { "@id": "{{ person_id }}" },
+      {%- endif %}
+      {%- if page.last_modified_at %}
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      {%- endif %}
+      "inLanguage": "en"
+    }
+    {%- endif %}
+  ]
+}
+</script>

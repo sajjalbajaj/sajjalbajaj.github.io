@@ -3,6 +3,7 @@ layout: post
 title: "Billing Project Work in Odoo: From Timesheet to Invoice"
 date: 2026-09-05 08:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, Accounting, ERP]
+hub: services
 description: "How Odoo turns project work and logged time into accurate invoices, so services businesses bill for everything they do without the manual scramble."
 ---
 

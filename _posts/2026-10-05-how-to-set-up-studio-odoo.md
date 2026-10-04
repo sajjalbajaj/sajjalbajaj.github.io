@@ -3,6 +3,7 @@ layout: post
 title: "How to Use Studio to Customise Odoo"
 date: 2026-10-05 10:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Studio, Customization, Project Management, Services, How To]
+hub: admin
 description: "A plain-English guide to using Odoo Studio, so you can tailor Odoo to your business, adding fields, adjusting screens and building simple apps, without code."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "Marketing Meets CRM: Turning Campaigns into Pipeline in Odoo"
 date: 2026-09-02 09:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, CRM, ERP]
+hub: marketing
 description: "How Odoo connects marketing to sales, so the interest your campaigns create flows straight into your CRM pipeline instead of getting lost."
 ---
 

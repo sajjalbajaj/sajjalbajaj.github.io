@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Purchase: From RFQ to Purchase Order"
 date: 2026-08-16 10:00:00 +0530
 tags: [Odoo, Odoo 19, Purchase, ERP, Inventory Management, Stock Control, Procurement, Supply Chain]
+hub: purchase
 description: "A plain-English walk through Odoo Purchase: how requests for quotation become purchase orders, and how buying connects to stock and accounting."
 ---
 

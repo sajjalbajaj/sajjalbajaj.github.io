@@ -3,6 +3,7 @@ layout: post
 title: "Expenses in Odoo: Simple Expense Management"
 date: 2026-08-30 08:00:00 +0530
 tags: [Odoo, Odoo 19, HR, Accounting, ERP]
+hub: accounting
 description: "How Odoo Expenses lets employees submit expenses easily, managers approve them quickly, and everything flows into accounting without manual re-entry."
 ---
 

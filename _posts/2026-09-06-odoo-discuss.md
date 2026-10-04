@@ -3,6 +3,7 @@ layout: post
 title: "Discuss in Odoo: Team Communication in Context"
 date: 2026-09-06 08:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo Discuss keeps team communication in the same place as your work, with channels, direct messages and conversations tied to real records."
 ---
 

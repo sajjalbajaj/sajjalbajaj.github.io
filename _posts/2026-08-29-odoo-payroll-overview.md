@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Payroll: An Overview"
 date: 2026-08-29 10:00:00 +0530
 tags: [Odoo, Odoo 19, HR, Accounting, ERP]
+hub: hr
 description: "A plain-English overview of Odoo Payroll: how it turns contracts, attendance and leave into accurate pay, and connects to your accounting."
 ---
 

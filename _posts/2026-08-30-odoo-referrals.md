@@ -3,6 +3,7 @@ layout: post
 title: "Employee Referrals in Odoo: Hiring Through Your Team"
 date: 2026-08-30 10:00:00 +0530
 tags: [Odoo, Odoo 19, HR, Recruitment, ERP]
+hub: hr
 description: "How Odoo Referrals turns your employees into a hiring channel, making it easy for them to refer great candidates and get rewarded for it."
 ---
 

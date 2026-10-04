@@ -2,9 +2,13 @@
 layout: post
 title: "Odoo 20: Release Date, Global and India Availability, and What's New (2026 Preview)"
 date: 2026-09-05 15:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 20, Upgrade, ERP, India, Migration, ERP Migration, Accounting]
+hub: planning
 description: "A complete preview of Odoo 20: when it launches, when it is available globally and in India, the new features expected, and what is getting upgraded from Odoo 19."
 ---
+
+> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
 Odoo 20 is coming, and if you run your business on Odoo or are thinking about it, this is the release to watch. Here is
 a complete, plain-English preview in one place: when it launches, when you can actually use it, what is new, what is

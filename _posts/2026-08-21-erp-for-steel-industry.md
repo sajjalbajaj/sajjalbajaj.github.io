@@ -3,6 +3,7 @@ layout: post
 title: "ERP for the Steel Industry: Problems It Solves"
 date: 2026-08-21 14:00:00 +0530
 tags: [ERP, Odoo, Steel, Manufacturing, Inventory Management, SME]
+hub: industries
 description: "The specific problems steel businesses face, from weight-based inventory and off-cuts to batch traceability and volatile material prices, and how Odoo solves them."
 ---
 

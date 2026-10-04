@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Lunch: An Easy Way to Manage Staff Meals"
 date: 2026-09-12 08:00:00 +0530
 tags: [Odoo, Odoo 19, HR, Productivity, ERP, Lunch, Employee Experience, Procurement]
+hub: hr
 description: "How Odoo Lunch lets employees order meals from your chosen vendors, tracks who ordered what, and takes the daily chaos out of office lunch."
 ---
 

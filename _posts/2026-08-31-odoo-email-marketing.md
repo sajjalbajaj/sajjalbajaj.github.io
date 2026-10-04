@@ -3,6 +3,7 @@ layout: post
 title: "Email Marketing in Odoo: Campaigns That Connect"
 date: 2026-08-31 08:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, ERP]
+hub: marketing
 description: "How Odoo Email Marketing lets you design, send and measure email campaigns, using the customer data you already have in your ERP."
 ---
 

@@ -1,8 +1,8 @@
 title: Sajjal Bajaj
-tagline: ERP Consultant & Project Manager
+tagline: Odoo ERP Consultant & Project Manager
 description: >-
-  Daily notes on IT, ERP, Power BI, AI, DevOps and software delivery from
-  Sajjal Bajaj, ERP Consultant, Project Manager and Certified ScrumMaster.
+  Practical Odoo guides and ERP consulting from Sajjal Bajaj, an Odoo ERP consultant
+  and project manager in Mohali, India, focused on inventory, manufacturing and distribution.
 author: Sajjal Bajaj
 email: sajjalbajaj@gmail.com
 lang: en
@@ -27,7 +27,12 @@ comments:
   cusdis_host: "https://cusdis.com"
   disqus_shortname: ""
 
-# Default social image + SEO metadata (jekyll-seo-tag)
+# Measurement. Paste a GA4 measurement ID (e.g. "G-ABC123XYZ") to switch on Google Analytics
+# and contact-click events in production builds. Left blank, nothing is loaded.
+analytics:
+  ga4_id: ""
+
+# Default social image + SEO metadata (rendered by _includes/seo.html)
 image: /assets/sajjalbajaj.jpg
 social:
   name: Sajjal Bajaj
@@ -76,3 +81,4 @@ exclude:
   - content-plan
   - cv-pdf
   - .cocoindex
+  - content-review

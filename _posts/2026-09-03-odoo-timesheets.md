@@ -3,6 +3,7 @@ layout: post
 title: "Timesheets in Odoo: Tracking Time That Matters"
 date: 2026-09-03 09:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, ERP]
+hub: services
 description: "How Odoo Timesheets makes logging time simple, so you know where hours really go, bill accurately, and understand project profitability."
 ---
 

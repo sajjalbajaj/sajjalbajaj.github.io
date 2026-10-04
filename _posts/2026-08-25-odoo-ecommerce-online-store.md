@@ -3,6 +3,7 @@ layout: post
 title: "Odoo eCommerce: Setting Up Your Online Store"
 date: 2026-08-25 08:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Sales, ERP]
+hub: website
 description: "How to set up an online store with Odoo eCommerce, and why running your shop inside your ERP means stock, orders and accounts stay in sync automatically."
 ---
 

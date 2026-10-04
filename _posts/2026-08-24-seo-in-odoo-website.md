@@ -3,6 +3,7 @@ layout: post
 title: "SEO in Odoo Website: Getting Found on Google"
 date: 2026-08-24 09:00:00 +0530
 tags: [Odoo, Odoo 19, Website, SEO, ERP]
+hub: website
 description: "How Odoo Website's built-in SEO tools help your pages get found on Google, from titles and meta descriptions to sitemaps and clean, fast pages."
 ---
 

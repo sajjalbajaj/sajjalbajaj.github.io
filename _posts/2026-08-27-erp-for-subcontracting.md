@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Subcontracting Businesses: Problems It Solves"
 date: 2026-08-27 14:00:00 +0530
 tags: [ERP, Odoo, Subcontracting, Manufacturing, Inventory Management, SME]
+hub: industries
 description: "The problems subcontracting businesses face, from tracking components off-site to receiving finished goods and costing, and how Odoo solves them."
 ---
 

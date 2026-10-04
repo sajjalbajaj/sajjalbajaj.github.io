@@ -3,6 +3,7 @@ layout: post
 title: "Building and Segmenting Your Marketing Audience in Odoo"
 date: 2026-09-02 08:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, CRM, ERP]
+hub: marketing
 description: "Why your audience and how you segment it matter more than any single campaign, and how Odoo helps you target the right people with the right message."
 ---
 

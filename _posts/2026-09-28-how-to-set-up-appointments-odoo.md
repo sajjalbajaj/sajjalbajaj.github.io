@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Appointments in Odoo"
 date: 2026-09-28 10:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Appointments, Productivity, Calendar, Scheduling, Website]
+hub: services
 description: "A plain-English guide to setting up Odoo Appointments, so customers and colleagues can book time with you online without the back-and-forth emails."
 ---
 

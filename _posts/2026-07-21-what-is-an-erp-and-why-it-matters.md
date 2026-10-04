@@ -3,6 +3,7 @@ layout: post
 title: "What is an ERP, and why it matters"
 date: 2026-07-21 09:00:00 +0530
 tags: [ERP, Inventory Management, Stock Control, Invoicing, Sales Management, Business Automation, ERP Cost, Spreadsheets]
+hub: planning
 description: "A plain-English introduction to ERP systems and the value they bring."
 faqs:
   - q: "What is an ERP system?"

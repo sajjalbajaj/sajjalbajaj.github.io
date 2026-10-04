@@ -8,7 +8,12 @@ layout: default
     <span>{{ page.title }}</span>
   </nav>
 
+  {% assign representative = false %}{% if page.status == 'representative' %}{% assign representative = true %}{% endif %}
   <h1 class="section-title">{{ page.title }}</h1>
+  {% if representative %}
+  <p class="cs-status" role="note"><strong>Representative example.</strong> This page illustrates how I approach a typical
+  project of this kind. It does not describe a specific client engagement, and no client results are claimed.</p>
+  {% endif %}
   {% if page.summary %}<p class="services__lead">{{ page.summary }}</p>{% endif %}
 
   {% if page.industry or page.duration or page.services %}
@@ -19,7 +24,7 @@ layout: default
   </ul>
   {% endif %}
 
-  {% if page.metrics %}
+  {% if page.metrics and representative == false %}
   <div class="cs-results">
     {% for m in page.metrics %}
     <div class="cs-metric"><span class="cs-metric__num">{{ m.value }}</span><span class="cs-metric__label">{{ m.label }}</span></div>
@@ -30,13 +35,15 @@ layout: default
   {% if page.problem %}<h2 class="services__ind-title">The problem</h2><p>{{ page.problem }}</p>{% endif %}
   {% if page.existing_process %}<h2 class="services__ind-title">The existing process</h2><p>{{ page.existing_process }}</p>{% endif %}
   {% if page.requirements %}<h2 class="services__ind-title">Business requirements</h2><ul>{% for r in page.requirements %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
-  {% if page.solution %}<h2 class="services__ind-title">The solution</h2><p>{{ page.solution }}</p>{% endif %}
-  {% if page.modules %}<h2 class="services__ind-title">Odoo modules used</h2><ul class="tags">{% for m in page.modules %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.role %}<h2 class="services__ind-title">My role</h2><p>{{ page.role }}</p>{% endif %}
+  {% if page.solution %}<h2 class="services__ind-title">{% if representative %}The approach{% else %}The solution{% endif %}</h2><p>{{ page.solution }}</p>{% endif %}
+  {% if page.decisions %}<h2 class="services__ind-title">Key decisions</h2><ul>{% for d in page.decisions %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.modules %}<h2 class="services__ind-title">{% if representative %}Odoo apps involved{% else %}Odoo modules used{% endif %}</h2><ul class="tags">{% for m in page.modules %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}
   {% if page.customizations %}<h2 class="services__ind-title">Customizations</h2><ul>{% for c in page.customizations %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
   {% if page.integrations %}<h2 class="services__ind-title">Integrations</h2><ul>{% for i in page.integrations %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
   {% if page.implementation %}<h2 class="services__ind-title">Implementation</h2><p>{{ page.implementation }}</p>{% endif %}
-  {% if page.challenges %}<h2 class="services__ind-title">Challenges</h2><ul>{% for c in page.challenges %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
-  {% if page.results %}<h2 class="services__ind-title">Results</h2><ul>{% for r in page.results %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.challenges %}<h2 class="services__ind-title">{% if representative %}Typical challenges{% else %}Challenges{% endif %}</h2><ul>{% for c in page.challenges %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.results %}<h2 class="services__ind-title">{% if representative %}Intended outcomes{% else %}Results{% endif %}</h2><ul>{% for r in page.results %}<li>{{ r }}</li>{% endfor %}</ul>{% endif %}
 
   {% if content != "" %}<div class="prose">{{ content }}</div>{% endif %}
 
@@ -48,18 +55,6 @@ layout: default
   </div>
 </article>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": {{ page.title | jsonify }},
-  "description": {{ page.summary | default: page.description | jsonify }},
-  "author": { "@type": "Person", "name": "Sajjal Bajaj", "url": "{{ '/' | absolute_url }}" },
-  "publisher": { "@type": "Organization", "name": "Sajjal Bajaj", "logo": { "@type": "ImageObject", "url": "{{ site.image | absolute_url }}" } },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
-  "url": "{{ page.url | absolute_url }}"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

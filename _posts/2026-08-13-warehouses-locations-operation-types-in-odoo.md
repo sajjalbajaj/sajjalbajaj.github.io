@@ -2,13 +2,18 @@
 layout: post
 title: "Warehouses, Locations and Operation Types in Odoo"
 date: 2026-08-13 08:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
+hub: inventory
 description: "How Odoo structures physical stock with warehouses, locations and operation types, and why this structure powers everything from picking to reporting."
 ---
 
 If products are the "what" of inventory, warehouses and locations are the "where." Odoo's structure
 here is more thoughtful than most people expect, and understanding it unlocks a lot of the app's
 power. Let us walk through warehouses, locations and operation types.
+
+*This article explains the concepts. For the exact setup steps, a worked example and troubleshooting, see
+[how to set up a warehouse and storage locations in Odoo 19](/blog/2026/09/23/how-to-set-up-warehouse-locations-odoo/).*
 
 ## Warehouses: the top level
 

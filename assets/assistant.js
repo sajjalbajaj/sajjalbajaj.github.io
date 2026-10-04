@@ -14,7 +14,7 @@
       a: "I help businesses choose, implement and get real value from <strong>ERP and CRM</strong> (Odoo, Microsoft Dynamics 365, Salesforce), plus <strong>Power BI</strong> reporting and automation. Whether you're moving off spreadsheets, starting fresh, or rescuing a stalled project, I guide it end to end as a hands-on partner. Tell me about your business, or reach me on <a href=\"https://wa.me/919914089472\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or <a href=\"mailto:sajjalbajaj@gmail.com\">email</a> and we'll map out the first step." },
     { q: 'Which industries have you worked with?',
       keywords: ['industr', 'sector', 'steel', 'construction', 'coffee', 'water', 'milk', 'dairy', 'trading', 'manufactur', 'subcontract', 'dropship', 'worked with', 'clients', 'experience in', 'similar'],
-      a: "Across many, including <strong>steel, construction, coffee, water, milk &amp; dairy, trading, manufacturing, subcontracting and dropshipping</strong>. In each, I've mapped ERP to real operations: inventory, production, purchasing and supply chain. If you're in one of these or similar, I've likely solved a version of your challenge before." },
+      a: "The client projects on Sajjal's <a href=\"/cv/\">CV</a> include <strong>manufacturing, steel, coffee, water, tools and education</strong>, and the wider Odoo work at Master Software Solutions also covers construction, dairy, trading, subcontracting and dropshipping. The common thread is inventory, production, purchasing and supply chain. Tell me about your business and I'll point you to the most relevant guides." },
     { q: 'What is ERP and do I need one?',
       keywords: ['what is erp', 'need erp', 'need one', 'enterprise resource', 'erp for', 'should i'],
       a: "An ERP is one connected system that runs your business: finance, inventory, sales, purchasing and more, with a single source of truth. If you're juggling spreadsheets, re-keying data, or can't get a real-time picture, it's probably time. Tell me your setup and I'll tell you honestly whether ERP fits." },
@@ -29,26 +29,26 @@
       a: "It depends on scope, but the smart approach is always the same: start with a lean, high-value first phase, prove it, then expand. That keeps timelines and budgets under control. I can help you plan a realistic phased rollout." },
     { q: 'Can you migrate or upgrade my system?',
       keywords: ['migrat', 'upgrade', 'odoo 20', 'version', 'move to', 'switch', 'transfer'],
-      a: "Yes. Whether it's moving from spreadsheets or another system, or upgrading Odoo versions (Odoo 20 is on the way), I plan and run migrations: inventory your customizations, test on a copy, then a clean cut-over. Tell me about your current setup." },
+      a: "Yes. Whether it's moving from spreadsheets or another system, or upgrading Odoo versions (Odoo 20 was released in September 2026), I plan and run migrations: inventory your customizations, test on a copy, then a clean cut-over. Tell me about your current setup." },
     { q: 'Do you do CRM too?',
       keywords: ['crm', 'sales', 'customer', 'lead', 'pipeline', 'salesforce', 'dynamics'],
       a: "Yes, CRM as well as ERP, across <strong>Odoo, Microsoft Dynamics 365 and Salesforce</strong>. I help you pick the right one, set it up, and, just as important, get your team actually using it. What are you trying to improve?" },
     { q: 'Power BI and reporting?',
       keywords: ['power bi', 'report', 'dashboard', 'data', 'analytics', 'insight', 'kpi', 'metric'],
-      a: "Absolutely, I'm a certified Power BI Data Analyst. I build dashboards that turn your ERP and business data into decisions: sales, finance, inventory and leadership views, live and trustworthy. Tell me what you need to see." },
+      a: "Yes. I earned Microsoft's Power BI Data Analyst Associate certification in 2024, and I build dashboards that turn your ERP and business data into decisions: sales, finance, inventory and leadership views, live and trustworthy. Tell me what you need to see." },
     { q: 'How does AI help in ERP?',
       keywords: ['ai', 'artificial intelligence', 'automation', 'automate', 'agent', 'machine learning'],
       a: "AI is genuinely useful in ERP now: reading invoices, scoring leads, drafting content, summarising, and increasingly acting inside your systems. The trick is clean data, guardrails and starting with one real task. I can help you find where AI actually pays off for you." },
     // --- About Sajjal ---
     { q: 'What does Sajjal do?',
       keywords: ['role', 'job', 'title', 'position', 'who', 'about him', 'about sajjal'],
-      a: "Sajjal is an <strong>ERP &amp; CRM Consultant and Project Manager</strong> at Master Software Solutions, also a Scrum Master, Business Analyst and Team Lead, with nearly 10 years of experience." },
+      a: "Sajjal is an <strong>ERP &amp; CRM Consultant and Project Manager</strong> at Master Software Solutions, also a business analyst and project manager, working in software delivery since 2016." },
     { q: 'How much experience?',
       keywords: ['experience', 'years', 'long', 'many', 'senior', 'expert'],
-      a: "Nearly <strong>10 years</strong> in IT (since 2016) across development, team leadership, project management, business analysis and ERP/CRM consulting." },
+      a: "In software delivery since <strong>July 2016</strong>: development and team leadership, then business analysis and project management from 2022, and ERP consulting focused on Odoo since October 2024." },
     { q: 'Certifications?',
       keywords: ['cert', 'csm', 'scrum master', 'pmi', 'qualif', 'certified'],
-      a: "Certified ScrumMaster (CSM), Microsoft Power BI Data Analyst Associate, Odoo 19 Functional Certification, Kickoff PMI, and Intel's AI For All (AI Aware &amp; AI Appreciate)." },
+      a: "Earned: Odoo 19 Functional Certification (2026), Microsoft Certified: Power BI Data Analyst Associate (2024) and Certified ScrumMaster (2020). Also completed PMI's Kickoff and Intel's AI For All." },
     { q: 'Tell me about the blog',
       keywords: ['blog', 'article', 'post', 'writ', 'read', 'latest'],
       a: "Sajjal writes practical notes on ERP, Odoo, CRM, Power BI and AI. Browse them all on the <a href=\"/blog/\">Blog page</a> &rarr;" },
@@ -61,7 +61,7 @@
   ];
   var SUGGESTED = [0, 2, 1, 14];
   var GREETING = "Hi! 👋 I'm Sajjal's ERP assistant. Ask me anything about <strong>ERP, Odoo, CRM, inventory, Power BI or AI</strong>, or tell me about your business and I'll show how we can help. What's your question?";
-  var FALLBACK = "Good question. I'm a simple assistant so I may not have the perfect answer, but Sajjal will. He helps businesses with ERP, Odoo, CRM and Power BI across industries like steel, construction, coffee, water, milk, trading, manufacturing, subcontracting and dropshipping. Tell me a little about your business, or reach him on <a href=\"https://wa.me/919914089472\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or <a href=\"mailto:sajjalbajaj@gmail.com\">email</a>.";
+  var FALLBACK = "Good question. I'm a simple assistant so I may not have the perfect answer, but Sajjal will. He helps manufacturers, distributors and traders with Odoo, ERP and Power BI. Tell me a little about your business, or reach him on <a href=\"https://wa.me/919914089472\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or <a href=\"mailto:sajjalbajaj@gmail.com\">email</a>.";
 
   // --- Build DOM ---
   var root = document.createElement('div');
@@ -172,7 +172,9 @@
 
   // Proactively greet readers on blog posts, once per browser session.
   function isBlogPost() { return /^\/blog\/\d{4}\//.test(location.pathname); }
-  if (isBlogPost() && !seen()) {
+  // Desktop only: on phones an auto-opening panel would cover the article.
+  var wide = window.matchMedia('(min-width: 900px)').matches;
+  if (wide && isBlogPost() && !seen()) {
     setTimeout(function () {
       if (seen()) return;
       if (!root.classList.contains('is-open')) setOpen(true);

@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Employees: Your Central HR Hub"
 date: 2026-08-28 08:00:00 +0530
 tags: [Odoo, Odoo 19, HR, ERP]
+hub: hr
 description: "How the Odoo Employees app acts as the central hub for your people data, and why keeping HR in the same system as the rest of your business helps."
 ---
 

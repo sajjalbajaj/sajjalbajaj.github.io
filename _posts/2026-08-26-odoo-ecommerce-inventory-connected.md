@@ -3,6 +3,7 @@ layout: post
 title: "eCommerce Meets Inventory: One Connected Store in Odoo"
 date: 2026-08-26 09:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Inventory Management, ERP]
+hub: website
 description: "Why running your online store inside the same system as your inventory is Odoo eCommerce's biggest advantage, and how it prevents overselling and chaos."
 ---
 

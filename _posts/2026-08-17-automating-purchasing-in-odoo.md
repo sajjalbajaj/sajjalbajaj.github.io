@@ -2,7 +2,9 @@
 layout: post
 title: "Automating Purchasing in Odoo: Reordering Rules and Lead Times"
 date: 2026-08-17 10:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 19, Purchase, Inventory, ERP, Inventory Management, Stock Control, Manufacturing]
+hub: purchase
 description: "How Odoo automates purchasing with reordering rules, make-to-order and vendor lead times, so you reorder the right amounts at the right time."
 ---
 
@@ -10,11 +12,16 @@ The best purchasing is the kind you barely have to think about: stock tops itsel
 without over-ordering. Odoo gets you close to that by linking purchasing to inventory and automating the
 routine buying. Here is how the pieces fit.
 
+*This article looks at purchasing automation from the buyer's side. For the exact setup steps, see
+[how to set up reordering rules in Odoo 19](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/); for choosing
+a replenishment strategy, see [replenishment in Odoo](/blog/2026/08/13/reordering-rules-and-replenishment-in-odoo/).*
+
 ## Reordering rules trigger purchasing
 
 We met reordering rules in the inventory part of this series, and this is where they pay off for buying.
-When you set a minimum and maximum stock level for a product, Odoo watches the level for you. When stock
-drops to the minimum, it proposes replenishing back to the maximum.
+When you set a minimum and maximum stock level for a product, Odoo watches the level for you. When the
+*forecasted* quantity (stock on hand plus confirmed incoming, minus confirmed outgoing, within the lead-time
+window) drops below the minimum, it proposes replenishing back to the maximum.
 
 For a bought-in product, that proposal becomes a request for quotation or purchase order to the right
 supplier. Your buying turns into reviewing sensible suggestions rather than constantly checking what is

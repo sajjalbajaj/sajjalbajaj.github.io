@@ -3,6 +3,7 @@ layout: post
 title: "Attendances in Odoo: Tracking Work Time"
 date: 2026-08-29 08:00:00 +0530
 tags: [Odoo, Odoo 19, HR, ERP]
+hub: hr
 description: "How Odoo Attendances tracks when employees check in and out, giving accurate work-time data that feeds planning, payroll and fair records."
 ---
 

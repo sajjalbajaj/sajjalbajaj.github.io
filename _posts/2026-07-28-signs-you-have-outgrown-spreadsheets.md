@@ -3,6 +3,7 @@ layout: post
 title: "5 Signs Your Business Has Outgrown Spreadsheets"
 date: 2026-07-28 09:00:00 +0530
 tags: [ERP, Digital Transformation, SME, Automation, Odoo, Business Automation, Spreadsheets, Business Efficiency]
+hub: planning
 description: "Five clear signs your business has outgrown spreadsheets, and the practical first step toward an ERP that scales with you."
 ---
 

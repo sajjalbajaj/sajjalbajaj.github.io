@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Trading and Distribution: Problems It Solves"
 date: 2026-08-26 14:00:00 +0530
 tags: [ERP, Odoo, Trading, Procurement, Inventory Management, SME]
+hub: industries
 description: "The problems trading and distribution businesses face, from thin margins and multi-warehouse stock to pricing and landed costs, and how Odoo solves them."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Dropshipping: Problems It Solves"
 date: 2026-08-28 14:00:00 +0530
 tags: [ERP, Odoo, Dropshipping, Procurement, Automation, SME]
+hub: industries
 description: "The problems dropshipping businesses face, from routing orders to suppliers and tracking margins to multi-channel selling, and how Odoo solves them."
 ---
 

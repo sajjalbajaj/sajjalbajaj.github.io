@@ -3,6 +3,7 @@ layout: post
 title: "Studio in Odoo: Customize Without Code"
 date: 2026-09-07 10:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo Studio lets you tailor Odoo to your business, adding fields, adjusting screens and building simple apps, often without writing code."
 ---
 

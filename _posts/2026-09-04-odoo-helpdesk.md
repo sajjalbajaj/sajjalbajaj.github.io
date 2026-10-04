@@ -3,6 +3,7 @@ layout: post
 title: "Helpdesk in Odoo: Support That Stays Organised"
 date: 2026-09-04 08:00:00 +0530
 tags: [Odoo, Odoo 19, Helpdesk, ERP]
+hub: services
 description: "How Odoo Helpdesk turns customer support into an organised, trackable process with tickets, teams and SLAs, so nothing gets missed."
 ---
 

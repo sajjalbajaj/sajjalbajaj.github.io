@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Sales: From Quotation to Sales Order"
 date: 2026-08-18 08:00:00 +0530
 tags: [Odoo, Odoo 19, Sales, ERP, Inventory Management, Stock Control, Warehouse Management, Manufacturing]
+hub: sales
 description: "A plain-English walk through Odoo Sales: how quotations become sales orders, and how selling connects to inventory, delivery and invoicing."
 ---
 

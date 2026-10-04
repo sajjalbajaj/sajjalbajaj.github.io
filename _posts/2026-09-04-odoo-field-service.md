@@ -3,6 +3,7 @@ layout: post
 title: "Field Service in Odoo: Managing On-Site Work"
 date: 2026-09-04 09:00:00 +0530
 tags: [Odoo, Odoo 19, Field Service, ERP]
+hub: services
 description: "How Odoo Field Service helps you plan, dispatch and complete on-site jobs, from scheduling technicians to logging work and billing, in one system."
 ---
 

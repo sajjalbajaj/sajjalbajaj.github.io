@@ -1,4 +1,9 @@
-<section class="section">
+{%- comment -%}
+  Shared template for /services/* pages. Every section is optional and driven by front matter:
+  problems, suitable, not_suitable, includes, deliverables, process, dependencies, evidence,
+  related, faqs, cta_title, cta_text. List items may contain Markdown links.
+{%- endcomment -%}
+<section class="section service-page">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a> ›
     <a href="{{ '/services/' | relative_url }}">Services</a> ›
@@ -6,15 +11,41 @@
   </nav>
 
   <h1 class="section-title">{{ page.h1 }}</h1>
-  <p class="services__lead">{{ page.intro }}</p>
+  <div class="services__lead service-page__intro">{{ page.intro | markdownify }}</div>
 
-  <div class="services__cta card" style="margin:1.5rem 0;">
-    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+  <div class="services__cta card service-page__top-cta">
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Discuss your project</a>
     <a class="btn btn--ghost" href="{{ '/services/' | relative_url }}">All services</a>
   </div>
 
+  {% if page.problems %}
+  <h2 class="services__ind-title">Problems this solves</h2>
+  <ul class="service-page__list">
+    {% for p in page.problems %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.suitable %}
+  <div class="layout service-page__fit">
+    <div class="card">
+      <h2 class="services__ind-title">A good fit if</h2>
+      <ul class="service-page__list">
+        {% for p in page.suitable %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% if page.not_suitable %}
+    <div class="card">
+      <h2 class="services__ind-title">Probably not the right fit if</h2>
+      <ul class="service-page__list">
+        {% for p in page.not_suitable %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
   {% if page.includes %}
-  <h2 class="services__ind-title">What this service includes</h2>
+  <h2 class="services__ind-title">Scope</h2>
   <div class="services__grid">
     {% for item in page.includes %}
     <article class="service-card">
@@ -26,31 +57,44 @@
   </div>
   {% endif %}
 
+  {% if page.deliverables %}
+  <h2 class="services__ind-title">What you receive</h2>
+  <ul class="service-page__list">
+    {% for d in page.deliverables %}<li>{{ d | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
   {% if page.process %}
-  <h2 class="services__ind-title">How it works</h2>
-  <div class="services__grid">
+  <h2 class="services__ind-title">How the work runs</h2>
+  <ol class="service-page__steps">
     {% for step in page.process %}
-    <article class="service-card">
-      <span class="service-card__no">{{ forloop.index | prepend: '0' }}</span>
-      <h3 class="service-card__title">{{ step.title }}</h3>
-      <p class="service-card__desc">{{ step.desc }}</p>
-    </article>
+    <li><strong>{{ step.title }}.</strong> {{ step.desc }}</li>
     {% endfor %}
+  </ol>
+  {% endif %}
+
+  {% if page.dependencies %}
+  <h2 class="services__ind-title">What I need from you</h2>
+  <ul class="service-page__list">
+    {% for d in page.dependencies %}<li>{{ d | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.evidence %}
+  <div class="card service-page__evidence">
+    <h2 class="services__ind-title">Experience behind this service</h2>
+    <ul class="service-page__list">
+      {% for e in page.evidence %}<li>{{ e | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+    </ul>
+    <p class="service-page__who">You work with me directly: I'm Sajjal Bajaj, an Odoo ERP consultant and project manager at
+    Master Software Solutions in Mohali, India. Read <a href="{{ '/#about' | relative_url }}">about my background</a>
+    or see my <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
   </div>
   {% endif %}
 
-  <div class="services__industries">
-    <h2 class="services__ind-title">Why work with me</h2>
-    <p class="services__lead">Nearly 10 years across ERP, project delivery and analytics, backed by an
-    <strong>Odoo 19 Functional Certification</strong>, <strong>Microsoft Power BI Data Analyst Associate</strong>
-    and <strong>Certified ScrumMaster (CSM)</strong>. I have delivered across steel, construction, coffee, water,
-    milk, trading, manufacturing, subcontracting and dropshipping, so I map the software to how your business
-    actually runs, not the other way around.</p>
-  </div>
-
   {% if page.related %}
   <div class="svc-related">
-    <h2 class="services__ind-title">Related reading</h2>
+    <h2 class="services__ind-title">Related guides</h2>
     <ul>
       {% for r in page.related %}
       <li><a href="{{ r.url | relative_url }}">{{ r.title }}</a></li>
@@ -76,7 +120,7 @@
   <div class="services__cta card">
     <h2>{{ page.cta_title | default: "Ready to talk?" }}</h2>
     <p>{{ page.cta_text }}</p>
-    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Discuss your project</a>
   </div>
 </section>
 
@@ -88,13 +132,8 @@
   "serviceType": {{ page.service_name | jsonify }},
   "url": "{{ page.url | absolute_url }}",
   "description": {{ page.description | jsonify }},
-  "areaServed": "Worldwide",
-  "provider": {
-    "@type": "Person",
-    "name": "Sajjal Bajaj",
-    "url": "{{ '/' | absolute_url }}",
-    "jobTitle": "Odoo ERP Consultant & Project Manager"
-  }
+  "areaServed": ["India", "Remote, worldwide"],
+  "provider": { "@id": "{{ site.url }}/#person" }
 }
 </script>
 {% if page.faqs %}

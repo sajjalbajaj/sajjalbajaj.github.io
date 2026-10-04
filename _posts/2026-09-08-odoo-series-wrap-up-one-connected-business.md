@@ -3,6 +3,7 @@ layout: post
 title: "The Odoo Guide Series: One Connected Business"
 date: 2026-09-08 10:00:00 +0530
 tags: [Odoo, Odoo 19, ERP, Digital Transformation]
+hub: planning
 description: "A wrap-up of the Odoo 19 guide series: the one idea that ties every app together, and how to think about putting Odoo to work in your business."
 ---
 

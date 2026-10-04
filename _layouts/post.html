@@ -8,6 +8,10 @@ layout: default
     By <a class="post__author" href="{{ '/cv/' | relative_url }}" rel="author">{{ site.author }}</a>
     <span class="dot">·</span>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {%- if page.last_modified_at %}
+    <span class="dot">·</span>
+    Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>
+    {%- endif %}
     <span class="dot">·</span>
     {% assign words = content | number_of_words %}{{ words | divided_by: 200 | plus: 1 }} min read
     {% if page.tags and page.tags.size > 0 %}<span class="dot">·</span>
@@ -145,24 +149,6 @@ layout: default
 </section>
 {% endif %}
 
-{% assign post_image = page.image | default: site.image %}
-{% assign post_desc = page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
-  "headline": {{ page.title | jsonify }},
-  "description": {{ post_desc | jsonify }},
-  "image": "{{ post_image | absolute_url }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": { "@type": "Person", "name": {{ site.author | jsonify }}, "url": "{{ '/cv/' | absolute_url }}" },
-  "publisher": { "@type": "Organization", "name": {{ site.author | jsonify }}, "logo": { "@type": "ImageObject", "url": "{{ site.image | absolute_url }}" } },
-  {% if page.tags and page.tags.size > 0 %}"keywords": {{ page.tags | join: ", " | jsonify }},{% endif %}
-  "url": "{{ page.url | absolute_url }}"
-}
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

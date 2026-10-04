@@ -3,6 +3,7 @@ layout: post
 title: "SMS Marketing in Odoo: Reaching Customers Directly"
 date: 2026-08-31 09:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, ERP]
+hub: marketing
 description: "How Odoo SMS Marketing lets you reach customers directly on their phones, when and how it works best, and how it fits with the rest of your marketing."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Discuss for Team Communication in Odoo"
 date: 2026-10-04 09:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Discuss, Productivity, Project Management, Services, Team Communication]
+hub: admin
 description: "A plain-English guide to setting up Odoo Discuss, so your team can chat and collaborate inside the same system where the work actually happens."
 ---
 

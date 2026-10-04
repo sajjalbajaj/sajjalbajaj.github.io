@@ -2,9 +2,13 @@
 layout: post
 title: "Odoo 20 Migration: Should You Upgrade, and When?"
 date: 2026-08-10 11:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation, ERP Migration, ERP Cost, Odoo ERP]
+hub: planning
 description: "A new Odoo version is exciting, but should you upgrade to Odoo 20, and when? A practical guide to the decision and the right timing."
 ---
+
+> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
 Every time Odoo ships a new version, I get the same question: should we upgrade? With Odoo 20
 arriving, it is worth answering properly. A new release is exciting, but "should we move, and when"

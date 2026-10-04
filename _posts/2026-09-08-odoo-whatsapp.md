@@ -3,6 +3,7 @@ layout: post
 title: "WhatsApp in Odoo: Business Messaging Where Customers Are"
 date: 2026-09-08 08:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo's WhatsApp integration lets you reach customers on the channel they already use, for confirmations, updates and conversations, from your ERP."
 ---
 

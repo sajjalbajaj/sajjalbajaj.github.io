@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Planning in Odoo"
 date: 2026-10-01 09:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Planning, Services, Scheduling, How To, Business Automation]
+hub: services
 description: "A plain-English guide to setting up Odoo Planning, so you can schedule shifts and resources clearly, and everyone knows who is doing what and when."
 ---
 

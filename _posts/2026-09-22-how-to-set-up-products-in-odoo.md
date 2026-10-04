@@ -1,60 +1,156 @@
 ---
 layout: post
-title: "How to Set Up Products in Odoo"
+title: "How to Set Up Products and Units of Measure in Odoo 19"
 date: 2026-09-22 10:00:00 +0530
-tags: [Odoo, Odoo 19, Setup, Products, ERP, Accounting, Finance, Inventory Management]
-description: "A plain-English guide to setting up products in Odoo, from product types to units of measure and variants, so sales, stock and accounting all behave."
+last_modified_at: 2026-10-04
+tags: [Odoo, Odoo 19, Setup, Products, Inventory, Inventory Management, Stock Control, Purchase]
+hub: inventory
+description: "Set up products in Odoo 19 step by step: Goods vs Service, Track Inventory, units of measure and packagings, vendors, and the mistakes that break stock counts."
+faqs:
+  - q: "What replaced storable and consumable products in Odoo 19?"
+    a: "Odoo 18 and 19 use the product type Goods with a Track Inventory checkbox. A tracked good behaves like the old storable product, with on-hand and forecasted quantities. An untracked good behaves like the old consumable and is treated as always available."
+  - q: "Can I buy a product in boxes and sell it in units?"
+    a: "Yes. Enable Units of Measure & Packagings in Inventory settings, keep the product's inventory unit as Units, set the purchase unit on the vendor line, and add selling packagings on the Sales tab. Odoo converts quantities on receipts and deliveries automatically."
+  - q: "Which products need Track Inventory ticked?"
+    a: "Anything you need to count, value, reorder or trace: finished goods, resale items and most components. Leave it off for low-value items you never count, such as office supplies or packing tape."
 ---
 
-Products sit at the centre of Odoo: they drive sales, purchases, stock and costing. Setting them up correctly is what
-makes all of those work smoothly, and getting the basics wrong causes trouble everywhere. Continuing this series of
-practical Odoo how-to guides, here is setting up products.
+**Short answer:** in Odoo 19, open **Inventory ‣ Products ‣ Products ‣ New**. Set **Product Type** to **Goods**
+for physical items and tick **Track Inventory** if you need stock counts; set it to **Service** for work you
+sell or buy. Choose the unit you count stock in, add vendors with their purchase unit, and enable **Units of
+Measure & Packagings** if you buy, store or sell in different units.
 
-## Choose the right product type
+This is the step-by-step guide. For the reasoning behind product types, units and packaging, see the explainer:
+[product types, units of measure and packaging in Odoo](/blog/2026/08/12/odoo-product-types-units-of-measure-packaging/).
 
-The first decision for each product is its type, and it matters more than it looks. A storable product is tracked in
-stock; a consumable is bought and used but not stock-tracked; a service is not physical at all. Choosing the right type
-determines whether Odoo manages inventory for it, so get this right per product from the start.
+## Applies to
 
-## Get units of measure right
+- **Odoo version:** Odoo 19 (and 18, which introduced the Goods + Track Inventory model). Odoo 17 and earlier
+  use the older *storable* and *consumable* product types instead.
+- **Edition:** Community and Enterprise.
+- **Apps:** Inventory; Sales and Purchase add their own tabs and fields to the product form.
 
-If you buy, store and sell in different units, boxes, packs, individual items, you must set the units of measure
-correctly. This is one of the most common setup mistakes, and it throws off quantities and costs when wrong. Take the
-time to model your units properly; it saves a great deal of confusion later.
+## Before you start
 
-## Set prices and costs
+1. **Decide how you count each product.** Your inventory unit should be the unit your team counts on the shelf:
+   units, kilograms, metres. Changing it once stock moves exist causes confusion, so decide first.
+2. **List how suppliers sell to you.** Boxes of 12, rolls of 50 metres, sacks of 25 kg. These become purchase units
+   or packagings.
+3. **Decide which products need lots or serial numbers.** Traceability is set per product and is far easier to set
+   before the first receipt.
 
-Each product carries a sales price and a cost. The sales price drives your quotes and invoices; the cost feeds your
-margins and inventory valuation. Set both thoughtfully, and understand that cost may be updated automatically depending
-on your valuation method. Accurate prices and costs are what make your sales and reporting meaningful.
+## Step by step
 
-## Use variants for genuine variations
+### 1. Enable units of measure (if needed)
 
-If a product comes in several colours or sizes, use variants rather than creating a separate product for each. Variants
-keep related items tidy under one product with its options, which is far easier to manage than dozens of near-identical
-separate products. Reserve them for real variations of the same thing.
+1. Go to **Inventory ‣ Configuration ‣ Settings**.
+2. Under **Products**, tick **Units of Measure & Packagings** and click **Save**.
 
-## Organise with categories
+Skip this if every product is bought, stored and sold in single units.
 
-Product categories keep your catalogue manageable and also drive some accounting and inventory behaviour behind the
-scenes. A sensible category structure makes products easier to find and report on, and keeps the setup tidy as your
-catalogue grows. A little organisation here pays off every time you search or report.
+### 2. Create the product
 
-## Practical tips
+1. Go to **Inventory ‣ Products ‣ Products** and click **New**.
+2. Enter the product name.
+3. Tick **Sales** if you sell it and **Purchase** if you buy it. A component you only buy has Purchase alone; a
+   finished product you only sell has Sales alone.
+4. On the **General Information** tab, set **Product Type**:
+   - **Goods** for physical items;
+   - **Service** for work such as installation or consulting;
+   - **Combo** for a bundle of goods and services.
 
-- Choose the correct product type; it decides whether stock is tracked.
-- Set units of measure carefully if you buy, store and sell differently.
-- Set both sales price and cost thoughtfully for correct margins.
-- Use variants for real variations, not separate near-identical products.
-- Organise products into sensible categories from the start.
+### 3. Decide whether to track inventory
 
-## My take
+For goods, tick **Track Inventory** if you need stock levels, valuation, reordering rules or traceability. Then
+choose how to track:
 
-Products are central enough that getting them right pays off across the whole system, and getting them wrong causes
-scattered problems that are hard to trace. The right type, correct units of measure, sensible prices and tidy variants
-and categories are the foundation. Set products up with care and sales, stock and accounting all behave; rush them and
-you will be untangling issues for months.
+- **By Quantity** for ordinary stock;
+- **By Lots** for batches, for example food, chemicals or anything with expiry dates;
+- **By Unique Serial Number** for individually traceable items such as machines.
 
-Next in this series: how to set up a warehouse and locations.
+Leave Track Inventory off for items you never count. Odoo treats untracked goods as always available, so they can't
+use reordering rules, inventory adjustments or stock valuation.
 
-*Based on the official [Odoo 19 product type documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/type.html). Want your catalogue set up right? [Get in touch](/services/odoo-implementation/).*
+### 4. Set the inventory unit, price and cost
+
+The unit next to **Sales Price** and **Cost** is the product's inventory unit, the one stock is counted and moved in.
+Changing it in one field changes the other, because Odoo keeps them the same. Enter the sales price and cost per
+that unit.
+
+### 5. Add vendors and the purchase unit
+
+1. Open the **Purchase** tab and click **Add a line**.
+2. Choose the **Vendor**, enter the **Unit Price**, the **Lead Time** in days and the purchase **Unit**, for example
+   a box.
+3. Put your preferred vendor first. Odoo uses the top line when it creates purchase orders automatically.
+
+### 6. Add selling packagings (optional)
+
+On the **Sales** tab, in **Upsell & Cross-Sell**, add the packagings customers can buy, such as a case of 12.
+Several packagings can be added to one product.
+
+### 7. Check routes and save
+
+On the **Inventory** tab, confirm the routes: **Buy** for purchased products, **Manufacture** for products made
+in-house. Save the product.
+
+## Worked example: bought by the box, sold by the unit
+
+A distributor sells **Hand sanitiser 500 ml**.
+
+| Field | Value |
+|---|---|
+| Product Type | Goods |
+| Track Inventory | Ticked, **By Lots** (batches carry expiry dates) |
+| Inventory unit | Units |
+| Sales and Purchase | Both ticked |
+| Vendor line | Supplier A, purchase unit **Box of 24**, lead time 5 days |
+| Selling packaging | Case of 12 |
+| Route | Buy |
+
+A purchase order for **10 boxes** creates a receipt for **240 units**, because the warehouse counts in units. A
+customer order for **2 cases** creates a delivery for **24 units**. Stock reports, reordering rules and valuation
+all work in units, so nobody has to convert by hand.
+
+## What you should see
+
+- A **Forecasted** smart button on the product form, showing on-hand and forecasted quantities (tracked goods only).
+- Purchase orders that default to the vendor's unit, and receipts that show the converted quantity in the inventory
+  unit.
+- A **Lot/Serial Number** field on receipts for lot- or serial-tracked products.
+
+## Troubleshooting
+
+**No stock figures or Forecasted button.** The product is a Service, or a Good without **Track Inventory**. Tick it.
+
+**The reordering rule option is missing.** Same cause: reordering rules need a tracked good.
+
+**Receipts show odd quantities.** The purchase unit on the vendor line is wrong, or the conversion behind it is. A
+box defined as 24 units turns 10 boxes into 240 units on the receipt.
+
+**Automatic purchase orders aren't created.** There is no vendor on the **Purchase** tab, or the **Purchase**
+checkbox isn't ticked.
+
+**Products were created with the wrong type.** Fix it before stock moves exist where you can; once transactions exist,
+correcting the setup is more involved, so test with a few products before importing the whole catalogue.
+
+**Cost looks wrong after receipts.** Check the product category's costing method, which controls whether cost is
+standard or updated from purchases.
+
+## Related setup
+
+- [How to set up a warehouse and storage locations in Odoo 19](/blog/2026/09/23/how-to-set-up-warehouse-locations-odoo/)
+- [How to set up reordering rules in Odoo 19](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/)
+- [Lot and serial number tracking in Odoo](/blog/2026/08/12/lot-and-serial-number-tracking-in-odoo/)
+- [Importing and exporting data in Odoo](/blog/2026/09/14/odoo-import-export-data/), for loading a full catalogue
+- Setting up a large catalogue? See [Odoo implementation](/services/odoo-implementation/).
+
+## Official references
+
+- Odoo 19 documentation: [Product type](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/type.html)
+- Odoo 19 documentation: [Units of measure](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/uom.html)
+- Odoo 19 documentation: [Reordering rules](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.html)
+
+*How this guide was checked: menus, fields and behaviour were checked against the Odoo 19 documentation in October
+2026. The example is illustrative and wasn't run on a live database, so there are no screenshots; labels can vary
+slightly with your installed apps and language.*

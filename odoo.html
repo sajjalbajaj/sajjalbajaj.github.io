@@ -1,99 +1,118 @@
 ---
 layout: default
 permalink: /odoo/
-title: "Odoo Knowledge Hub | Guides, Tutorials & Consulting"
-description: "The Odoo knowledge hub: practical, plain-English guides on Odoo inventory, manufacturing, sales, CRM, accounting, migration and more, plus Odoo consulting and implementation services from a certified Odoo consultant."
-topics:
-  - tag: Inventory
-    title: "Inventory & Warehouse"
-    blurb: "Stock control, warehouses and locations, reordering, lots and serial numbers, valuation and removal strategies."
-  - tag: Manufacturing
-    title: "Manufacturing (MRP)"
-    blurb: "Bills of materials, work centers, manufacturing orders, subcontracting and quality control."
-  - tag: Purchase
-    title: "Purchase & Procurement"
-    blurb: "RFQs to purchase orders, vendor bills and three-way matching, pricelists and purchase automation."
-  - tag: Sales
-    title: "Sales"
-    blurb: "Quotations to sales orders, product variants, pricelists, invoicing policies and subscriptions."
-  - tag: CRM
-    title: "CRM"
-    blurb: "Pipeline management, lead generation and mining, predictive lead scoring, activities and forecasting."
-  - tag: Accounting
-    title: "Accounting & Finance"
-    blurb: "Customer invoicing, vendor bills, taxes, bank reconciliation, analytic accounting and financial reporting."
-  - tag: Migration
-    title: "Odoo 20 & Migration"
-    blurb: "Upgrading Odoo versions and migrating onto Odoo, planned, tested and delivered cleanly."
+title: "Odoo Guides by Subject"
+description: "Practical Odoo guides grouped by subject: inventory, manufacturing, purchasing, sales and CRM, accounting, eCommerce, HR, integrations and administration."
+schema_type: CollectionPage
+last_modified_at: 2026-10-04
+groups:
+  - key: planning
+    title: "Choosing, planning and upgrading Odoo"
+    blurb: "Whether Odoo fits, what it costs, how projects succeed or fail, data migration and Odoo 20."
+  - key: industries
+    title: "Odoo by industry"
+    blurb: "The operational problems ERP solves in specific industries, from steel and construction to coffee and dairy."
+  - key: inventory
+    title: "Inventory, warehouse and delivery"
+    blurb: "Products and units of measure, warehouses and locations, replenishment, traceability, valuation and delivery planning."
+  - key: purchase
+    title: "Purchasing"
+    blurb: "From request for quotation to vendor bill: vendor pricelists, purchase automation and three-way matching."
+  - key: manufacturing
+    title: "Manufacturing"
+    blurb: "Bills of materials, work centres, manufacturing orders, quality, maintenance, subcontracting and PLM."
+  - key: sales
+    title: "Sales, CRM and point of sale"
+    blurb: "Quotations to invoices, pricelists, the CRM pipeline, subscriptions, rental and point of sale."
+  - key: accounting
+    title: "Accounting and finance"
+    blurb: "Invoicing, vendor bills, taxes, bank reconciliation, analytic accounting, reporting and expenses."
+  - key: website
+    title: "Website and eCommerce"
+    blurb: "Building the website, running an online store connected to stock, live chat and eLearning."
+  - key: marketing
+    title: "Marketing"
+    blurb: "Email, SMS and social marketing, automation, events and surveys, and how campaigns feed the CRM."
+  - key: services
+    title: "Projects, services and support"
+    blurb: "Projects, timesheets, planning, field service, appointments and helpdesk for service businesses."
+  - key: hr
+    title: "HR and people"
+    blurb: "Employees, recruitment, time off, attendance, appraisals, payroll, fleet and referrals."
+  - key: integrations
+    title: "Integrations, data and reporting"
+    blurb: "Connecting Odoo to other systems, importing and cleaning data, spreadsheets and reporting."
+  - key: admin
+    title: "Administration and productivity"
+    blurb: "Company setup, users and access rights, email, multi-company, Studio and the productivity apps."
 ---
 <section class="section">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a> ›
-    <span>Odoo</span>
+    <span>Odoo guides</span>
   </nav>
 
-  <h1 class="section-title"><span class="section-title__no">☰</span> Odoo Knowledge Hub</h1>
-  <p class="services__lead">Practical, plain-English guides to getting real value from Odoo, across inventory,
-  manufacturing, purchasing, sales, CRM and accounting, written by a certified Odoo consultant. Browse the
-  guides below, or jump straight to how I can help with your Odoo project.</p>
+  <h1 class="section-title"><span class="section-title__no">☰</span> Odoo guides by subject</h1>
+  <p class="services__lead">Plain-English Odoo guides, written from my work as an Odoo consultant. Each subject lists its
+  step-by-step setup guides first, followed by explainers and common mistakes. Most guides are written for Odoo 19 and say
+  which version and edition they apply to.</p>
 
-  <h2 class="services__ind-title">Odoo consulting &amp; services</h2>
-  <div class="services__grid">
-    <article class="service-card">
-      <span class="service-card__no">01</span>
-      <h3 class="service-card__title"><a href="{{ '/services/odoo-consulting/' | relative_url }}">Odoo Consulting</a></h3>
-      <p class="service-card__desc">Vendor-neutral advice on choosing, scoping and getting value from Odoo.</p>
-    </article>
-    <article class="service-card">
-      <span class="service-card__no">02</span>
-      <h3 class="service-card__title"><a href="{{ '/services/odoo-implementation/' | relative_url }}">Odoo Implementation</a></h3>
-      <p class="service-card__desc">End-to-end implementation, configured to how your business really runs.</p>
-    </article>
-    <article class="service-card">
-      <span class="service-card__no">03</span>
-      <h3 class="service-card__title"><a href="{{ '/services/odoo-migration/' | relative_url }}">Odoo Migration</a></h3>
-      <p class="service-card__desc">Move onto Odoo or upgrade versions, tested on a copy, then a clean cut-over.</p>
-    </article>
-    <article class="service-card">
-      <span class="service-card__no">04</span>
-      <h3 class="service-card__title"><a href="{{ '/services/odoo-customization/' | relative_url }}">Odoo Customization</a></h3>
-      <p class="service-card__desc">Custom modules and workflows for the gaps standard Odoo does not cover.</p>
-    </article>
-  </div>
+  <nav class="hub-toc card" aria-label="Subjects on this page">
+    <h2 class="services__ind-title">Jump to a subject</h2>
+    <ul>
+      {% for g in page.groups %}{% assign gp = site.posts | where: "hub", g.key %}{% if gp.size > 0 %}
+      <li><a href="#{{ g.key }}">{{ g.title }}</a> <span class="hub-toc__n">({{ gp.size }})</span></li>
+      {% endif %}{% endfor %}
+    </ul>
+  </nav>
 
   <div class="svc-related">
-    <h2 class="services__ind-title">Start here: popular guides</h2>
+    <h2 class="services__ind-title">Start here</h2>
     <ul>
-      <li><a href="{{ '/blog/2026/07/23/why-odoo-erp/' | relative_url }}">Why Odoo? A Consultant's View</a></li>
-      <li><a href="{{ '/blog/2026/07/28/how-much-does-odoo-cost/' | relative_url }}">How Much Does Odoo Cost? A Straight Answer</a></li>
-      <li><a href="{{ '/blog/2026/07/27/sap-vs-odoo/' | relative_url }}">SAP vs Odoo: Which Fits Your Business?</a></li>
-      <li><a href="{{ '/blog/2026/07/24/odoo-vs-microsoft-business-central/' | relative_url }}">Odoo vs Microsoft Business Central</a></li>
-      <li><a href="{{ '/blog/2026/08/05/erp-vs-crm/' | relative_url }}">ERP vs CRM: Do You Need Both?</a></li>
-      <li><a href="{{ '/blog/2026/07/27/odoo-implementation-checklist/' | relative_url }}">Odoo Implementation Checklist</a></li>
-      <li><a href="{{ '/blog/2026/07/31/odoo-20-what-to-expect/' | relative_url }}">Odoo 20: What to Expect and How to Prepare</a></li>
+      <li><a href="{{ '/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/' | relative_url }}">How to set up reordering rules in Odoo 19</a></li>
+      <li><a href="{{ '/blog/2026/09/23/how-to-set-up-warehouse-locations-odoo/' | relative_url }}">How to set up a warehouse and storage locations in Odoo 19</a></li>
+      <li><a href="{{ '/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/' | relative_url }}">How to set up a bill of materials in Odoo 19</a></li>
+      <li><a href="{{ '/blog/2026/07/27/odoo-implementation-checklist/' | relative_url }}">Odoo implementation checklist</a></li>
+      <li><a href="{{ '/blog/2026/07/28/how-much-does-odoo-cost/' | relative_url }}">How much does Odoo cost?</a></li>
+      <li><a href="{{ '/blog/2026/10/04/ai-route-planning-odoo-experience-india-2026/' | relative_url }}">Recap: AI-based route planning at Odoo Experience India 2026</a></li>
     </ul>
   </div>
 
-  {% for t in page.topics %}
-    {% assign tp = site.tags[t.tag] %}
-    {% if tp and tp.size > 0 %}
-    <div class="svc-related">
-      <h2 class="services__ind-title">{{ t.title }}</h2>
-      <p class="services__lead">{{ t.blurb }}</p>
+  {% for g in page.groups %}
+    {% assign gp = site.posts | where: "hub", g.key | sort: "date" %}
+    {% if gp.size > 0 %}
+    <section class="svc-related hub-group" id="{{ g.key }}" aria-labelledby="{{ g.key }}-h">
+      <h2 class="services__ind-title" id="{{ g.key }}-h">{{ g.title }}</h2>
+      <p class="services__lead">{{ g.blurb }}</p>
       <ul>
-        {% for p in tp %}
+        {% for p in gp %}{% if p.title contains 'How to' %}
+        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span class="hub-kind">Setup guide</span></li>
+        {% endif %}{% endfor %}
+        {% for p in gp %}{% unless p.title contains 'How to' %}
         <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-        {% endfor %}
+        {% endunless %}{% endfor %}
       </ul>
-    </div>
+      <p class="hub-group__top"><a href="#main">Back to top</a></p>
+    </section>
     {% endif %}
   {% endfor %}
 
+  <div class="svc-related">
+    <h2 class="services__ind-title">Services and examples</h2>
+    <ul>
+      <li><a href="{{ '/services/odoo-consulting/' | relative_url }}">Odoo consulting and business analysis</a></li>
+      <li><a href="{{ '/services/odoo-implementation/' | relative_url }}">Odoo implementation for manufacturing and distribution</a></li>
+      <li><a href="{{ '/services/odoo-migration/' | relative_url }}">Odoo migration and version upgrades</a></li>
+      <li><a href="{{ '/services/odoo-customization/' | relative_url }}">Odoo customisation</a></li>
+      <li><a href="{{ '/case-studies/coffee-roaster-odoo-erp/' | relative_url }}">Representative example: Odoo for a coffee roaster and wholesaler</a></li>
+    </ul>
+  </div>
+
   <div class="services__cta card">
     <h2>Planning an Odoo project?</h2>
-    <p>Whether it is a fresh implementation, a migration, customization or just a straight second opinion,
-    I can help. Let's talk about what you are trying to achieve.</p>
-    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
+    <p>Whether it's a new implementation, a migration or a second opinion on an existing setup, tell me what you're
+    trying to achieve.</p>
+    <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Discuss your project</a>
     <a class="btn btn--ghost" href="{{ '/services/odoo-consulting/' | relative_url }}">Odoo consulting</a>
   </div>
 </section>
@@ -101,21 +120,10 @@ topics:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Odoo Knowledge Hub",
-  "url": "{{ '/odoo/' | absolute_url }}",
-  "description": {{ page.description | jsonify }},
-  "isPartOf": { "@type": "WebSite", "name": "Sajjal Bajaj", "url": "{{ '/' | absolute_url }}" },
-  "about": { "@type": "SoftwareApplication", "name": "Odoo", "applicationCategory": "BusinessApplication" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ '/' | absolute_url }}" },
-    { "@type": "ListItem", "position": 2, "name": "Odoo", "item": "{{ '/odoo/' | absolute_url }}" }
+    { "@type": "ListItem", "position": 2, "name": "Odoo guides", "item": "{{ '/odoo/' | absolute_url }}" }
   ]
 }
 </script>

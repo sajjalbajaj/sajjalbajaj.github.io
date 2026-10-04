@@ -3,6 +3,7 @@ layout: post
 title: "Payments and Checkout in Odoo eCommerce"
 date: 2026-08-25 10:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Accounting, ERP]
+hub: website
 description: "How Odoo eCommerce handles payments and checkout, from payment providers to a smooth buying flow, and how it ties into your accounts automatically."
 ---
 

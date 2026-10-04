@@ -3,6 +3,7 @@ layout: post
 title: "Project Profitability in Odoo: Did the Project Make Money?"
 date: 2026-09-05 09:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, ERP]
+hub: services
 description: "How Odoo helps you see whether a project actually made money, by bringing its costs and revenue together, so a busy business is also a profitable one."
 ---
 

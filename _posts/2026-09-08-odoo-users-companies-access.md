@@ -3,6 +3,7 @@ layout: post
 title: "Users, Companies and Access Rights in Odoo"
 date: 2026-09-08 09:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo handles users, access rights and multiple companies, so the right people see the right things and your setup is secure and organised."
 ---
 

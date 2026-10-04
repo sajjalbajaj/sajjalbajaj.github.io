@@ -3,6 +3,7 @@ layout: post
 title: "ERP for a Dairy and Milk Business: Problems It Solves"
 date: 2026-08-25 14:00:00 +0530
 tags: [ERP, Odoo, Dairy, Food and Beverage, Inventory Management, SME]
+hub: industries
 description: "The problems dairy and milk businesses face, from perishability and batch traceability to farmer procurement and route distribution, and how Odoo solves them."
 ---
 

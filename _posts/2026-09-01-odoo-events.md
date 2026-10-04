@@ -3,6 +3,7 @@ layout: post
 title: "Events in Odoo: From Registration to Follow-up"
 date: 2026-09-01 09:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, ERP]
+hub: marketing
 description: "How Odoo Events helps you run events end to end, from a registration page and ticketing to attendee management and follow-up, all in one system."
 ---
 

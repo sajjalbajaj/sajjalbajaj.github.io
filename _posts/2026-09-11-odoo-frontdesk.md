@@ -3,6 +3,7 @@ layout: post
 title: "Frontdesk in Odoo: Simple Visitor Management"
 date: 2026-09-11 10:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP, Frontdesk, Visitor Management, Business Automation, Digital Transformation]
+hub: hr
 description: "How Odoo Frontdesk gives you a simple, professional way to manage visitors checking in, notify hosts automatically, and keep a clear record."
 ---
 

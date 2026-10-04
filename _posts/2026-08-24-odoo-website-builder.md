@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Website: Building a Site with the Drag-and-Drop Builder"
 date: 2026-08-24 08:00:00 +0530
 tags: [Odoo, Odoo 19, Website, eCommerce, ERP]
+hub: website
 description: "How Odoo's drag-and-drop website builder lets you create a professional site with no code, and why building it inside your ERP is a real advantage."
 ---
 

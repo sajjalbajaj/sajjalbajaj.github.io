@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Manufacturing: The Problems It Solves"
 date: 2026-08-20 14:00:00 +0530
 tags: [ERP, Odoo, Manufacturing, Production Planning, SME, Digital Transformation]
+hub: industries
 description: "The everyday problems manufacturers face, from raw material shortages to unclear product costs, and how an ERP like Odoo solves each one."
 ---
 

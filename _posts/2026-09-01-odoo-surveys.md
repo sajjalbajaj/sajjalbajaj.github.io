@@ -3,6 +3,7 @@ layout: post
 title: "Surveys in Odoo: Collect Feedback That Matters"
 date: 2026-09-01 10:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, ERP]
+hub: marketing
 description: "How Odoo Surveys helps you gather feedback from customers and employees, from building the survey to analysing the responses, all in one place."
 ---
 

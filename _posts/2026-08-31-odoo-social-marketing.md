@@ -3,6 +3,7 @@ layout: post
 title: "Social Marketing in Odoo: Manage Your Channels in One Place"
 date: 2026-08-31 10:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, ERP]
+hub: marketing
 description: "How Odoo Social Marketing lets you post, schedule and monitor your social media channels from one place, alongside the rest of your marketing."
 ---
 

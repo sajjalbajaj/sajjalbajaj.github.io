@@ -2,13 +2,18 @@
 layout: post
 title: "Bills of Materials in Odoo: Kits, Variants and Multi-Level BoMs"
 date: 2026-08-15 08:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, Inventory Management, Stock Control, Production Planning]
+hub: manufacturing
 description: "A plain-English guide to Bills of Materials in Odoo: what a BoM is, plus kits, product variants, multi-level BoMs and by-products explained."
 ---
 
 If you make things, the Bill of Materials is the single most important record you will set up. Every
 manufacturing order, cost and stock movement flows from it. Odoo goes well beyond a simple parts
 list, so here is a plain-English guide to Bills of Materials and the useful variations.
+
+*This article explains BoM types such as kits, variants and multi-level BoMs. For the exact setup steps and a
+worked example, see [how to set up a bill of materials in Odoo 19](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/).*
 
 ## What a Bill of Materials is
 

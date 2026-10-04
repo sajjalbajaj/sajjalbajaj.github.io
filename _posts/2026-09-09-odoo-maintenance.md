@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Maintenance: Keeping Equipment Running"
 date: 2026-09-09 10:00:00 +0530
 tags: [Odoo, Odoo 19, Maintenance, Manufacturing, ERP, Asset Management, Repairs, After Sales]
+hub: manufacturing
 description: "How Odoo Maintenance helps you look after equipment with preventive and corrective maintenance, so breakdowns are rarer and less costly."
 ---
 

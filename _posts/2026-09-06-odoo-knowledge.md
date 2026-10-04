@@ -3,6 +3,7 @@ layout: post
 title: "Knowledge in Odoo: Your Company Wiki"
 date: 2026-09-06 09:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo Knowledge gives your business a living wiki for processes, guides and shared information, so what your team knows is written down and findable."
 ---
 

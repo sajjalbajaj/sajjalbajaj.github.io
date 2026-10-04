@@ -3,6 +3,7 @@ layout: post
 title: "Fleet Management in Odoo"
 date: 2026-08-30 09:00:00 +0530
 tags: [Odoo, Odoo 19, HR, ERP]
+hub: hr
 description: "How Odoo Fleet helps you manage company vehicles, from assignments and contracts to costs and maintenance, in one organised place."
 ---
 

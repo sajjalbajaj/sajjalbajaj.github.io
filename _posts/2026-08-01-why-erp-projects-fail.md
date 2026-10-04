@@ -3,6 +3,7 @@ layout: post
 title: "Why ERP Projects Fail (and How to Make Yours Succeed)"
 date: 2026-08-01 09:00:00 +0530
 tags: [ERP, ERP Implementation, Digital Transformation, SME, Stock Control, Lead Management, ERP Migration, ERP Cost]
+hub: planning
 description: "The real reasons ERP projects fail are rarely technical. Here are the common causes and the practical habits that keep an implementation on track."
 faqs:
   - q: "Why do ERP projects fail?"

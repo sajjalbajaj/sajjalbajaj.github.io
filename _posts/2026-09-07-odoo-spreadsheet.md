@@ -3,6 +3,7 @@ layout: post
 title: "Spreadsheet in Odoo: Live Data, Live Reports"
 date: 2026-09-07 09:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, Data, ERP]
+hub: integrations
 description: "How Odoo Spreadsheet gives you familiar spreadsheet power connected to live business data, so your analysis updates itself instead of going stale."
 ---
 

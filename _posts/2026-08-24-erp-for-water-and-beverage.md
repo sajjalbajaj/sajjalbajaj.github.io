@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Water and Beverage Businesses: Problems It Solves"
 date: 2026-08-24 14:00:00 +0530
 tags: [ERP, Odoo, Water, Food and Beverage, Inventory Management, SME]
+hub: industries
 description: "The problems water and beverage businesses face, from batch production and returnable containers to route delivery and thin margins, and how Odoo solves them."
 ---
 

@@ -2,13 +2,18 @@
 layout: post
 title: "Work Centers and Work Orders in Odoo Manufacturing"
 date: 2026-08-15 09:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, Inventory Management, Stock Control, Production Planning]
+hub: manufacturing
 description: "How Odoo models the shop floor with work centers, operations and work orders, giving you real-time production tracking and capacity planning."
 ---
 
 A Bill of Materials tells Odoo what a product is made of. Work centers and work orders tell it how the
 product is actually made, step by step, on your shop floor. For anything beyond simple assembly, this
 is where Odoo Manufacturing earns its keep.
+
+*This article explains the concepts. For the exact setup steps, a worked example and troubleshooting, see
+[how to set up work centres and work orders in Odoo 19](/blog/2026/09/27/how-to-set-up-work-orders-odoo/).*
 
 ## Work centers: where the work happens
 

@@ -2,9 +2,13 @@
 layout: post
 title: "Odoo 20: The New Features Launching"
 date: 2026-09-05 12:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 20, Features, ERP, AI, Automation, Upgrade, Business Automation]
+hub: planning
 description: "What genuinely new features is Odoo 20 launching? A plain-English preview of the fresh additions, from agentic AI to a redesigned mobile app and new industries."
 ---
+
+> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
 Every new Odoo version brings a mix of brand-new capabilities and improvements to existing ones. This post focuses on
 what is genuinely new in Odoo 20, the fresh arrivals, rather than the upgrades to things already there, which I cover

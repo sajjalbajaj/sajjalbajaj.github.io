@@ -3,6 +3,7 @@ layout: post
 title: "Product Pages, Variants and Catalog in Odoo eCommerce"
 date: 2026-08-25 09:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Sales, ERP]
+hub: website
 description: "How to build product pages that convert in Odoo eCommerce, handle variants cleanly, and organise your catalog so customers find what they want."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Fleet Management in Odoo"
 date: 2026-10-02 10:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Fleet, HR, Maintenance, Asset Management, Repairs]
+hub: hr
 description: "A plain-English guide to setting up Odoo Fleet, so your company vehicles, their costs, contracts and maintenance are all tracked in one place."
 ---
 

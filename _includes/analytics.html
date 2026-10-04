@@ -1,0 +1,16 @@
+{%- comment -%}
+  Google Analytics 4. Renders nothing until `analytics.ga4_id` is set in _config.yml,
+  and only in production builds (GitHub Actions sets JEKYLL_ENV=production).
+  Contact clicks are sent by assets/track.js as a `contact_click` event with only the
+  contact method and page section: no email addresses, phone numbers or message text.
+{%- endcomment -%}
+{%- assign ga4 = site.analytics.ga4_id | default: '' | strip -%}
+{%- if ga4 != '' and jekyll.environment == 'production' -%}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga4 }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '{{ ga4 }}');
+</script>
+{%- endif -%}

@@ -3,6 +3,7 @@ layout: post
 title: "Running a Services Business on Odoo"
 date: 2026-09-05 10:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, ERP]
+hub: services
 description: "How the Odoo services apps fit together to run a whole services business, from winning work to delivering, supporting, billing and understanding profit."
 ---
 

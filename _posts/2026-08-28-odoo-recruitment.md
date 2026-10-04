@@ -3,6 +3,7 @@ layout: post
 title: "Recruitment in Odoo: From Job Post to Hire"
 date: 2026-08-28 09:00:00 +0530
 tags: [Odoo, Odoo 19, HR, Recruitment, ERP]
+hub: hr
 description: "How Odoo Recruitment manages hiring, from posting a job to tracking candidates through stages to making a hire, all in one organised pipeline."
 ---
 

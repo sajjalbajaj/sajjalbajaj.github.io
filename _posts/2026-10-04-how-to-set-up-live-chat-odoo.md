@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Live Chat in Odoo"
 date: 2026-10-04 08:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Live Chat, Website, CRM, Sales Management, Web Design]
+hub: website
 description: "A plain-English guide to setting up Odoo Live Chat, so visitors on your website can get instant answers and you can turn conversations into leads and sales."
 ---
 

@@ -1,45 +1,46 @@
 ---
 layout: case-study
-title: "Odoo ERP for a Coffee Roaster and Wholesaler"
-description: "A representative case study: how a coffee roaster and wholesaler moves from spreadsheets to one connected Odoo ERP across roasting, traceability, multi-channel sales and accounting."
-summary: "A representative example of a growing coffee roaster and wholesaler replacing scattered spreadsheets with one connected Odoo system across purchasing, roasting, inventory, sales and accounting."
-industry: "Coffee (Food & Beverage)"
-services: ["Odoo Implementation", "Inventory", "Manufacturing", "Accounting"]
-duration: "Phased, first phase live in a few weeks"
-metrics:
-  - value: "1"
-    label: "Connected system, replacing scattered spreadsheets"
-  - value: "Live"
-    label: "Stock and sales visibility"
-  - value: "Bean to bag"
-    label: "Full lot traceability"
-problem: "A growing coffee roaster and wholesaler was running on spreadsheets and disconnected tools. Stock, roasting, orders and accounts never quite agreed, and as volume grew the cracks widened into wasted time, errors and guesswork on cost."
-existing_process: "Green bean stock lived in one spreadsheet, roasting was logged on paper, wholesale orders arrived by email, and the accounts were kept separately. Nobody had a live, trustworthy view, and tracing a roasted bag back to its green bean lot was slow and manual."
+status: representative
+title: "Representative Example: Odoo for a Coffee Roaster and Wholesaler"
+description: "A representative example of how I would approach Odoo for a coffee roaster: purchasing, roasting, lot traceability, sales channels and accounting."
+last_modified_at: 2026-10-04
+summary: "An illustration of how I would approach an Odoo project for a growing coffee roaster and wholesaler that runs on spreadsheets: the typical problems, the design decisions and the outcomes the design aims for."
+industry: "Coffee (food and beverage)"
+services: ["Odoo implementation", "Inventory", "Manufacturing", "Accounting"]
+problem: "A growing roaster that sells wholesale, retail and by subscription often runs on spreadsheets and disconnected tools. Green coffee stock, roasting, orders and accounts rarely agree, and as volume grows the gaps turn into wasted time, errors and guesswork about the real cost of each blend."
+existing_process: "In a typical setup, green coffee stock lives in one spreadsheet, roasting is logged on paper, wholesale orders arrive by email and the accounts are kept separately. Nobody has a live, trustworthy view, and tracing a bag of roasted coffee back to its green coffee lot is slow and manual."
 requirements:
-  - "One connected system for purchasing, stock, roasting, sales and accounts."
-  - "Traceability from green bean lot through to the finished bag."
-  - "Accurate roast yield and clear cost per blend."
-  - "Handle wholesale, retail and subscription channels in one place."
-solution: "I implemented Odoo across purchasing, inventory, manufacturing, sales and accounting, configured around how a roastery actually works. Roasting was modelled as a production step, and blends as bills of materials, so stock, yield and cost stayed accurate. The first phase was kept lean so the team saw value quickly, then we expanded."
+  - "One system for purchasing, stock, roasting, sales and accounts."
+  - "Traceability from green coffee lot to finished bag."
+  - "Realistic roast yields and a clear cost per blend."
+  - "Wholesale, retail and subscription orders drawing on the same stock."
+solution: "I would implement Odoo across Purchase, Inventory, Manufacturing, Sales and Accounting, configured around how a roastery works. Roasting is modelled as a manufacturing step and each blend as a bill of materials, so green coffee consumed, roasted coffee produced and the cost per bag stay connected. The first phase stays small, usually purchasing and stock, so the team trusts the system before production and sales move across."
+decisions:
+  - "Green coffee and finished coffee tracked by lots, so any bag can be traced back to the green coffee it came from."
+  - "Blends as multi-level bills of materials rather than custom code, with roast loss built into the component quantities."
+  - "Flexible consumption set to warn rather than block, because roast loss varies between batches."
+  - "Standard Odoo features first; any customisation only after a fit-gap shows a real need."
 modules: ["Purchase", "Inventory", "Manufacturing", "Sales", "Accounting"]
 customizations:
-  - "Kept deliberately minimal. Standard Odoo features covered most needs, with blends handled through multi-level bills of materials rather than custom code."
+  - "Kept to a minimum: standard Odoo covers most roastery needs, with blends handled through bills of materials rather than custom code."
 integrations:
-  - "Connected the online store so web orders flowed into Odoo automatically, alongside wholesale and subscription orders."
-implementation: "Delivered in phases: purchasing and stock first, then roasting and sales, then accounting. Master data was cleaned before migration, real users tested their daily tasks, and there was hands-on support through the first busy days at go-live."
+  - "If the roaster sells online, web orders would flow into Odoo alongside wholesale and subscription orders so they share the same stock."
+implementation: "Delivered in phases: purchasing and stock first, then roasting and sales, then accounting. Product and lot data is cleaned before import, staff test their daily tasks in a test database, and the first busy weeks after go-live get close support."
 challenges:
-  - "Roasting loses weight, so stock and cost can drift. This was solved by modelling roasting as a production order that accounts for green beans in and roasted coffee out."
-  - "Getting the team to log roasting in the system rather than on paper. This was solved with short, role-based training and keeping the everyday actions simple."
+  - "Roasting loses weight, so stock and cost drift if it isn't modelled. Treating roasting as a manufacturing order, with green coffee in and roasted coffee out, keeps both accurate."
+  - "Getting roasters to record batches in the system instead of on paper. Short, role-based training and simple daily actions help."
 results:
-  - "One connected system replaced the scattered spreadsheets, giving a single source of truth."
-  - "Live stock and sales visibility, instead of waiting on manual reports."
-  - "Full traceability from green bean lot to finished bag, supporting quality and customer trust."
-  - "Clear, consistent costing per blend, so pricing decisions were made with confidence."
-  - "Wholesale, retail and subscription orders handled together, all drawing on the same stock."
-cta_title: "Run a coffee or food business on spreadsheets?"
-cta_text: "If your stock, production and accounts do not talk to each other, this is exactly the kind of problem I help solve. Let's talk about your setup."
+  - "One system instead of scattered spreadsheets, as the single source of truth."
+  - "Live stock and sales visibility instead of waiting for manual reports."
+  - "Traceability from green coffee lot to finished bag, supporting quality checks and recalls."
+  - "Consistent costing per blend, so pricing decisions rest on real yields."
+  - "Wholesale, retail and subscription orders handled together against the same stock."
+cta_title: "Running a coffee or food business on spreadsheets?"
+cta_text: "If your stock, production and accounts don't agree with each other, tell me how you work today and I'll explain how I would approach it in Odoo."
 ---
 
-*This is a representative example that illustrates a typical coffee-industry Odoo engagement, the kind of
-problem, approach and outcome involved. It does not describe a specific named client, and any details are
-anonymized. If you would like references for real projects, I am happy to share them directly.*
+For the setup steps behind this approach, see my guides on
+[bills of materials](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/),
+[products and units of measure](/blog/2026/09/22/how-to-set-up-products-in-odoo/) and
+[lot and serial number tracking](/blog/2026/08/12/lot-and-serial-number-tracking-in-odoo/).
+If you'd like to hear about comparable projects I've worked on, ask me directly and I'll share what I can.

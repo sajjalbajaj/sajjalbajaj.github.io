@@ -3,6 +3,7 @@ layout: post
 title: "Measuring Marketing in Odoo: Metrics That Matter"
 date: 2026-09-02 10:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, Data, ERP]
+hub: marketing
 description: "Which marketing metrics actually matter, and how Odoo helps you measure the whole journey from campaign to revenue instead of vanity numbers."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "Project Management in Odoo: Tasks, Stages and Delivery"
 date: 2026-09-03 08:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, ERP]
+hub: services
 description: "How Odoo Project helps you plan and deliver work with tasks, stages and clear ownership, keeping projects on track and everyone on the same page."
 ---
 

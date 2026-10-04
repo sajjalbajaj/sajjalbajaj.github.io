@@ -24,3 +24,9 @@ Gemfile.lock
 
 # Local-only CV PDF (not published)
 cv-pdf/
+
+# Private, local-only content review notes and handover drafts (repo is public)
+content-review/
+
+# Local Bundler settings (Ruby gems for local preview live outside the repo)
+.bundle/

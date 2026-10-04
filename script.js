@@ -108,7 +108,7 @@
   var counted = false;
   function countUp() {
     if (counted) return; counted = true;
-    $$('.stat__num').forEach(function (el) {
+    $$('.stat__num[data-count]').forEach(function (el) {
       var target = parseInt(el.getAttribute('data-count'), 10) || 0;
       var suffix = el.getAttribute('data-suffix') || '';
       if (reduceMotion) { el.textContent = target + suffix; return; }
@@ -154,19 +154,19 @@
   /* ---------- Ask my portfolio (canned Q&A) ---------- */
   var QA = [
     { q: 'What do you do?',
-      a: "I'm Sajjal Bajaj, an ERP Consultant and Project Manager. Day to day I wear several hats: Scrum Master, Business Analyst, Team Lead, and ERP Consultant, having grown from a hands-on developer over nearly 10 years." },
+      a: "I'm Sajjal Bajaj, an Odoo ERP consultant and project manager at Master Software Solutions in Mohali. I help manufacturers, distributors and traders implement Odoo: requirements and process mapping, configuration, testing, training and go-live." },
     { q: 'How many years of experience?',
-      a: "Nearly 10 years. My tech journey began in June 2016 as a developer, and I've been building, leading, and delivering ever since." },
+      a: "I've worked in software delivery since July 2016: six years as a developer and team lead, then business analysis and project management from 2022, and ERP consulting focused on Odoo since October 2024." },
     { q: "What's your current role?",
-      a: "At Master Software Solutions I currently serve as ERP Consultant, Project Manager, Business Analyst, and Team Lead, implementing ERP (Odoo & Microsoft), running Agile delivery, and keeping teams and clients aligned." },
+      a: "At Master Software Solutions I work as ERP consultant, project manager and business analyst, mainly on Odoo projects covering inventory, purchasing, manufacturing and sales." },
     { q: 'What is your tech stack?',
       a: "Development: PHP, Python, JavaScript, jQuery, AngularJS, Ionic/Cordova, WordPress, HTML5 & CSS. ERP & data: Odoo, Data Warehousing, Power BI, UiPath. Cloud: AWS (S3) and Google Cloud (GCP, GKE). All wrapped in Agile/Scrum delivery." },
     { q: 'Are you certified?',
-      a: "Yes! Certified ScrumMaster (CSM), Microsoft Power BI Data Analyst Associate, Odoo 19 Functional Certification, Kickoff PMI, and Intel's AI For All (AI Aware & AI Appreciate)." },
-    { q: 'What are you into lately?',
-      a: "AI and Microservices: I've been collaborating with Intel-powered AI initiatives, alongside ERP implementations with Odoo and Microsoft, and turning data into insight with Power BI." },
+      a: "I've earned the Odoo 19 Functional Certification (2026), Microsoft Certified: Power BI Data Analyst Associate (2024) and Certified ScrumMaster (2020), and completed PMI's Kickoff course and Intel's AI For All programme." },
+    { q: 'What are you working on lately?',
+      a: "Odoo projects for manufacturing and distribution, Odoo 19 setup guides on this site, and in September 2026 I presented Master Software Solutions' route-planning module for Odoo at Odoo Experience India 2026." },
     { q: 'How can I reach you?',
-      a: "Easiest by email at sajjalbajaj@gmail.com, by phone at +91 99140 89472, or connect on LinkedIn (linkedin.com/in/sajjal-bajaj). I'd love to chat." }
+      a: "Email sajjalbajaj@gmail.com, WhatsApp or call +91 99140 89472, or message me on LinkedIn (linkedin.com/in/sajjal-bajaj). Tell me briefly what you make or sell and what isn't working." }
   ];
 
   var chipsWrap = $('#ask-chips');

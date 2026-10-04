@@ -3,6 +3,7 @@ layout: post
 title: "Planning in Odoo: Scheduling Your Team and Resources"
 date: 2026-09-03 10:00:00 +0530
 tags: [Odoo, Odoo 19, Project Management, ERP]
+hub: services
 description: "How Odoo Planning helps you schedule people and resources, balance workloads and see who is doing what, so work is assigned clearly and fairly."
 ---
 

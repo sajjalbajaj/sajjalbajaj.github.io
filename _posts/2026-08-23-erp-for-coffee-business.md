@@ -3,6 +3,7 @@ layout: post
 title: "ERP for a Coffee Business: Problems It Solves"
 date: 2026-08-23 14:00:00 +0530
 tags: [ERP, Odoo, Coffee, Food and Beverage, Manufacturing, SME]
+hub: industries
 description: "The problems coffee roasters and producers face, from bean traceability and roast yield to blends, freshness and multiple sales channels, and how Odoo solves them."
 ---
 

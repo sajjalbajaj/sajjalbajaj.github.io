@@ -3,6 +3,7 @@ layout: post
 title: "Appointments in Odoo: Let Clients Book Your Time"
 date: 2026-09-04 10:00:00 +0530
 tags: [Odoo, Odoo 19, ERP]
+hub: services
 description: "How Odoo Appointments lets clients book time with you online, based on real availability, cutting out the back-and-forth of scheduling."
 ---
 

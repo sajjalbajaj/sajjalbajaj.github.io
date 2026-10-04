@@ -3,6 +3,7 @@ layout: post
 title: "Documents in Odoo: Organise and Automate Your Files"
 date: 2026-09-06 10:00:00 +0530
 tags: [Odoo, Odoo 19, Productivity, ERP]
+hub: admin
 description: "How Odoo Documents helps you store, organise and automate handling of your files, keeping paperwork tidy and connected to the rest of your business."
 ---
 

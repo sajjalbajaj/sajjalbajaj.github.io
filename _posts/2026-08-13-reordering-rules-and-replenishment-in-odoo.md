@@ -1,27 +1,33 @@
 ---
 layout: post
-title: "Reordering Rules and Replenishment in Odoo Inventory"
+title: "Replenishment in Odoo: Reordering Rules, Replenish on Order and Lead Times"
 date: 2026-08-13 09:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 19, Inventory, Warehouse, ERP, Inventory Management, Stock Control, Warehouse Management]
-description: "How Odoo automates restocking with reordering rules, make-to-order and lead times, so you avoid stockouts without over-ordering."
+hub: inventory
+description: "Which replenishment strategy fits which product in Odoo: reordering rules, replenish on order (MTO) and lead times explained, with links to the setup steps."
 ---
 
 Running out of stock loses sales. Holding too much ties up cash. The art of inventory is staying in
 the sweet spot between them, and Odoo automates most of that work through replenishment. Here is how
-reordering rules, make-to-order and lead times fit together.
+reordering rules, replenish on order and lead times fit together, and when to use each.
+
+*This article explains the strategy. For the exact setup steps, a worked example and troubleshooting, see
+[how to set up reordering rules in Odoo 19](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/).*
 
 ## Reordering rules: the classic min/max
 
 The workhorse of replenishment is the reordering rule. You set a minimum and a maximum quantity for a
-product at a location. When stock falls to or below the minimum, Odoo proposes replenishing back up
-to the maximum.
+product at a location. When the product's *forecasted* quantity (stock on hand plus confirmed incoming, minus
+confirmed outgoing, within the lead-time window) falls below the minimum, Odoo replenishes enough to bring the
+forecast back up to the maximum.
 
 Depending on the product, that replenishment becomes a purchase order to a supplier or a
 manufacturing order to produce more. You review and confirm, and the restock is on its way. Set these
 rules on your key products and a big part of your buying becomes a checklist instead of a guessing
 game.
 
-## Make-to-order: buy or build on demand
+## Replenish on order (MTO): buy or build on demand
 
 Some products should not sit on a shelf at all. With make-to-order, Odoo waits for actual demand, a
 sales order, then triggers the purchase or production to fulfil exactly that.

@@ -3,6 +3,7 @@ layout: post
 title: "ERP for Construction: Problems It Solves"
 date: 2026-08-22 14:00:00 +0530
 tags: [ERP, Odoo, Construction, Project Management, SME, Digital Transformation]
+hub: industries
 description: "The problems construction businesses face, from project costing and site materials to subcontractors and progress billing, and how an ERP like Odoo solves them."
 ---
 

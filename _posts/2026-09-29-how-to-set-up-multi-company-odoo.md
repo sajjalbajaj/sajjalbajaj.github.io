@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up Multi-Company in Odoo"
 date: 2026-09-29 10:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Multi-Company, ERP, Contacts, Customer Management, Accounting]
+hub: admin
 description: "A plain-English guide to setting up multi-company in Odoo, so you can run several companies in one system with the right separation and shared data."
 ---
 

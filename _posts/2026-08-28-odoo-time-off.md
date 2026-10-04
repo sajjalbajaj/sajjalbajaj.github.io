@@ -3,6 +3,7 @@ layout: post
 title: "Time Off in Odoo: Managing Leave Without the Spreadsheet"
 date: 2026-08-28 10:00:00 +0530
 tags: [Odoo, Odoo 19, HR, ERP]
+hub: hr
 description: "How Odoo Time Off handles leave requests, approvals and balances, giving employees and managers a clear, self-service way to manage time off."
 ---
 

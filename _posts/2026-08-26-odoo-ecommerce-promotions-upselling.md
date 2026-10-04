@@ -3,6 +3,7 @@ layout: post
 title: "Promotions, Coupons and Upselling in Odoo eCommerce"
 date: 2026-08-26 10:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Sales, ERP]
+hub: website
 description: "How Odoo eCommerce helps you lift sales with promotions, coupons, discounts and upselling, so each visitor and order is worth more."
 ---
 

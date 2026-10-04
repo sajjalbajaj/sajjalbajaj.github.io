@@ -2,9 +2,13 @@
 layout: post
 title: "Odoo 20 and Agentic AI: The Headline of This Release"
 date: 2026-09-05 10:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 20, AI, Automation, ERP, Upgrade, Business Automation, Digital Transformation]
-description: "Agentic AI is the flagship of Odoo 20. What does it actually mean, how is it different from earlier AI, and what could it do for your business? A plain-English guide."
+hub: planning
+description: "Agentic AI is the flagship of Odoo 20. What it means, how it differs from earlier AI in Odoo, and what it could do for your business, in plain English."
 ---
+
+> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
 If there is one phrase to know about Odoo 20, it is agentic AI. It is the headline of the release and the clearest sign
 of where Odoo is heading. But what does it actually mean, and why does it matter? Here is a plain-English explanation.

@@ -3,6 +3,7 @@ layout: post
 title: "Shipping and Delivery in Odoo eCommerce"
 date: 2026-08-26 08:00:00 +0530
 tags: [Odoo, Odoo 19, eCommerce, Inventory Management, ERP]
+hub: website
 description: "How Odoo eCommerce handles shipping and delivery, from shipping methods and rates to connecting couriers, so orders reach customers smoothly."
 ---
 

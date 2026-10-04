@@ -1,28 +1,34 @@
-# Sajjal Bajaj Portfolio
+# Sajjal Bajaj: personal site (www.sajjalbajaj.in)
 
-A single-page, interactive personal portfolio. **Plain HTML, CSS & JavaScript, no build step,
-no frameworks, no dependencies.** Warm-minimal design with a light/dark theme, animated hero,
-scroll reveals, count-up stats, and a canned "Ask my portfolio" Q&A.
+A Jekyll site published to GitHub Pages by the "Build and deploy site" GitHub Action (on push to `main`
+and daily, so future-dated posts publish on their date). Light/dark theme, scroll reveals, count-up stats,
+a canned Q&A and a canned chat assistant; no front-end framework.
 
-## Files
-```
-myPage/
-├─ index.html        # all content & structure
-├─ styles.css        # design tokens (light + dark), layout, components, animations, print
-├─ script.js         # theme toggle, scroll reveal, count-up, nav, avatar fallback, Ask Q&A
-├─ README.md
-└─ assets/
-   ├─ favicon.svg
-   └─ profile.gif     # (optional) your avatar, see below
-```
+## How the site is put together (Oct 2026)
 
-## View it
-Just open `index.html` in any browser (double-click it). No server needed.
-For a nicer local dev experience you can optionally run any static server, e.g.:
+- `_includes/seo.html` renders every page's title, description, canonical, robots, Open Graph/Twitter tags and
+  one JSON-LD graph (Person + WebSite + one page entity). It replaces `{% seo %}`; don't add page-level
+  BlogPosting/Article JSON-LD elsewhere. Useful front matter: `seo_title`, `description`, `schema_type`,
+  `last_modified_at` (also drives sitemap `lastmod` and the "Updated" date on posts), `robots`, `about_event`.
+- `_includes/analytics.html` + `assets/track.js`: GA4 and contact-click events, off until `analytics.ga4_id`
+  is set in `_config.yml`.
+- `_includes/service.html` renders `/services/*` pages from front matter (problems, suitable, scope,
+  deliverables, process, dependencies, evidence, related, faqs).
+- `/odoo/` groups posts by their `hub:` front-matter key (planning, industries, inventory, purchase,
+  manufacturing, sales, accounting, website, marketing, services, hr, integrations, admin). Give every new
+  Odoo post exactly one `hub`.
+- Case studies in `_case_studies/` need `status: documented` (approved real project) or
+  `status: representative` (illustration, labelled on the page). See `TEMPLATE.md`.
+- `content-review/` is local-only and gitignored (the repository is public).
+
+## Local preview
+
+GitHub Pages builds the site itself; local preview is optional. With Ruby 3.3 and Bundler installed:
+
 ```
-npx serve .
-# or
-python -m http.server
+bundle install
+JEKYLL_ENV=production bundle exec jekyll build   # output in _site/
+bundle exec jekyll serve                         # http://localhost:4000
 ```
 
 ## Save / print as PDF
@@ -46,7 +52,7 @@ to the “SB” monogram automatically.
 > short MP4, and drop it in per step 3.
 
 ## Editing content
-Everything is straightforward HTML in `index.html`:
+The homepage is `index.html` (rendered through `_layouts/default.html`):
 - **Hero / headline**: the `.hero` section.
 - **Experience**: the `.exp-group` blocks (one per company; roles are `<li class="timeline__item">`).
 - **Skills**: the `.skillgroup` lists. Shown as tag pills (LinkedIn doesn't expose numeric
@@ -57,17 +63,18 @@ Everything is straightforward HTML in `index.html`:
   + footer); the nav has a LinkedIn icon.
 - **WhatsApp button**: the floating green button (bottom-right) opens
   `https://wa.me/919914089472?text=…`. To change the number or the prefilled message, search
-  `index.html` for `wa.me`.
+  `_layouts/default.html` (and the homepage contact section in `index.html`) for `wa.me`.
 
 ## Customise the look
 Open `styles.css` and tweak the tokens under `:root` (light) and `:root[data-theme="dark"]` (dark):
-colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in both blocks.
+colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in both blocks. Text links use
+`--link` (darker amber in light mode for WCAG AA contrast).
 
 ## Accessibility & performance
 - Semantic landmarks, keyboard focus styles, `aria-live` on the Q&A answer.
 - Full `prefers-reduced-motion` support (animations, typing, and count-up all disable).
 - Theme preference persists via `localStorage` and respects your OS setting on first visit.
-- No external JS/CSS except Google Fonts.
+- No external JS/CSS except Google Fonts (and Google Analytics, only if a GA4 ID is configured).
 
 ## Writing a new blog post (daily)
 The blog is powered by **Jekyll**, which GitHub Pages builds automatically, you don't
@@ -99,9 +106,3 @@ Tips:
 - Reuse the same tag spelling so the tag filter groups posts correctly.
 - The first paragraph becomes the card excerpt.
 - SEO / Open-Graph meta tags are generated per post for good Google + LinkedIn/X previews.
-
-## Possible next steps
-- A **live** AI-powered chatbot for the site/blog (needs a small serverless backend + API key).
-- A **⌘K command palette** for quick section jumps.
-- A **Projects / case-studies** section.
-- A custom domain (e.g. `sajjalbajaj.com`) on the GitHub Pages site.

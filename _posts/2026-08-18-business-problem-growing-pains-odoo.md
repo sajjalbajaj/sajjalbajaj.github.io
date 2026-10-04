@@ -3,6 +3,7 @@ layout: post
 title: "Growing Pains? How Odoo Scales With Your Business"
 date: 2026-08-18 14:00:00 +0530
 tags: [ERP, Odoo, Digital Transformation, SME, Manufacturing, Production Planning, Bookkeeping, Spreadsheets]
+hub: planning
 description: "A good problem to have, but still a problem: growth that your systems cannot keep up with. Here is how Odoo scales with your business."
 ---
 

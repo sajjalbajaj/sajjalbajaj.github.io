@@ -1,8 +1,10 @@
 ---
 layout: default
 permalink: /case-studies/
-title: "Case Studies | ERP, Odoo & Power BI Projects"
-description: "Real-world ERP, Odoo and Power BI project case studies: the problems faced, the solutions delivered, and the results achieved by Sajjal Bajaj."
+title: "Odoo Case Studies and Examples"
+description: "Odoo project write-ups and clearly labelled representative examples: the business problem, the approach, the Odoo apps involved and the outcomes."
+schema_type: CollectionPage
+last_modified_at: 2026-10-04
 ---
 <section class="section">
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -11,14 +13,18 @@ description: "Real-world ERP, Odoo and Power BI project case studies: the proble
   </nav>
 
   <h1 class="section-title"><span class="section-title__no">✦</span> Case Studies</h1>
-  <p class="services__lead">Selected ERP, Odoo and Power BI projects: the real problem, the approach taken,
-  and the results delivered. Details are anonymized where confidentiality requires it.</p>
+  <p class="services__lead">Write-ups of Odoo work, covering the business problem, the approach, the Odoo apps involved
+  and the outcomes. Pages marked <strong>Representative example</strong> illustrate how I approach a type of project;
+  they don't describe a specific client, and they make no claims about client results. Documented client projects
+  are added only when the client has approved the details. The client projects I've worked on are listed on my
+  <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
 
   {% assign cs = site.case_studies %}
   {% if cs and cs.size > 0 %}
   <div class="services__grid">
     {% for c in cs %}
     <article class="service-card">
+      {% if c.status == 'representative' %}<p class="cs-badge">Representative example</p>{% endif %}
       <h2 class="service-card__title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
       <p class="service-card__desc">{{ c.summary }}</p>
       {% if c.industry %}<p class="service-card__ideal"><strong>Industry:</strong> {{ c.industry }}</p>{% endif %}
@@ -29,13 +35,12 @@ description: "Real-world ERP, Odoo and Power BI project case studies: the proble
   <p class="services__lead">Detailed project case studies are being prepared. In the meantime, you can explore
   the <a href="{{ '/services/' | relative_url }}">services</a> I offer across Odoo, ERP and Power BI, read the
   <a href="{{ '/odoo/' | relative_url }}">Odoo Knowledge Hub</a>, or see the range of projects on my
-  <a href="{{ '/cv/' | relative_url }}">CV</a>. I have delivered across steel, construction, coffee, water,
-  milk, trading, manufacturing, subcontracting and dropshipping.</p>
+  <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
   {% endif %}
 
   <div class="services__cta card">
-    <h2>Want results like these for your business?</h2>
-    <p>Tell me about your project and the problem you are trying to solve, and I will show you how I can help.</p>
+    <h2>Have a similar project?</h2>
+    <p>Tell me about your business and the problem you're trying to solve, and I'll explain how I would approach it.</p>
     <a class="btn btn--primary" href="{{ '/#contact' | relative_url }}">Get in touch</a>
     <a class="btn btn--ghost" href="{{ '/services/' | relative_url }}">View services</a>
   </div>

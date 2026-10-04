@@ -2,9 +2,13 @@
 layout: post
 title: "Odoo 20: What's Getting Upgraded From Odoo 19"
 date: 2026-09-05 11:00:00 +0530
+last_modified_at: 2026-10-04
 tags: [Odoo, Odoo 20, Upgrade, ERP, Migration, ERP Migration, Accounting, Finance]
+hub: planning
 description: "Beyond the brand-new features, what existing parts of Odoo are getting better in Odoo 20? A preview of the upgrades to payroll, accounting, CRM, inventory and more."
 ---
+
+> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
 A new Odoo version is not just about brand-new features; a lot of the value is in existing apps getting better. This
 post looks at what is expected to be upgraded in Odoo 20, the improvements to things you already use, as opposed to the

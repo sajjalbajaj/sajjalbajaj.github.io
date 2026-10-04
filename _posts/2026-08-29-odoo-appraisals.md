@@ -3,6 +3,7 @@ layout: post
 title: "Appraisals in Odoo: Structured Performance Reviews"
 date: 2026-08-29 09:00:00 +0530
 tags: [Odoo, Odoo 19, HR, ERP]
+hub: hr
 description: "How Odoo Appraisals brings structure to performance reviews, making them regular, fair and useful for both employees and managers."
 ---
 

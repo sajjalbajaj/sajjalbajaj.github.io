@@ -3,6 +3,7 @@ layout: post
 title: "Odoo Website: Pages, Blogs and Forms"
 date: 2026-08-24 10:00:00 +0530
 tags: [Odoo, Odoo 19, Website, Marketing, ERP]
+hub: website
 description: "How to build out an Odoo website with pages, a blog and forms that capture leads, and why having it all connected to your CRM matters."
 ---
 

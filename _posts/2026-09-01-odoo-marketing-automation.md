@@ -3,6 +3,7 @@ layout: post
 title: "Marketing Automation in Odoo: Nurture Leads on Autopilot"
 date: 2026-09-01 08:00:00 +0530
 tags: [Odoo, Odoo 19, Marketing, Automation, ERP]
+hub: marketing
 description: "How Odoo Marketing Automation lets you build campaigns that respond to what people do, nurturing leads automatically without manual chasing."
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up a Project in Odoo"
 date: 2026-09-24 10:00:00 +0530
 tags: [Odoo, Odoo 19, Setup, Project, ERP, Project Management, Services, Timesheets]
+hub: services
 description: "A plain-English guide to setting up a project in Odoo, with stages, tasks and owners, so work stays organised, visible and on track."
 ---
 

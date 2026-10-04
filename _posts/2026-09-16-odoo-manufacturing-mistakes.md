@@ -3,7 +3,8 @@ layout: post
 title: "Common Mistakes in Odoo Manufacturing"
 date: 2026-09-16 08:00:00 +0530
 tags: [Odoo, Odoo 19, Manufacturing, MRP, ERP, PLM, Product Management, Inventory Management]
-description: "The manufacturing mistakes that cause the most trouble in Odoo, from inaccurate bills of materials to ignoring work centers, and how to keep production running clean."
+hub: manufacturing
+description: "The manufacturing mistakes that cause the most trouble in Odoo, from inaccurate bills of materials to ignored work centres, and how to avoid them."
 ---
 
 Manufacturing is unforgiving of bad data, because a wrong bill of materials or a missing work center shows up
