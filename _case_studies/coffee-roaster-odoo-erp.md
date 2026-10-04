@@ -27,7 +27,7 @@ requirements:
   - "One place for customer queries from every channel, with response targets."
   - "Standard, repeatable processes across departments instead of personal workarounds."
   - "Screens simple enough for staff who are not technical."
-role: "I worked on this project as part of the Master Software Solutions team, on the business analysis and functional side: understanding how the business ran, turning that into Odoo requirements and design, and working with the client's team through testing and go-live. Custom development was done by MSS developers."
+role: "I delivered this project at Master Software Solutions as consultant, tech lead, project manager and delivery manager: understanding how the business worked and designing the Odoo solution, leading the MSS developers who built the custom parts, planning and running the phased rollout, and owning delivery through go-live."
 solution: "We replaced the legacy platform with Odoo and organised day-to-day work around two things: activities and tasks for internal work, and the Helpdesk app for customer queries. Recurring work was automated so it lands on the right person's list without anyone having to remember it, and workflows were set up per sales channel so each team sees what it needs and nothing more."
 decisions:
   - "Design around ownership first. Work without an owner and a deadline was the real problem, so every workflow ends in an activity assigned to a named person."

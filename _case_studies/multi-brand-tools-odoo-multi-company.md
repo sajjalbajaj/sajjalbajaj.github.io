@@ -28,7 +28,7 @@ requirements:
   - "Accurate, real-time stock across warehouse locations, with barcode scanning."
   - "Shopify orders flowing straight into Odoo."
   - "Customs commercial invoices generated from the system."
-role: "I worked on this project as part of the Master Software Solutions team, on the business analysis and functional side: mapping how the three companies worked together, turning that into Odoo requirements and design, and working with the client's team through testing and go-live. Custom development was done by MSS developers."
+role: "I delivered this project at Master Software Solutions as consultant, tech lead, project manager and delivery manager: mapping how the three companies worked together and designing the multi-company setup, leading the MSS developers who built the customs invoices and the Shopify connection, planning and running the project, and owning delivery through go-live."
 solution: "We extended and restructured the existing Odoo database rather than starting again, adding the other two companies alongside the first. Each company keeps its own chart of accounts, product catalogue, customers, suppliers and financial reports, and users switch between companies as they need. When one company sells to another, Odoo creates the matching purchase order automatically at the agreed intercompany price. Stock is managed by location with barcode scanning, reordering rules, demand forecasting and automatic back orders. Shopify is connected both ways, and commercial invoices for customs are generated from purchase orders."
 decisions:
   - "Extend the existing database instead of replacing it, keeping the first brand's history and setup."

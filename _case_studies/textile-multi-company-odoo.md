@@ -17,7 +17,7 @@ requirements:
   - "Intercompany purchases, stock transfers and invoices created automatically."
   - "Real-time stock across the group, with textile attributes recorded consistently."
   - "Invoices generated from confirmed and delivered orders, and consolidated reporting for the group."
-role: "I worked on this project as part of the Master Software Solutions team, on the business analysis and functional side: mapping each company's processes, turning them into Odoo requirements and design, and working with the client's team through testing and go-live. Custom development was done by MSS developers."
+role: "I delivered this project at Master Software Solutions as consultant, tech lead, project manager and delivery manager: mapping each company's processes and designing the multi-company setup, leading the MSS developers who built the custom parts, planning and running all six stages from discovery to hypercare, and owning delivery through go-live."
 solution: "One Odoo database with a company for each entity, each with its own chart of accounts and role-based access. Sales and CRM, inventory, manufacturing and accounting were configured together, so an order flows from the salesperson through stock and production to an invoice. When one company sells to another, the matching purchase order, stock transfer and accounting entries are created on the other side automatically."
 decisions:
   - "Several companies in one database rather than separate databases, so intercompany flows can be automated and the group reported on as a whole."

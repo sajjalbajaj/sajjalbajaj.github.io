@@ -17,7 +17,7 @@ requirements:
   - "One system for operations and accounting."
   - "Optimised delivery routes planned inside Odoo."
   - "A long-term partner for Odoo support and development."
-role: "I worked on this project as part of the Master Software Solutions team, on the functional side: reviewing and documenting the existing Odoo setup, planning the move of accounting from QuickBooks, and the route-planning rollout. The route-planning module is an MSS product, built by MSS developers."
+role: "I delivered this project at Master Software Solutions as consultant, tech lead, project manager and delivery manager: reviewing and documenting the existing setup, designing the move of accounting from QuickBooks and the route-planning rollout, leading the MSS developers, and owning delivery and the ongoing support. The route-planning module is an MSS product."
 solution: "First, understand what was already there: the existing Odoo configuration was audited and documented so it could be supported safely. Accounting then moved into Odoo: the chart of accounts was mapped, historical financial data migrated, taxes configured, and invoicing tied to delivery orders, so a completed delivery produces its invoice. Route optimisation was added inside Odoo, so dispatch plans routes from the day's delivery orders instead of from memory."
 decisions:
   - "Document before changing anything. With the only expert gone, the first job was to make the existing system understood."

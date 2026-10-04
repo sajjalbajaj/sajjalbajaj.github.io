@@ -17,7 +17,7 @@ requirements:
   - "Quoting, production planning, inventory and delivery in one system."
   - "Production sequenced by delivery date, so promised dates are protected."
   - "Cutting work grouped sensibly for laser nesting, without manual sorting."
-role: "I worked on this project as part of the Master Software Solutions team, on the business analysis and functional side: understanding how the shop and office worked, turning that into Odoo requirements and design, and working with the client's team through testing and go-live. Custom development was done by MSS developers."
+role: "I delivered this project at Master Software Solutions as consultant, tech lead, project manager and delivery manager: understanding how the shop and office worked and designing the Odoo solution, leading the MSS developers who built the nesting batches and the link to the nesting workflow, planning and running the project, and owning delivery through go-live and support."
 solution: "Odoo became the single system for quotations, inventory, production planning, manufacturing and delivery tracking. The key piece of custom development was automatic batching for nesting: orders are grouped into batches and sub-batches by delivery date, product type, material thickness and material type, and each batch stays linked to the sales orders inside it. When a batch moves on, the progress of every order in it is visible immediately."
 decisions:
   - "Batch by delivery date first, then product type, thickness and material. The date protects the promise to the customer; the other three keep the same material and gauge together for efficient nesting."

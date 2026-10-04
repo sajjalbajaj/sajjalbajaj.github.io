@@ -18,7 +18,7 @@ requirements:
   - "Product information kept up to date in both systems without manual fixes."
   - "Wholesale client accounts, order history and communication recorded consistently in Odoo."
   - "Someone to look after Odoo on an ongoing basis."
-role: "I worked on this engagement as part of the Master Software Solutions team, on the functional side: auditing the product data, planning the clean-up and the account workflows, and working with the client's team through testing. Integration and development work was done by MSS developers."
+role: "I delivered this engagement at Master Software Solutions as consultant, tech lead, project manager and delivery manager: auditing the product data and the integration and designing the fix, leading the MSS developers on the integration work, and planning and owning delivery of the upgrade, the website launch and the ongoing support."
 solution: "Instead of patching the connector, we fixed the data it depends on. The whole product catalogue was audited for duplicate and conflicting internal references, each product was given a unique reference matching its WooCommerce SKU, and the integration was then reconfigured and tested. Client account workflows in Odoo were tidied at the same time, so order history, communication and account details are recorded the same way every time. The engagement also covered an Odoo upgrade and a website launch, and continued as ongoing Odoo support."
 decisions:
   - "Treat the sync failures as a data problem first. Integrations like this match products on their reference, so duplicates cause failures however the connector is configured."
