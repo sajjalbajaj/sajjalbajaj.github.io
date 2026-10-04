@@ -13,12 +13,17 @@ layout: default
   {% if representative %}
   <p class="cs-status" role="note"><strong>Representative example.</strong> This page illustrates how I approach a typical
   project of this kind. It does not describe a specific client engagement, and no client results are claimed.</p>
+  {% elsif page.status == 'anonymised' %}
+  <p class="cs-status" role="note"><strong>Real client project, name withheld.</strong> Delivered by the Master Software
+  Solutions team, where I worked on this project. The client's name and identifying details are left out.</p>
   {% endif %}
   {% if page.summary %}<p class="services__lead">{{ page.summary }}</p>{% endif %}
 
-  {% if page.industry or page.duration or page.services %}
+  {% if page.industry or page.location or page.platform or page.duration or page.services %}
   <ul class="tags cs-meta">
     {% if page.industry %}<li>Industry: {{ page.industry }}</li>{% endif %}
+    {% if page.location %}<li>Location: {{ page.location }}</li>{% endif %}
+    {% if page.platform %}<li>Platform: {{ page.platform }}</li>{% endif %}
     {% if page.duration %}<li>Duration: {{ page.duration }}</li>{% endif %}
     {% for s in page.services %}<li>{{ s }}</li>{% endfor %}
   </ul>
@@ -30,6 +35,7 @@ layout: default
     <div class="cs-metric"><span class="cs-metric__num">{{ m.value }}</span><span class="cs-metric__label">{{ m.label }}</span></div>
     {% endfor %}
   </div>
+  {% if page.metrics_note %}<p class="cs-metrics-note">{{ page.metrics_note }}</p>{% endif %}
   {% endif %}
 
   {% if page.problem %}<h2 class="services__ind-title">The problem</h2><p>{{ page.problem }}</p>{% endif %}
@@ -38,7 +44,7 @@ layout: default
   {% if page.role %}<h2 class="services__ind-title">My role</h2><p>{{ page.role }}</p>{% endif %}
   {% if page.solution %}<h2 class="services__ind-title">{% if representative %}The approach{% else %}The solution{% endif %}</h2><p>{{ page.solution }}</p>{% endif %}
   {% if page.decisions %}<h2 class="services__ind-title">Key decisions</h2><ul>{% for d in page.decisions %}<li>{{ d }}</li>{% endfor %}</ul>{% endif %}
-  {% if page.modules %}<h2 class="services__ind-title">{% if representative %}Odoo apps involved{% else %}Odoo modules used{% endif %}</h2><ul class="tags">{% for m in page.modules %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}
+  {% if page.modules %}<h2 class="services__ind-title">{% if page.modules_heading %}{{ page.modules_heading }}{% elsif representative %}Odoo apps involved{% else %}Odoo modules used{% endif %}</h2><ul class="tags">{% for m in page.modules %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}
   {% if page.customizations %}<h2 class="services__ind-title">Customizations</h2><ul>{% for c in page.customizations %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
   {% if page.integrations %}<h2 class="services__ind-title">Integrations</h2><ul>{% for i in page.integrations %}<li>{{ i }}</li>{% endfor %}</ul>{% endif %}
   {% if page.implementation %}<h2 class="services__ind-title">Implementation</h2><p>{{ page.implementation }}</p>{% endif %}

@@ -21,8 +21,10 @@ a canned Q&A and a canned chat assistant; no front-end framework.
 - `/odoo/` search (`assets/odoo-search.js`) suggests subjects and guides as you type. It indexes the page's
   own lists (title, tags, description), so new posts are searchable automatically. Odoo shorthand lives in
   its `ABBREV` and `RELATED` maps.
-- Case studies in `_case_studies/` need `status: documented` (approved real project) or
-  `status: representative` (illustration, labelled on the page). See `TEMPLATE.md`.
+- Case studies in `_case_studies/` need `status: anonymised` (real project, client name withheld),
+  `status: documented` (client approved its name) or `status: representative` (illustration). Each status is
+  labelled on the page; `order:` sets the position on /case-studies/. Write in your own words, with no client
+  names or cities and no links to the MSS website. See `TEMPLATE.md`.
 - `content-review/` is local-only and gitignored (the repository is public).
 
 ## Local preview

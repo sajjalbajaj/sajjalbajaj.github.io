@@ -1,17 +1,21 @@
 ---
 layout: case-study
 published: false                 # keep false while drafting; set to true (or delete this line) to publish
-status: documented               # documented = a real engagement with approved details; representative = illustration only
+status: anonymised               # anonymised = real project, client name withheld; documented = real project, client approved its name; representative = illustration only
+order: 99                        # position on /case-studies/ (lowest first)
 title: "Odoo ERP Implementation for a Manufacturing Company"
 description: "One or two sentence summary of the project, used for SEO and search snippets (under 160 characters)."
 last_modified_at: 2026-10-04
 summary: "A short one-line summary shown on the Case Studies index and at the top of the page."
 industry: "Manufacturing"
+location: "Country or region (no city if it would identify the client)"
+platform: "Odoo"
 services: ["Odoo Implementation", "Power BI"]
 duration: "Only if confirmed from project records"
-metrics:                         # ONLY measured, client-approved figures. Delete this block if you have none.
+metrics:                         # ONLY measured or officially published figures. Delete this block if you have none.
   - value: "Measured value"
     label: "What was measured, how and over what period"
+metrics_note: "Say where the figures come from, e.g. published by Master Software Solutions for this project."
 problem: "The business problem, in a sentence or two."
 existing_process: "How they worked before: spreadsheets, disconnected tools, manual re-keying."
 requirements:
@@ -20,6 +24,7 @@ role: "What I personally did (analysis, configuration, project management, testi
 solution: "The approach taken and why it fit the business."
 decisions:
   - "An important design decision and the reason for it."
+modules_heading: "Odoo modules used"   # optional; e.g. "Platform features used" for non-Odoo projects
 modules: ["Sales", "Inventory", "Purchase", "Accounting", "Manufacturing"]
 customizations:
   - "Custom work, who built it, and why standard Odoo was not enough."
@@ -40,9 +45,12 @@ HOW TO ADD A CASE STUDY
    steel-erp-implementation.md  ->  /case-studies/steel-erp-implementation/
 2. Fill in the fields above with the real (or anonymized) project details. Any field you leave
    out is simply skipped, so you only fill what you have.
-   Before publishing, confirm: the client approved its name, logo, screenshots and any quotes;
-   every number comes from a measurement you can show; and the "role" field separates your own
-   work from the MSS team's. Never invent percentages, savings, timelines or quotations.
+   Before publishing, confirm: for "documented", the client approved its name, logo, screenshots
+   and any quotes; for "anonymised", no client or brand names, cities or other identifying details.
+   Every number comes from a measurement you can show or an official published case study (say
+   which in metrics_note), and the "role" field separates your own work from the MSS team's.
+   Write in your own words: never copy text from MSS or anyone else's case study, and never link
+   to the MSS website. Never invent percentages, savings, timelines or quotations.
 3. Set  published: true  (or delete the "published: false" line) when it is ready.
 4. Commit and push. It will appear automatically on /case-studies/ and in the sitemap.
 

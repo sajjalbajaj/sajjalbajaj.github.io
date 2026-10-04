@@ -1,46 +1,56 @@
 ---
 layout: case-study
-status: representative
-title: "Representative Example: Odoo for a Coffee Roaster and Wholesaler"
-description: "A representative example of how I would approach Odoo for a coffee roaster: purchasing, roasting, lot traceability, sales channels and accounting."
-last_modified_at: 2026-10-04
-summary: "An illustration of how I would approach an Odoo project for a growing coffee roaster and wholesaler that runs on spreadsheets: the typical problems, the design decisions and the outcomes the design aims for."
-industry: "Coffee (food and beverage)"
-services: ["Odoo implementation", "Inventory", "Manufacturing", "Accounting"]
-problem: "A growing roaster that sells wholesale, retail and by subscription often runs on spreadsheets and disconnected tools. Green coffee stock, roasting, orders and accounts rarely agree, and as volume grows the gaps turn into wasted time, errors and guesswork about the real cost of each blend."
-existing_process: "In a typical setup, green coffee stock lives in one spreadsheet, roasting is logged on paper, wholesale orders arrive by email and the accounts are kept separately. Nobody has a live, trustworthy view, and tracing a bag of roasted coffee back to its green coffee lot is slow and manual."
+status: anonymised
+order: 5
+title: "Odoo for a Specialty Coffee Roaster: Task Ownership and Helpdesk"
+description: "A Canadian specialty coffee roaster replaced a 20-year-old system with Odoo so every task and customer query has a named owner."
+last_modified_at: 2026-10-05
+summary: "A multi-channel specialty coffee business in Canada moved off a 20-year-old system onto Odoo, so every task and customer query now has an owner, a deadline and a history."
+industry: "Food and beverage: specialty coffee"
+location: "Canada"
+platform: "Odoo"
+services: ["Odoo implementation", "Helpdesk", "Process design"]
+metrics:
+  - value: "85%"
+    label: "fewer missed or untracked employee tasks"
+  - value: "3x"
+    label: "faster helpdesk query resolution"
+  - value: "60%"
+    label: "less time on manual admin and workarounds"
+  - value: "70%"
+    label: "faster onboarding of new team members"
+metrics_note: "Figures published by Master Software Solutions for this project, not my own measurements."
+problem: "The business sells through many channels at once: whole bean and single-cup coffee, subscriptions, office coffee programmes, café and restaurant supply, wholesale and private-label blends. Work passed between people all day, but nothing recorded who owned a task, whether it was finished, or what had happened to a customer's question."
+existing_process: "The company ran on a platform about 20 years old. It had no task ownership, no audit trail and few modern integrations or reports, so staff had built their own workarounds. Customer queries came in by phone and email and were followed up informally, and each department had its own way of doing things."
 requirements:
-  - "One system for purchasing, stock, roasting, sales and accounts."
-  - "Traceability from green coffee lot to finished bag."
-  - "Realistic roast yields and a clear cost per blend."
-  - "Wholesale, retail and subscription orders drawing on the same stock."
-solution: "I would implement Odoo across Purchase, Inventory, Manufacturing, Sales and Accounting, configured around how a roastery works. Roasting is modelled as a manufacturing step and each blend as a bill of materials, so green coffee consumed, roasted coffee produced and the cost per bag stay connected. The first phase stays small, usually purchasing and stock, so the team trusts the system before production and sales move across."
+  - "Every operational task assigned to a named person, with a due date and a record of completion."
+  - "One place for customer queries from every channel, with response targets."
+  - "Standard, repeatable processes across departments instead of personal workarounds."
+  - "Screens simple enough for staff who are not technical."
+role: "I worked on this project as part of the Master Software Solutions team, on the business analysis and functional side: understanding how the business ran, turning that into Odoo requirements and design, and working with the client's team through testing and go-live. Custom development was done by MSS developers."
+solution: "We replaced the legacy platform with Odoo and organised day-to-day work around two things: activities and tasks for internal work, and the Helpdesk app for customer queries. Recurring work was automated so it lands on the right person's list without anyone having to remember it, and workflows were set up per sales channel so each team sees what it needs and nothing more."
 decisions:
-  - "Green coffee and finished coffee tracked by lots, so any bag can be traced back to the green coffee it came from."
-  - "Blends as multi-level bills of materials rather than custom code, with roast loss built into the component quantities."
-  - "Flexible consumption set to warn rather than block, because roast loss varies between batches."
-  - "Standard Odoo features first; any customisation only after a fit-gap shows a real need."
-modules: ["Purchase", "Inventory", "Manufacturing", "Sales", "Accounting"]
-customizations:
-  - "Kept to a minimum: standard Odoo covers most roastery needs, with blends handled through bills of materials rather than custom code."
-integrations:
-  - "If the roaster sells online, web orders would flow into Odoo alongside wholesale and subscription orders so they share the same stock."
-implementation: "Delivered in phases: purchasing and stock first, then roasting and sales, then accounting. Product and lot data is cleaned before import, staff test their daily tasks in a test database, and the first busy weeks after go-live get close support."
+  - "Design around ownership first. Work without an owner and a deadline was the real problem, so every workflow ends in an activity assigned to a named person."
+  - "Route every customer query into Helpdesk, whatever channel it arrives through, instead of leaving email as the record."
+  - "Keep the interface task-driven and simple for non-technical staff, even where Odoo offers more options."
+  - "Roll out in phases, so each team was comfortable with the new way of working before the next one moved over."
+modules: ["Helpdesk", "Activities and task tracking", "Workflow automation"]
+implementation: "A discovery phase mapped how each channel and department worked. The rollout was phased, and training focused on making the system easy to adopt for staff without a technical background."
 challenges:
-  - "Roasting loses weight, so stock and cost drift if it isn't modelled. Treating roasting as a manufacturing order, with green coffee in and roasted coffee out, keeps both accurate."
-  - "Getting roasters to record batches in the system instead of on paper. Short, role-based training and simple daily actions help."
+  - "Twenty years of habits and workarounds. People needed to see that the new process was easier than their workaround, not just more controlled."
+  - "Many channels with different rhythms, from one-off retail orders to recurring office, café and wholesale accounts."
 results:
-  - "One system instead of scattered spreadsheets, as the single source of truth."
-  - "Live stock and sales visibility instead of waiting for manual reports."
-  - "Traceability from green coffee lot to finished bag, supporting quality checks and recalls."
-  - "Consistent costing per blend, so pricing decisions rest on real yields."
-  - "Wholesale, retail and subscription orders handled together against the same stock."
-cta_title: "Running a coffee or food business on spreadsheets?"
-cta_text: "If your stock, production and accounts don't agree with each other, tell me how you work today and I'll explain how I would approach it in Odoo."
+  - "Every operational activity is now tracked against a named employee."
+  - "90% of customer queries are resolved within the agreed response window (published figure)."
+  - "Open, overdue and completed work is visible across the business without chasing people."
+cta_title: "Running on an old system and workarounds?"
+cta_text: "If tasks and customer queries fall through the gaps in your business, tell me how work moves today and I'll suggest where Odoo would help first."
 ---
+## What I'd tell a similar business
 
-For the setup steps behind this approach, see my guides on
-[bills of materials](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/),
-[products and units of measure](/blog/2026/09/22/how-to-set-up-products-in-odoo/) and
-[lot and serial number tracking](/blog/2026/08/12/lot-and-serial-number-tracking-in-odoo/).
-If you'd like to hear about comparable projects I've worked on, ask me directly and I'll share what I can.
+- Before choosing apps, ask who owns each piece of work today. If the honest answer is "whoever notices", fix that first.
+- Moving customer queries out of personal inboxes is often the quickest visible win for a growing business.
+- Replacing an old system is as much about retiring workarounds as moving data. List the workarounds during discovery: each one is a requirement in disguise.
+
+Related guides: [How to set up a helpdesk in Odoo](/blog/2026/09/28/how-to-set-up-helpdesk-odoo/) and
+[common mistakes in Odoo Helpdesk](/blog/2026/09/20/odoo-helpdesk-mistakes/).

@@ -1,10 +1,10 @@
 ---
 layout: default
 permalink: /case-studies/
-title: "Odoo Case Studies and Examples"
-description: "Odoo project write-ups and clearly labelled representative examples: the business problem, the approach, the Odoo apps involved and the outcomes."
+title: "Odoo and ERP Case Studies by Industry"
+description: "Real Odoo and ERP projects, client names withheld: metal fabrication, textiles, tools, skincare, coffee, propane and dairy. Problem, solution, results."
 schema_type: CollectionPage
-last_modified_at: 2026-10-04
+last_modified_at: 2026-10-05
 ---
 <section class="section">
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -13,28 +13,32 @@ last_modified_at: 2026-10-04
   </nav>
 
   <h1 class="section-title"><span class="section-title__no">✦</span> Case Studies</h1>
-  <p class="services__lead">Write-ups of Odoo work, covering the business problem, the approach, the Odoo apps involved
-  and the outcomes. Pages marked <strong>Representative example</strong> illustrate how I approach a type of project;
-  they don't describe a specific client, and they make no claims about client results. Documented client projects
-  are added only when the client has approved the details. The client projects I've worked on are listed on my
-  <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+  <p class="services__lead">Client projects I worked on as part of the team at Master Software Solutions, across
+  manufacturing, distribution, food and beverage, energy and dairy, for businesses in Canada, the United States, the UK,
+  Europe and India. Each page covers the business problem, the solution, the decisions behind it and the results.</p>
+  <p class="services__lead">Client names and identifying details are left out. Where figures appear, they are the
+  results published for the project, not my own measurements. Six are Odoo projects; the two dairy projects use a
+  dairy-specific ERP platform built by MSS. More of my client work is listed on my <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
 
-  {% assign cs = site.case_studies %}
+  {% assign cs = site.case_studies | sort: "order" %}
   {% if cs and cs.size > 0 %}
   <div class="services__grid">
     {% for c in cs %}
     <article class="service-card">
-      {% if c.status == 'representative' %}<p class="cs-badge">Representative example</p>{% endif %}
+      {% if c.status == 'representative' %}<p class="cs-badge">Representative example</p>
+      {% elsif c.status == 'anonymised' %}<p class="cs-badge">Real project, name withheld</p>{% endif %}
       <h2 class="service-card__title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h2>
       <p class="service-card__desc">{{ c.summary }}</p>
       {% if c.industry %}<p class="service-card__ideal"><strong>Industry:</strong> {{ c.industry }}</p>{% endif %}
+      {% if c.location %}<p class="service-card__ideal"><strong>Location:</strong> {{ c.location }}</p>{% endif %}
+      {% if c.platform %}<p class="service-card__ideal"><strong>Platform:</strong> {{ c.platform }}</p>{% endif %}
     </article>
     {% endfor %}
   </div>
   {% else %}
   <p class="services__lead">Detailed project case studies are being prepared. In the meantime, you can explore
   the <a href="{{ '/services/' | relative_url }}">services</a> I offer across Odoo, ERP and Power BI, read the
-  <a href="{{ '/odoo/' | relative_url }}">Odoo Knowledge Hub</a>, or see the range of projects on my
+  <a href="{{ '/odoo/' | relative_url }}">Odoo guides</a>, or see the range of projects on my
   <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
   {% endif %}
 

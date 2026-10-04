@@ -3,7 +3,7 @@ layout: default
 title: "Odoo and ERP Services"
 permalink: /services/
 description: "Odoo consulting, implementation, migration and customisation for manufacturers and distributors, plus Power BI reporting and project delivery. Mohali, India."
-last_modified_at: 2026-10-04
+last_modified_at: 2026-10-05
 odoo_services:
   - title: "Odoo consulting and business analysis"
     url: /services/odoo-consulting/
@@ -39,13 +39,25 @@ other_services:
     desc: "Web applications and integrations for needs outside the ERP, delivered with a development team."
     ideal: "Requirements that don't belong in Odoo."
 industries:
-  - Manufacturing
-  - Distribution and trading
-  - Food and beverage (coffee)
-  - Steel
-  - Water
-  - Tools
-  - Education
+  - name: "Metal fabrication"
+    url: /case-studies/metal-fabrication-odoo-manufacturing/
+  - name: "Textiles"
+    url: /case-studies/textile-multi-company-odoo/
+  - name: "Tools distribution"
+    url: /case-studies/multi-brand-tools-odoo-multi-company/
+  - name: "Skincare manufacturing"
+    url: /case-studies/skincare-manufacturer-odoo-woocommerce-sync/
+  - name: "Specialty coffee"
+    url: /case-studies/coffee-roaster-odoo-erp/
+  - name: "Propane delivery"
+    url: /case-studies/propane-delivery-odoo-routes-accounting/
+  - name: "Dairy farming"
+    url: /case-studies/dairy-farm-erp-direct-to-consumer/
+  - name: "Dairy subscriptions"
+    url: /case-studies/organic-dairy-subscription-erp/
+  - name: "Steel"
+  - name: "Trading and distribution"
+  - name: "Education"
 faqs:
   - q: "Where should an Odoo project start?"
     a: "With discovery: short workshops to map how orders, purchasing, stock, production and accounts work today, then a phased scope. It costs far less to settle requirements on paper than to reconfigure a live database."
@@ -95,9 +107,10 @@ faqs:
 
   <div class="services__industries reveal">
     <h2 class="services__ind-title">Industries in my project history</h2>
-    <p class="services__lead">Based on the client projects listed on my <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+    <p class="services__lead">From client projects I've worked on, listed on my <a href="{{ '/cv/' | relative_url }}">CV</a>.
+    Linked industries have a <a href="{{ '/case-studies/' | relative_url }}">case study</a> with the client's name withheld.</p>
     <ul class="tags">
-      {% for i in page.industries %}<li>{{ i }}</li>{% endfor %}
+      {% for i in page.industries %}<li>{% if i.url %}<a href="{{ i.url | relative_url }}">{{ i.name }}</a>{% else %}{{ i.name }}{% endif %}</li>{% endfor %}
     </ul>
   </div>
 
@@ -105,7 +118,7 @@ faqs:
     <h2 class="services__ind-title">Useful before you get in touch</h2>
     <ul>
       <li><a href="{{ '/odoo/' | relative_url }}">Odoo guides, grouped by subject</a></li>
-      <li><a href="{{ '/case-studies/coffee-roaster-odoo-erp/' | relative_url }}">Representative example: Odoo for a coffee roaster and wholesaler</a></li>
+      <li><a href="{{ '/case-studies/' | relative_url }}">Case studies: real Odoo and ERP projects by industry</a></li>
       <li><a href="{{ '/blog/2026/07/27/odoo-implementation-checklist/' | relative_url }}">Odoo implementation checklist</a></li>
       <li><a href="{{ '/blog/2026/10/04/ai-route-planning-odoo-experience-india-2026/' | relative_url }}">My recap from Odoo Experience India 2026</a></li>
     </ul>

@@ -695,7 +695,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
                     padding: .15rem .5rem; border-radius: 8px; }
 .service-card__title { font-size: 1.15rem; font-weight: 700; margin: .7rem 0 .5rem; }
 .service-card__desc { color: var(--muted); font-size: .95rem; margin: 0 0 .7rem; }
-.service-card__ideal { font-size: .85rem; color: var(--faint); margin: 0; }
+.service-card__ideal { font-size: .85rem; color: var(--muted); margin: 0; }
 .service-card__ideal strong { color: var(--text); }
 .services__cta { text-align: center; margin-top: 1.8rem;
                  background: radial-gradient(120% 120% at 50% 0%, var(--surface-tint), transparent 60%), var(--surface); }
@@ -851,6 +851,8 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .cs-metric { flex: 1 1 140px; background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-sm); padding: 1rem 1.1rem; }
 .cs-metric__num { display: block; font-size: 1.9rem; font-weight: 800; color: var(--accent); line-height: 1.1; }
 .cs-metric__label { display: block; color: var(--muted); font-size: .85rem; margin-top: .2rem; }
+.cs-metrics-note { margin: -1.2rem 0 2rem; font-size: .85rem; color: var(--muted); }
+.services__industries .tags a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
 
 /* Service sub-page breadcrumb + related links */
 .breadcrumb { font-size: .85rem; color: var(--muted); margin: 0 0 1.25rem; }
