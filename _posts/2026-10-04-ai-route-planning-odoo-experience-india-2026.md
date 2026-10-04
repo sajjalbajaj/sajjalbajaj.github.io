@@ -110,5 +110,5 @@ module, [get in touch](/#contact). For the warehouse side of the flow, my guides
 ## Sources
 
 - Odoo: [Odoo Experience 2026 India event page](https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction) (dates, venue and programme)
-- Master Software Solutions: [coverage of Odoo Experience India 2026](https://www.mastersoftwaresolutions.com/news/odoo-experience-india-2026/) (external)
-- Master Software Solutions: [Route Optimization Odoo plugin](https://www.mastersoftwaresolutions.com/route-optimization-odoo-plugin/) (module features, requirements and supported versions)
+- Master Software Solutions: its published coverage of Odoo Experience India 2026 (subjects raised at the booth)
+- Master Software Solutions: its Route Optimization Odoo plugin product page (module features, requirements and supported versions)
