@@ -30,7 +30,7 @@ comments:
 # Measurement. Paste a GA4 measurement ID (e.g. "G-ABC123XYZ") to switch on Google Analytics
 # and contact-click events in production builds. Left blank, nothing is loaded.
 analytics:
-  ga4_id: ""
+  ga4_id: "G-G2NTL6M604"
 
 # Default social image + SEO metadata (rendered by _includes/seo.html)
 image: /assets/sajjalbajaj.jpg
