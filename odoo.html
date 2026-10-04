@@ -4,7 +4,7 @@ permalink: /odoo/
 title: "Odoo Guides by Subject"
 description: "Practical Odoo guides grouped by subject: inventory, manufacturing, purchasing, sales and CRM, accounting, eCommerce, HR, integrations and administration."
 schema_type: CollectionPage
-last_modified_at: 2026-10-04
+last_modified_at: 2026-10-05
 groups:
   - key: planning
     title: "Choosing, planning and upgrading Odoo"
@@ -57,6 +57,30 @@ groups:
   step-by-step setup guides first, followed by explainers and common mistakes. Most guides are written for Odoo 19 and say
   which version and edition they apply to.</p>
 
+  <div class="hub-search" id="hub-search" hidden>
+    <form role="search" action="#" novalidate>
+      <label class="hub-search__label" for="hub-q">Search the Odoo guides</label>
+      <div class="hub-search__box">
+        <div class="hub-search__field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="hub-q" name="q" role="combobox" aria-autocomplete="list" aria-expanded="false"
+                 aria-controls="hub-suggest" aria-describedby="hub-hint" autocomplete="off" autocapitalize="none"
+                 spellcheck="false" enterkeyhint="search" placeholder="Try reordering, invoice, GST or payroll">
+        </div>
+        <div class="hub-suggest" id="hub-pop" hidden>
+          <p class="hub-suggest__note" id="hub-note" hidden></p>
+          <ul class="hub-suggest__list" id="hub-suggest" role="listbox" aria-label="Suggested subjects and guides"></ul>
+          <p class="hub-suggest__empty" id="hub-empty" hidden>No guides match &ldquo;<span id="hub-empty-q"></span>&rdquo; yet.
+            Try another word, or <a href="{{ '/#contact' | relative_url }}">ask me about it</a>.</p>
+        </div>
+      </div>
+      <p class="sr-only" id="hub-hint">Suggestions appear as you type. Press Enter to list every matching guide.</p>
+    </form>
+    <p class="hub-search__status" id="hub-status" hidden><span id="hub-status-text"></span>
+      <button type="button" class="hub-search__clear" id="hub-clear">Clear search</button></p>
+    <p class="sr-only" id="hub-live" aria-live="polite"></p>
+  </div>
+
   <nav class="hub-toc card" aria-label="Subjects on this page">
     <h2 class="services__ind-title">Jump to a subject</h2>
     <ul>
@@ -66,7 +90,7 @@ groups:
     </ul>
   </nav>
 
-  <div class="svc-related">
+  <div class="svc-related hub-start">
     <h2 class="services__ind-title">Start here</h2>
     <ul>
       <li><a href="{{ '/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/' | relative_url }}">How to set up reordering rules in Odoo 19</a></li>
@@ -85,11 +109,11 @@ groups:
       <h2 class="services__ind-title" id="{{ g.key }}-h">{{ g.title }}</h2>
       <p class="services__lead">{{ g.blurb }}</p>
       <ul>
-        {% for p in gp %}{% if p.title contains 'How to' %}
-        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span class="hub-kind">Setup guide</span></li>
+        {% for p in gp %}{% assign lead = p.title | slice: 0, 13 %}{% if lead == 'How to Set Up' or lead == 'How to Build ' %}
+        <li data-k="{{ p.tags | join: ' ' | escape }}" data-d="{{ p.description | default: p.excerpt | strip_html | strip_newlines | truncate: 240 | escape }}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span class="hub-kind">Setup guide</span></li>
         {% endif %}{% endfor %}
-        {% for p in gp %}{% unless p.title contains 'How to' %}
-        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+        {% for p in gp %}{% assign lead = p.title | slice: 0, 13 %}{% unless lead == 'How to Set Up' or lead == 'How to Build ' %}
+        <li data-k="{{ p.tags | join: ' ' | escape }}" data-d="{{ p.description | default: p.excerpt | strip_html | strip_newlines | truncate: 240 | escape }}"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
         {% endunless %}{% endfor %}
       </ul>
       <p class="hub-group__top"><a href="#main">Back to top</a></p>
@@ -116,6 +140,8 @@ groups:
     <a class="btn btn--ghost" href="{{ '/services/odoo-consulting/' | relative_url }}">Odoo consulting</a>
   </div>
 </section>
+
+<script src="{{ '/assets/odoo-search.js' | relative_url }}" defer></script>
 
 <script type="application/ld+json">
 {

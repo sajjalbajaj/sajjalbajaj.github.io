@@ -16,7 +16,11 @@ a canned Q&A and a canned chat assistant; no front-end framework.
   deliverables, process, dependencies, evidence, related, faqs).
 - `/odoo/` groups posts by their `hub:` front-matter key (planning, industries, inventory, purchase,
   manufacturing, sales, accounting, website, marketing, services, hr, integrations, admin). Give every new
-  Odoo post exactly one `hub`.
+  Odoo post exactly one `hub`. Titles starting "How to Set Up" or "How to Build" get the "Setup guide" badge
+  and are listed first.
+- `/odoo/` search (`assets/odoo-search.js`) suggests subjects and guides as you type. It indexes the page's
+  own lists (title, tags, description), so new posts are searchable automatically. Odoo shorthand lives in
+  its `ABBREV` and `RELATED` maps.
 - Case studies in `_case_studies/` need `status: documented` (approved real project) or
   `status: representative` (illustration, labelled on the page). See `TEMPLATE.md`.
 - `content-review/` is local-only and gitignored (the repository is public).

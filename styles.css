@@ -925,6 +925,47 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .hub-group { scroll-margin-top: 90px; }
 .hub-group__top { margin: .6rem 0 0; font-size: .85rem; }
 
+/* Odoo hub search with suggestions (assets/odoo-search.js) */
+.hub-search { margin: 1.5rem 0 1.8rem; max-width: 680px; }
+.hub-search__label { display: block; font-family: var(--font-head); font-weight: 600; margin: 0 0 .5rem; }
+.hub-search__box { position: relative; scroll-margin-top: calc(var(--nav-h) + 12px); }
+.hub-search__field { display: flex; align-items: center; gap: .6rem; background: var(--surface);
+  border: 1px solid var(--hairline); border-radius: var(--radius-pill); padding: .7rem 1.1rem;
+  box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; }
+.hub-search__field:focus-within { border-color: var(--accent-strong); box-shadow: 0 0 0 3px var(--accent-soft); }
+.hub-search__field svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--muted);
+  stroke-width: 2; stroke-linecap: round; }
+.hub-search__field input { border: none; background: transparent; color: var(--text); font: inherit;
+  font-size: 1rem; width: 100%; outline: none; min-width: 0; }
+.hub-search__field input::placeholder { color: var(--muted); opacity: 1; }
+.hub-suggest { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 60;
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow); max-height: min(70vh, 480px); overflow-y: auto; padding: .35rem; }
+.hub-suggest__list { list-style: none; margin: 0; padding: 0; }
+.hub-suggest__opt a, .hub-suggest__all { display: block; padding: .55rem .75rem; border-radius: 10px;
+  color: var(--text); text-decoration: none; cursor: pointer; }
+.hub-suggest__opt a:hover, .hub-suggest__opt.is-active a,
+.hub-suggest__all:hover, .hub-suggest__all.is-active { background: var(--surface-tint); }
+.hub-suggest__opt.is-active a, .hub-suggest__all.is-active { box-shadow: inset 3px 0 0 var(--accent-strong); }
+.hub-suggest__title { display: block; font-weight: 500; line-height: 1.35; }
+.hub-suggest__meta { display: block; font-size: .8rem; color: var(--muted); margin-top: .15rem; }
+.hub-suggest__opt.is-active .hub-suggest__meta, .hub-suggest__opt a:hover .hub-suggest__meta { color: var(--text); }
+.hub-suggest mark { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 .05em; }
+.hub-suggest__all { font-weight: 600; color: var(--link); border-top: 1px solid var(--hairline);
+  border-radius: 0 0 10px 10px; margin-top: .25rem; }
+.hub-suggest__note, .hub-suggest__empty { margin: 0; padding: .55rem .75rem; font-size: .9rem; color: var(--muted); }
+.hub-suggest__empty a { color: var(--link); font-weight: 600; }
+.hub-search__status { margin: .8rem 0 0; font-size: .95rem; }
+.hub-search__clear { font: inherit; font-size: .85rem; font-weight: 600; color: var(--link); cursor: pointer;
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-pill);
+  padding: .2rem .75rem; margin-left: .35rem; }
+.hub-search__clear:hover { border-color: var(--accent-strong); }
+.is-filtering .hub-toc, .is-filtering .hub-start { display: none; }
+.hub-search[hidden], .hub-suggest[hidden], .hub-suggest [hidden], .hub-search__status[hidden],
+.hub-group[hidden], .hub-group li[hidden] { display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
 /* Footer navigation */
 .footer__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.1rem; margin: 0 0 .9rem; }
 .footer__nav a { font-weight: 500; }
