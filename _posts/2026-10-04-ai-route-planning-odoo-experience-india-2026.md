@@ -4,7 +4,7 @@ title: "AI-Based Route Planning at Odoo Experience India 2026"
 date: 2026-10-04 10:00:00 +0530
 tags: [Odoo, Odoo Experience, Events, Logistics, Delivery Planning, Fleet, Inventory Management, Distribution]
 hub: inventory
-description: "My recap of presenting Master Software Solutions' route planning module for Odoo at Odoo Experience India 2026, and lessons on delivery data."
+description: "My recap of exhibiting for Master Software Solutions at Odoo Experience India 2026 and presenting its route planning module, with lessons on delivery data."
 about_event:
   name: "Odoo Experience India 2026"
   start: "2026-09-11"
@@ -17,8 +17,9 @@ about_event:
   url: "https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction"
 ---
 
-At Odoo Experience India 2026 I presented Master Software Solutions' AI-based Route Planning and Optimization
-module for Odoo: a tool that assigns delivery orders to drivers and builds routes inside Odoo using Google Maps.
+At Odoo Experience India 2026 I represented Master Software Solutions as an exhibitor and gave a presentation
+on its AI-based Route Planning and Optimization module for Odoo: a tool that assigns delivery orders to drivers
+and builds routes inside Odoo using Google Maps.
 This is my account of what the module is for, what my part was, and the practical lessons that apply to any
 business planning deliveries from its ERP.
 
@@ -27,14 +28,22 @@ business planning deliveries from its ERP.
 - **Event:** Odoo Experience India 2026, organised by Odoo
 - **Dates:** 11–12 September 2026
 - **Venue:** Mahatma Mandir Convention Center, Gandhinagar, Gujarat
-- **My role:** presenter for Master Software Solutions (MSS), which exhibited as an Odoo partner
+- **My role:** exhibitor and presenter on behalf of Master Software Solutions (MSS), which exhibited as an Odoo partner
 - **Topic:** MSS's AI-based Route Planning and Optimization module for Odoo
 
 The programme opened on 11 September with Odoo India's keynote introducing Odoo 20, and ran talks across
 accounting, inventory, manufacturing, CRM, eCommerce and AI.
 
 A note on ownership: the route-planning module is an MSS product, built by the MSS team. My role at the event
-was presenting it and explaining how different kinds of businesses could use it.
+was exhibiting it on MSS's behalf, presenting it, and explaining how different kinds of businesses could use it.
+
+## At the MSS booth
+
+Exhibiting meant the conversations continued after the presentation. MSS's own coverage of the event lists the
+subjects visitors raised at the booth: manufacturing and production, inventory and warehouse operations,
+logistics and delivery, business automation, AI-powered workflows, sales and customer management, and connecting
+separate business processes through Odoo. Very few of those conversations were about a single feature. Most were
+about getting the underlying operations right first, which is also where the lessons below come from.
 
 ## The problem the module addresses
 
@@ -63,7 +72,7 @@ The "AI" in the name refers to that automated optimisation of assignments and ro
 
 ## Lessons for any business planning deliveries in Odoo
 
-Preparing and presenting the module made a few things very clear. None of them depend on this particular tool;
+Exhibiting and presenting the module made a few things very clear. None of them depend on this particular tool;
 they apply to any route planner you connect to an ERP.
 
 **1. Address data decides whether a delivery can be planned at all.** The module needs map coordinates for every

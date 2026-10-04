@@ -164,7 +164,7 @@
     { q: 'Are you certified?',
       a: "I've earned the Odoo 19 Functional Certification (2026), Microsoft Certified: Power BI Data Analyst Associate (2024) and Certified ScrumMaster (2020), and completed PMI's Kickoff course and Intel's AI For All programme." },
     { q: 'What are you working on lately?',
-      a: "Odoo projects for manufacturing and distribution, Odoo 19 setup guides on this site, and in September 2026 I presented Master Software Solutions' route-planning module for Odoo at Odoo Experience India 2026." },
+      a: "Odoo projects for manufacturing and distribution, Odoo 19 setup guides on this site, and in September 2026 I exhibited for Master Software Solutions at Odoo Experience India 2026 and presented its route-planning module for Odoo." },
     { q: 'How can I reach you?',
       a: "Email sajjalbajaj@gmail.com, WhatsApp or call +91 99140 89472, or message me on LinkedIn (linkedin.com/in/sajjal-bajaj). Tell me briefly what you make or sell and what isn't working." }
   ];
