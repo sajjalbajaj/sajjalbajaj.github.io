@@ -394,6 +394,8 @@
   function reset() {
     input.value = '';
     last = null;
+    sentTerm = '';
+    clearTimeout(trackTimer);
     clearFilter();
     render(null);
   }
@@ -404,10 +406,34 @@
     if (a) a.click();
   }
 
+  /* ---------- Search analytics (GA4) ---------- */
+  // Sends a GA4 `search` event once a search settles: after a two-second pause in typing, or straight
+  // away when a suggestion is chosen or Enter is pressed. search_term fills GA4's built-in "Search term"
+  // report; search_results is the number of matching guides (0 = a topic with no guide yet). Nothing
+  // else is sent, terms that look like an email address or phone number are never sent, and nothing
+  // happens if GA4 is not configured.
+  var sentTerm = '', trackTimer = 0, trackPending = false;
+  function track() {
+    clearTimeout(trackTimer);
+    trackPending = false;
+    if (typeof window.gtag !== 'function') return;
+    var term = input.value.trim().toLowerCase().replace(/\s+/g, ' ').slice(0, 100);
+    if (term.length < 3 || term === sentTerm) return;
+    if (term.indexOf('@') !== -1 || /\d{6,}/.test(term.replace(/[\s()+.\-]/g, ''))) return;
+    sentTerm = term;
+    window.gtag('event', 'search', { search_term: term, search_results: last ? last.arts.length : 0 });
+  }
+  function trackSoon() {
+    clearTimeout(trackTimer);
+    trackPending = true;
+    trackTimer = setTimeout(track, 2000);
+  }
+
   /* ---------- Events ---------- */
   input.addEventListener('input', function () {
     clearFilter();
     update();
+    trackSoon();
     // On phones, lift the box towards the top so the keyboard does not hide the suggestions.
     if (!scrolled && narrow.matches && box.getBoundingClientRect().top > window.innerHeight * 0.25) {
       scrolled = true;
@@ -441,6 +467,7 @@
   });
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    track();
     if (!pop.hidden && active >= 0 && opts[active]) choose(opts[active]);
     else showAll();
   });
@@ -451,6 +478,7 @@
   list.addEventListener('click', function (e) {
     var li = e.target.closest('[role="option"]');
     if (!li) return;
+    track();
     if (li.getAttribute('data-action') === 'all') { showAll(); return; }
     var a = li.querySelector('a');
     if (a && a.getAttribute('href').charAt(0) === '#') hidePop();
@@ -463,6 +491,7 @@
     if (!root.contains(e.target)) hidePop();
   });
   window.addEventListener('pageshow', hidePop);
+  window.addEventListener('pagehide', function () { if (trackPending) track(); });
 
   root.hidden = false;
 })();
