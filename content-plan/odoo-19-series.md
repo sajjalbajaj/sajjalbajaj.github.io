@@ -13,7 +13,7 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
   guide, not a replacement for the docs.*
 
 ## Publishing mechanism
-- `future: false` in _config.yml + `.github/workflows/pages.yml` daily cron (04:00 UTC).
+- `future: false` in _config.yml + `.github/workflows/pages.yml` daily cron (05:00 UTC / 10:30 IST).
 - Queue posts with future dates (2-5 per day). Each day's build publishes that day's posts.
 - Keep the queue filled AHEAD of the calendar. If it empties, publishing pauses until refilled.
 
@@ -141,3 +141,39 @@ Ideas for future Round 2 batches:
 - More industries + case studies.
 - Odoo 20: feature deep-dives as they are confirmed at Odoo Experience 2026 (late Sep).
 - More industries (retail, hospitality, healthcare, education) and more case studies.
+
+## ROUND 3 - topic-gap batches (decided 2026-10-05)
+Topic research across established Odoo blogs found 60 subjects this blog doesn't cover yet (topics only:
+every post is original writing from the official Odoo documentation, never a rewrite of another article).
+Same production rules: 9 posts per batch, 3/day at 08:00/09:00/10:00 +0530, one `hub:` each, 8 tags,
+verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
+
+- Batch 19: India and finance essentials, dated 10-10 to 10-12 (re-dated from 10-06 to 10-08 before first push).
+  GST setup (HSN, CGST/SGST/IGST, returns); GST e-invoicing and e-way bills; Odoo vs Tally; TDS and TCS;
+  migrating from Tally to Odoo; online payments in India (Razorpay, UPI); multi-currency for importers and
+  exporters; customer credit limits; Odoo implementation cost in India.
+- Batch 20: inventory and sales operations, dated 10-13 to 10-15.
+  Backorders; sales returns and RMAs; returnable crates, bottles and deposits; B2B dealer ordering portal;
+  van sales and route sales; scrap and wastage; inter-warehouse resupply; batch, wave and cluster picking;
+  quotation templates.
+- Batch 21: manufacturing, costing and stock models, dated 10-16 to 10-18.
+  Master production schedule; how Odoo costs a manufactured product; batch and process manufacturing
+  (recipes, yields); catch weight; demand forecasting; consignment stock; cross-docking; customs duty and
+  import costs; sales commissions.
+- Batch 22 (complete): integrations and comparisons, 10-19 to 10-21. Expanded into detailed, practical guides
+  with version/hosting limits, data ownership, rollout or evaluation steps, FAQs and official references.
+  Shopify; WooCommerce; Amazon and marketplaces; courier integrations; Odoo and Power BI; connecting Odoo to
+  AI assistants through MCP; Community vs Enterprise; Odoo vs Zoho; Odoo vs ERPNext.
+- Batch 23 (complete): requested vertical and workflow guides, 10-22 to 10-25.
+  WhatsApp Business workflows; healthcare clinic operations; dental practice administration; car rentals;
+  delivery dispatch and route planning; vertical Helpdesk workflows; skincare and cosmetics manufacturing;
+  veterinary clinic operations; pet supplies retail and wholesale; food supply distribution; food retail POS.
+  These guides distinguish standard Odoo business workflows from clinical systems, sector compliance and
+  specialist route optimization. Existing generic WhatsApp, Rental, Helpdesk and POS posts remain the overviews;
+  these are deeper use cases for specific operating models.
+- Batch 24 (planned): finance and planning, 10-26 to 10-28.
+  Down payments; payment follow-ups and aged receivables; month-end and year-end closing; budgets; opening
+  balances at go-live; which Odoo versions are supported; what an upgrade costs; the discovery phase;
+  rescuing a stalled implementation.
+- Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; avoiding lock-in; support contracts; total cost of
+  ownership; post-dated cheques.

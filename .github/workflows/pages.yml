@@ -5,8 +5,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # 04:00 UTC = 09:30 IST daily. Publishes any posts dated that day (future: false).
-    - cron: "0 4 * * *"
+    # 05:00 UTC = 10:30 IST daily. Publishes all posts dated that day (future: false).
+    - cron: "0 5 * * *"
   workflow_dispatch:
 
 permissions:
