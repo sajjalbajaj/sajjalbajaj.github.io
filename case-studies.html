@@ -4,14 +4,30 @@ permalink: /case-studies/
 title: "Odoo and ERP Case Studies by Industry"
 description: "Real Odoo and ERP projects, client names withheld: metal fabrication, textiles, tools, skincare, coffee, propane and dairy. Problem, solution, results."
 schema_type: CollectionPage
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-18
 ---
+<style>
+  .case-studies-intro__visual { display: none; }
+  @media screen and (min-width: 1024px) {
+    .case-studies-intro { position: relative; padding-right: 37%; }
+    .case-studies-intro__visual {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 34%;
+      max-width: 460px;
+      height: auto;
+    }
+  }
+</style>
 <section class="section">
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="{{ '/' | relative_url }}">Home</a> ›
     <span>Case Studies</span>
   </nav>
 
+  <div class="case-studies-intro">
   <h1 class="section-title"><span class="section-title__no">✦</span> Case Studies</h1>
   <p class="services__lead">Odoo projects I delivered at Master Software Solutions as consultant, tech lead, project
   manager and delivery manager, across
@@ -20,6 +36,12 @@ last_modified_at: 2026-10-05
   <p class="services__lead">Client names and identifying details are left out. Where figures appear, they are the
   results published for the project, not my own measurements. The two dairy projects use MSS's Odoo-based dairy ERP
   features. More of my client work is listed on my <a href="{{ '/cv/' | relative_url }}">CV</a>.</p>
+
+  <img class="case-studies-intro__visual"
+       src="{{ '/assets/erp-connected-operations.svg' | relative_url }}"
+       alt="ERP connecting manufacturing, inventory, delivery and accounting workflows."
+       width="560" height="520" decoding="async">
+  </div>
 
   {% assign cs = site.case_studies | sort: "order" %}
   {% if cs and cs.size > 0 %}

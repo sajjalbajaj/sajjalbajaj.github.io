@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="520" viewBox="0 0 560 520" role="img" aria-labelledby="title desc">
+  <title id="title">Connected ERP business operations</title>
+  <desc id="desc">Manufacturing, warehouse inventory, delivery and accounting connect through a central ERP dashboard.</desc>
+  <defs>
+    <linearGradient id="panel" x2="0" y2="1">
+      <stop stop-color="#fffdf8"/><stop offset="1" stop-color="#fce9c4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="280" cy="260" r="204" fill="#f2a81d" opacity=".08"/>
+  <circle cx="280" cy="260" r="157" fill="none" stroke="#d9a74a" stroke-opacity=".35" stroke-dasharray="3 10"/>
+  <g fill="none" stroke="#d98e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M135 153v77h45M425 153v77h-45M135 367v-77h45M425 367v-77h-45"/>
+  </g>
+  <g fill="#f2a81d">
+    <circle cx="135" cy="203" r="5"/><circle cx="425" cy="203" r="5"/>
+    <circle cx="135" cy="317" r="5"/><circle cx="425" cy="317" r="5"/>
+  </g>
+  <!-- Central system: an illustrative interface without invented results. -->
+  <rect x="174" y="187" width="212" height="154" rx="20" fill="#3a342e" opacity=".08" transform="translate(0 8)"/>
+  <rect x="174" y="187" width="212" height="154" rx="20" fill="url(#panel)" stroke="#d6c5aa" stroke-width="1.5"/>
+  <path d="M194 226h172" stroke="#dfd2bd"/>
+  <circle cx="198" cy="208" r="4" fill="#f2a81d"/>
+  <circle cx="211" cy="208" r="4" fill="#e7d8be"/>
+  <circle cx="224" cy="208" r="4" fill="#e7d8be"/>
+  <g font-family="Arial, sans-serif" fill="#3a342e" text-anchor="middle">
+    <text x="280" y="255" font-size="24" font-weight="700">ERP</text>
+    <text x="280" y="275" font-size="11" letter-spacing="1.5">CONNECTED OPERATIONS</text>
+  </g>
+  <g fill="#f2a81d">
+    <rect x="207" y="294" width="36" height="24" rx="6"/>
+    <rect x="251" y="294" width="58" height="24" rx="6" fill="#fce9c4" stroke="#d9a74a"/>
+    <rect x="317" y="294" width="36" height="24" rx="6"/>
+  </g>
+  <g fill="#fffaf0" stroke="#dfd2bd" stroke-width="1.5">
+    <rect x="61" y="47" width="148" height="118" rx="20"/>
+    <rect x="351" y="47" width="148" height="118" rx="20"/>
+    <rect x="61" y="355" width="148" height="118" rx="20"/>
+    <rect x="351" y="355" width="148" height="118" rx="20"/>
+  </g>
+  <g stroke="#3a342e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <!-- Factory -->
+    <path d="M105 119V91l19 11V88l20 12V76h16v43z" fill="#fce9c4"/>
+    <path d="M115 111h3m14 0h3m14 0h3M149 68v-5"/>
+    <!-- Warehouse -->
+    <path d="m393 91 32-22 32 22v29h-64z" fill="#fce9c4"/>
+    <path d="M389 93 425 68l36 25M408 120V96h34v24M408 104h34M408 112h34"/>
+    <!-- Delivery -->
+    <path d="M100 413v-29h42v29M142 393h14l13 14v6h-69" fill="#fce9c4"/>
+    <path d="M150 398v8h12"/>
+    <circle cx="112" cy="415" r="7" fill="#fffaf0"/><circle cx="155" cy="415" r="7" fill="#fffaf0"/>
+    <!-- Accounting -->
+    <path d="M405 426v-48h29l13 13v35z" fill="#fce9c4"/>
+    <path d="M434 378v13h13M415 400h22M415 409h8M415 417h8"/>
+    <path d="m430 415 4 4 7-8" stroke="#a56a00"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#3a342e">
+    <text x="135" y="145">Manufacturing</text>
+    <text x="425" y="145">Inventory</text>
+    <text x="135" y="453">Delivery</text>
+    <text x="425" y="453">Accounting</text>
+  </g>
+</svg>
