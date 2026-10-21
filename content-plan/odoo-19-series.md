@@ -7,7 +7,8 @@ Goal: an original, plain-English guide series covering the Odoo 19 documentation
 - **Original writing only.** Explain the concept in our own words. Do NOT copy Odoo's docs
   (copyright + Google penalises duplicate content). Cite and link the relevant official doc
   page at the end of every post: this is what gives authority and "valid context".
-- Each post: ~450-700 words, practical, business-owner friendly, no em dashes.
+- Earlier overview posts used 450 to 700 words. New decision and workflow explainers use 900 to 1400 words,
+  with practical examples, version boundaries, FAQs and official references. No em or en dashes.
 - Front matter tag every series post with `Odoo 19` plus the app tag (e.g. `Inventory`).
 - End every post with: *Based on the official [Odoo 19 <App> documentation](URL). A plain-English
   guide, not a replacement for the docs.*
@@ -171,9 +172,28 @@ verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
   These guides distinguish standard Odoo business workflows from clinical systems, sector compliance and
   specialist route optimization. Existing generic WhatsApp, Rental, Helpdesk and POS posts remain the overviews;
   these are deeper use cases for specific operating models.
-- Batch 24 (planned): finance and planning, 10-26 to 10-28.
+- Batch 24 (queued): finance and implementation planning, 2026-10-26 to 2026-10-28.
   Down payments; payment follow-ups and aged receivables; month-end and year-end closing; budgets; opening
   balances at go-live; which Odoo versions are supported; what an upgrade costs; the discovery phase;
   rescuing a stalled implementation.
-- Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; avoiding lock-in; support contracts; total cost of
-  ownership; post-dated cheques.
+- Batch 25 (queued): support, ownership and implementation decisions, 2026-10-29 to 2026-10-31.
+  Support contracts and SLA definitions; data ownership and exit planning; total cost of ownership;
+  hosting responsibilities; user acceptance scenarios; change requests; backup and recovery readiness;
+  implementation handover; rollout across branches.
+- Batch 26 (queued): operational exceptions and controls, 2026-11-01 to 2026-11-03.
+  Food traceability and recall drills; skincare formula and label revisions; car rental return inspections;
+  Helpdesk warranty claims and repairs; POS refunds and settlement; clinic reception access;
+  pet supply cases and units; WhatsApp failures and handoffs; cold chain receiving exceptions.
+- Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; post-dated cheques.
+
+### Batches 24 to 26 publication status
+
+Requested as three batches of nine detailed posts. All 27 posts are queued for publication, with three posts per
+calendar day at 08:00, 09:00 and 10:00 +0530 from October 26 through November 3, 2026. The existing daily
+Pages workflow and future-date filtering determine when each day's articles appear.
+
+Each post has one guide hub, eight existing tags, two FAQs, an original worked example and official
+Odoo 19 references. Corresponding Odoo 20 documentation was reviewed, with relevant differences called
+out for permissions, POS, PLM, Quality and multi company workflows. Examples are illustrative and make
+no claims of client results or live database testing. The website layout and styling are unchanged.
+
