@@ -184,6 +184,18 @@ verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
   Food traceability and recall drills; skincare formula and label revisions; car rental return inspections;
   Helpdesk warranty claims and repairs; POS refunds and settlement; clinic reception access;
   pet supply cases and units; WhatsApp failures and handoffs; cold chain receiving exceptions.
+- Batch 27 (written locally): purchasing exceptions and supplier decisions, 2026-11-04 to 2026-11-06.
+  Blanket order call offs; alternative RFQ comparisons; supplier lead times and promises; vendor bill
+  matching exceptions; supplier returns and credits; purchase approval boundaries; vendor price updates;
+  dropship delivery exceptions; subcontractor component shortages.
+- Batch 28 (written locally): warehouse and manufacturing decisions, 2026-11-07 to 2026-11-09.
+  Expiry dates and customer shelf life; barcode receipt discrepancies; inventory count variance review;
+  putaway capacity and overflow; packages versus product packaging; recovered components from unbuilds;
+  usable byproducts versus waste; alternative work centre readiness; partial manufacturing completion.
+- Batch 29 (written locally): revenue and integration workflows, 2026-11-10 to 2026-11-12.
+  Milestone acceptance and billing; timesheet billing caps; subscription payment failure recovery;
+  abandoned carts versus unpaid orders; pricelist validity and open quotations; provider settlement
+  reconciliation; integration retries and duplicate actions; API key rotation; scheduled job monitoring.
 - Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; post-dated cheques.
 
 ### Batches 24 to 26 publication status
@@ -197,3 +209,15 @@ Odoo 19 references. Corresponding Odoo 20 documentation was reviewed, with relev
 out for permissions, POS, PLM, Quality and multi company workflows. Examples are illustrative and make
 no claims of client results or live database testing. The website layout and styling are unchanged.
 
+
+### Batches 27 to 29 publication schedule
+
+The user requested another three batches of nine detailed posts. All 27 are queued for publication, dated
+November 4 through November 12, 2026, with three posts per day at 08:00, 09:00 and 10:00 +0530.
+The daily Pages workflow and future date filtering control when they appear. They extend the existing topic coverage with
+specific operational decisions rather than repeating the application overviews.
+
+Each article contains an illustrative worked example, fit considerations, common mistakes, two FAQs,
+one guide hub, eight existing tags and official Odoo references. Body lengths range from 923 to 1057
+words, excluding front matter and link destinations. Odoo 19 and corresponding Odoo 20 documentation
+were reviewed, with relevant version boundaries identified. The current website design is unchanged.
