@@ -4,6 +4,7 @@ title: "AI-Based Route Planning at Odoo Experience India 2026"
 date: 2026-10-04 10:00:00 +0530
 tags: [Odoo, Odoo Experience, Events, Logistics, Delivery Planning, Fleet, Inventory Management, Distribution]
 hub: inventory
+last_modified_at: 2026-10-22
 description: "My recap of exhibiting for Master Software Solutions at Odoo Experience India 2026 and presenting its route planning module, with lessons on delivery data."
 about_event:
   name: "Odoo Experience India 2026"
@@ -22,6 +23,13 @@ on its AI-based Route Planning and Optimization module for Odoo: a tool that ass
 and builds routes inside Odoo using Google Maps.
 This is my account of what the module is for, what my part was, and the practical lessons that apply to any
 business planning deliveries from its ERP.
+
+## Watch the event session
+
+Odoo India has published the Odoo Experience India 2026 session on how businesses in supply chain and
+logistics can use Odoo in their operations.
+
+[Watch the supply chain and logistics session on YouTube](https://www.youtube.com/watch?v=iTmBb76tm_I).
 
 ## The event at a glance
 
@@ -108,6 +116,8 @@ module, [get in touch](/#contact). For the warehouse side of the flow, my guides
 [reordering rules](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/) are a good place to start.
 
 ## Sources
+
+- Odoo India: [supply chain and logistics session recording](https://www.youtube.com/watch?v=iTmBb76tm_I) (Odoo Experience India 2026)
 
 - Odoo: [Odoo Experience 2026 India event page](https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction) (dates, venue and programme)
 - Master Software Solutions: its published coverage of Odoo Experience India 2026 (subjects raised at the booth)
