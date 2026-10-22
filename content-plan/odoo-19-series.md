@@ -184,18 +184,30 @@ verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
   Food traceability and recall drills; skincare formula and label revisions; car rental return inspections;
   Helpdesk warranty claims and repairs; POS refunds and settlement; clinic reception access;
   pet supply cases and units; WhatsApp failures and handoffs; cold chain receiving exceptions.
-- Batch 27 (written locally): purchasing exceptions and supplier decisions, 2026-11-04 to 2026-11-06.
+- Batch 27 (queued): purchasing exceptions and supplier decisions, 2026-11-04 to 2026-11-06.
   Blanket order call offs; alternative RFQ comparisons; supplier lead times and promises; vendor bill
   matching exceptions; supplier returns and credits; purchase approval boundaries; vendor price updates;
   dropship delivery exceptions; subcontractor component shortages.
-- Batch 28 (written locally): warehouse and manufacturing decisions, 2026-11-07 to 2026-11-09.
+- Batch 28 (queued): warehouse and manufacturing decisions, 2026-11-07 to 2026-11-09.
   Expiry dates and customer shelf life; barcode receipt discrepancies; inventory count variance review;
   putaway capacity and overflow; packages versus product packaging; recovered components from unbuilds;
   usable byproducts versus waste; alternative work centre readiness; partial manufacturing completion.
-- Batch 29 (written locally): revenue and integration workflows, 2026-11-10 to 2026-11-12.
+- Batch 29 (queued): revenue and integration workflows, 2026-11-10 to 2026-11-12.
   Milestone acceptance and billing; timesheet billing caps; subscription payment failure recovery;
   abandoned carts versus unpaid orders; pricelist validity and open quotations; provider settlement
   reconciliation; integration retries and duplicate actions; API key rotation; scheduled job monitoring.
+- Batch 30 (queued): sales continuity and customer decisions, 2026-11-13 to 2026-11-15.
+  Lead ownership handovers; lost reason reviews; duplicate opportunity decisions; activity plan dates;
+  quotation revisions and acceptance; invoice and delivery addresses; sales to delivery handovers;
+  customer portal access; order cancellation reviews.
+- Batch 31 (queued): service evidence and support operations, 2026-11-16 to 2026-11-18.
+  Field service worksheets; van stock and material billing; repeat visits; task dependency release;
+  missing project costs; Helpdesk priority triage; SLA waiting time and calendars; ticket closure;
+  Knowledge article ownership and review.
+- Batch 32 (queued): data maintenance and administration, 2026-11-19 to 2026-11-21.
+  Import external identifiers; blank field corrections; product variant retirement; unit conversion
+  discrepancies; shared company data; staff departure handovers; document sharing; signature evidence;
+  email aliases and reply routing.
 - Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; post-dated cheques.
 
 ### Batches 24 to 26 publication status
@@ -221,3 +233,16 @@ Each article contains an illustrative worked example, fit considerations, common
 one guide hub, eight existing tags and official Odoo references. Body lengths range from 923 to 1057
 words, excluding front matter and link destinations. Odoo 19 and corresponding Odoo 20 documentation
 were reviewed, with relevant version boundaries identified. The current website design is unchanged.
+
+
+### Batches 30 to 32 publication schedule
+
+These 27 detailed decision guides continue the schedule from November 13 through November 21, 2026,
+with three posts per day at 08:00, 09:00 and 10:00 +0530. Publication follows the existing daily Pages
+workflow and future date filtering. Each includes two FAQs, eight existing tags, one guide hub,
+an illustrative example, related reading and official references.
+
+The articles contain 25,513 body words in total, ranging from 914 to 987 words each. Official Odoo 19
+sources and corresponding Odoo 20 pages were reviewed. Field Service articles explicitly distinguish
+the Odoo 19 task workflow from Odoo 20 Planning and cite the replacement version reference.
+The website layout and styling are unchanged.
