@@ -496,7 +496,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
   .layout { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   .nav__links {
     position: absolute; top: var(--nav-h); left: 0; right: 0;
     flex-direction: column; gap: 0; padding: .5rem;
@@ -507,6 +507,9 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
   .nav__links a { padding: .8rem 1rem; border-radius: 10px; }
   .nav__links a.is-active::after { display: none; }
   .nav__burger { display: grid; }
+}
+
+@media (max-width: 720px) {
   .stats { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
 }
 
@@ -683,6 +686,7 @@ a.chip:hover { transform: translateY(-2px); border-color: var(--accent); box-sha
 .services__lead strong { color: var(--text); }
 .services__industries { margin-top: 2rem; }
 .services__ind-title { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; margin-bottom: .8rem; }
+.services__grid + .services__ind-title { margin-top: 2rem; }
 .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.2rem; }
 .service-card { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--hairline);
                 border-radius: var(--radius); padding: 1.6rem 1.5rem; box-shadow: var(--shadow-sm);
