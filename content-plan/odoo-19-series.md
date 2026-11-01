@@ -208,6 +208,30 @@ verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
   Import external identifiers; blank field corrections; product variant retirement; unit conversion
   discrepancies; shared company data; staff departure handovers; document sharing; signature evidence;
   email aliases and reply routing.
+- Batch 33 (queued): accounting decisions and financial controls, 2026-11-22 to 2026-11-24.
+  Cash discount eligibility; credit note and refund completion; unmatched bank transactions; analytic
+  distribution changes; invoice sequence gaps; customer statement disputes; intercompany counterparts;
+  consolidation readiness; post dated check controls.
+- Batch 34 (queued): people operations and payroll readiness, 2026-11-25 to 2026-11-27.
+  Time off accrual changes; attendance corrections; duplicate expense claims; contract renewals;
+  duplicate candidate records; appraisal goal changes; payroll work entry conflicts; fleet odometer
+  anomalies; referral reward eligibility.
+- Batch 35 (queued): marketing, website and customer journey controls, 2026-11-28 to 2026-11-30.
+  Email bounce and blacklist review; UTM naming; event attendance and no shows; survey anonymity;
+  eLearning certification renewal; website redirects; eCommerce returns and exchanges; missed live
+  chat routing; marketing subscription and unsubscribe governance.
+- Batch 36 (queued): finance close and accounting evidence, 2026-12-01 to 2026-12-03.
+  Duplicate vendor bills; payment batch approvals; fixed asset capitalisation and disposal; deferred
+  revenue; deferred expenses; foreign exchange differences; accounting lock date reopening; fiscal
+  position mapping; manual journal entries and reversals.
+- Batch 37 (queued): inventory, engineering and equipment controls, 2026-12-04 to 2026-12-06.
+  Lot and serial corrections; negative stock and valuation; landed cost corrections; quality alert root
+  cause closure; PLM change effectivity; overdue preventive maintenance; repair parts and warranty billing;
+  replenishment route conflicts; removal strategy exceptions.
+- Batch 38 (queued): workplace and customer administration, 2026-12-07 to 2026-12-09.
+  Approval request evidence; planning shift conflicts; employee equipment returns; document retention;
+  Knowledge permissions; appointment cancellations and no shows; Frontdesk visitor handoffs; VoIP missed
+  calls; Social Marketing publishing access.
 - Reserve: Odoo vs SAP Business One; Odoo vs NetSuite; post-dated cheques.
 
 ### Batches 24 to 26 publication status
@@ -246,3 +270,29 @@ The articles contain 25,513 body words in total, ranging from 914 to 987 words e
 sources and corresponding Odoo 20 pages were reviewed. Field Service articles explicitly distinguish
 the Odoo 19 task workflow from Odoo 20 Planning and cite the replacement version reference.
 The website layout and styling are unchanged.
+
+
+### Batches 33 to 35 publication schedule
+
+These 27 detailed operational control guides continue the schedule from November 22 through November 30,
+2026, with three posts per day at 08:00, 09:00 and 10:00 +0530. They add finance, people operations and
+customer journey decisions without repeating the existing application overviews or setup guides.
+
+Each article includes two FAQs, eight existing tags, one guide hub, an illustrative example, internal
+related reading and official Odoo 19 references. Body lengths range from 931 to 1,011 words, with 25,755
+words in total. Version boundaries and legal, tax, employment and privacy limitations are stated where
+the business decision cannot be inferred from software configuration. The website layout and styling
+are unchanged.
+
+
+### Batches 36 to 38 publication schedule
+
+These 27 detailed control guides continue the schedule from December 1 through December 9, 2026, with
+three posts per day at 08:00, 09:00 and 10:00 +0530. They add finance close, inventory and engineering,
+and workplace administration decisions without repeating the existing module introductions.
+
+Each article contains two FAQs, eight existing tags, one guide hub, an illustrative worked example,
+internal related reading and official Odoo 19 references. Body lengths range from 980 to 1,015 words,
+with 26,927 words in total. The articles distinguish Odoo records from accounting, tax, safety, privacy,
+employment and compliance decisions that require an authorised business owner or specialist. The website
+layout and styling are unchanged.
