@@ -1,21 +1,41 @@
 ---
 layout: post
-title: "Odoo Payroll: An Overview"
+title: "Odoo Payroll: Work Entries, Payslips and Accounting in Odoo 20"
 date: 2026-08-29 10:00:00 +0530
-tags: [Odoo, Odoo 19, HR, Accounting, ERP]
+last_modified_at: 2026-11-17
+tags: [Odoo, Odoo 20, Odoo 19, HR, Payroll, Accounting, Employees, Best Practices]
 hub: hr
-description: "A plain-English overview of Odoo Payroll: how it turns contracts, attendance and leave into accurate pay, and connects to your accounting."
+description: "Understand Odoo 20 Payroll: employee pay data, work entries, salary structures, payslips, pay runs, localizations, validation and accounting entries."
+faqs:
+  - q: "What information does Odoo Payroll use to calculate a payslip?"
+    a: "It uses the employee's pay and working schedule, work entry values, salary structure and rules, plus applicable inputs, attachments and localization settings."
+  - q: "Can Odoo Payroll use attendance and time off data?"
+    a: "Yes. Work entries can reflect working schedules and information from apps such as Attendances, Time Off, Planning or Timesheets, depending on the configuration."
+  - q: "Does Odoo Payroll automatically provide every country's statutory rules?"
+    a: "No. The correct country localization must be installed and validated. Legal and tax requirements should be reviewed by a qualified local payroll owner."
 ---
 
-Payroll has to be right, every time. People notice immediately when it is not, and errors cost trust as
-well as money. Odoo Payroll brings it into the same system as the rest of your HR and accounts. Continuing
-the series on Odoo HR and People, here is a payroll overview.
+**Short answer:** Odoo 20 Payroll turns employee pay data, working schedules, work entries and salary rules into
+payslips and pay runs. It can use information from Time Off, Attendances, Planning and Timesheets, then create the
+accounting entry when payroll accounting is configured. The system provides the calculation framework, but the
+business remains responsible for the correct localization, salary rules, inputs, approvals and payment controls.
+
+This overview explains the full flow before configuration. For common control failures, read
+[common mistakes in Odoo Payroll](/blog/2026/09/18/odoo-payroll-mistakes/).
+
+## Applies to
+
+This article follows the official Odoo 20 Payroll documentation and also notes concepts familiar to Odoo 19 users.
+Payroll is country specific, so screens, reports and legal rules depend on the localization installed for the company.
 
 ## Built on your HR data
 
-Payroll does not work in isolation. It draws on the information already in Odoo: employee records,
-contracts, attendance and leave. Because that data is already there and connected, payroll has an accurate
-foundation to work from, rather than requiring everything to be re-entered.
+Payroll does not work in isolation. It draws on employee records, employment and pay data, working schedules, time
+off and other sources of worked time. In Odoo 20, contractual payroll data is held through employee versions in the
+underlying model, even though user documentation and screens may still describe employment contracts.
+
+The connection reduces re-entry, but it also means an incorrect schedule, wage, localization or time record can
+flow into payroll. Review source data before computing the period.
 
 ## Turning inputs into pay
 
@@ -23,11 +43,27 @@ The job of payroll is to turn all those inputs, salary, hours, leave, allowances
 correct pay for each employee, based on the rules that apply. Odoo structures this so that pay is calculated
 consistently, rather than worked out by hand each time with all the risk that carries.
 
+Odoo groups salary rules into structures. Work entries provide categories of time such as regular work, leave or
+other configured types. Additional inputs can include approved adjustments and salary attachments. The rules are
+evaluated in sequence to calculate lines such as basic pay, allowances, deductions and net pay.
+
+## Resolve work entry conflicts before computing
+
+Work entries are the bridge between scheduled time and the payslip. Review conflicts or missing information before
+processing a pay run. Correct the source record when possible so the explanation remains consistent across HR and
+payroll rather than applying an unexplained manual input only on the payslip.
+
+For the operating review, see [Odoo payroll work entry conflicts](/blog/2026/11/27/odoo-payroll-work-entry-conflicts/).
+
 ## Payslips and records
 
 Payroll produces payslips and keeps the records, so employees get clear documentation of their pay and you
 have a proper history. Organised records also make period-end and compliance far less painful than digging
 through spreadsheets.
+
+Payslips can be prepared individually or grouped into a pay run. Use a defined review sequence for calculation,
+approval, validation, payment and accounting. Limit who can change structures or rules, and preserve the evidence
+used for exceptional inputs.
 
 ## Connected to accounting
 
@@ -40,6 +76,10 @@ step.
 Payroll is one of the most location-specific areas of any system, because tax and labour rules vary widely
 by country. The right setup depends on your local requirements, so this is an area where getting the
 configuration correct, often with local expertise, really matters.
+
+Installing a payroll localization is not the same as approving it for production. Test representative employees,
+leave, overtime, new joiners, exits, deductions and year end cases. Have the responsible payroll and finance owners
+confirm the results against the applicable requirements.
 
 ## Practical tips
 
@@ -54,6 +94,17 @@ Payroll is high-stakes and detail-heavy, and the big advantage of doing it in Od
 on your existing HR data and flows into your accounts, reducing manual steps and errors. Get the local rules
 set up correctly, and payroll becomes a reliable, connected part of the business.
 
-Next in the series: handling employee expenses in Odoo.
+## Related guides
 
-*Based on the official [Odoo 19 Payroll documentation](https://www.odoo.com/documentation/19.0/applications/hr/payroll.html). A plain-English guide, not a replacement for the docs.*
+Read [Odoo Attendances](/blog/2026/08/29/odoo-attendances/), [Odoo Time Off](/blog/2026/08/28/odoo-time-off/)
+and [Odoo accounting overview](/blog/2026/08/21/odoo-accounting-overview-for-business-owners/) for the connected
+sources and financial result. For implementation support, see [Odoo consulting](/services/odoo-consulting/).
+
+## Official references
+
+1. [Odoo 20 Payroll configuration](https://www.odoo.com/documentation/20.0/applications/hr/payroll/configuration.html)
+2. [Odoo 20 payslips and pay runs](https://www.odoo.com/documentation/20.0/applications/hr/payroll/payslips.html)
+3. [Odoo 20 Payroll technical overview](https://www.odoo.com/documentation/20.0/developer/reference/standard_modules/payroll.html)
+
+*Updated on 17 November 2026 using the official Odoo 20 Payroll documentation. This is an ERP workflow guide, not
+payroll, tax or legal advice.*

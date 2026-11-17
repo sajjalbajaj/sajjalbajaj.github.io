@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How to Set Up Work Centres and Work Orders in Odoo 19"
+title: "Odoo Work Orders: Set Up Work Centres in Odoo 20"
 date: 2026-09-27 08:00:00 +0530
-last_modified_at: 2026-10-04
-tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP, Production Planning, Work Centers, Shop Floor]
+last_modified_at: 2026-11-17
+tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Work Centers, Shop Floor]
 hub: manufacturing
-description: "Set up Odoo 19 work centres and work orders step by step: enable work orders, define capacity and costs, add operations to BoMs, and run them on Shop Floor."
+description: "Set up Odoo 20 work orders and work centres: enable the feature, define capacity and costs, add BoM operations, plan work and use Shop Floor."
 faqs:
-  - q: "How do I enable work orders in Odoo 19?"
+  - q: "How do I enable work orders in Odoo 20?"
     a: "Go to Manufacturing, Configuration, Settings, tick Work Orders in the Operations section and save. Work centres and the Operations tab on bills of materials then become available."
   - q: "Is Shop Floor available in Odoo Community?"
     a: "No. Shop Floor is part of Odoo Enterprise. Community users can still create work centres and work orders and process them from the Manufacturing app."
@@ -15,18 +15,19 @@ faqs:
     a: "It adjusts expected durations for that work centre. Odoo's documentation gives the example of older equipment that takes twice as long, set at 50 percent efficiency."
 ---
 
-**Short answer:** in Odoo 19, enable **Work Orders** in **Manufacturing ‣ Configuration ‣ Settings**, create your
+**Short answer:** in Odoo 20, enable **Work Orders** in **Manufacturing ‣ Configuration ‣ Settings**, create your
 work centres in **Manufacturing ‣ Configuration ‣ Work Centers**, then add **operations** to each bill of
 materials, choosing the work centre that does each step. Manufacturing orders then create one work order per
-operation, which operators process in the Manufacturing app or, on Enterprise, in **Shop Floor**.
+operation. Work centres provide the calendar, capacity, expected duration and cost basis used to plan and measure
+that work. Operators process the resulting work orders in Manufacturing or, on Enterprise, in **Shop Floor**.
 
 This is the setup guide. For an explanation of what work centres and work orders are for, see
 [work centres and work orders in Odoo](/blog/2026/08/15/work-centers-and-work-orders-in-odoo/).
 
 ## Applies to
 
-- **Odoo version:** Odoo 19. Odoo 20 was released in September 2026; check its documentation before applying
-  these steps to an Odoo 20 database.
+- **Odoo version:** Odoo 20. The setup is similar in Odoo 19, but this article now follows the current Odoo 20
+  work centre and bill of materials documentation.
 - **Edition:** Work centres and work orders are in the Manufacturing app in Community and Enterprise. **Shop Floor**,
   quality checks and IoT triggers are Enterprise only.
 - **Apps:** Manufacturing and Inventory; Maintenance if you want equipment on work centres.
@@ -51,7 +52,8 @@ Go to **Manufacturing ‣ Configuration ‣ Settings**, tick **Work Orders** in 
 
 1. Go to **Manufacturing ‣ Configuration ‣ Work Centers** and click **New**.
 2. **Work Center Name** and a short **Code**.
-3. **Working Hours:** the default is *Standard 40 hours/week* (Monday to Friday, 8:00 to 17:00). Create another
+3. **Working Hours:** the documented Odoo 20 default is *Work Center 40 hours/week* (Monday to Friday, 8:00 to
+   16:00). Create another
    schedule if the work centre runs shifts.
 4. **Alternative Workcenters:** where work can go if this one is busy.
 5. On the **General Information** tab:
@@ -134,17 +136,16 @@ that match the real shifts.
 
 ## Related setup
 
-- [How to set up a bill of materials in Odoo 19](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/)
+- [How to set up a bill of materials in Odoo 20](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/)
 - [Manufacturing orders and the production workflow in Odoo](/blog/2026/08/15/manufacturing-orders-production-workflow-in-odoo/)
 - [Maintenance in Odoo](/blog/2026/09/09/odoo-maintenance/), for equipment on work centres
 - Rolling out manufacturing? See [Odoo implementation](/services/odoo-implementation/).
 
 ## Official references
 
-- Odoo 19 documentation: [Work centers](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.html)
-- Odoo 19 documentation: [Bill of materials](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
+- Odoo 20 documentation: [Work centers](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/using_work_centers.html)
+- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/bill_configuration.html)
 - Odoo 19 documentation: [Shop Floor overview](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.html)
 
-*How this guide was checked: menus, fields and behaviour were checked against the Odoo 19 documentation in October
-2026, and edition availability against Odoo 19's open-source code. The example is illustrative and wasn't run on a
-live database, so there are no screenshots; labels can vary slightly with your installed apps and language.*
+*Updated on 17 November 2026 using the official Odoo 20 work centre and bill of materials documentation. The example
+is illustrative and was not run on a live database. Labels can vary with installed apps and language.*

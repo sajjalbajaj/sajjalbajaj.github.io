@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "How Odoo Calculates the Cost of a Manufactured Product"
+title: "Odoo Manufacturing Costs: Components, Operations and Real Cost"
 date: 2026-10-16 09:00:00 +0530
-tags: [Odoo, Odoo 19, Manufacturing, MRP, Accounting, Finance, Inventory Management, Stock Control]
+last_modified_at: 2026-11-17
+tags: [Odoo, Odoo 20, Odoo 19, Manufacturing, MRP, Accounting, Finance, Inventory Management]
 hub: manufacturing
-description: "How Odoo 19 costs a manufactured product: costing methods, Compute Price from BoM, work centre rates, by-product cost share, WIP and variances."
+description: "Understand Odoo 20 manufacturing costs: component value, work centre and employee cost, expected versus real cost, BoM price, WIP and variances."
 faqs:
   - q: "What does Compute Price from BoM do in Odoo?"
     a: "It sets the product's Cost to the expected cost from its bill of materials: each component's Cost times its quantity, plus each operation's time at the work centre's cost per hour, divided by the BoM quantity, less any by-product cost share."
@@ -14,16 +15,18 @@ faqs:
     a: "In Community, operations are costed at the work centre's cost per hour only. Enterprise adds a per-employee rate on the work centre for the expected cost and uses each employee's hourly cost for the real cost."
 ---
 
-**Short answer:** Odoo builds the cost of a manufactured product from the components it consumes, each valued by its
-own costing method, plus the time spent in work centres at their cost per hour. The bill of materials gives the
-*expected* cost, which **Compute Price from BoM** writes into the product's **Cost** field; a finished manufacturing
-order gives the *real* cost. **Standard Price** then ignores the real cost, **AVCO** averages it in, and **FIFO**
-keeps it on the units that order produced.
+**Short answer:** Odoo 20 calculates manufacturing costs from component quantities and values, operation time, work
+centre operating cost and, where configured, employee cost. The manufacturing order shows an expected **MO Cost**
+from the bill of materials and a **Real Cost** based on what was actually consumed and recorded. Differences in
+component use, operation duration and employee rates explain why the two figures can diverge.
+
+This article also explains how the product costing method affects inventory value. Start with the manufacturing
+order overview before deciding whether a difference is a data error, a production variance or an expected outcome.
 
 ## Applies to
 
-- **Odoo version:** Odoo 19. The Odoo 20 manufacturing cost and by-product pages read the same, except that the
-  order's **Produce All** button is now called **Produce**.
+- **Odoo version:** Odoo 20, with Odoo 19 terminology retained where the accounting explanation still applies.
+  Odoo 20 documents expected MO cost, real cost, work centre cost, employee cost and average manufacturing cost.
 - **Edition:** costing methods, Compute Price from BoM, the BoM Overview and the MO Overview are in Community and
   Enterprise. Employee costs on operations and the **Production Analysis** report are Enterprise only.
 - **Apps:** Manufacturing, Inventory, and Invoicing or Accounting.
@@ -132,15 +135,16 @@ percentage split. Those usually mean periodic journal entries or customisation.
 
 ## Related
 
-- [How to use the Master Production Schedule in Odoo 19](/blog/2026/10/16/master-production-schedule-odoo/)
-- [How to set up a bill of materials in Odoo 19](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/)
-- [How to set up work centres and work orders in Odoo 19](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
+- [How to use the Master Production Schedule in Odoo](/blog/2026/10/16/master-production-schedule-odoo/)
+- [How to set up a bill of materials in Odoo 20](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/)
+- [How to set up work centres and work orders in Odoo 20](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
 - [Inventory valuation and landed costs in Odoo](/blog/2026/08/14/inventory-valuation-and-landed-costs-in-odoo/)
 - Want product costs your finance team trusts? See [Odoo implementation](/services/odoo-implementation/).
 
 ## Official references
 
-- Odoo 19 documentation: [Manufacturing order costs](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html)
+- Odoo 20 documentation: [Manufacturing order costs](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/mo_costs.html)
+- Odoo 20 documentation: [Production analysis](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/workflows/production_analysis.html)
 - Odoo 19 documentation: [Work-in-progress costs](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.html)
 - Odoo 19 documentation: [By-products](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/workflows/byproducts.html)
 - Odoo 19 documentation: [Inventory valuation (Accounting)](https://www.odoo.com/documentation/19.0/applications/finance/accounting/get_started/inventory_valuation.html)
@@ -148,7 +152,6 @@ percentage split. Those usually mean periodic journal entries or customisation.
 - Odoo 19 documentation: [Production analysis](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.html)
 - Odoo 19 source code: [Accounting - MRP (mrp_account) module](https://github.com/odoo/odoo/tree/19.0/addons/mrp_account)
 
-*How this article was checked: the cost calculations, buttons, fields and accounting entries were checked against the
-Odoo 19 documentation and the Odoo 19 code of the mrp, mrp_account and stock_account modules in October 2026, with the
-Odoo 20 pages and code compared. Employee costs and Production Analysis are Enterprise features and come from the
-documentation only. The worked example uses illustrative numbers and wasn't run on a live database.*
+*Updated on 17 November 2026 using the official Odoo 20 manufacturing cost and production analysis documentation,
+with the accounting explanation compared with the earlier Odoo 19 review. The worked example uses illustrative
+numbers and was not run on a live database.*

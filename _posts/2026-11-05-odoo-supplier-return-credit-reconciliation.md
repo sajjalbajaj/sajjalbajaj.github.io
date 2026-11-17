@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Odoo Supplier Returns: Follow the Goods Through to the Credit"
+title: "Odoo Supplier Reconciliation: Returns, Credits and Replacements"
 date: 2026-11-05 09:00:00 +0530
-tags: [Odoo, Odoo 19, ERP, Best Practices, Purchase, Inventory, Accounting, Supply Chain]
+last_modified_at: 2026-11-17
+tags: [Odoo, Odoo 20, Odoo 19, Best Practices, Purchase, Inventory, Accounting, Supply Chain]
 hub: purchase
-description: "Coordinate Odoo supplier returns with lot identity, dispatch evidence, replacement decisions and vendor credits so physical and financial records agree."
+description: "Reconcile Odoo supplier returns with vendor credits, replacements, lot identity, dispatch evidence and outstanding balances so stock and accounts agree."
 faqs:
   - q: "Does sending goods back automatically create a vendor credit?"
     a: "No. The physical return and the financial adjustment are separate processes. Record and reconcile the supplier credit or replacement outcome."
@@ -12,11 +13,16 @@ faqs:
     a: "That depends on the agreement. Record the accepted replacement and its receipt separately so the original return does not become an unexplained shortage."
 ---
 
-**Short answer:** a supplier return is complete when the business can explain both where the goods went and how the supplier obligation was settled. Keep the original receipt, returned quantity and credit or replacement decision connected. A dispatched return does not by itself prove that the supplier accepted a claim or adjusted the account.
+**Short answer:** Odoo supplier reconciliation should connect the original receipt, the quantity returned, the
+supplier's accepted outcome and the resulting vendor credit, replacement or open balance. A validated return proves
+that goods moved in the system. It does not by itself prove that the supplier accepted the claim, issued a credit or
+sent a replacement. Stock and finance therefore need separate records that can be reconciled to the same case.
 
 ## Applies to
 
-Odoo 19 Inventory, Purchase and vendor accounting. Return authorisation and disposition are business decisions; finance should approve the applicable credit treatment. The corresponding Odoo 20 references were reviewed in October 2026; use the documentation for your installed release when configuring screens and fields.
+Odoo 20 Inventory, Purchase and vendor accounting, with the same control principles applicable to Odoo 19. Return
+authorisation and disposition are business decisions. Finance should approve the applicable credit treatment and
+the installed release should be demonstrated before the process is accepted.
 
 ## What should be agreed before dispatch?
 
@@ -74,12 +80,19 @@ Finish with a reconciliation of returned quantity, accepted outcome and remainin
 
 Read [Odoo Vendor Bill Matching: Resolve Receipt and Price Exceptions](/blog/2026/11/05/odoo-vendor-bill-matching-exceptions/) for the connected workflow.
 
+Also see [vendor bills and three-way matching in Odoo](/blog/2026/08/17/vendor-bills-and-three-way-matching-in-odoo/)
+and [lot and serial number tracking](/blog/2026/08/12/lot-and-serial-number-tracking-in-odoo/) for the records used
+during reconciliation.
+
 ## Official references
 
-1. [Credit notes and refunds](https://www.odoo.com/documentation/19.0/applications/finance/accounting/customer_invoices/credit_notes.html)
+1. [Odoo 20 credit notes and refunds](https://www.odoo.com/documentation/20.0/applications/finance/accounting/customer_invoices/credit_notes.html)
+1. [Odoo 20 valuation of vendor returns](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.html)
 1. [Manage vendor bills](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/manage.html)
 1. [Lot numbers](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.html)
 
-*How this article was checked: official Odoo 19 documentation and the corresponding Odoo 20 pages were reviewed in October 2026. The examples are illustrative, not client results or tests on a live database.*
+*Updated on 17 November 2026 using the official Odoo 20 credit note and inventory valuation documentation, with
+the purchasing and traceability controls compared with the earlier Odoo 19 review. The examples are illustrative,
+not client results or tests on a live database.*
 
 For help designing this workflow, see my [Odoo consulting services](/services/odoo-consulting/).

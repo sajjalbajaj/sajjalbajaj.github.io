@@ -1,32 +1,33 @@
 ---
 layout: post
-title: "How to Set Up a Bill of Materials in Odoo 19"
+title: "Odoo 20 Bill of Materials: Components, Operations and Setup"
 date: 2026-09-24 08:00:00 +0530
-last_modified_at: 2026-10-04
-tags: [Odoo, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Stock Control, Production Planning]
+last_modified_at: 2026-11-17
+tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Production Planning]
 hub: manufacturing
-description: "Create a bill of materials in Odoo 19 step by step: components, quantities, operations, consumption rules and lead times, with a worked example and fixes."
+description: "Set up an Odoo 20 bill of materials with components, quantities, operations, work centres, consumption rules, by-products and a practical example."
 faqs:
   - q: "What is the difference between a manufacturing BoM and a kit in Odoo?"
     a: "A BoM of type Manufacture this Product is used to make the product through manufacturing orders, consuming components into a finished item. A Kit is a set of unassembled components sold together: Odoo delivers the components rather than producing the kit."
-  - q: "Why is there no Operations tab on my bill of materials?"
+  - q: "Why is there no Operations tab on my Odoo 20 bill of materials?"
     a: "The Work Orders setting is off. Enable it in Manufacturing, Configuration, Settings, in the Operations section, and the Operations tab appears on BoMs."
   - q: "Should components be consumed exactly as the BoM says?"
     a: "That depends on the process. The Flexible Consumption field on the BoM's Miscellaneous tab can block deviations, allow them, or allow them with a warning. Processes with natural variation, such as roasting or cutting, usually need Allowed or Allowed with Warning."
 ---
 
-**Short answer:** in Odoo 19, go to **Manufacturing ‣ Products ‣ Bills of Materials ‣ New**, choose the
+**Short answer:** in Odoo 20, go to **Manufacturing ‣ Products ‣ Bills of Materials ‣ New**, choose the
 **Product**, set the **Quantity** the BoM produces, keep **BoM Type** as **Manufacture this Product**, and list
 each component with its quantity on the **Components** tab. Enable **Work Orders** in Manufacturing settings
-if you also want to record operations and work centres.
+if you also want to record operations and work centres. The BoM becomes the production blueprint used to reserve
+components, create work orders, calculate expected cost and document how the product should be made.
 
 This is the setup guide. For how manufacturing orders use the BoM from confirmation to completion, see
 [manufacturing orders and the production workflow in Odoo](/blog/2026/08/15/manufacturing-orders-production-workflow-in-odoo/).
 
 ## Applies to
 
-- **Odoo version:** Odoo 19. Odoo 20 was released in September 2026; check its documentation before applying
-  these steps to an Odoo 20 database.
+- **Odoo version:** Odoo 20. The core setup remains familiar to Odoo 19 users, but this guide now follows the
+  official Odoo 20 bill of materials documentation.
 - **Edition:** Bills of materials, operations and work orders are in the Manufacturing app in both Community and
   Enterprise. Detailed step instructions (which need the Quality app), BoM versioning through PLM and the Shop
   Floor app are Enterprise only.
@@ -131,17 +132,16 @@ components and aren't manufactured.
 
 ## Related setup
 
-- [How to set up work centres and work orders in Odoo 19](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
-- [How to set up reordering rules in Odoo 19](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/)
+- [How to set up work centres and work orders in Odoo 20](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
+- [How to set up reordering rules in Odoo](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/)
 - [Subcontracting in Odoo manufacturing](/blog/2026/08/16/subcontracting-in-odoo-manufacturing/)
 - Setting up manufacturing for the first time? See [Odoo implementation](/services/odoo-implementation/).
 
 ## Official references
 
-- Odoo 19 documentation: [Bill of materials](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
-- Odoo 19 documentation: [Manufacturing product configuration](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.html)
-- Odoo 19 documentation: [Kits](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.html)
+- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/bill_configuration.html)
+- Odoo 20 documentation: [Manufacturing product configuration](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/configure_manufacturing_product.html)
+- Odoo 20 documentation: [Manufacturing](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing.html)
 
-*How this guide was checked: menus, fields and settings were checked against the Odoo 19 documentation in October
-2026, and edition availability against Odoo 19's open-source code. The example is illustrative and wasn't run on a
-live database, so there are no screenshots; labels can vary slightly with your installed apps and language.*
+*Updated on 17 November 2026 using the official Odoo 20 bill of materials and manufacturing documentation. The
+worked example is illustrative and was not run on a live database. Labels can vary with installed apps and language.*
