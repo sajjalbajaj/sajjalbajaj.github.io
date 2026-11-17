@@ -1,0 +1,18 @@
+services:
+  forum:
+    build: .
+    env_file: .env
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - forum-data:/app/data
+    restart: unless-stopped
+  worker:
+    build: .
+    command: ["python", "worker.py"]
+    env_file: .env
+    volumes:
+      - forum-data:/app/data
+    restart: unless-stopped
+volumes:
+  forum-data:

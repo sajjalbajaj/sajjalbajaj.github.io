@@ -82,3 +82,5 @@ exclude:
   - cv-pdf
   - .cocoindex
   - content-review
+
+  - forum-service
