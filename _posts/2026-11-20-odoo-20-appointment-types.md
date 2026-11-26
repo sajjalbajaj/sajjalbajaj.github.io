@@ -4,108 +4,55 @@ title: "Odoo 20 Appointment Types: Control Availability and Resources"
 date: 2026-11-20 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Appointments, Customer Management, Website, Operations]
 hub: services
-description: "A practical Odoo 20 guide to appointment type configuration, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Configure Odoo 20 appointment types around user or resource availability, capacity, publication status and clear cancellation rules."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for appointment type configuration in Odoo 20?"
-    a: "Odoo 20 adds a dedicated appointment type documentation page."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which resource, duration, buffer, location and qualification should a customer booking reserve?"
+  - q: "Does an appointment type reserve both a user and a room automatically?"
+    a: "Do not assume that. The documentation distinguishes bookings based on users from bookings based on resources. Test any requirement to coordinate several constraints."
+  - q: "Why can a configured appointment type be missing from the website?"
+    a: "Check whether it is published. The appointment type's Published ribbon indicates website visibility."
+  - q: "How does Employee Schedule affect available slots?"
+    a: "When enabled, a slot must fit both the appointment type's availability windows and the employee's working schedule."
 ---
 
-**Short answer:** Odoo 20 adds a dedicated appointment type documentation page. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 appointment types define what a customer can book, whether availability comes from users or resources, and how assignment and capacity work. Match the configuration to the real service. Verify publication status, working schedules, concurrent bookings and cancellation behaviour before sharing the booking link.
 
-## Applies to
+## Which choice should be made before entering time slots?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [appointment type documentation](https://www.odoo.com/documentation/20.0/applications/productivity/appointments/appointment_types.html) distinguishes user based meetings from resource based bookings. A consultant's availability and a room's capacity are different scheduling constraints.
 
-## What is confirmed in Odoo 20
+Do not assume that selecting a specialist automatically reserves a separate room as well. If the service needs both, define the required relationship and demonstrate it in the configured booking flow. Resource linking and capacity options need their own review.
 
-Odoo 20 adds a dedicated appointment type documentation page.
+Choose the duration, location and assignment method deliberately. Automatic assignment and a visitor choosing a person can create different customer expectations.
 
-This article focuses specifically on appointment type configuration. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+## How do availability windows and employee schedules interact?
 
-## The business decision
+Enter the intended windows on the Availabilities tab. If Employee Schedule is enabled, Odoo offers a slot only within the intersection of those windows and the employee's working schedule.
 
-Which resource, duration, buffer, location and qualification should a customer booking reserve?
+For example, a proposed test can use a type available until 17:00 and an employee whose workday ends at 16:00. Confirm that the later slot is not offered. Include a midday gap and an existing calendar event so the test covers more than an empty calendar.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## What should be checked before publishing the link?
 
-## What needs fresh review from Odoo 19
+A type that exists internally is not necessarily visible on the website. Review its Published status and test the public booking page while signed out.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+Check the wording, time zone, location and information requested from the visitor. Make a question mandatory only when the answer is needed to arrange the appointment. Avoid collecting detailed health or other sensitive records through a generic booking question merely because the form allows text.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## How should cancellations and reminders work?
 
-## Questions to answer during discovery
+The type supports reminder configuration and confirmation and cancellation messages. The Cancellation setting restricts how close to the appointment a customer can cancel independently. The documented restricted flow shows contact information when self cancellation is no longer available.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+The restriction still needs a human process. Decide who receives a late cancellation request and how the released slot is handled. A reminder being sent is not proof the visitor will attend.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+## Which acceptance cases reveal scheduling mistakes?
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+| Proposed case | Expected review |
+| --- | --- |
+| Two visitors choose the same capacity | Configured capacity is respected |
+| Employee unavailable | Slot is excluded as intended |
+| Visitor in another time zone | Displayed and recorded time agree |
+| Late cancellation | Correct restriction and contact route |
+| Unpublished type | No unintended public booking route |
 
-## A practical rollout sequence
+Confirm the resulting calendar event and assigned person or resource after booking. The [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) provides a place to record these expected results. For broader workflow ownership, see the [field service planning guide](/blog/2026/11/18/odoo-20-field-service-planning/).
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
-
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A consultation type reserves the right specialist and room with preparation time, while a simple call uses different availability.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Appointment configuration does not define cancellation law, clinical records or staff working limits.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Appointments: Manage Cancellations and No Shows](/blog/2026/12/08/odoo-appointments-cancellation-no-show/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/productivity/appointments/appointment_types.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

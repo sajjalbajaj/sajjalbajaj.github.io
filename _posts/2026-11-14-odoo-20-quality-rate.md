@@ -4,108 +4,54 @@ title: "Odoo 20 Quality Rate: Measure Checks Without Hiding Exceptions"
 date: 2026-11-14 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Quality, Manufacturing, Reporting, Compliance]
 hub: manufacturing
-description: "A practical Odoo 20 guide to the documented quality rate, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Understand Odoo 20 supplier quality rate, receipt quality control points, passed check percentages and the limits of a vendor score."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for the documented quality rate in Odoo 20?"
-    a: "Odoo 20 adds documentation for quality rate reporting."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "What counts as a check, failure and meaningful population, and can the rate be traced to actual results?"
+  - q: "What does Odoo 20 quality rate measure?"
+    a: "It measures the percentage of passed quality checks on incoming vendor transfers. It is not automatically a measure of manufacturing yield or units accepted."
+  - q: "Which configuration is needed for supplier quality rate?"
+    a: "The documentation requires Quality and Purchase, appropriate Quality access and a quality control point with Receipts as its operation."
+  - q: "Can a high quality rate close a supplier complaint?"
+    a: "No. Review the relevant failed checks, sampling coverage and corrective action evidence separately from the headline percentage."
 ---
 
-**Short answer:** Odoo 20 adds documentation for quality rate reporting. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 quality rate reports the percentage of quality checks passed on incoming vendor transfers. Configure receipt quality control points and inspect the checks behind the percentage. A supplier's high rate does not establish that every delivered unit was inspected, or that a recurring defect has been resolved.
 
-## Applies to
+## What is the scope of this metric?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [quality rate documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/quality/quality_management/quality_rate.html) places the feature in supplier receipt quality monitoring. This scope matters because a vendor check rate, production yield and customer complaint rate describe different populations.
 
-## What is confirmed in Odoo 20
+In a simple illustrative set of five completed receipt checks, four passes and one failure produce an 80 percent pass rate. That does not mean 80 percent of the physical units passed individual inspection. The checks may cover different receipt sizes or sampling arrangements.
 
-Odoo 20 adds documentation for quality rate reporting.
+## What configuration makes the report meaningful?
 
-This article focuses specifically on the documented quality rate. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+The documented prerequisites include Quality and Purchase, with at least the relevant Quality user access. Configure a quality control point whose operation is Receipts, then complete the checks generated for the selected scope.
 
-## The business decision
+The vendor contact provides a quality rate smart button, and supplier links are also available from the control point. A completed check is needed for the button to appear. An empty report is therefore a reason to inspect the setup and recorded checks, rather than assign the supplier a perfect score.
 
-What counts as a check, failure and meaningful population, and can the rate be traced to actual results?
+## How should a buyer read the analysis?
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+The default vendor analysis groups check results by product over the last twelve months. Check the active dates, supplier and product grouping before comparing vendors.
 
-## What needs fresh review from Odoo 19
+Ask whether the checks cover comparable risks. One supplier may deliver a high volume with a narrow sampling plan, while another has frequent targeted checks following a problem. Without that context, the percentage can reward reduced inspection rather than improved performance.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+| Review item | Why it changes interpretation |
+| --- | --- |
+| Check count | A tiny sample makes a percentage unstable |
+| Products covered | A good result for one item does not clear another |
+| Inspection scope | Different sampling plans are not directly comparable |
+| Failure detail | Repeated defects can matter more than the overall average |
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## What would a useful pilot look like?
 
-## Questions to answer during discovery
+Prepare receipt cases for a pass, a failure and a receipt outside the control point's scope. Confirm which cases generate checks and which appear in the analysis. Trace each counted result to its receipt and product.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+Then change the date filter and confirm that the displayed population changes as expected. Record whether a failed inspection creates a separate follow up in your configured process; do not assume that viewing the rate creates or closes a corrective action.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+## How should this inform supplier decisions?
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Use the rate to locate patterns and support a supplier discussion. Retain the failed check, defect description, affected receipt and agreed follow up alongside the summary. Purchasing and quality should agree what action a recurring failure triggers.
 
-## A practical rollout sequence
+The [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) can hold the proposed report checks and unresolved inspection questions. For production context, see the [manufacturing flow guide](/blog/2026/11/12/odoo-20-continuous-production/).
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
-
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A team reviews a high pass rate alongside repeated seal failures instead of using the percentage to close alerts.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-A rate does not prove product conformity or corrective action effectiveness. Sampling and regulatory rules still apply.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Quality Alerts: Close the Root Cause, Not Just the Record](/blog/2026/12/05/odoo-quality-alert-root-cause-closure/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/quality/quality_management/quality_rate.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

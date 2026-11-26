@@ -2,101 +2,78 @@
 layout: post
 title: "Odoo Recruitment: Review Duplicate Candidate Records"
 date: 2026-11-26 09:00:00 +0530
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, ERP, Best Practices, Customer Management, Business Automation, Setup, Data Import]
 hub: services
-description: "Review duplicate Odoo recruitment applications before merging or closing them so consent, communication, vacancies and interview history remain clear."
+description: "Distinguish duplicate Odoo 19 applications from a candidate applying to different jobs, and review refusal messages before closing records."
 faqs:
-  - q: "Should two applications from one person always be merged?"
-    a: "No. They may relate to different vacancies or application journeys."
-  - q: "What should survive any cleanup?"
-    a: "The vacancy context, communication history, interview decisions and required privacy evidence."
+  - q: "Should applications with the same email always be merged?"
+    a: "No. The same person may apply for different vacancies. Establish the person, job and application journey before combining, refusing or deleting records."
+  - q: "What does Odoo document for duplicate applications to one job?"
+    a: "Odoo 19 describes a Refuse Duplicate Applications option in the refusal flow when applicable. It can refuse the listed duplicates for the job and send one email; inspect the affected applications before confirming."
+  - q: "Does refusing an application delete it?"
+    a: "No. The refusal documentation says refused application cards are hidden by default and can be viewed again. Refusal is different from deleting the record or satisfying a personal-data deletion request."
 ---
 
-**Short answer:** Two records with the same email address are not always the same application. Establish whether they represent one person applying twice, two vacancies or an import duplicate.
+**Short answer:** In Odoo Recruitment, the same contact details do not prove two applications are duplicates. First establish the candidate, vacancy and application history. Handle repeated applications to one job separately from a person's legitimate applications to different jobs, and review outgoing messages before taking a bulk action.
 
-## Applies to
+## Which records need to be distinguished?
 
-Odoo 19 Recruitment. Privacy, retention and hiring policy remain the employer's responsibility.
+A candidate represents a person. An application represents their interest in a particular role and its hiring journey. A data cleanup that preserves the person but loses the vacancy history can create a misleading recruitment record.
 
-## Start with the decision
+| Situation | Proposed decision |
+|---|---|
+| Same person, same job, repeated submission | Investigate whether one application is redundant |
+| Same person, different jobs | Preserve each relevant application journey |
+| Similar names, different contact evidence | Do not assume they are the same person |
+| Import creates an extra copy | Compare source identifiers and history before cleanup |
 
-Which person, vacancy and application journey does each record represent, and what information may be combined?
+These are review principles. They do not establish that a particular merge operation is available or appropriate in every installation.
 
-The configuration should follow that decision. It should not become the place where an unresolved policy choice is hidden. Write down the expected outcome, the owner and the evidence that will show the step is complete. This gives administrators a testable rule and gives reviewers a reason for each exception.
+## What does Odoo 19 document for duplicate refusal?
 
-## What Odoo records and what the business must decide
+The official [refusal guide](https://www.odoo.com/documentation/19.0/applications/hr/recruitment/refuse_applicant.html) describes **Refuse Duplicate Applications** for candidates applying repeatedly to the same job. When the option appears, the dialog lists the duplicate applications affected. The documented flow sends one email and marks the relevant applications for that job as refused.
 
-* Applications are connected to jobs, stages, activities and messages.
-* Candidate identity and application context both matter.
-* Imports and website submissions can create similar records.
+Read that list before confirming. The business decision to stop processing a redundant submission must be distinguished from rejecting the person for every vacancy.
 
-These records make the workflow visible, but they do not judge the commercial, legal or operational meaning on their own. The process owner must decide which source is authoritative, who may correct it and what happens when two records disagree.
+## How should a recruiter review a possible duplicate?
 
-## A practical control design
+I would begin with the application that needs a decision, then compare:
 
-1. **Compare email, phone and attached documents carefully.**
-2. **Keep separate vacancies visible even for one candidate.**
-3. **Preserve interview and communication history.**
-4. **Apply retention and consent rules before combining data.**
+1. The job position and date of submission.
+2. Contact information and any identifiers from the import or recruitment channel.
+3. Interview stages, activities and correspondence.
+4. Attached documents and whether they are new versions.
+5. Messages or actions that would be triggered by refusal or another change.
 
-Keep the exception route as clear as the normal route. Staff should know where to place an item that cannot yet be completed, who reviews it and which deadline or business event should bring it back for attention. A dashboard with only completed records can look healthy while unresolved work remains outside the system.
+Do not copy sensitive candidate information into a general spreadsheet just to compare it. Use references to the authorised recruitment records and apply the organisation's retention arrangements.
 
-## How to introduce the control
+## What should happen to candidate communication?
 
-Start with a small set of representative records: one normal transaction, one incomplete record, one correction and one case near a reporting or operational cutoff. Walk each example through the proposed workflow with the people who create, review and use the result. This exposes differences in language and responsibility before they become configuration problems.
+Odoo's refusal flow includes a **Send Email** choice. Review the refusal reason, message and recipients before confirming an action. The documentation says email can be disabled for cases where no message should be sent, such as spam.
 
-Configure the minimum fields and stages needed to express the agreed decision. Add automation only after the team can explain the manual path. An automated action should have a narrow trigger, a visible result and an exception route. If users cannot tell why a record moved or changed, the automation will make investigation slower even when it saves keystrokes.
+For an import duplicate that does not represent a real new application, another rejection email may confuse the candidate. For a legitimate application, suppressing an expected update may also be wrong. Decide the communication outcome along with the record outcome.
 
-Before release, compare permissions with actual responsibilities. The person who enters a record may not be the person authorised to approve a correction or financial outcome. Test the workflow with ordinary users as well as administrators, and include a record that should be refused or returned for more information.
+## What does a worked example show?
 
-## Evidence to keep with the decision
+A person applies for a finance vacancy and an operations vacancy with the same email. Each has its own interview history. A later import creates another copy of the finance application.
 
-Keep the source reference, responsible person, relevant date, reason for any correction and the final linked record. Where a decision depends on an external document, bank movement, customer message or manager confirmation, retain the reference according to the organisation's document and privacy policy. Avoid copying sensitive material into several places merely to make it visible.
+In this illustrative scenario, the recruiter preserves the two genuine journeys, identifies the extra finance record from its import reference and reviews what will happen to its activities and notifications. A shared email address alone would not justify closing all three records.
 
-A useful audit trail lets a reviewer reconstruct the sequence without relying on a private inbox or someone's memory. It should show what was known at the time, what exception was found, who resolved it and which downstream record was affected. That is more valuable than a long activity history with no clear outcome.
+## Is refusal the same as deletion?
 
-## Worked example
+No. Odoo documents that refused cards are hidden by default and can be viewed again. That matters when a team thinks a record has disappeared: it may be excluded by the current view rather than removed.
 
-A candidate applies for finance and operations roles using the same email. The recruiter keeps two applications linked to the relevant vacancies while using the same person details. A third record from an import is confirmed as a duplicate and handled under the defined process.
+A request to delete personal information is a separate privacy process. The authorised owner must assess what must be removed, retained or restricted under applicable requirements. Do not use the refusal status as evidence that data has been erased.
 
-The example is illustrative. The useful point is the sequence: confirm the business event, compare it with the Odoo record, resolve the difference with an accountable owner and retain enough context for the next person to understand the result.
+## What should the acceptance test establish?
 
-## When it fits
+Test a repeat submission to one job, two legitimate vacancies for one candidate, and an import duplicate with existing correspondence. Observe both the affected records and the actual communication outcome. Use synthetic candidate data for the test.
 
-This fits recruiting teams receiving applications from several channels or importing historic candidates.
+Record the result using the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/). For initial setup, see [recruitment configuration](/blog/2026/09/26/how-to-set-up-recruitment-odoo/).
 
-## Limits and boundaries
+## Source and review
 
-It does not authorise combining personal data without a lawful basis or deleting records needed for recruitment evidence.
+Official reference: [Odoo 19 refusal and duplicate application handling](https://www.odoo.com/documentation/19.0/applications/hr/recruitment/refuse_applicant.html), checked on 27 November 2026. The examples and comparison process are recommendations, not live tests or hiring decisions.
 
-Where local law, tax, employment, privacy or regulated practice matters, have the appropriate specialist define the requirement. Then test whether the configured workflow produces the required record. A software screen is not evidence that the policy itself is correct.
-
-## Common mistakes
-
-**Merging solely by name.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Losing the vacancy context.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Sending duplicate interview messages.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Keeping candidate data indefinitely.** Review the underlying record and the next operational consequence before closing the exception.
-
-## What the owner should review
-
-Repeated email addresses, multiple open applications, imported records and candidates with conflicting contact details.
-
-Review a small sample as well as totals. Sampling shows whether the reason, source document and next action are understandable, while totals reveal ageing and recurring patterns. Repeated manual corrections usually indicate a rule, data source or ownership problem worth fixing upstream.
-
-The goal is not to remove every exception. It is to make each important exception visible, owned and traceable to a decision.
-
-## Related
-
-Read [How to Set Up Recruitment in Odoo](/blog/2026/09/26/how-to-set-up-recruitment-odoo/) for the connected workflow.
-
-## Official references
-
-1. [Recruitment](https://www.odoo.com/documentation/19.0/applications/hr/recruitment.html)
-
-*How this article was checked: official Odoo 19 documentation was reviewed in November 2026. Confirm the corresponding documentation for the installed version before implementation. Examples are illustrative business scenarios, not client results or tests on a live database.*
-
-If you need help translating these decisions into your own workflow, see my [Odoo consulting services](/services/odoo-consulting/).
+For help defining the application workflow and its acceptance tests, see my [Odoo consulting services](/services/odoo-consulting/).

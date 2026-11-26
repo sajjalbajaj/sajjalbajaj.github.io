@@ -4,110 +4,60 @@ title: "Odoo 20 MCP Server: Connect External AI Tools Safely"
 date: 2026-11-05 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, AI, Integration, API, Security]
 hub: integrations
-description: "A practical Odoo 20 guide to the documented Odoo MCP server, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Configure Odoo 20 MCP access with scoped identities, exposed tools and revocation tests. Understand why a read-only tool label is not a security boundary."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for the documented Odoo MCP server in Odoo 20?"
-    a: "Odoo 20 includes documentation for an MCP server and the tools exposed through it."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which external client needs access, under whose identity, to which tools and with what monitoring?"
+  - q: "Does the Readonly Tool option enforce read-only access?"
+    a: "No. Odoo describes it as advice to the client about invoking a tool without approval. Restrict the tools and permissions themselves; do not use the label as an access-control guarantee."
+  - q: "How can an Odoo MCP connection be revoked?"
+    a: "The documentation says OAuth and API-key connections appear in My Preferences under Security. Delete the corresponding key, then verify from the client that access has stopped."
+  - q: "Should every MCP client be allowed to register?"
+    a: "Odoo's dynamic client registration option allows any application to register and request access. Keep the approved-client list narrow unless there is a defined reason to broaden registration."
 ---
 
-**Short answer:** Odoo 20 includes documentation for an MCP server and the tools exposed through it. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 exposes an MCP endpoint through which an external AI client can call available tools under an Odoo identity. Control the identity, approved clients and exposed actions separately. A tool marked read-only is not automatically prevented from writing data, so verify its implementation before relying on that label.
 
-## Applies to
+## What must exist before connecting a client?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [MCP reference](https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html) documents OAuth and API-key authentication, the database's `/mcp` endpoint and tool exposure through server actions. Confirm the installed version and plan support the intended integration before promising access.
 
-## What is confirmed in Odoo 20
+Odoo recommends OAuth and limits that route to internal users; its documentation directs portal users to an API key. Whichever route is used, identify the actual account whose permissions govern the work. Sharing an administrator identity across unrelated assistants makes it difficult to reason about responsibility.
 
-Odoo 20 includes documentation for an MCP server and the tools exposed through it.
+## How should client approval and tool exposure be separated?
 
-This article focuses specifically on the documented Odoo MCP server. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+A connection answers who is calling. Available tools determine what operations the client can request. The action's implementation and the user's permissions determine whether those requests should succeed.
 
-## The business decision
+1. Review approved client metadata in **Settings ‣ Integrations ‣ MCP OAuth** when using OAuth.
+2. Connect the intended client to the database endpoint.
+3. Review server actions in developer mode under **Settings ‣ Technical ‣ Server Actions**.
+4. Inspect **Available in MCP** before exposing an additional action.
+5. Test the resulting permissions with representative records.
 
-Which external client needs access, under whose identity, to which tools and with what monitoring?
+Avoid enabling dynamic client registration merely to resolve one client's setup issue. The documented setting lets any application register and request access; it changes the approval boundary.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## What does the read-only label actually mean?
 
-## What needs fresh review from Odoo 19
+Odoo says **Readonly Tool** advises the client that an action can run without explicit user approval. It does not hide the tool or prove its code cannot modify data.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+For a reporting pilot, I would inspect the allowed actions and attempt a refused write using synthetic records. An assistant saying it has read-only access is not the acceptance evidence. The test needs to show that the requested modification was prevented and that the authorised report still works.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## Which connection tests are worth keeping?
 
-## Questions to answer during discovery
+| Proposed test | Result to inspect |
+|---|---|
+| Read one permitted customer record | Correct data and no unrelated customer fields |
+| Request a record outside the account's scope | Refusal or appropriately restricted output |
+| Ask for an unexposed operation | No successful mutation through another available route |
+| Revoke the connection and retry | The old credential can no longer access the database |
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+These are proposed acceptance cases, not completed tests. Start with non-sensitive synthetic data so a failed restriction does not expose real customer information.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+## What happens when access expires or is revoked?
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+A client may cache its discovered tools for a session. Therefore, inspect the server result rather than treating a cached tool list as proof of continued access. Odoo documents deleting the relevant security key to revoke the connection. Verify the old client session after that action.
 
-## A practical rollout sequence
+Record the connection owner, client, expiry and approved purpose in your internal inventory. Keep the credential itself in an appropriate secret store, not in the [acceptance evidence worksheet](/resources/erp-acceptance-evidence/).
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+For the separate architecture question, read [AI assistants and Odoo integrations](/blog/2026/10/20/odoo-ai-assistants-mcp/).
 
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A research assistant receives read access to selected customer context but cannot create invoices or change bank data.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-MCP does not bypass Odoo permissions or make every client trustworthy. Credentials, tool scope and logs need control.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Connecting Odoo to AI Assistants with MCP: Architecture and Guardrails](/blog/2026/10/20/odoo-ai-assistants-mcp/) for the connected workflow and earlier version context.
-
-Before adopting this feature in production, decide [whether and when to upgrade to Odoo 20](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/) and use the [practical Odoo 20 migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) to plan testing and go-live.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

@@ -8,7 +8,7 @@ Planned and drafted 1 November 2026 from the official Odoo 20 documentation and 
 * Pilot period: 30 days, from 2 November through 1 December 2026.
 * Frequency: one Odoo 20 article every day.
 * Front matter time: 07:00:00 +0530, before the existing daily GitHub Pages rebuild.
-* Target length: 1,100 to 1,500 body words.
+* Length: enough to answer the specific question completely; do not pad articles to a word target.
 * Evidence: official Odoo 20 documentation plus the official Odoo 20 release notes.
 * Positioning: confirmed Odoo 20 workflows, changes and implementation decisions.
 * Exclusions: no speculative roadmap claims, invented customer results, copied release note text or
@@ -59,19 +59,14 @@ use `https://www.odoo.com/odoo-20-release-notes` as the primary confirmation sou
 
 ## Required article structure
 
-Each article should answer one search intent and contain:
+Each article should answer one search intent with a direct short answer, relevant setup details,
+topic-specific questions and two or three substantive FAQs. Separate documented behaviour from
+recommendations and clearly labelled illustrative or proposed test cases. Cite the exact source for
+technical claims and explain important version, edition, hosting and provider boundaries.
 
-1. A direct short answer.
-2. The exact Odoo 20 scope and relevant applications.
-3. What is confirmed in Odoo 20.
-4. What changed or needs fresh review when moving from Odoo 19.
-5. The business decision behind the feature.
-6. A practical configuration or rollout sequence.
-7. Permissions, data ownership and exception handling.
-8. One clearly labelled illustrative example.
-9. Limits, edition, hosting, localization or compliance boundaries.
-10. Common mistakes, owner review points and two useful FAQs.
-11. Official Odoo 20 references and one relevant internal link.
+Discuss an Odoo 19 difference only when the sources establish it. Do not repeat generic discovery,
+rollout or permission paragraphs across the series. Link shared acceptance advice to the ERP acceptance
+evidence resource, leaving room for the particular feature's controls and failure cases.
 
 ## SEO rules
 
@@ -93,9 +88,19 @@ uniqueness, description length, future date checks and the existing no em dash o
 labels and capabilities must be confirmed against Odoo 20 rather than inferred from Odoo 19. Any feature
 available only in a particular edition, hosting plan, localization or external service must say so clearly.
 
-## Draft completion
+## Source-specific review completed on 27 November 2026
 
-All 30 posts were drafted with one article per day from 2 November through 1 December 2026 at 07:00 IST.
-The series contains 34,564 body words, with individual articles ranging from 1,133 to 1,176 words.
-Validation confirmed dates, front matter, two FAQs, eight unique tags, internal related links, official
-Odoo source domains, unique titles and the no em dash or en dash rule.
+All 30 daily guides have been rewritten against the official documentation and release notes. The
+November 2 through December 1 schedule, 07:00 IST front matter times, titles, URLs, hubs and tags remain
+unchanged. Replaced repeated general sections with feature-specific explanations, setup requirements,
+illustrative scenarios and proposed acceptance tests. No live Odoo database tests or customer results
+are claimed. Source review dates identify reference checks, not certification of every installation.
+
+Corrections include receipt-check scope for supplier quality rate, partial quantities between work
+orders for continuous production, read-only MCP labels as advisory, and BioTime Cloud rather than a
+direct terminal connection. Release-note-only capabilities are distinguished from detailed setup
+documentation. Prepublication revisions do not receive a new modification date.
+
+The series passes strict article structure and focused exact-prose repetition checks. These checks
+do not establish factual completeness or uniqueness of every sentence. Retain human source review
+for future changes.

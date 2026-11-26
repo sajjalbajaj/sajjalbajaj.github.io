@@ -4,108 +4,56 @@ title: "Odoo 20 Subscription Loyalty: Define Rewards and Boundaries"
 date: 2026-11-22 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Subscriptions, Sales, Customer Management, Pricing]
 hub: sales
-description: "A practical Odoo 20 guide to loyalty rules for subscriptions, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Separate recurring subscription loyalty earning rules from recurring rewards in Odoo 20, and test renewals, failed payments and cancellations."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for loyalty rules for subscriptions in Odoo 20?"
-    a: "Odoo 20 adds documented loyalty rules and rewards for subscriptions."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which behaviour earns a reward, how is it valued and what happens when a subscription pauses, changes or ends?"
+  - q: "Are recurring loyalty rules and recurring rewards the same setting?"
+    a: "No. Odoo documents separate Recurring choices for earning rules and rewards. Decide whether eligibility, redemption or both should repeat."
+  - q: "Do all programme types support both recurring choices?"
+    a: "No. The guide distinguishes loyalty cards and next order coupons from programmes where recurring behaviour is available only for rewards."
+  - q: "Does a recurring invoice prove a qualifying payment was collected?"
+    a: "No. Define the commercial eligibility rule and test failed payments, drafts and cancellations before promising a paid renewal reward."
 ---
 
-**Short answer:** Odoo 20 adds documented loyalty rules and rewards for subscriptions. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 subscription loyalty separates recurring earning rules from recurring rewards. Decide what qualifies a subscriber, when a benefit is granted and whether it repeats. Test the supported programme type and the renewal payment outcome before describing a reward as earned through payment.
 
-## Applies to
+## Which configuration is documented?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [subscription loyalty guide](https://www.odoo.com/documentation/20.0/applications/sales/subscriptions/subscriptions_loyalty.html) requires Subscriptions and the relevant discounts and loyalty functionality. It describes a Recurring choice on rules and a separate choice on rewards.
 
-## What is confirmed in Odoo 20
+Those controls answer different questions. A recurring rule concerns earning eligibility across subscription periods. A recurring reward concerns applying the benefit across periods. Enabling one does not communicate the whole commercial promise.
 
-Odoo 20 adds documented loyalty rules and rewards for subscriptions.
+## Why does the programme type matter?
 
-This article focuses specifically on loyalty rules for subscriptions. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+The guide distinguishes loyalty cards and next order coupons, which support recurring rules and rewards, from programme types where recurring behaviour is available for rewards only.
 
-## The business decision
+Review the choices shown for the actual programme before designing an offer around them. The guide's wording is not a substitute for demonstrating the configured combination in the database.
 
-Which behaviour earns a reward, how is it valued and what happens when a subscription pauses, changes or ends?
+| Commercial intention | Configuration question |
+| --- | --- |
+| Earn something each qualifying period | Does this programme support a recurring rule? |
+| Reuse a benefit on later invoices | Is the reward recurring? |
+| Give one introductory benefit | How is recurrence prevented? |
+| Reward a collected renewal | What evidence establishes successful payment? |
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## How could a renewal benefit go wrong?
 
-## What needs fresh review from Odoo 19
+Consider an illustrative subscription offer that promises a benefit after a paid renewal. A generated renewal invoice alone does not prove money was collected. The customer might have a failed payment, a credit note or a cancelled draft.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+Define the eligibility event in ordinary business language before configuring the programme. Then demonstrate whether the standard rules implement that event. If additional controls are needed, identify them as implementation work rather than claiming the Recurring checkbox solves payment eligibility.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## Which cases should be tested with finance?
 
-## Questions to answer during discovery
+Run a normal renewal, a failed payment, a cancelled draft and a subscription that changes its product or price. Include an existing customer who already holds a benefit.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+For each case, inspect the invoice lines, reward usage and remaining entitlement. Check what happens when a transaction is reversed. Do not assume cancellation automatically restores or removes a benefit in precisely the way the business intends.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Agree the accounting and tax treatment with the finance owner. The loyalty setting does not decide those policies.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+## What should the customer wording explain?
 
-## A practical rollout sequence
+State the qualifying event, value, expiry and any cancellation effect clearly. The support team should be able to explain why a particular subscriber did or did not receive the reward using the system records.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+The [subscription payment failure guide](/blog/2026/11/10/odoo-subscription-payment-failure-review/) covers the collection exception. Record the proposed loyalty cases and any gap between the offer and configured behaviour in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/).
 
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A renewal reward is applied only after the qualifying paid period and is removed from a cancelled draft renewal.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Loyalty configuration does not decide tax, consumer rights or revenue recognition. Test financial and cancellation effects.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Subscription Payment Failures: Check Before Retrying](/blog/2026/11/10/odoo-subscription-payment-failure-review/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/sales/subscriptions/subscriptions_loyalty.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

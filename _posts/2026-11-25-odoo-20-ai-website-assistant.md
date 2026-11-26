@@ -4,108 +4,59 @@ title: "Odoo 20 AI Website Assistant: Build Pages with Review Controls"
 date: 2026-11-25 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Website, AI, Content Marketing, Business Automation]
 hub: website
-description: "A practical Odoo 20 guide to the expanded AI Website Assistant, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Use the Odoo 20 AI Website Assistant for pages, forms and menus while reviewing claims, record access, accessibility and real form submissions."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for the expanded AI Website Assistant in Odoo 20?"
-    a: "Odoo 20 release notes confirm page creation, web research, record use, forms, menus and interactive element assistance."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which content may be generated, which sources are permitted and who verifies claims, links, forms and accessibility?"
+  - q: "What can the Odoo 20 AI Website Assistant help edit?"
+    a: "The release notes describe page creation, snippets, images, forms, menus, interactive elements and content informed by websites or database records."
+  - q: "Does an AI generated form prove the submission process works?"
+    a: "No. Submit a test and verify validation, permissions, destination records and notifications before publishing."
+  - q: "Should an assistant copy a competitor's page?"
+    a: "Use a reference to explain a design need, then produce original content and authorised assets. Review the result for copied wording and unsupported claims."
 ---
 
-**Short answer:** Odoo 20 release notes confirm page creation, web research, record use, forms, menus and interactive element assistance. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20's AI Website Assistant can help create pages, edit forms and menus, and add interactive elements. Give it a precise brief and authorised sources, then review the result as a real website change. Generated copy and a convincing preview do not establish factual accuracy, accessibility or a working submission process.
 
-## Applies to
+## Which capabilities are confirmed for Odoo 20?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [Website release notes](https://www.odoo.com/odoo-20-release-notes) describe page creation, changes to forms and navigation, interactive elements, and assistance using web content or database records. They also identify an editor indicator for blocks generated or modified by the assistant.
 
-## What is confirmed in Odoo 20
+These are authoring capabilities. The release notes do not establish that every generated page is suitable for immediate publication or that every linked record is appropriate for a public audience.
 
-Odoo 20 release notes confirm page creation, web research, record use, forms, menus and interactive element assistance.
+## What should a useful brief contain?
 
-This article focuses specifically on the expanded AI Website Assistant. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+Consider an illustrative request for a service enquiry page. Specify the intended audience, the service actually offered, verified contact details, permitted images and the action a visitor should take.
 
-## The business decision
+Identify claims that need evidence. Avoid asking for invented customer counts, savings, accreditations or delivery guarantees. If a reference page is supplied, explain the desired layout or interaction rather than instructing the assistant to reproduce its wording.
 
-Which content may be generated, which sources are permitted and who verifies claims, links, forms and accessibility?
+Where database records inform a page, review which fields will appear publicly. A record being available to an editor does not make every detail suitable for publication.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## Why must forms be tested beyond the preview?
 
-## What needs fresh review from Odoo 19
+A form can look complete while sending the wrong information to the wrong place. Define the expected result first: for example, a valid enquiry creates the intended record and reaches the responsible team.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+| Proposed test | What to inspect |
+| --- | --- |
+| Valid submission | Created record and assigned owner |
+| Missing required value | Understandable validation |
+| Invalid or unexpected input | Safe rejection or handling |
+| Attachment, if enabled | Permitted type and access |
+| Confirmation | Accurate visitor message and notification |
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+Use a test submission with non sensitive data. Verify the stored result while signed in as an intended reviewer, rather than treating the visitor's success message as the only evidence.
 
-## Questions to answer during discovery
+## What should the page review include?
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+Read every claim and link. Check headings, keyboard navigation, labels, contrast and the mobile layout. Confirm that interactive counters or statistics use verified values and have a sensible purpose.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Inspect the navigation after menu changes. A moved or deleted item can make an existing service difficult to find even when the new page itself looks good.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Keep a recoverable version before broad edits, and review any content pulled from external sites for attribution and permission.
 
-## A practical rollout sequence
+## When is the page ready to publish?
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+The page owner should approve the final content and demonstrated visitor journey together. Record any untested integration or unsupported claim as an open issue rather than hiding it behind polished wording.
 
-## Data and permission controls
+The [website building guide](/blog/2026/09/30/how-to-build-a-website-odoo/) covers the broader setup. Use the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to connect the brief, form test and publication decision.
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-The assistant drafts a service page, while the owner verifies every claim, removes unsupported numbers and tests the form before publishing.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Generated design and copy can be inaccurate, inaccessible or derivative. Human editorial and technical review remain required.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [How to Build a Website in Odoo](/blog/2026/09/30/how-to-build-a-website-odoo/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/odoo-20-release-notes)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

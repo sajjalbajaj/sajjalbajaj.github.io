@@ -4,108 +4,61 @@ title: "Odoo 20 BioTime Attendance Integration: Ownership and Validation"
 date: 2026-12-01 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Attendances, Human Resources, Integration, Payroll]
 hub: integrations
-description: "Odoo 20 guidance for the documented BioTime attendance integration, with confirmed scope, setup controls, testing, ownership, exceptions and limits."
+description: "Configure Odoo 20 BioTime Cloud attendance integration with employee ID mapping, fetch windows, punch processing and unmatched event review."
 faqs:
-  - q: "What is confirmed for the documented BioTime attendance integration in Odoo 20?"
-    a: "Odoo 20 adds dedicated documentation for BioTime integration in Attendances."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which system owns the clock event, employee identity and correction when a device record does not match?"
+  - q: "Does Odoo connect directly to ZKTeco terminals?"
+    a: "The documented integration connects to BioTime Cloud software, not directly to the terminals. Device compatibility depends on BioTime."
+  - q: "How often do transactions synchronise?"
+    a: "The documentation states an automatic twelve hour sync, with a manual Fetch action available. Configure the fetch window to cover delayed runs."
+  - q: "What happens when a checkout cannot find an open attendance?"
+    a: "It remains unmatched when no eligible open attendance is found within the configured lookback. Inspect the Processing Note and source event before correcting it."
 ---
 
-**Short answer:** Odoo 20 adds dedicated documentation for BioTime integration in Attendances. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20's documented BioTime integration connects to BioTime Cloud and imports individual punches for processing into attendance records. It does not connect directly to ZKTeco terminals. Verify employee identifiers, fetch coverage and checkout matching before relying on the attendance output for downstream review.
 
-## Applies to
+## What is the supported connection?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [BioTime integration guide](https://www.odoo.com/documentation/20.0/applications/hr/attendances/biotime_integration.html) explicitly limits this integration to BioTime Cloud. Hardware compatibility belongs to the BioTime environment and supported device list.
 
-## What is confirmed in Odoo 20
+Install the Attendances ZKTeco BioTime module, then configure the company, server URL and authentication details in Attendances settings. Test the connection without putting credentials into acceptance screenshots or shared documents.
 
-Odoo 20 adds dedicated documentation for BioTime integration in Attendances.
+A successful connection proves access to the server. It does not prove that the correct employees, time periods or punch types are being imported.
 
-This article focuses specifically on the documented BioTime attendance integration. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+## Why are fetched punches separate from attendances?
 
-## The business decision
+BioTime stores each check in or checkout as an individual event. Odoo attendance records combine the beginning and end of an attendance period. Imported transactions therefore need processing before the final attendance exists.
 
-Which system owns the clock event, employee identity and correction when a device record does not match?
+Employee matching uses the ZKTeco employee ID on the employee record. An unmatched identity produces a Processing Note. Inspect that warning rather than assigning the transaction to a person with a similar name.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+The documented supported punch types are check in and checkout. Other values need investigation before processing.
 
-## What needs fresh review from Odoo 19
+## How should fetch and lookback windows be chosen?
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+The guide describes automatic synchronisation every twelve hours and a manual Fetch action. The Transaction Fetch Window should cover delays so a late run does not omit events.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+Check-out Lookback controls how far back processing searches for an open check in. A checkout links to the earliest eligible open attendance within that period. This is especially important for overnight work and unresolved older attendances.
 
-## Questions to answer during discovery
+Do not increase either window blindly to hide an exception. Understand which events will be considered and review the actual employee history.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+## Which proposed tests matter before payroll reliance?
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+| Proposed case | Result to inspect |
+| --- | --- |
+| Normal shift | Correct employee, times and linked attendance |
+| Overnight shift | Appropriate date and time zone handling |
+| Unknown employee ID | Clear warning with no false assignment |
+| Existing open attendance | New check in is investigated |
+| Checkout outside lookback | Unmatched event remains visible |
+| Delayed or repeated fetch | Coverage and duplicate handling are verified |
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+These cases need execution against the configured systems. The guide is not evidence that duplicate behaviour has been tested in a particular installation.
 
-## A practical rollout sequence
+## How should failures be corrected?
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+Inspect the Processing Note and the source punch. Use Process after correcting the identified issue. If source data is incomplete or wrong, the documented Re-Fetch action retrieves it again before processing.
 
-## Data and permission controls
+Avoid deleting attendance simply to clear a transaction warning. Retain the reason, source reference and authorised correction. Successfully processed records show the linked attendance and BioTime mode.
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
+The [attendance correction guide](/blog/2026/11/25/odoo-attendance-correction-approval/) covers review ownership. Capture the proposed integration checks in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/).
 
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A missing checkout is flagged for manager review rather than silently corrected before payroll work entries are prepared.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Hardware availability, employee privacy, biometric law, network reliability and payroll policy require separate review.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Attendance Corrections: Review the Evidence Before Payroll](/blog/2026/11/25/odoo-attendance-correction-approval/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/hr/attendances/biotime_integration.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

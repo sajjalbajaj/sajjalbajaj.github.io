@@ -2,103 +2,77 @@
 layout: post
 title: "Odoo Attendance Corrections: Review the Evidence Before Payroll"
 date: 2026-11-25 09:00:00 +0530
-last_modified_at: 2026-11-26
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, ERP, Best Practices, ERP Implementation, Business Automation, Setup, Compliance]
 hub: services
-description: "Control Odoo attendance corrections with employee explanations, manager review and payroll cutoffs so missing checkouts do not become silent edits."
+description: "Correct Odoo 19 attendance errors with evidence, review payroll work entries, and distinguish missing checkouts from overtime approval."
 faqs:
-  - q: "Where should an attendance error be corrected?"
-    a: "Correct the source attendance entry where possible, then review the resulting work entry."
-  - q: "Does location data prove the full shift?"
-    a: "No. It is one signal and must be interpreted within the organisation's policy and evidence."
+  - q: "Should an attendance error be corrected in Payroll or Attendances?"
+    a: "Where Attendances caused the error, correct that source record first, then regenerate and review the affected payroll work entries. Odoo warns that source errors can return when work entries are regenerated."
+  - q: "Does an overtime approval prove the full shift was worked?"
+    a: "No. Overtime approval and the accuracy of the underlying attendance are different questions. Review the recorded times and supporting evidence before approving the required outcome."
+  - q: "What if payroll already used the incorrect attendance?"
+    a: "Establish which payslip, journal entry or payment was affected before changing records. The authorised payroll owner should decide the correction route; changing attendance does not by itself prove a completed payroll has been corrected."
 ---
 
-**Short answer:** Correct an attendance record only after confirming the actual shift, recording the reason and assigning an accountable reviewer. Check whether payroll has already used the hours before deciding how to carry the correction through.
+**Short answer:** Correct an Odoo attendance error after confirming the actual shift, its source and whether payroll has already used it. Where the attendance record caused a payroll conflict, fix that source before regenerating the affected work entries. Keep overtime approval and payroll settlement as separate decisions.
 
-## Applies to
+## What is the difference between an attendance correction and overtime approval?
 
-Odoo 19 Attendances and Payroll work entries. Local timekeeping and employment requirements still apply.
+An attendance correction changes an inaccurate check-in or checkout. Overtime approval decides how much extra time the organisation accepts under its policy. Those decisions can involve the same record but answer different questions.
 
-## Start with the decision
+Odoo 19's [management documentation](https://www.odoo.com/documentation/19.0/applications/hr/attendances/management.html) describes the **Attendances ‣ Management** dashboard and partial approval of extra hours. It also explains that check-in and checkout details can be modified on the detailed record. The documented **Mode** field records how the entry was created and is not editable.
 
-What actually happened during the shift, who can support the correction and has payroll already used the record?
+I would inspect the detailed record before approving a material exception. Approving an item from a list does not establish that somebody checked the supporting circumstances.
 
-The configuration should follow that decision. It should not become the place where an unresolved policy choice is hidden. Write down the expected outcome, the owner and the evidence that will show the step is complete. This gives administrators a testable rule and gives reviewers a reason for each exception.
+## Which evidence should support a missing checkout?
 
-## What Odoo records and what the business must decide
+Compare the employee's explanation with the roster and an appropriate source that supports the actual shift. A location signal at check-in is not evidence of presence throughout the day.
 
-* Attendance errors include missing checkouts and unusually long entries.
-* Completed logs contribute to displayed worked time.
-* Payroll work entries can inherit problems from attendance records.
+| Item | Review question |
+|---|---|
+| Original check-in and checkout | Which value is missing or inaccurate? |
+| Proposed replacement | What supports the proposed time? |
+| Payroll period | Has this period already been processed? |
+| Decision record | Who authorised the correction and why? |
 
-These records make the workflow visible, but they do not judge the commercial, legal or operational meaning on their own. The process owner must decide which source is authoritative, who may correct it and what happens when two records disagree.
+These are proposed review fields, not a claim that every installation supplies a mandatory correction form. Keep supporting information within the organisation's privacy and retention arrangements.
 
-## A practical control design
+## How should the correction reach Payroll?
 
-1. **Give employees a clear route to report mistakes.**
-2. **Require manager evidence for material changes.**
-3. **Correct the attendance source before the payroll entry.**
-4. **Lock or report changes after the pay period cutoff.**
+Odoo's [work entry documentation](https://www.odoo.com/documentation/19.0/applications/hr/payroll/work_entries.html) recommends fixing conflicts in the app that created them. Otherwise regeneration can recreate the problem.
 
-Keep the exception route as clear as the normal route. Staff should know where to place an item that cannot yet be completed, who reviews it and which deadline or business event should bring it back for attention. A dashboard with only completed records can look healthy while unresolved work remains outside the system.
+For an attendance-origin error, I would follow this sequence:
 
-## How to introduce the control
+1. Identify the employee, shift and affected payroll period.
+2. Retain a reference to the original values and the authorised reason.
+3. Correct the attendance source under the permitted role.
+4. Use **Payroll ‣ Work Entries ‣ Work Entries** to review the affected period.
+5. Where regeneration is required, select only the relevant employees and date range.
+6. Compare the resulting hours and unresolved conflicts with the approved correction.
 
-Start with a small set of representative records: one normal transaction, one incomplete record, one correction and one case near a reporting or operational cutoff. Walk each example through the proposed workflow with the people who create, review and use the result. This exposes differences in language and responsibility before they become configuration problems.
+Regeneration overwrites the selected work entries. Define the intended range and record the evidence before using it.
 
-Configure the minimum fields and stages needed to express the agreed decision. Add automation only after the team can explain the manual path. An automated action should have a narrow trigger, a visible result and an exception route. If users cannot tell why a record moved or changed, the automation will make investigation slower even when it saves keystrokes.
+## What does a worked example show?
 
-Before release, compare permissions with actual responsibilities. The person who enters a record may not be the person authorised to approve a correction or financial outcome. Test the workflow with ordinary users as well as administrators, and include a record that should be refused or returned for more information.
+In this illustrative scenario, an employee worked from 09:00 to 17:00 but has no checkout. The manager confirms the end time against an authorised shift record. HR corrects the attendance, then Payroll reviews the resulting work entry for that employee and day.
 
-## Evidence to keep with the decision
+If a break or different work-entry source applies, eight elapsed hours should not automatically be treated as eight payable hours. Compare the configured rules and the actual payroll record. This example is not a live test or a client result.
 
-Keep the source reference, responsible person, relevant date, reason for any correction and the final linked record. Where a decision depends on an external document, bank movement, customer message or manager confirmation, retain the reference according to the organisation's document and privacy policy. Avoid copying sensitive material into several places merely to make it visible.
+## What if a payslip or payment already exists?
 
-A useful audit trail lets a reviewer reconstruct the sequence without relying on a private inbox or someone's memory. It should show what was known at the time, what exception was found, who resolved it and which downstream record was affected. That is more valuable than a long activity history with no clear outcome.
+First identify what relied on the incorrect time. A corrected attendance is only the upstream part of the investigation. An authorised payroll owner must decide whether later records require a controlled adjustment under the applicable localisation and accounting process.
 
-## Worked example
+Do not erase the trail by making unrelated edits until totals agree. The reviewer needs to understand the original discrepancy and the downstream correction.
 
-An employee forgets to check out after a normal shift. The manager confirms the roster and site record, HR corrects the checkout with the reason, and payroll regenerates the affected work entry before payslips are finalised.
+## Which acceptance tests are useful?
 
-The example is illustrative. The useful point is the sequence: confirm the business event, compare it with the Odoo record, resolve the difference with an accountable owner and retain enough context for the next person to understand the result.
+Demonstrate a missing checkout, a partial overtime approval and an error discovered after the payroll cutoff. For each, retain the original reference, authorised correction, resulting work entry and decision about the next payroll step.
 
-## When it fits
+Use the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to record those links. For initial configuration, see [setting up Attendances](/blog/2026/10/01/how-to-set-up-attendances-odoo/).
 
-This fits organisations using Odoo as the attendance source for payroll or workforce reporting.
+## Sources and review
 
-## Limits and boundaries
+The Odoo 19 [attendance management](https://www.odoo.com/documentation/19.0/applications/hr/attendances/management.html) and [work entries](https://www.odoo.com/documentation/19.0/applications/hr/payroll/work_entries.html) pages were checked on 27 November 2026. The review sequence is my implementation recommendation. Employment and payroll requirements remain the responsibility of the appropriate local specialists.
 
-It does not prove presence from GPS or browser data alone. Use those signals according to policy and privacy requirements.
-
-Where local law, tax, employment, privacy or regulated practice matters, have the appropriate specialist define the requirement. Then test whether the configured workflow produces the required record. A software screen is not evidence that the policy itself is correct.
-
-## Common mistakes
-
-**Editing payroll without fixing attendance.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Accepting every correction without evidence.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Ignoring repeated automatic checkouts.** Review the underlying record and the next operational consequence before closing the exception.
-
-**Changing a closed period without payroll review.** Review the underlying record and the next operational consequence before closing the exception.
-
-## What the owner should review
-
-Error logs, automatic checkouts, repeated corrections, edits after cutoff and conflicts in work entries.
-
-Review a small sample as well as totals. Sampling shows whether the reason, source document and next action are understandable, while totals reveal ageing and recurring patterns. Repeated manual corrections usually indicate a rule, data source or ownership problem worth fixing upstream.
-
-The goal is not to remove every exception. It is to make each important exception visible, owned and traceable to a decision.
-
-## Related
-
-Read [How to Set Up Attendances in Odoo](/blog/2026/10/01/how-to-set-up-attendances-odoo/) for the connected workflow.
-
-## Official references
-
-1. [Attendance logs](https://www.odoo.com/documentation/19.0/applications/hr/attendances/attendance_logs.html)
-1. [Work entries](https://www.odoo.com/documentation/19.0/applications/hr/payroll/work_entries.html)
-
-*How this article was checked: official Odoo 19 documentation was reviewed in November 2026. Confirm the corresponding documentation for the installed version before implementation. Examples are illustrative business scenarios, not client results or tests on a live database.*
-
-If you need help translating these decisions into your own workflow, see my [Odoo consulting services](/services/odoo-consulting/).
+For help defining correction and acceptance procedures, see my [Odoo consulting services](/services/odoo-consulting/).

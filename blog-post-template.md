@@ -20,7 +20,7 @@ Identify version, edition, hosting and country dependencies. Distinguish standar
 
 ## How does the process work?
 
-Explain the workflow in original language, using a numbered sequence where order matters. Put a specific official source near technical claims and verify it before publishing.
+Explain the workflow in original language, using a numbered sequence where order matters. Put a specific official source near technical claims and verify it before publishing. Distinguish the provider's documented behaviour from your recommendations. Replace generic implementation paragraphs with details needed for this specific task; link shared testing advice to /resources/erp-acceptance-evidence/.
 
 ## What does a worked example show?
 
@@ -50,5 +50,8 @@ Use British spelling and no em or en dashes. Never fabricate prices, performance
 Keep exactly eight relevant existing tags and one supported subject hub.
 Use last_modified_at only for a substantive edit to a previously published article.
 Run ruby scripts/check_content.rb --strict _posts/YYYY-MM-DD-slug.md.
+Run python3 scripts/check_originality.py --strict _posts/YYYY-MM-DD-slug.md.
+Show the observed result only when a test was actually executed. Otherwise label the scenario illustrative.
+Do not target a minimum length by repeating controls from another guide. Resolve sources and technical completeness first.
 Passing automated checks does not verify facts or guarantee search or AI visibility.
 -->

@@ -29,6 +29,9 @@ Read each article's version context and cited official references before applyin
 
 ## Guides and project examples
 
+- [Editorial approach](https://www.sajjalbajaj.in/editorial-policy/): Authorship, sourcing, examples, review dates and corrections.
+- [ERP acceptance evidence worksheet](https://www.sajjalbajaj.in/resources/erp-acceptance-evidence/): Original review method and a blank downloadable CSV for connecting outcomes, test results and release decisions.
+
 - [Odoo guides by subject](https://www.sajjalbajaj.in/odoo/): Main index for manufacturing, inventory, purchasing, CRM, accounting, HR and other Odoo topics.
 - [Blog](https://www.sajjalbajaj.in/blog/): Published articles and recent ERP guidance. Use this index to discover new posts.
 - [Case studies](https://www.sajjalbajaj.in/case-studies/): Anonymised implementation examples with business problems, decisions and qualified results.

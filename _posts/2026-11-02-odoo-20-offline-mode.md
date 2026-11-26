@@ -2,112 +2,75 @@
 layout: post
 title: "Odoo 20 Offline Mode: What Works and What to Test"
 date: 2026-11-02 07:00:00 +0530
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 20, ERP, Best Practices, Business Automation, Operations, Mobile, Implementation]
 hub: services
-description: "A practical Odoo 20 guide to offline work and later synchronization, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "What Odoo 20 can do offline, which records need caching, what cannot be uploaded, and how to test the queue after reconnection."
 faqs:
-  - q: "What is confirmed for offline work and later synchronization in Odoo 20?"
-    a: "Odoo 20 documents creating, editing, archiving and deleting records offline, plus reuse of earlier searches."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which work must continue without connectivity, and which records are too sensitive or dependent to handle offline?"
+  - q: "Can Odoo 20 work offline for an entire day?"
+    a: "Odoo describes offline mode as support for short interruptions, not full or long-term offline operation. Test the specific records and views needed for the work; an offline screen does not establish that every downstream action can run."
+  - q: "Can a user create any record while offline?"
+    a: "The documentation requires a record of the same type to have been created while online first. Editing, deleting, archiving or unarchiving requires the record to have been opened online."
+  - q: "Can users upload attachments offline?"
+    a: "Odoo's offline documentation says attachments and images can be opened offline, but cannot be uploaded or deleted. Plan a separate step to add required evidence after connectivity returns."
 ---
 
-**Short answer:** Odoo 20 documents creating, editing, archiving and deleting records offline, plus reuse of earlier searches. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 offline mode supports short interruptions for logged-in users working with previously available data. Record creation and changes have preparation requirements, and changes wait in a local queue for synchronisation. Decide what staff can safely record offline and verify the server result after reconnection.
 
-## Applies to
+## What is available offline in Odoo 20?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+Odoo's [offline mode reference](https://www.odoo.com/documentation/20.0/applications/general/offline_mode.html) distinguishes previously opened records, new records and attachments. It does not describe a disconnected copy of every business process.
 
-## What is confirmed in Odoo 20
+| Task | Documented prerequisite or limit |
+|---|---|
+| Reopen a view or record | Open it while online first |
+| Create a record | Previously create a record of that type while online |
+| Edit, delete, archive or unarchive | Previously open that record while online |
+| Repeat a search | Perform the search online first |
+| Add or remove an attachment | Not available offline |
 
-Odoo 20 documents creating, editing, archiving and deleting records offline, plus reuse of earlier searches.
+This guidance concerns the general Odoo 20 web client. Point of Sale has its own offline behaviour and must be assessed separately. Custom modules also need their own compatibility checks.
 
-This article focuses specifically on offline work and later synchronization. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+## How should a field team prepare before losing connectivity?
 
-## The business decision
+I would choose the exact visit records and searches the team needs, then prepare those while connected. A technician should know which information is available locally and which evidence must wait. A visit photograph, for example, cannot be treated as uploaded just because the visit note was saved locally.
 
-Which work must continue without connectivity, and which records are too sensitive or dependent to handle offline?
+Offline records also create a device-handling responsibility. Agree what happens on shared equipment, when a device is lost, or when the person ends the shift with work still pending. Do not treat browser storage as the team's archive.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## What should happen when the connection returns?
 
-## What needs fresh review from Odoo 19
+Odoo documents a temporary local queue and automatic synchronisation when connectivity returns. While disconnected, the **Working offline** control lists pending changes and lets users review or discard them.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+For acceptance, I would compare the pending list with the resulting server records. A disappearing queue is one observation; the correct customer, quantities and notes on the server are the business evidence. Repeat the check from a second authorised session after synchronisation.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## Which tests should an implementation include?
 
-## Questions to answer during discovery
+These are proposed acceptance tests, not results from a live database:
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+| Scenario | Evidence to inspect |
+|---|---|
+| Edit a prepared visit note offline | Pending change followed by the intended server value |
+| Try a record never opened online | The actual availability restriction and the user's fallback |
+| Attempt to add a photograph | A clear instruction to upload it when connected |
+| Two people change the same record | Observed conflict behaviour in the installed build |
+| Lose connectivity again during synchronisation | Whether every intended change reaches the server once |
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Do not assume a particular conflict-resolution rule. Record what the installed build does and decide whether that is acceptable for the workflow.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+## What can remove locally available data?
 
-## A practical rollout sequence
+The documentation warns that a hard refresh removes locally stored data and describes a maximum offline allocation of 2 GB, with older data removed as needed. Do not use a hard refresh as a routine troubleshooting step while valuable work is pending. Ask support to establish the queue state first.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+For views where stale data is unsuitable, the documented developer-mode action can disable **Data caching**. Review that choice with the implementer; it changes what users can access offline.
 
-## Data and permission controls
+## When is offline mode the wrong operating model?
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
+A team that needs long periods without connectivity, guaranteed access to unprepared records or immediate external confirmation needs a broader design. Examples include a payment that must be authorised by a provider or a delivery decision requiring current stock from another location.
 
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
+Use the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to capture the tested scope. For upgrade planning, read the [Odoo migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/).
 
-## Testing before production
+## Source and review
 
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
+Official reference: [Odoo 20 offline mode](https://www.odoo.com/documentation/20.0/applications/general/offline_mode.html). Documentation checked on 27 November 2026. The acceptance tests above are my proposed review method; I have not presented them as completed tests or client results.
 
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A field team loses connectivity, records approved visit notes offline, then checks ownership and duplicate changes after synchronization.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Offline availability does not remove conflicts, device security, server dependency or the need to test each business model.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Backups: Prove You Can Restore Business Operations](/blog/2026/10/31/odoo-backup-restore-readiness/) for the connected workflow and earlier version context.
-
-Before adopting this feature in production, decide [whether and when to upgrade to Odoo 20](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/) and use the [practical Odoo 20 migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) to plan testing and go-live.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/general/offline_mode.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+For help defining the disconnected workflow and its acceptance evidence, see my [Odoo consulting services](/services/odoo-consulting/).

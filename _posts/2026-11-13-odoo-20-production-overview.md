@@ -4,108 +4,58 @@ title: "Odoo 20 Production Overview: Review Orders, Components and Delays"
 date: 2026-11-13 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Manufacturing, Reporting, Inventory Management, Operations]
 hub: manufacturing
-description: "A practical Odoo 20 guide to the new production overview, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Use Odoo 20 Manufacturing Kanban production overview to inspect order priorities, component availability, work centres and planning exceptions."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for the new production overview in Odoo 20?"
-    a: "Odoo 20 adds a documented production overview for manufacturing reporting."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which order, component or operation needs action, and does the overview link back to reliable source records?"
+  - q: "Where is the Odoo 20 production overview?"
+    a: "Open Manufacturing, Operations, Manufacturing Orders and select Kanban view. The documented overview is this order view."
+  - q: "Why might a completed manufacturing order be missing?"
+    a: "The default To Do filter can exclude it. Inspect the active filters and grouping before concluding that the record is missing."
+  - q: "Does component availability on a card prove physical readiness?"
+    a: "No. Open the underlying order and check locations, reservations and actual material handling before committing production capacity."
 ---
 
-**Short answer:** Odoo 20 adds a documented production overview for manufacturing reporting. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** The Odoo 20 production overview is the Kanban view of manufacturing orders. It brings order status, priorities, component availability and work progress together for review. Its value depends on choosing the right filters and checking the underlying order before changing a production commitment.
 
-## Applies to
+## Where do planners find the overview?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [production overview documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/reporting/production_overview.html) directs users to Manufacturing, Operations, Manufacturing Orders, then Kanban. This is an operational order view, rather than a separate capacity optimisation engine.
 
-## What is confirmed in Odoo 20
+The default To Do filter and weekly grouping affect what appears. Cards are organised with priority and scheduled date in mind. Start a planning review by recording the active filters and date grouping so everyone is discussing the same population.
 
-Odoo 20 adds a documented production overview for manufacturing reporting.
+## Which card details deserve attention?
 
-This article focuses specifically on the new production overview. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+The view includes the manufacturing order, product and quantity, status, priority, activities, remaining work order time, component availability and responsible person. Depending on the order's progress, the active work centre and child manufacturing status can also provide context.
 
-## The business decision
+Use those details to choose what to investigate. They are summaries of recorded activity, and may lag behind work that has happened physically but has not been entered.
 
-Which order, component or operation needs action, and does the overview link back to reliable source records?
+| Signal on the overview | Useful follow up |
+| --- | --- |
+| Components waiting | Inspect the missing component, reservation and expected receipt |
+| Priority raised | Confirm who authorised the change and what other work it displaces |
+| Work centre active | Open work order progress and confirm the actual remaining work |
+| Child order delayed | Check the dependency before changing the parent promise |
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## How should a planner handle a possible shortage?
 
-## What needs fresh review from Odoo 19
+Consider an illustrative assembly order scheduled for tomorrow. Its card indicates a component issue. Open the order and identify the exact component, quantity and supplying location. Determine whether supply is genuinely late, is waiting for a warehouse operation, or is recorded in the wrong place.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+Only then decide whether to expedite material, release a partial quantity or reschedule. A priority change without that investigation can simply move the same shortage to another order.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+If partial quantities are the issue, the [continuous production guide](/blog/2026/11/12/odoo-20-continuous-production/) explains why operation progress and finished stock availability require separate checks.
 
-## Questions to answer during discovery
+## How can grouping improve the daily meeting?
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+Group by product when discussing related production runs, by status when reviewing the work queue, and by material availability when focusing on shortages. Date and deadline groupings answer different questions, so do not silently substitute one for the other.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Use a small set of agreed views with a stated purpose. A screenshot without its filter context is weak evidence of what the team actually reviewed.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+## What should acceptance testing prove?
 
-## A practical rollout sequence
+Create proposed cases for a ready order, an order waiting on a component, an active work centre and a delayed child order. Verify that each appears under the intended filters and opens the correct source record.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+Include a completed order so reviewers understand why it disappears from the default To Do population. Confirm that priority edits are restricted to the intended users and that the team can identify who owns an unresolved exception.
 
-## Data and permission controls
+The acceptance outcome is a reproducible planning review, with a decision and owner for each material issue. Capture that review in the [ERP acceptance evidence resource](/resources/erp-acceptance-evidence/).
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A planner spots component risk in the overview, opens the underlying order and confirms the actual shortage before rescheduling.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-A dashboard summarizes recorded data. Late validation or incorrect routes can still make the picture misleading.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Manufacturing Backorders: Close Only What Was Produced](/blog/2026/11/09/odoo-manufacturing-partial-completion/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/reporting/production_overview.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

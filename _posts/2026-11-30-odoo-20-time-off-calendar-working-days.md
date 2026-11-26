@@ -4,108 +4,56 @@ title: "Odoo 20 Time Off: Calendar Days, Working Days and Minimum Requests"
 date: 2026-11-30 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Human Resources, Time Off, Payroll, Compliance]
 hub: services
-description: "A practical Odoo 20 guide to new time off calculation choices, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Review Odoo 20 calendar versus working day leave deductions, minimum requests and public holidays against the actual employee schedule and policy."
 faqs:
-  - q: "What is confirmed for new time off calculation choices in Odoo 20?"
-    a: "Odoo 20 release notes confirm calendar day or working day deductions, minimum requests and expanded public holiday support."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which calendar and deduction rule matches policy, contract and payroll for each time off type?"
+  - q: "Can Odoo 20 calculate leave using calendar days?"
+    a: "Yes. The release notes describe a choice between calendar day and working day deductions."
+  - q: "Are country suggested holidays automatically correct for every employee?"
+    a: "No. Review the observed dates, company, region and working schedule before applying them."
+  - q: "Does changing a deduction rule decide the payroll treatment?"
+    a: "No. Validate the leave balance and work entry or payroll outcome separately against the applicable policy and requirements."
 ---
 
-**Short answer:** Odoo 20 release notes confirm calendar day or working day deductions, minimum requests and expanded public holiday support. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 adds calendar day or working day leave deductions and a minimum request amount. Configure those choices against the actual leave policy and employee schedule. Test weekends, observed holidays and payroll related outputs before applying a new rule broadly.
 
-## Applies to
+## What does the release confirm?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [Time Off release notes](https://www.odoo.com/odoo-20-release-notes) describe the deduction choice, minimum request amounts and loading public holidays for a year with suggestions based on the company's country.
 
-## What is confirmed in Odoo 20
+The detailed [time off type guide](https://www.odoo.com/documentation/20.0/applications/hr/time_off/time_off_types.html) covers approvals, allocations and public holiday handling, but does not fully describe every new control. Confirm the available fields in the actual Odoo 20 database rather than inventing a menu path from an earlier version.
 
-Odoo 20 release notes confirm calendar day or working day deductions, minimum requests and expanded public holiday support.
+## Why must the policy be written before configuration?
 
-This article focuses specifically on new time off calculation choices. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+Calendar days and working days can produce different deductions for the same date range. Neither is universally correct for every leave category or employment arrangement.
 
-## The business decision
+Write down which days count, the unit requested, how public holidays are handled and any minimum duration. Identify whether different employee schedules need different cases. Obtain the appropriate HR and payroll review before interpreting that policy as a system rule.
 
-Which calendar and deduction rule matches policy, contract and payroll for each time off type?
+## How should a weekend and holiday case be tested?
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+Use an illustrative employee with an agreed Monday to Friday schedule and a leave request spanning a weekend. Add an observed public holiday in the test period.
 
-## What needs fresh review from Odoo 19
+HR should calculate the expected deduction under the approved policy before entering the request. Then compare the request duration, remaining allocation and calendar display with that expectation. Do not use the system's first result as the definition of the policy.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+| Proposed case | Review focus |
+| --- | --- |
+| Leave spanning a weekend | Calendar or working day treatment |
+| Observed public holiday | Inclusion or exclusion as intended |
+| Part time schedule | Correct employee working pattern |
+| Request below the minimum | Clear and appropriate validation |
+| Cancellation after approval | Restored balance and downstream records |
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+## What needs reviewing in public holiday setup?
 
-## Questions to answer during discovery
+The [public holiday documentation](https://www.odoo.com/documentation/20.0/applications/hr/time_off/public_holidays.html) explains company, date and working hour scope, along with work entry type where payroll is used.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+Country suggestions are a starting point. Check regional observance, company policy and the intended year before accepting them. A holiday can affect other applications using working schedules, so review planning and production implications as well as leave.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+## What should happen before changing an existing type?
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Record the current configuration and identify approved or future requests affected by the change. Test how the database handles them; do not assume a changed rule recalculates every historical request safely.
 
-## A practical rollout sequence
+Compare balances before and after the test, and inspect work entries or payroll inputs where relevant. Keep a decision owner for discrepancies instead of correcting totals without explanation.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+For the related accrual decision, see [time off accrual plan changes](/blog/2026/11/25/odoo-time-off-accrual-plan-changes/). Use the [ERP acceptance evidence resource](/resources/erp-acceptance-evidence/) to connect policy, expected deductions and observed results.
 
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-HR tests a leave request across a weekend and public holiday before applying the new calculation rule to employees.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Employment law, contracts, payroll and localization determine the correct rule. Configuration alone is not legal advice.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Odoo Time Off Accruals: Control Plan Changes](/blog/2026/11/25/odoo-time-off-accrual-plan-changes/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/hr/time_off.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

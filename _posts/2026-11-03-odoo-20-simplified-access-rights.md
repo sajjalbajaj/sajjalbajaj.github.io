@@ -2,112 +2,70 @@
 layout: post
 title: "Odoo 20 Access Rights: Review the Simplified Security Model"
 date: 2026-11-03 07:00:00 +0530
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 20, ERP, Best Practices, Security, Compliance, Implementation, Business Automation]
 hub: services
-description: "A practical Odoo 20 guide to the simplified access rights model, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Review Odoo 20 roles, inherited groups and record access with a practical permission matrix and tests for allowed and refused actions."
 faqs:
-  - q: "What is confirmed for the simplified access rights model in Odoo 20?"
-    a: "Odoo 20 release notes describe simplified access rights with domains placed directly on access rights rather than separate record rules."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which records should each role read, create, change and delete after the security model is migrated?"
+  - q: "Does a simpler Odoo 20 role screen prove access is correct?"
+    a: "No. Review the permissions inherited through groups and test actual records and actions with ordinary user accounts. A role label alone does not prove that company or document boundaries are enforced."
+  - q: "Should portal users have the same access as internal users?"
+    a: "No. Odoo describes the Portal role for external users accessing their own information. Test portal journeys separately from internal roles."
+  - q: "Can adding permissions affect a Light user?"
+    a: "The Odoo 20 documentation says a Light user is automatically upgraded to User if granted access beyond the reduced permission set. Review access and pricing implications before expanding permissions."
 ---
 
-**Short answer:** Odoo 20 release notes describe simplified access rights with domains placed directly on access rights rather than separate record rules. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Review Odoo 20 access through roles, groups, inherited permissions and the records each user can actually reach. Use a permission matrix that includes actions the role must be refused. A simpler role screen does not by itself establish least privilege or safe migration of custom security.
 
-## Applies to
+## What does the Odoo 20 documentation describe?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The current [access rights reference](https://www.odoo.com/documentation/20.0/applications/general/users/access_rights.html) describes internal **User**, **Administrator** and **Light** roles, together with a **Portal** role for external users. Groups define the detailed permissions associated with a role.
 
-## What is confirmed in Odoo 20
+The page also distinguishes selected groups from groups added automatically through inheritance. Removing one visible selection is therefore not a complete account of the permissions a person receives.
 
-Odoo 20 release notes describe simplified access rights with domains placed directly on access rights rather than separate record rules.
+The release description of simplified access is a starting point for an upgrade review. It is not enough evidence to mechanically replace security definitions in a custom module.
 
-This article focuses specifically on the simplified access rights model. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+## Which permission matrix is useful before an upgrade?
 
-## The business decision
+Start with work that a person must perform and information they must not access. This illustrative matrix defines requirements, not Odoo's default behaviour:
 
-Which records should each role read, create, change and delete after the security model is migrated?
+| Role | Must be able to do | Must be refused |
+|---|---|---|
+| Sales representative | Read assigned opportunities and prepare quotations | Read another team's restricted commercial records |
+| Warehouse operator | Process authorised stock operations | Change accounting configuration |
+| Expense approver | Review the assigned team's expenses | Approve unrelated teams without authority |
+| Customer portal user | Read their permitted documents | Read another customer's documents |
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+Add company, branch or ownership conditions where the business requires them. A restriction in the written matrix must be demonstrated in the installed application.
 
-## What needs fresh review from Odoo 19
+## How should inherited permissions be reviewed?
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+Odoo's documentation shows how selected permissions can imply others. Record each test user's role, selected groups and inherited groups before comparing results. Test the combination actually assigned to the user rather than each group in isolation.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+A useful investigation starts with the record that should be hidden. Establish its owner and company, reproduce the access with the affected account and then trace the permissions that account receives. Hiding a menu is not a sufficient test of whether the underlying record can be reached.
 
-## Questions to answer during discovery
+## What should be tested beyond opening the app?
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+I would include reading, creating, changing and deleting representative records where those operations exist. Also exercise permitted exports, linked documents and direct links to records. These are test scenarios, not a claim that every application exposes identical controls.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+For an illustrative sales restriction, save a direct link to an opportunity outside the representative's allowed scope. Open it with that representative's account and record the result. Repeat with the authorised manager. This distinguishes a working restriction from a screen that simply omits the opportunity from one list.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Use the [acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to record the role and outcome without copying sensitive record content into the report.
 
-## A practical rollout sequence
+## Which changes need particular care?
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+The documentation warns that incorrect access changes can leave nobody able to administer permissions. Plan a recovery route before changing administrative access. Run exploratory changes in a test database and avoid making the only administrator account the experimental account.
 
-## Data and permission controls
+Light users also deserve a licensing check. Odoo says granting access beyond the Light permission set automatically upgrades the role to User. Review the [current pricing terms](https://www.odoo.com/pricing-plan) when assessing a proposed expansion.
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
+## When is the access review complete?
 
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
+The proposed role is ready only when the expected allowed and refused actions are evidenced, unresolved exceptions have an owner, and support understands how to investigate future access requests. An administrator's successful test does not prove an ordinary user's experience.
 
-## Testing before production
+For the earlier setup context, see [users and access rights in Odoo](/blog/2026/09/21/how-to-set-up-odoo-users-access-rights/).
 
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
+## Source and review
 
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
+Official reference: [Odoo 20 access rights](https://www.odoo.com/documentation/20.0/applications/general/users/access_rights.html), checked on 27 November 2026. The matrix and scenarios are implementation recommendations, not verified outcomes for your database.
 
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-An upgrade test finds that branch users can see records outside their branch, so the team corrects the access domain before production rollout.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-A simpler interface is not proof of least privilege. Custom modules and inherited groups still need scenario testing.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [How to Set Up Users and Access Rights in Odoo](/blog/2026/09/21/how-to-set-up-odoo-users-access-rights/) for the connected workflow and earlier version context.
-
-Before adopting this feature in production, decide [whether and when to upgrade to Odoo 20](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/) and use the [practical Odoo 20 migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) to plan testing and go-live.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/general/users/access_rights.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+For a requirements and permission review, see my [Odoo consulting services](/services/odoo-consulting/).

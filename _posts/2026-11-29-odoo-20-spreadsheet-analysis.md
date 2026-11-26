@@ -4,108 +4,58 @@ title: "Odoo 20 Spreadsheet Analysis: New Charts, Filters and Controls"
 date: 2026-11-29 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Spreadsheet, Reporting, Analytics, Business Automation]
 hub: services
-description: "Odoo 20 guidance for new Spreadsheet analysis and control features, with confirmed scope, setup controls, testing, ownership, exceptions and limits."
+description: "Use Odoo 20 spreadsheet filters, calculated columns and sheet locks while checking source mappings, formula recalculation and report scope."
 faqs:
-  - q: "What is confirmed for new Spreadsheet analysis and control features in Odoo 20?"
-    a: "Odoo 20 release notes confirm new charts, calculated columns, data cleanup, sheet locks, print settings and analysis features."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which source and refresh state support the conclusion, and who may change formulas, filters and presentation?"
+  - q: "Do global filters only hide visible spreadsheet rows?"
+    a: "No. The documentation says they act on underlying Odoo data sources. Field matching determines which source fields receive each filter."
+  - q: "Does locking a sheet replace access control?"
+    a: "No. It helps prevent modifications, but data visibility and who may access or edit the spreadsheet still require review."
+  - q: "Does pressing F9 refresh every source record?"
+    a: "The release notes describe F9 for manual formula recalculation when automatic recalculation is disabled. Do not equate that with independently verifying source freshness."
 ---
 
-**Short answer:** Odoo 20 release notes confirm new charts, calculated columns, data cleanup, sheet locks, print settings and analysis features. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 adds spreadsheet analysis features including calculated columns, named ranges, sheet locks and expanded chart options. The most useful control is still a report that can be explained: identify its sources, map filters correctly, verify calculations and preserve the scope used for each published conclusion.
 
-## Applies to
+## Which new features deserve an implementation decision?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [Spreadsheet release notes](https://www.odoo.com/odoo-20-release-notes) identify calculated columns in dynamic lists, sheet locking and manual formula recalculation. These can improve a reporting workflow, but they solve different problems.
 
-## What is confirmed in Odoo 20
+A calculated column expresses logic. A sheet lock reduces accidental editing. Manual recalculation changes when formulas are recomputed. None alone establishes that the source data is complete or that the calculation answers the intended business question.
 
-Odoo 20 release notes confirm new charts, calculated columns, data cleanup, sheet locks, print settings and analysis features.
+## How do global filters affect the data?
 
-This article focuses specifically on new Spreadsheet analysis and control features. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+The [global filter documentation](https://www.odoo.com/documentation/20.0/applications/productivity/spreadsheet/work_with_data/global_filters.html) explains that filters act on underlying Odoo data sources, rather than only hiding displayed rows.
 
-## The business decision
+Field matching matters when one workbook combines several sources. A date filter mapped to order date in one source and invoice date in another can create a plausible but misleading comparison.
 
-Which source and refresh state support the conclusion, and who may change formulas, filters and presentation?
+Document the intended meaning of each filter. Do not label a result simply as monthly sales if one chart uses orders and another uses posted invoices without making that distinction visible.
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+## How would a finance dashboard be reviewed?
 
-## What needs fresh review from Odoo 19
+Consider an illustrative workbook with a revenue pivot and an invoice detail list. Finance wants both to show the same company and accounting period.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+First inspect the source domains and field matching. Then select a small known set of invoices and reconcile the displayed total to that set. Change the period and confirm both sources respond correctly.
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+| Proposed check | Evidence to retain |
+| --- | --- |
+| Company filter | Consistent company scope across sources |
+| Date filter | Correct date field and boundary records |
+| Calculated column | Formula and independently checked examples |
+| Locked calculation sheet | Intended editing restriction |
+| Exported report | Visible scope, units and reporting date |
 
-## Questions to answer during discovery
+## What changes when automatic recalculation is disabled?
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+The release notes describe disabling automatic formula recalculation and using F9 to recalculate manually. This can be useful, but the operating procedure must make the calculation state clear.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Do not assume a displayed formula result has updated just because an underlying record changed. Also distinguish formula recalculation from the separate question of whether the source data is current. Verify both before distributing a report.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+## How should charts and permissions be assessed?
 
-## A practical rollout sequence
+Choose a chart that fits the question, and label its units and period. An attractive bubble or calendar chart can still conceal an unsuitable denominator or missing population.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+Review access to the workbook and source records using the intended user role. A locked sheet is not a substitute for controlling who may see the data.
 
-## Data and permission controls
+The [spreadsheet overview](/blog/2026/09/07/odoo-spreadsheet/) covers the wider application. Use the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) for the proposed filter and calculation checks.
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A finance dashboard locks calculation sheets, documents filters and verifies source refresh before exporting a management report.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Spreadsheet flexibility does not ensure governance. Formula changes, stale data and misleading charts still require review.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Spreadsheet in Odoo: Live Data, Live Reports](/blog/2026/09/07/odoo-spreadsheet/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/productivity/spreadsheet.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

@@ -4,108 +4,55 @@ title: "Odoo 20 Allocation Report: Review Reserved and Expected Stock"
 date: 2026-11-16 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, Inventory Management, Warehouse, Sales, Reporting]
 hub: inventory
-description: "A practical Odoo 20 guide to the allocation report, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Use the Odoo 20 allocation report to assign incoming supply to confirmed demand while keeping reservations separate from physical receipt."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for the allocation report in Odoo 20?"
-    a: "Odoo 20 adds a documented allocation report for stock demand and availability review."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which demand owns the quantity, when is supply expected and who may change an allocation?"
+  - q: "Does allocating incoming stock make it immediately pickable?"
+    a: "No. Allocation does not move inventory. The incoming receipt or manufacturing completion still needs validation before the goods are physically available for picking."
+  - q: "Where is the allocation report enabled?"
+    a: "Enable Show Allocation on the relevant Inventory operation type. Optional allocation by location also requires Storage Locations."
+  - q: "Does the report allocate stock already reserved for another order?"
+    a: "The documentation describes allocating the unreserved remaining demand. Review existing reservations before changing order priorities."
 ---
 
-**Short answer:** Odoo 20 adds a documented allocation report for stock demand and availability review. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20's allocation report assigns incoming purchased or manufactured supply to confirmed demand. It helps establish which order should receive a quantity, but allocation itself does not move stock. Verify existing reservations, receipt completion and the authority to change priorities before promising a dispatch date.
 
-## Applies to
+## What does the report connect?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [allocation report documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.html) describes incoming supply from purchase or manufacturing against confirmed sales or manufacturing demand. The Allocation button can be available on the incoming receipt or manufacturing order.
 
-## What is confirmed in Odoo 20
+Enable Show Allocation on the relevant operation type. If allocation must be restricted by location, review that additional setting and enable Storage Locations as required. Test the actual operation types in use, rather than assuming one setting covers every warehouse flow.
 
-Odoo 20 adds a documented allocation report for stock demand and availability review.
+## Why is allocation different from receipt?
 
-This article focuses specifically on the allocation report. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+A buyer can know which customer order needs an incoming item before that item reaches the warehouse. Allocation records that relationship. It does not validate the receipt, perform a warehouse movement or establish that quality release is complete.
 
-## The business decision
+The documentation explicitly separates allocation from movement. If the receipt has not been validated, the assigned quantity is not automatically ready to pick. Keep the commercial promise tied to the remaining physical steps.
 
-Which demand owns the quantity, when is supply expected and who may change an allocation?
+## How should competing customer orders be handled?
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+Suppose an illustrative incoming shipment contains 40 units while two confirmed orders still require 25 and 30 units. Inspect any stock already reserved against those orders first. The report concerns remaining unreserved demand, so adding the gross order quantities can overstate the shortage.
 
-## What needs fresh review from Odoo 19
+Agree which demand has priority and why. If a later order receives a quantity ahead of an earlier commitment, record the authorised exception and tell the affected commercial owner. The report cannot choose the company's service policy.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+## What happens when the expected receipt changes?
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+Revisit allocations when the supplier reduces the quantity, the expected date changes or a customer order is cancelled. Trace the affected orders before updating a promise.
 
-## Questions to answer during discovery
+| Proposed test | Question to resolve |
+| --- | --- |
+| Partial incoming quantity | Which demand remains unallocated? |
+| Existing reservation | Is that quantity excluded from the remaining need? |
+| Late receipt | Which promised deliveries require review? |
+| Cancelled demand | Who reviews any now unnecessary allocation? |
+| Receipt awaiting validation | Does the team understand why picking is still blocked? |
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+These cases should be demonstrated in the configured database. They are not claims that every reprioritisation or cancellation is handled automatically.
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+## What evidence supports warehouse acceptance?
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Capture the incoming order and receipt, outgoing demand, quantity allocated, remaining requirement and validation state. Have a warehouse user demonstrate when the goods become available for the next operation.
 
-## A practical rollout sequence
+Use the [backorder guide](/blog/2026/10/13/backorders-odoo/) for the outstanding delivery decision, and the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to record who accepted the allocation behaviour and which exceptions remain open.
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
-
-## Data and permission controls
-
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-A sales promise is reviewed against existing reservations and incoming supply before one order is reprioritized.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Allocation data does not guarantee supplier delivery or physical availability. Priority changes need an authorised business rule.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Backorders in Odoo 19: Partial Deliveries and Receipts](/blog/2026/10/13/backorders-odoo/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/allocation_report.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

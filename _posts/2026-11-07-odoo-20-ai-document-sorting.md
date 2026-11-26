@@ -4,108 +4,59 @@ title: "Odoo 20 AI Document Sorting: Route Business Files for Review"
 date: 2026-11-07 07:00:00 +0530
 tags: [Odoo, Odoo 20, ERP, Best Practices, AI, Documents, Business Automation, Compliance]
 hub: services
-description: "A practical Odoo 20 guide to AI assisted document sorting, covering setup, testing, ownership, exceptions, review points and important limitations."
+description: "Set up Odoo 20 document auto-sorting around folder prompts and permitted actions, with a review route for bundled, ambiguous or sensitive files."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is confirmed for AI assisted document sorting in Odoo 20?"
-    a: "Odoo 20 documents AI document sorting as a way to direct incoming files using configured rules and prompts."
-  - q: "What should a business decide before using this Odoo 20 feature?"
-    a: "Which document classes are reliable enough to route, and who checks files that are ambiguous or sensitive?"
+  - q: "Does Odoo 20 document sorting require the AI app?"
+    a: "The documentation says the AI app is not required for document automation. Documents and the relevant business apps must be installed, and available actions depend on those apps."
+  - q: "Does tagging a file for splitting split it automatically?"
+    a: "No. The documented example adds a review tag to a file containing multiple documents. The tag identifies the manual task; it does not perform the split."
+  - q: "Does correct folder placement prove an invoice is valid?"
+    a: "No. Classification and routing do not establish authenticity, approval, accounting treatment or the absence of a duplicate bill."
 ---
 
-**Short answer:** Odoo 20 documents AI document sorting as a way to direct incoming files using configured rules and prompts. Treat the feature as part of a controlled business process, not as proof that the underlying decision is correct.
+**Short answer:** Odoo 20 AI document sorting evaluates files using folder-level prompts and selected actions. Design those actions around the document types you can identify and the exceptions that need a person. A correctly routed file has not necessarily been validated or approved for accounting.
 
-## Applies to
+## Where is sorting configured?
 
-Odoo 20 and the applications named in the official source below. Edition, hosting, localization and external service requirements must be confirmed for the installed database.
+The [document-sort documentation](https://www.odoo.com/documentation/20.0/applications/productivity/ai/document_sort.html) describes **Documents**, the relevant installed business apps and the permissions on folders and files. It says the separate AI app is not required for this automation.
 
-## What is confirmed in Odoo 20
+Select the folder, open its actions and choose **AI Auto-sort**. The prompt describes what should happen, while **What actions can the AI take?** limits the available operations. Review that list before writing a long classification prompt.
 
-Odoo 20 documents AI document sorting as a way to direct incoming files using configured rules and prompts.
+## Why does the folder boundary matter?
 
-This article focuses specifically on AI assisted document sorting. It does not repeat the broad release previews already published on this site. The purpose is to translate the confirmed feature into an implementation decision that an owner can test and review.
+A file can move through several decision points. An inbox may distinguish supplier documents from customer documents; an accounts-payable folder may then support a narrower task. Applying every action to every incoming file makes an ambiguous document more consequential.
 
-## The business decision
+I would begin with routing and tagging before exposing record creation. That allows reviewers to compare the proposed classification with the file without first correcting unintended business records.
 
-Which document classes are reliable enough to route, and who checks files that are ambiguous or sensitive?
+## How should a bundled attachment be handled?
 
-Write the expected outcome before changing configuration. Name the responsible owner, the input that starts the process, the evidence required for completion and the exception that must stop automation. This turns a feature description into a workflow that staff can operate consistently.
+The official example identifies a file containing several documents and tags it for splitting before continuing other processing. Its action does not split the file.
 
-## What needs fresh review from Odoo 19
+Consider an illustrative PDF containing an invoice and a separate insurance document. Routing the entire PDF as an invoice may send unrelated information to the wrong audience. The useful result is a review item that preserves the original file and identifies why processing stopped.
 
-Do not copy an Odoo 19 checklist and change only the version number. Odoo 20 can change navigation, permissions, status language, available fields and integration boundaries. Compare the installed Odoo 19 process with the documented Odoo 20 behaviour and record every difference that affects users, reports, automation or external systems.
+## What should the initial routing design specify?
 
-Review custom modules and Studio changes separately. A standard Odoo 20 feature can behave differently when inherited views, automated actions, security groups or connectors modify the same records. Test with the actual user roles and representative data rather than relying on administrator access.
+| File condition | Proposed handling |
+|---|---|
+| One clearly identifiable supplier document | Route to the approved review folder |
+| Several documents in one file | Mark for separation before further processing |
+| Supplier or document type unclear | Leave in an owned exception queue |
+| Sensitive employee or customer information | Use the authorised restricted route |
+| Familiar invoice submitted again | Investigate duplication before record creation |
 
-## Questions to answer during discovery
+These are process recommendations, not descriptions of automatic controls that appear simply by enabling auto-sort. The configured actions must support the selected outcome.
 
-Ask where the source data originates, who is allowed to correct it and which later process depends on the result. Confirm whether a failure should stop work, create a warning or route the record to a person. These decisions are more important than the position of a button because they determine the safe configuration.
+## How do you validate a prompt without hiding mistakes?
 
-Map the complete record journey. Identify what exists before the Odoo 20 action, what the feature creates or changes, and how another team knows it can proceed. Include external providers, imported files, scheduled actions and manual handoffs. A workflow can look complete inside one application while leaving finance, support or operations with an unresolved task.
+Create a small synthetic document set that includes similar-looking categories, missing identifiers and a bundled file. Record the expected destination before running the sorter. Then inspect the actual folder, tags, access and any business record created.
 
-Agree measurable acceptance evidence before configuration begins. Useful evidence may include a linked source record, a correctly restricted user test, a reconciled transaction, an exception with an owner, or a report that ties back to individual records. Avoid acceptance statements such as "the feature is enabled" because enablement does not prove the business outcome.
+Use the [acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to link each test file to its result. Count misrouted and unresolved files separately. A folder with no visible exceptions may simply be moving uncertain files onward.
 
-## A practical rollout sequence
+## When should record creation remain disabled?
 
-1. **Define the outcome.** State the business result and the evidence that proves it.
-2. **Confirm availability.** Check edition, hosting, installed applications, localization and external service needs.
-3. **Map ownership.** Identify who configures, uses, reviews and supports the workflow.
-4. **Prepare test cases.** Include a normal case, missing data, a correction, a refused action and a downstream failure.
-5. **Test permissions.** Use ordinary roles and verify both allowed and blocked actions.
-6. **Release narrowly.** Pilot with a controlled group before wider rollout.
-7. **Review exceptions.** Track unresolved records, repeated manual changes and failed automation.
+Keep it disabled when the organisation has not established who reviews uncertain files, how duplicates are found or which data may be shared with the processing service. A document's appearance alone does not prove that a vendor bill should be posted.
 
-## Data and permission controls
+The [Documents overview](/blog/2026/09/06/odoo-documents/) covers the broader repository. This guide concerns the narrower decision about automation at a folder boundary.
 
-Use the minimum access needed for the task. The person who prepares information may not be authorised to approve a financial, employment, customer or security outcome. Where a feature uses AI or an external service, document which data leaves the immediate workflow, which identity performs the action and how credentials can be revoked.
-
-Keep authoritative information in the appropriate Odoo record rather than copying sensitive material into prompts, spreadsheets and private messages. If an exception needs external evidence, retain the reference according to the organisation's privacy and document retention policy.
-
-## Testing before production
-
-Run the workflow from start to finish and inspect the downstream result, not only the screen where the action began. Check reports, chatter, linked records, notifications and integrations. Repeat the test with incomplete or conflicting data and confirm that the process stops safely or creates an owned review item.
-
-Record the Odoo build, installed applications, important configuration and test result. Screens and behaviour can change through later updates, so a dated test record is more useful than an undated screenshot.
-
-## Go live and support
-
-Release the feature with named support ownership and a short operating guide. Tell users what the feature will do, what it will not do and where uncertain records should go. Monitor the first real transactions closely enough to compare them with the accepted test cases.
-
-Set a review date after the initial release. Look for unused configuration, repeated overrides, permission requests, duplicate actions and external service failures. If staff are working around the feature, investigate the reason before adding more automation. The workaround may reveal a missing decision or an unrealistic process assumption.
-
-## Illustrative example
-
-Supplier invoices move to accounts payable, while an unclear attachment stays in an exception workspace instead of being silently filed.
-
-This is an illustrative scenario, not a client result or a test on a live database. The transferable method is to compare the expected business outcome with the records Odoo creates, resolve differences with an accountable owner and keep enough evidence for another reviewer to understand the decision.
-
-## Limits and boundaries
-
-Classification does not validate authenticity, accounting treatment, retention or access. Those remain owned controls.
-
-Odoo documentation explains product behaviour. It does not replace accounting, tax, employment, privacy, safety, legal or sector advice. Have the appropriate specialist define regulated requirements before configuration, then test whether the system produces the required evidence.
-
-## Common mistakes
-
-**Treating availability as readiness.** A visible feature still needs ownership, permissions, testing and support.
-
-**Testing only the successful route.** Missing data, conflicts, retries and refused actions often reveal the real risk.
-
-**Using administrator access as the user test.** It hides permission and company boundary problems.
-
-**Assuming automation owns the outcome.** A named person still needs to review exceptions and repeated failures.
-
-## What the owner should review
-
-Review adoption, failed actions, manual overrides, records waiting without an owner, permission changes and differences between expected and actual downstream results. Sample individual records as well as totals. Repeated exceptions usually point to unclear policy, incomplete data, training, unsuitable access or an integration boundary.
-
-## Related reading
-
-Read [Documents in Odoo: Organise and Automate Your Files](/blog/2026/09/06/odoo-documents/) for the connected workflow and earlier version context.
-
-## Official Odoo 20 source
-
-1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/productivity/ai/document_sort.html)
-
-*Source reviewed from the official Odoo 20 documentation and release notes in November 2026. Confirm the documentation for the installed build before implementation.*
-
-If you need help assessing or implementing Odoo 20, see my [Odoo consulting services](/services/odoo-consulting/).
+*Sources reviewed on 27 November 2026. Scenarios are proposed acceptance cases, not reported customer results. Confirm edition, installed modules and provider requirements for your database.*

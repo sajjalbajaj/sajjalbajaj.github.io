@@ -2,9 +2,9 @@ name: Check article structure
 
 on:
   push:
-    paths: ['_posts/**', 'scripts/check_content.rb', '.github/workflows/content-quality.yml']
+    paths: ['_posts/**', 'scripts/check_content.rb', 'scripts/check_originality.py', 'scripts/test_check_originality.py', '.github/workflows/content-quality.yml']
   pull_request:
-    paths: ['_posts/**', 'scripts/check_content.rb', '.github/workflows/content-quality.yml']
+    paths: ['_posts/**', 'scripts/check_content.rb', 'scripts/check_originality.py', 'scripts/test_check_originality.py', '.github/workflows/content-quality.yml']
 
 permissions:
   contents: read
@@ -23,6 +23,10 @@ jobs:
           ruby-version: '3.3'
       - name: Check every article
         run: ruby scripts/check_content.rb
+      - name: Review repeated prose
+        run: |
+          python3 -m unittest discover -s scripts -p 'test_*.py'
+          python3 scripts/check_originality.py
       - name: Apply the full standard to new articles
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -38,4 +42,5 @@ jobs:
           rm "$added_posts"
           if (( ${#posts[@]} )); then
             ruby scripts/check_content.rb --strict "${posts[@]}"
+            python3 scripts/check_originality.py --strict "${posts[@]}"
           fi

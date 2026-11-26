@@ -1,0 +1,61 @@
+---
+layout: default
+title: "ERP Acceptance Evidence Worksheet"
+permalink: /resources/erp-acceptance-evidence/
+description: "A practical ERP acceptance worksheet connecting an agreed outcome, test inputs, observed results, unresolved issues and an accountable release decision."
+last_modified_at: 2026-11-27
+schema_type: WebPage
+---
+
+<article class="post" aria-labelledby="evidence-title">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> <span aria-hidden="true">›</span> ERP acceptance worksheet</nav>
+  <h1 class="post__title" id="evidence-title">ERP acceptance evidence worksheet</h1>
+  <p class="post__meta">By <a href="{{ '/cv/' | relative_url }}">Sajjal Bajaj</a> · Updated <time datetime="2026-11-27">27 November 2026</time></p>
+  <div class="prose">
+    <p><strong>Short answer:</strong> An ERP acceptance record should connect an agreed business outcome to a reproducible test, its observed result and the next decision. A configured feature, screenshot or closed task alone does not show that the business outcome was achieved.</p>
+    <p>This is my proposed review method for implementation milestones and operating controls. It works across ERP products. It is not an industry standard, legal acceptance document or guarantee of a successful release.</p>
+    <p><a href="{{ '/assets/downloads/erp-acceptance-evidence.csv' | relative_url }}" download>Download the blank CSV worksheet</a>. It opens in spreadsheet software and requires no sign-in or submission of project data.</p>
+    <h2>What should one evidence record contain?</h2>
+    <dl>
+      <dt><strong>Agreed outcome</strong></dt><dd>State what the next team must be able to rely on. Include the scope and any exclusion.</dd>
+      <dt><strong>Environment and inputs</strong></dt><dd>Record the product version, build, installed apps, role, company and synthetic record references needed to reproduce the case.</dd>
+      <dt><strong>Expected and observed result</strong></dt><dd>Write the expectation before the test. Record what happened afterwards, including a mismatch.</dd>
+      <dt><strong>Evidence reference</strong></dt><dd>Link the source record, output and relevant test notes in their authorised location. Do not copy passwords or confidential data into the worksheet.</dd>
+      <dt><strong>Issue and next decision</strong></dt><dd>Name the unresolved discrepancy, owner and next action. Acceptance requires an accountable decision, not just a test marked complete.</dd>
+    </dl>
+    <h2>How should you run the review?</h2>
+    <ol>
+      <li>Agree the outcome with the person who will use the result. Replace vague wording such as “integration works” with an observable transaction and boundary.</li>
+      <li>Choose a normal case, a missing input, a refused action, a correction and a retry where repetition could cause a duplicate.</li>
+      <li>Use the actual role and company scope. An administrator test can hide access problems.</li>
+      <li>Follow the record into the next process. For example, an imported order and a fulfilled order are different outcomes.</li>
+      <li>Record the result honestly. Distinguish pass, fail, blocked and not run.</li>
+      <li>Assign each unresolved item and decide whether to accept, retest, defer or stop the release.</li>
+    </ol>
+    <h2>What does a completed example look like?</h2>
+    <p>The following is illustrative. No client result or executed test is claimed.</p>
+    <p><strong>Outcome:</strong> A repeated submission of one store order must not create a second ERP order. Stock allocation and the selected financial treatment must stay linked to the accepted order.</p>
+    <p><strong>Inputs:</strong> A test store order reference, one customer, one product and the mapping version. Submit the original event and then the same event again.</p>
+    <p><strong>Expected result:</strong> One ERP order for the source reference, with a visible explanation of how the second event was handled. Inspect downstream records as well as the connector's response.</p>
+    <p><strong>Observed result:</strong> Leave this field empty until the test is run. If two orders appear, record their identifiers and mark the case failed. Do not rewrite the expectation to match the result.</p>
+    <p><strong>Decision:</strong> Identify who can authorise release or require a fix, and link the retest after any change.</p>
+    <h2>What evidence is useful for different workflows?</h2>
+    <ul>
+      <li><strong>Payroll:</strong> the corrected source record, resulting work entry and decision about an already processed payslip.</li>
+      <li><strong>Expenses:</strong> receipt reference, payment source, approved claim and the one intended reimbursement route.</li>
+      <li><strong>Access:</strong> a permitted action and a refused attempt on a record outside the role's scope.</li>
+      <li><strong>AI agent:</strong> the source supporting the answer, requested action, actual tool result and any human decision.</li>
+    </ul>
+    <h2>How does this relate to rollout and support?</h2>
+    <p>Release to a defined group with a named support owner. Preserve the accepted scope, known exceptions and recovery route. After release, sample real records against the agreed outcomes and investigate repeated overrides instead of treating them as normal operation.</p>
+    <p>Product availability, permissions and provider dependencies must still be checked in the relevant documentation. Where regulated practice applies, obtain the specialist requirement before deciding what the software test must prove.</p>
+    <h2>Related guidance</h2>
+    <ul>
+      <li><a href="{{ '/blog/2026/10/30/odoo-user-acceptance-scenarios/' | relative_url }}">Designing Odoo user acceptance scenarios</a></li>
+      <li><a href="{{ '/blog/2026/11/12/odoo-integration-retries-duplicate-orders/' | relative_url }}">Integration retries and duplicate orders</a></li>
+      <li><a href="{{ '/blog/2026/11/03/odoo-20-simplified-access-rights/' | relative_url }}">Access rights review</a></li>
+      <li><a href="{{ '/editorial-policy/' | relative_url }}">How I write and check guides</a></li>
+    </ul>
+    <p>For help turning requirements into testable outcomes, see my <a href="{{ '/services/odoo-consulting/' | relative_url }}">ERP and Odoo consulting work</a>.</p>
+  </div>
+</article>

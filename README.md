@@ -113,6 +113,14 @@ new files. It reports separately from deployment. Use `ruby scripts/check_conten
 for the full editorial audit; missing FAQs or question headings in older posts are review
 prompts, not instructions to add repetitive filler.
 
+Run `python3 scripts/check_originality.py --strict` with the new post paths as well. It
+reports identical prose of at least 45 words and rejects new paragraphs shared across
+three or more articles. Inspect reports rather than rewriting the same filler with synonyms.
+Use `/editorial-policy/` for the public sourcing approach and link shared acceptance
+advice to `/resources/erp-acceptance-evidence/`. Use the length needed to answer the task;
+do not add paragraphs just to reach a word target. These checks do not establish factual
+accuracy, originality beyond exact matches, or likely AI citations.
+
 Jekyll adds published posts to the blog, RSS feed, sitemap and `llms.txt` directory. The
 post layout renders visible FAQs and their matching structured data from the same fields.
 Do not add duplicate schema blocks to article bodies. Clear answers and accurate sources
