@@ -154,11 +154,11 @@
   /* ---------- Ask my portfolio (canned Q&A) ---------- */
   var QA = [
     { q: 'What do you do?',
-      a: "I'm Sajjal Bajaj, an Odoo ERP consultant and project manager at Master Software Solutions in Mohali. I help manufacturers, distributors and traders implement Odoo: requirements and process mapping, configuration, testing, training and go-live." },
+      a: "I'm Sajjal Bajaj, an Odoo ERP consultant and project manager in Mohali. I worked at Master Software Solutions from November 2020 to October 2026. I help manufacturers, distributors and traders implement Odoo: requirements and process mapping, configuration, testing, training and go-live." },
     { q: 'How many years of experience?',
       a: "I've worked in software delivery since July 2016: six years as a developer and team lead, then business analysis and project management from 2022, and ERP consulting focused on Odoo since October 2024." },
     { q: "What's your current role?",
-      a: "At Master Software Solutions I work as ERP consultant, project manager and business analyst, mainly on Odoo projects covering inventory, purchasing, manufacturing and sales." },
+      a: "I work on ERP consulting, project management and business analysis, mainly for Odoo projects covering inventory, purchasing, manufacturing and sales. My employment at Master Software Solutions ended in October 2026." },
     { q: 'What is your tech stack?',
       a: "Development: PHP, Python, JavaScript, jQuery, AngularJS, Ionic/Cordova, WordPress, HTML5 & CSS. ERP & data: Odoo, Data Warehousing, Power BI, UiPath. Cloud: AWS (S3) and Google Cloud (GCP, GKE). All wrapped in Agile/Scrum delivery." },
     { q: 'Are you certified?',

@@ -42,7 +42,7 @@
     // --- About Sajjal ---
     { q: 'What does Sajjal do?',
       keywords: ['role', 'job', 'title', 'position', 'who', 'about him', 'about sajjal'],
-      a: "Sajjal is an <strong>ERP &amp; CRM Consultant and Project Manager</strong> at Master Software Solutions, also a business analyst and project manager, working in software delivery since 2016." },
+      a: "Sajjal is an <strong>ERP &amp; CRM Consultant and Project Manager</strong> with business analysis experience, working in software delivery since 2016. He worked at Master Software Solutions from November 2020 to October 2026." },
     { q: 'How much experience?',
       keywords: ['experience', 'years', 'long', 'many', 'senior', 'expert'],
       a: "In software delivery since <strong>July 2016</strong>: development and team leadership, then business analysis and project management from 2022, and ERP consulting focused on Odoo since October 2024." },
