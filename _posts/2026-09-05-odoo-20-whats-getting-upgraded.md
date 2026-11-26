@@ -2,59 +2,64 @@
 layout: post
 title: "Odoo 20: What's Getting Upgraded From Odoo 19"
 date: 2026-09-05 11:00:00 +0530
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 20, Upgrade, ERP, Migration, ERP Migration, Accounting, Finance]
 hub: planning
-description: "Beyond the brand-new features, what existing parts of Odoo are getting better in Odoo 20? A preview of the upgrades to payroll, accounting, CRM, inventory and more."
+description: "Review Odoo 19 to Odoo 20 workflow changes through payment statuses, stock reporting, planning and AI controls, with focused regression checks."
+faqs:
+  - q: "Should old operating instructions simply be relabelled Odoo 20?"
+    a: "No. Compare labels, permissions, inputs and downstream outputs against the target version and update instructions only after validation."
+  - q: "Which payment labels changed in Odoo 20?"
+    a: "The release notes rename In Process to Paid and the former Paid label to Reconciled. Review how staff and integrations interpret those states."
+  - q: "Do performance improvements remove the need for workload testing?"
+    a: "No. Test representative data, custom modules and integrations. A general product improvement is not a benchmark for your environment."
 ---
 
-**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
+**Short answer:** Moving from Odoo 19 to Odoo 20 can change how an existing workflow is interpreted, even when the business process remains familiar. Compare the actual states, permissions and outputs. Start regression testing with consequential differences such as payment meanings, stock availability and field service billing.
 
-> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
+## How should a version comparison be built?
 
-A new Odoo version is not just about brand-new features; a lot of the value is in existing apps getting better. This
-post looks at what is expected to be upgraded in Odoo 20, the improvements to things you already use, as opposed to the
-genuinely new arrivals, which I cover separately.
+Use the [official release notes](https://www.odoo.com/odoo-20-release-notes) to identify candidate changes, then inspect the detailed reference and your configured workflow. Record the old behaviour, intended target behaviour and proposed test.
 
-A note on accuracy: as of early September 2026, Odoo 20 has not launched. The improvements below are based on Odoo's
-public roadmap ahead of the launch, and the confirmed details come at the event itself.
+Avoid claims that an entire application is now simpler, smarter or compliant without specifying the change. Those descriptions cannot tell an operator what to do differently.
 
-## Simpler payroll
+## Which accounting change can affect ordinary decisions?
 
-Payroll is expected to get simpler in Odoo 20. Payroll is one of the fiddlier, higher-stakes areas of any ERP, so
-streamlining how it works is a genuinely useful upgrade. Anything that makes running payroll faster and less error-prone,
-while keeping it compliant, is welcome for the teams who deal with it every month.
+The payment status renaming changes the meaning a reviewer may attach to a familiar label. In the release notes, In Process becomes Paid and the former Paid becomes Reconciled.
 
-## Enhanced accounting
+Review operating procedures, report filters and integrations that use these states. Check both the visible label and any underlying technical value used by custom code. They are not necessarily the same thing.
 
-Accounting is set for enhancements. Accounting is the backbone of the system, so improvements here ripple through
-everything. Whether it is smoother reconciliation, better reporting or a cleaner day-to-day experience, upgrades to
-accounting tend to be felt widely, because so much of the business touches the books in some way.
+The [bank consistency guide](/blog/2026/11/10/odoo-20-bank-consistency-payment-status/) explains why a label should be supported by the relevant payment and bank matching evidence.
 
-## Improved CRM
+## What should warehouse and manufacturing teams compare?
 
-The CRM is expected to be improved in Odoo 20. Sales teams live in the CRM, so a better pipeline experience, smarter
-handling of opportunities and sharper insight all translate fairly directly into helping people sell. Combined with the
-release's wider push toward automation, a smarter CRM is a natural and valuable upgrade.
+Test quantity interpretation across operations. A report can show a reservation, an incoming allocation or partially completed work, but those are different stages.
 
-## Smarter marketing automation
+| Area | Regression question |
+| --- | --- |
+| Detailed stock | Do locations and reservations explain the same physical position? |
+| Allocation | Does incoming supply remain distinct from validated stock? |
+| Continuous production | Can a partial quantity advance without overstating finished output? |
+| Supplier quality rate | Is the metric interpreted as passed receipt checks? |
 
-Marketing automation is set to get smarter. Automation is only as good as how well it targets and adapts, so
-improvements here mean campaigns that are more relevant and take less manual tending. In a release themed around
-intelligence, marketing automation getting cleverer fits the direction perfectly.
+Use the [detailed stock guide](/blog/2026/11/15/odoo-20-detailed-stock-report/) and [continuous production guide](/blog/2026/11/12/odoo-20-continuous-production/) for proposed cases.
 
-## Better inventory management
+## Why does field service need commercial testing?
 
-Inventory is expected to see improvements too. For any business that holds stock, inventory accuracy and efficiency
-matter enormously, so upgrades to how stock is managed have a direct, practical payoff on the warehouse floor and in the
-numbers. Better inventory tools are the kind of upgrade operations teams feel immediately.
+The [Odoo 20 field service documentation](https://www.odoo.com/documentation/20.0/applications/services/planning/field_service.html) describes interventions through Planning, including published shifts and warranty behaviour.
 
-## Performance and reliability
+A useful comparison checks where products are added. Under Warranty affects products added from the shift differently from items entered directly on the sales order. Test the intended route with the service and finance owners instead of assuming the old training material still describes the price outcome.
 
-Alongside the app-level upgrades, Odoo 20 is expected to bring performance and reliability improvements: greater speed,
-better handling of larger workloads and improved offline functionality. These are the quiet upgrades that make the whole
-system feel snappier and more dependable, which everyone benefits from even if no one points at a single new button.
+## What should change in an AI workflow review?
 
+Revisit the distinction between information and actions. An automatically invoked agent or tool needs explicit execution safeguards where business rules require them. Do not carry forward a generic instruction to keep a human involved without identifying the actual review point.
 
-*Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
-Confirmed details come at launch. Weighing an upgrade to Odoo 20? [Get in touch](/services/odoo-migration/).*
+See [AI server actions](/blog/2026/11/06/odoo-20-ai-server-actions/) for that assessment.
+
+## What makes the comparison complete?
+
+Include a normal transaction, a refused operation and a correction for each critical changed workflow. Reconcile relevant reports and inspect downstream records. For performance concerns, use a representative workload; do not promise a speed increase solely from a major version number.
+
+Keep the expected result, observed result and release decision together in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/). The [migration execution guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) covers the broader cutover project.
+
+*Official references reviewed on 27 November 2026. Examples and test cases are illustrative proposals, not completed customer tests. Check the installed version, edition, hosting and provider requirements.*

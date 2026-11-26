@@ -14,10 +14,11 @@ Planned and drafted 1 November 2026 from the official Odoo 20 documentation and 
 * Exclusions: no speculative roadmap claims, invented customer results, copied release note text or
   unsupported performance claims.
 
-The website already has nine broad Odoo 20 preview, release and migration articles. This series should
-not create another general article about release dates, new features, availability, India availability,
-agentic AI or whether to upgrade. Those existing pages should be refreshed separately so that prelaunch
-language is clearly distinguished from confirmed Odoo 20 behaviour.
+The website also has nine broader Odoo 20 release and migration articles. They were refreshed on
+27 November 2026 to replace outdated preview claims with current references and distinct scopes:
+preparation, upgrade decisions, migration execution, agentic AI, selected capabilities, workflow
+regression, India localisation, hosting availability and a reading map. Preserve those scopes rather
+than creating more broad articles that repeat them. Their URLs and original publication dates remain.
 
 ## Daily schedule
 

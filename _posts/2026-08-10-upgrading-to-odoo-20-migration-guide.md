@@ -2,98 +2,73 @@
 layout: post
 title: "Upgrading to Odoo 20: A Practical Migration Guide"
 date: 2026-08-10 09:00:00 +0530
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-27
 tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation, Inventory Management, Stock Control, Business Automation]
 hub: planning
-description: "A practical, step-by-step guide to planning your Odoo 20 migration: how Odoo upgrades work, what to test, and how to reach go-live without surprises."
+description: "Plan an Odoo 20 test upgrade, custom module adaptation, neutralised integrations, acceptance testing, cutover and hosting specific recovery."
+faqs:
+  - q: "Does a standard upgrade include changing edition or hosting?"
+    a: "No. Odoo's upgrade documentation separates version upgrades from edition changes, hosting changes and migration from another ERP. Scope those activities explicitly."
+  - q: "Why might scheduled jobs or emails not run on a test database?"
+    a: "Odoo neutralises test databases to reduce unintended production effects. Verify disabled processes and use controlled test credentials for integration checks."
+  - q: "Can every production upgrade be undone with one click?"
+    a: "No. Recovery differs by hosting and circumstances. Confirm the supported process and how post cutover transactions would be preserved before approving the move."
 ---
 
-**Short answer:** Plan an Odoo migration by inventorying modules and integrations, upgrading a test copy, validating business workflows and rehearsing cutover and recovery. Read the historical release notes in context and base production approval on your own acceptance evidence.
+**Short answer:** An Odoo 20 migration needs a test database conversion, compatible custom code, workflow checks and a rehearsed production cutover. Verify neutralised integrations in testing and agree recovery for the actual hosting. A completed conversion is not evidence that users can safely resume every business process.
 
-> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
+## What does the upgrade project include?
 
-With Odoo 20 on the way, a lot of businesses on older versions are asking the same question: how do
-we actually move to it? A version upgrade is very doable, but it is a proper project, not a button
-you press. Here is the practical migration playbook I use.
+The [Odoo upgrade documentation](https://www.odoo.com/documentation/20.0/administration/upgrade.html) describes moving a database to a newer supported version. It separates that activity from changing edition, changing hosting and migrating from a different ERP.
 
-<div class="post-download">
-  <span class="post-download__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></span>
-  <div class="post-download__body">
-    <p class="post-download__title">Free download: Odoo 20 Upgrade Checklist (PDF)</p>
-    <p class="post-download__text">A printable, step-by-step checklist to plan and deliver your Odoo 20 migration.</p>
-  </div>
-  <a class="post-download__btn" href="/assets/downloads/Odoo-20-Upgrade-Checklist.pdf" download>Download PDF</a>
-</div>
+Record the starting version, edition and hosting, target version, company scope and module inventory. If the project includes a hosting move or business redesign, give those changes their own responsibilities and acceptance conditions.
 
-## First, a timing note
+## How should the test upgrade be organised?
 
-Odoo 20 is expected to be released at **Odoo Experience 2026** in late September, with general
-availability following in the weeks after. So treat this as your preparation plan. The smart teams
-start getting ready now and do the actual move once the release has settled. More on timing in a
-companion post on whether and when to upgrade.
+Request the upgraded test database through the supported route for your hosting. In parallel, obtain compatible custom module code from its maintainer.
 
-## How an Odoo upgrade actually works
+Odoo's [customised database guidance](https://www.odoo.com/documentation/20.0/developer/howtos/upgrade_custom_db.html) distinguishes checking modules on an empty target database from testing them on the upgraded business database. The first can reveal installation and compatibility issues; the second exposes interactions with existing records and configuration.
 
-It helps to understand the model before you start. Odoo provides an upgrade platform that takes a
-copy of your database and migrates it to the new version. Odoo's own scripts handle the standard,
-core data and structures. What is not handled automatically is your **custom code and third-party
-apps**. Those have to be reviewed and adapted to work with the new version.
+For self hosted work, follow the documented treatment of the filestore and attachments. A database that opens while its documents are missing is not a complete rehearsal.
 
-That single fact shapes the whole project: the more custom modules and integrations you have, the
-more careful the upgrade needs to be.
+## Why are test integrations different from production?
 
-## Step 1: Take stock of where you are
+Read the [neutralised database reference](https://www.odoo.com/documentation/20.0/administration/neutralized_database.html). Test environments disable or alter processes such as outgoing mail, scheduled actions, bank connections and payment or delivery services to reduce unintended effects.
 
-You cannot plan a move without knowing your starting point.
+Inspect custom connectors separately. Do not assume every external endpoint has become safe merely because the database displays a test banner. Use sandbox credentials and controlled destinations where available.
 
-- Your current Odoo version, edition (Community or Enterprise) and hosting (Odoo Online, Odoo.sh or
-  on-premise).
-- The full list of apps and modules you actually use.
-- How business-critical each part is, so you know what must not break.
+A silent scheduled action can therefore mean test neutralisation rather than a broken upgrade. Record which integrations were intentionally disabled and how their behaviour will be demonstrated safely.
 
-## Step 2: Inventory your customizations and integrations
+## Which acceptance cases should users run?
 
-This is the make-or-break step. List every custom module, tweak and connected system: your website,
-payment provider, shipping tool, bank feeds, anything that talks to Odoo. This list is where the real
-work of an upgrade lives, so be thorough and honest about it.
+Use end to end cases from actual responsibilities. An illustrative distributor could test a partial receipt, a tracked delivery, a customer invoice and the resulting report.
 
-## Step 3: Request a test upgrade
+| Area | Proposed evidence |
+| --- | --- |
+| Sales and warehouse | Order, reservation, delivery and remaining demand agree |
+| Accounting | Opening balances, selected transactions and reports reconcile |
+| Access | Intended users can work and unrelated records remain restricted |
+| Integrations | Successful transaction, refusal, retry and owned failure |
+| Documents | Required attachments and generated outputs remain usable |
 
-Never upgrade production first. Use Odoo's upgrade platform to migrate a **copy** of your database
-and get a test version on Odoo 20. This gives you a safe place to check everything before anything
-real is touched.
+Record expected results before execution and assign discrepancies. The [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) includes a blank CSV for this work.
 
-## Step 4: Migrate and test your custom modules
+## How should cutover be rehearsed?
 
-Take your custom modules and adapt them to Odoo 20, then load them into the test database. Expect
-some to need changes. This is normal, and it is exactly why you test on a copy first rather than
-discovering problems on go-live day.
+Rehearse with a recent copy and the intended code. Record conversion duration, deployment order, data freeze, verification steps and the person who decides whether to reopen.
 
-## Step 5: Run proper user testing (UAT)
+Changes made in production after a copy is taken do not automatically appear in that copy. Define the last included transaction and how any allowed late activity is captured. Avoid vague instructions to load remaining data without a controlled method.
 
-Get your actual users to run their real daily processes on the test system: raise a quote, confirm an
-order, receive stock, run a report, close the books. Build the test scripts from how you really work,
-log every issue, fix, and retest until the critical path is solid.
+## What does recovery need to cover?
 
-## Step 6: Clean your data
+Confirm the hosting specific behaviour. Odoo documents different production upgrade processes and cautions; there is no universal one click downgrade promise.
 
-An upgrade is a good moment to tidy up. Deduplicate master data, archive what you no longer need, and
-fix known issues. Cleaner data in means a cleaner system out.
+Agree a tested backup and restore route where applicable, a decision deadline and the treatment of transactions entered after reopening. Restoring an older database without reconciling new orders or payments can lose legitimate business activity.
 
-## Step 7: Plan the cut-over
+## What happens after reopening?
 
-Once the test version is signed off, plan the real move:
+Verify critical transactions before normal volume resumes. Check authorised production endpoints, scheduled processes, attachments and user access. Assign support owners for the first operating cycles and the first relevant financial close.
 
-- Pick a quiet business window, not your busiest week.
-- Freeze changes, run the final production upgrade, and load any last data.
-- Verify the critical processes immediately after, before you reopen for normal work.
+For the investment and timing decision that precedes this work, read [whether and when to upgrade](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/).
 
-## Step 8: Support the first days
-
-Have help on hand for the first busy days after go-live. Watch for friction, answer questions fast,
-and fix small issues before they become frustrations. A well-tested upgrade usually makes this quiet,
-which is exactly the goal.
-
-
-Planning your move to Odoo 20? I am happy to review your setup and help you scope the upgrade
-sensibly.
+*Official references reviewed on 27 November 2026. Examples and test cases are illustrative proposals, not completed customer tests. Check the installed version, edition, hosting and provider requirements.*

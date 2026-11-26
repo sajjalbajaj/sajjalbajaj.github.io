@@ -2,79 +2,61 @@
 layout: post
 title: "Odoo 20: What to Expect and How to Prepare"
 date: 2026-07-31 09:00:00 +0530
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-27
 tags: [ERP, Odoo, AI, Digital Transformation, Bookkeeping, Business Intelligence, Data Analytics, Business Automation]
 hub: planning
-description: "A grounded preview of Odoo 20, based on the official roadmap: the AI direction, the features being discussed, and how businesses should prepare for the upgrade."
+description: "Prepare for Odoo 20 with a process inventory, feature shortlist, dependency checks and clear ownership before choosing an upgrade project."
+faqs:
+  - q: "Is Odoo 20 still an upcoming release?"
+    a: "No. Odoo's support table lists Odoo 20.0 as released in September 2026. Earlier preview wording in this article has been replaced with current preparation advice."
+  - q: "What should be prepared before requesting an upgrade?"
+    a: "Record the current version, edition, hosting, installed modules, custom code, integrations and critical business workflows."
+  - q: "Does a release note prove a feature will work in my database?"
+    a: "No. Confirm the feature's requirements and demonstrate it with the intended user roles, modules and representative records."
 ---
 
-**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
+**Short answer:** Odoo 20 is released, so preparation should now focus on your actual database and business processes. Build an inventory of modules, custom work and integrations, shortlist the changes that matter, and assign owners to the evidence needed for an upgrade decision.
 
-> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
+## What has changed since this article was first published?
 
-Every year Odoo ships a major new version, and the next one, **Odoo 20**, is already generating a
-lot of questions from clients. Here is a grounded look at what we actually know, what to expect,
-and how to prepare, without the hype.
+This page began as a July 2026 preview. It has been revised to remove expectations presented as current facts. Odoo's [standard and extended support table](https://www.odoo.com/documentation/20.0/administration/standard_extended_support.html) records the September 2026 release of Odoo 20.0.
 
-## First, an honest caveat
+Use the [official release notes](https://www.odoo.com/odoo-20-release-notes) for confirmed product changes. They describe capabilities, but do not establish that your custom modules, country requirements or connected services are ready.
 
-Odoo 20 has **not been released yet**. It is expected to be unveiled at **Odoo Experience 2026**,
-Odoo's annual conference in Brussels, scheduled for **24 to 26 September 2026**, with general
-availability following in the weeks after.
+## What should the starting inventory contain?
 
-Everything below is based on the official roadmap that Odoo presented in April 2026, plus the clear
-direction of recent releases. Odoo itself cheerfully describes its roadmap as "a list of things we
-will maybe do," so treat specific features as likely, not guaranteed, until launch day.
+Record the current version and build, edition, hosting, installed applications and active companies. Then identify the owner of each custom module, connector, report and automated action.
 
-## The big theme: AI woven into the work
+Include apparently small adaptations such as modified invoice layouts, export files and access rules. These can matter to a customer or regulator even when they are absent from the main project presentation.
 
-If Odoo 18 and 19 sprinkled AI in, Odoo 20's stated ambition is to make AI an **assistance layer
-across the whole platform**, not a bolt-on chatbot in one corner.
+| Inventory item | Question to answer |
+| --- | --- |
+| Business workflow | What must staff still be able to complete? |
+| Custom module | Who supplies and maintains the target version? |
+| Integration | Which system owns credentials, retries and errors? |
+| Report | Which source balances or records must it reproduce? |
+| User role | Which permitted and refused actions must remain correct? |
 
-The direction being discussed is task-level AI that can actually do things inside your business:
-draft, check and act, with the human staying in control. Think less "ask a question, get an answer"
-and more "here is a task, let AI handle the first pass." The goal Odoo keeps repeating is simpler,
-more intuitive, more automated.
+## How should new features be shortlisted?
 
-## Features being talked about
+Start with an existing operational problem. A planner might need earlier movement between work orders; a finance team might need clearer bank matching; a support team might want assistance using approved procedures.
 
-From the roadmap and Odoo's recent trajectory, these are the areas getting attention. Again, expect
-movement before the final release:
+Link each problem to a documented capability, then identify what remains a business decision. For example, a new stock report can expose a reservation but cannot decide which customer receives priority.
 
-- **Accounting:** an AI-assisted audit to catch anomalies, and more direct payment handling from
-  inside Odoo.
-- **Payroll:** a simpler, dashboard-driven flow that reduces manual work entries.
-- **Point of Sale:** easier hardware setup and smarter product combos.
-- **Mobile:** a purpose-built mobile experience with clearer, touch-friendly screens.
-- **Platform:** deeper automation across modules, and infrastructure work aimed at larger,
-  higher-load deployments.
+Select a few workflows for assessment. Turning on unrelated features during the upgrade makes it harder to understand whether an issue came from version conversion or process redesign.
 
-The through-line is friction reduction for everyday users, rather than more knobs for power users.
+## What should a discovery review produce?
 
-## What this means for your business
+Consider an illustrative distributor with a courier connector and custom customer statements. Discovery should identify the connector owner, available Odoo 20 version, statement reconciliation examples and the people who can approve them.
 
-A new version is exciting, but the smart question is not "what is new," it is "what is new **for
-me**." A few practical points:
+The output is a dependency list with an owner and an evidence request. It is not a promised completion date based only on the number of installed apps.
 
-- **You do not have to upgrade on day one.** New major versions mature over the following months.
-  For anything running real operations, waiting for the first stable patches is the sensible play.
-- **Custom modules and integrations need testing.** If you have custom development, third-party
-  apps or a multi-company setup, budget time to test them against the new version before you commit.
-- **AI features are a tool, not a strategy.** The value comes from pointing them at a real, specific
-  task, not from turning everything on at once.
+For the detailed operating implications, consult the guides on [continuous production](/blog/2026/11/12/odoo-20-continuous-production/), [bank consistency](/blog/2026/11/10/odoo-20-bank-consistency-payment-status/) and [AI agent scope](/blog/2026/11/04/odoo-20-ai-agents-governance/).
 
-## How to prepare now
+## What comes after preparation?
 
-You do not need to wait for launch to get ready:
+Use the inventory to make a [whether and when to upgrade decision](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/). If the project proceeds, the separate [migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) covers test conversion and cutover.
 
-1. **Know your current version and edition.** Clarity on where you are today makes any upgrade path
-   simpler.
-2. **List your customizations and integrations.** This is the part that makes or breaks an upgrade.
-3. **Keep configurations clean.** The tidier your current setup, the smoother the move.
-4. **Pick your moment.** Plan the upgrade for a quiet business period, not your busiest month.
+Capture expected outcomes in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/). Preparation is complete when the important unknowns have owners and a route to evidence, even if some dependencies still block production.
 
-
-If you are on an older Odoo version and wondering whether and when to move, that is exactly the kind
-of planning I help with. Happy to map out a sensible path when the time is right.
-
-*Source: [Odoo Experience 2026](https://www.odoo.com/event/odoo-experience-2026-1) and the official Odoo 20 roadmap.*
+*Official references reviewed on 27 November 2026. Examples and test cases are illustrative proposals, not completed customer tests. Check the installed version, edition, hosting and provider requirements.*

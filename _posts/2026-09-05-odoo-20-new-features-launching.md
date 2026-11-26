@@ -1,57 +1,61 @@
 ---
 layout: post
-title: "Odoo 20: The New Features Launching"
+title: "Odoo 20 Features: Confirmed Capabilities and What to Test"
 date: 2026-09-05 12:00:00 +0530
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 20, Features, ERP, AI, Automation, Upgrade, Business Automation]
 hub: planning
-description: "What genuinely new features is Odoo 20 launching? A plain-English preview of the fresh additions, from agentic AI to a redesigned mobile app and new industries."
+description: "Explore confirmed Odoo 20 capabilities through AI, documents, production and website examples, with links to detailed guides and practical limits."
+faqs:
+  - q: "Is this an exhaustive list of Odoo 20 changes?"
+    a: "No. It is a selected capability map. Use the official release notes for the full release list and the detailed documentation for setup."
+  - q: "Does every item in Odoo 20 release notes originate in version 20?"
+    a: "No. Some notes explicitly identify availability from earlier versions. Check that qualification before describing a capability as entirely new."
+  - q: "Do the same features work on every edition and hosting plan?"
+    a: "Do not assume so. Confirm installed applications, edition, hosting, access and external service requirements for the feature being assessed."
 ---
 
-**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
+**Short answer:** Odoo 20 has documented capabilities across AI, document handling, manufacturing and website operations. Use a shortlist matched to your business problem, then read the detailed requirements and test the outcome. A release list is neither an implementation specification nor proof that every item is new to version 20.
 
-> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
+## Which sources replace the earlier preview?
 
-Every new Odoo version brings a mix of brand-new capabilities and improvements to existing ones. This post focuses on
-what is genuinely new in Odoo 20, the fresh arrivals, rather than the upgrades to things already there, which I cover
-separately.
+This page originally discussed expected features before launch. It now uses the [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) and the linked official documentation.
 
-A note on accuracy: as of early September 2026, Odoo 20 has not launched. What follows is based on Odoo's public roadmap
-ahead of the launch, and Odoo itself describes its roadmap as a list of things it might do. So treat this as an informed
-preview; the confirmed feature list comes at the launch.
+Some release entries identify availability from earlier versions. Keep those qualifications when comparing versions. Describing an existing capability as newly introduced can lead a team to plan an unnecessary upgrade or overlook a configuration option it already has.
 
-## Agentic AI: the flagship new capability
+## Which AI capabilities deserve separate assessment?
 
-The standout new feature is the move to agentic AI. Earlier Odoo versions used AI as an assistant, answering questions
-and helping draft content. Odoo 20 is expected to introduce AI that can actually carry out tasks on its own within your
-workflows, an AI agent rather than just an AI helper. If it lands as described, this is the most significant addition,
-because it changes what the software can do for you, not just how it looks.
+The [agent documentation](https://www.odoo.com/documentation/20.0/applications/productivity/ai/agents.html) describes agents through instructions, knowledge, skills, tools and triggers. The [MCP server reference](https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html) addresses external client connections.
 
-## A redesigned mobile app
+Those solve different problems. An internal agent's task definition is not the same as granting an external client access to database tools.
 
-Odoo 20 is expected to bring a redesigned mobile application. As more work happens on phones and tablets, a genuinely
-good mobile experience matters, for approvals on the move, for field staff, for anyone not sat at a desk. A fresh mobile
-app aimed at making Odoo pleasant and capable on a small screen is a welcome new arrival.
+The [document sorting guide](https://www.odoo.com/documentation/20.0/applications/productivity/ai/document_sort.html) describes folder based prompts and available actions. Classification should still be checked before a document's routing is treated as an approved accounting or confidentiality decision.
 
-## New industry verticals
+## What should operations teams investigate?
 
-One of the more interesting themes is dedicated solutions for new industries. Odoo 20 is expected to ship
-industry-specific packages for areas such as hospitality, construction and others, bringing tailored features for those
-sectors out of the box. For businesses in those industries, a ready-made vertical means less configuration and a faster
-start on features built for how they actually work.
+| Business question | Guide to start with | Important distinction |
+| --- | --- | --- |
+| Can the next operation start on a partial quantity? | [Continuous production](/blog/2026/11/12/odoo-20-continuous-production/) | Work progress differs from finished stock |
+| Which receipt checks did a supplier pass? | [Quality rate](/blog/2026/11/14/odoo-20-quality-rate/) | Check percentages differ from unit yield |
+| Which demand needs incoming supply? | [Allocation report](/blog/2026/11/16/odoo-20-allocation-report/) | Allocation does not move inventory |
+| Can a client use database tools? | [MCP server](/blog/2026/11/05/odoo-20-mcp-server/) | Connection approval differs from action permission |
 
-## Technical additions under the hood
+Select the row that corresponds to a real issue. Avoid enabling all of them as an undefined “innovation” workstream.
 
-Not all new features are visible on screen. Odoo 20 is expected to include technical additions aimed at speed and scale,
-such as database improvements for handling larger workloads and better offline functionality. These are the kind of
-changes you do not see directly but feel as a smoother, faster, more reliable system, especially as your business grows.
+## What should website teams review?
 
-## What to make of the new features
+The release notes describe AI assisted page and form editing, default structured data, adaptive images and sitemap improvements. Each has a different acceptance result.
 
-The through-line of Odoo 20's new features is intelligence and reach: smarter automation through agentic AI, a better
-experience on mobile, ready-made solutions for more industries, and stronger foundations underneath. It is less about a
-long checklist of small additions and more about a few meaningful steps forward.
+For a form, demonstrate the submission and destination record. For structured data, check that the entity agrees with the visible page. For images, inspect mobile loading and presentation. None of those checks can be replaced by a claim that the site now uses AI.
 
+The [Website SEO guide](/blog/2026/11/26/odoo-20-website-seo-structured-data/) explains the rendered page checks.
 
-*Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
-The confirmed feature list comes at launch. Want to know what Odoo 20 means for you? [Get in touch](/services/odoo-consulting/).*
+## How should a feature shortlist become a decision?
+
+For each candidate, state the current problem, confirmed capability, setup requirements and proposed evidence. Include the cost of adaptation and training as well as any service usage charges.
+
+An illustrative shortlist might retain one reporting change for immediate assessment and defer an action taking AI pilot until permissions are clear. That is a planning decision, not a measured benefit from a completed deployment.
+
+Use the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) to record tests. For changes to an existing workflow, read [what needs review when moving from Odoo 19](/blog/2026/09/05/odoo-20-whats-getting-upgraded/).
+
+*Official references reviewed on 27 November 2026. Examples and test cases are illustrative proposals, not completed customer tests. Check the installed version, edition, hosting and provider requirements.*

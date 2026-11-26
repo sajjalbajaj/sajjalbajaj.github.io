@@ -1,58 +1,63 @@
 ---
 layout: post
-title: "Odoo 20 and Agentic AI: The Headline of This Release"
+title: "Odoo 20 Agentic AI: What Agents Can Do and What Needs Control"
 date: 2026-09-05 10:00:00 +0530
-last_modified_at: 2026-11-25
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 20, AI, Automation, ERP, Upgrade, Business Automation, Digital Transformation]
 hub: planning
-description: "Agentic AI is the flagship of Odoo 20. What it means, how it differs from earlier AI in Odoo, and what it could do for your business, in plain English."
+description: "Understand Odoo 20 agentic AI through knowledge, skills, tools and triggers, including why instructions alone do not enforce action approval."
+faqs:
+  - q: "What makes an Odoo AI agent different from a text assistant?"
+    a: "An agent can combine instructions and information with skills and tools that perform tasks. The configured capabilities determine what it can actually do."
+  - q: "Does every automatically triggered agent ask before changing records?"
+    a: "No. Odoo's AI server action documentation says automatically triggered agents can act directly. Enforce necessary checks through configuration, permissions and execution logic."
+  - q: "Is agentic AI entirely new to Odoo 20?"
+    a: "Do not infer first introduction from this label. This guide describes the documented Odoo 20 components rather than claiming every AI capability first appeared in this version."
 ---
 
-**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
+**Short answer:** In Odoo 20, agentic AI means an assistant can use configured skills and tools to perform tasks, rather than only generate text. Its practical scope comes from its sources, actions, triggers and permissions. Do not assume a natural language instruction automatically creates an approval or security boundary.
 
-> **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
+## What components does the official documentation describe?
 
-If there is one phrase to know about Odoo 20, it is agentic AI. It is the headline of the release and the clearest sign
-of where Odoo is heading. But what does it actually mean, and why does it matter? Here is a plain-English explanation.
+The [Odoo 20 agent reference](https://www.odoo.com/documentation/20.0/applications/productivity/ai/agents.html) identifies instructions, knowledge, skills and tools, and triggers. Instructions describe the role. Knowledge supplies information. Skills organise task guidance and tools. Triggers determine when the agent runs.
 
-A note on accuracy: as of early September 2026, Odoo 20 has not launched, so this is based on Odoo's public roadmap and
-direction ahead of the launch. Exactly how agentic AI works in practice is confirmed at the event and refined in the
-releases that follow.
+Creating and customising agents requires the AI application, and requests use the documented IAP arrangements. Confirm availability and usage costs for the actual database.
 
-## From AI helper to AI agent
+This is a current explanation of those components. It replaces this page's earlier roadmap discussion and does not claim that every form of AI assistance first appeared in Odoo 20.
 
-Earlier Odoo versions introduced AI as a helper. It could answer questions, draft text, summarise and assist, useful,
-but always something you drove. Agentic AI is a step beyond that. An AI agent does not just help you do a task; it can
-carry out a task itself, taking steps within your workflow to get something done. The shift is from an assistant that
-waits for instructions to an agent that acts.
+## How does an answer differ from an action?
 
-## What that could look like in practice
+An assistant might explain a published returns policy, draft a response or request a record change. Those outcomes have different consequences.
 
-Imagine routine work that today needs a person to click through it: chasing a follow-up, drafting and sending a standard
-response, moving a record along when conditions are met, preparing something for review. An AI agent could handle steps
-like these on its own, within the boundaries you set, freeing people for the work that genuinely needs human judgement.
-That is the promise: less routine clicking, more real work.
+A correct explanation does not establish that a proposed refund is authorised. A successful tool call does not establish that the business rule was appropriate. Decide which outcome the workflow is intended to produce before selecting its capabilities.
 
-## Why it matters more than a normal feature
+| Capability | Question to ask |
+| --- | --- |
+| Retrieve a procedure | Is the source current and appropriate? |
+| Draft a message | Who checks the recipient and content? |
+| Change a record | Which permission and rule allow that change? |
+| Run on an event | What prevents an unintended repeat? |
 
-Most new features add something you can do. Agentic AI changes who does the work. If software can take on genuine tasks
-rather than just assist with them, the productivity effect is different in kind, not just degree. That is why this is the
-headline of Odoo 20 rather than one item on a feature list: it points at a real change in how an ERP earns its keep.
+## Why is a prompt not the whole control?
 
-## The sensible way to think about it
+The [AI server action documentation](https://www.odoo.com/documentation/20.0/applications/productivity/ai/server-actions.html) warns that automatically triggered agents act without requesting approval before record changes. It also places business rule enforcement in the execution logic of tools.
 
-Excitement aside, the wise approach is grounded. New capabilities like this arrive and then mature over subsequent
-releases; the first version is rarely the finished article. Treat agentic AI as a promising direction to understand now
-and adopt carefully, starting with low-risk tasks where an AI agent handling the work saves time without much downside,
-and expanding as trust and the technology both grow.
+Therefore, writing “ask before acting” in a description is insufficient evidence for a consequential workflow. Inspect the actual available actions, user identity and required checks, then demonstrate the refused case as well as the successful one.
 
-## Keep a human in the loop
+For the detailed configuration review, see [AI agents and human review](/blog/2026/11/04/odoo-20-ai-agents-governance/).
 
-Whatever AI agents can do, judgement, oversight and accountability stay human. The best use of agentic AI is to remove
-drudgery while keeping people in control of decisions that matter. Setting sensible boundaries on what an agent does, and
-reviewing its work, is what makes it a genuine help rather than a risk. Automation should serve your judgement, not
-replace it.
+## What is a useful first pilot?
 
+Consider an illustrative internal assistant answering questions from approved support procedures. Start with information and draft responses. Keep payments, bank changes and customer account changes outside its permitted scope.
 
-*Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
-Details are confirmed at launch. Want to use Odoo's automation well? [Get in touch](/services/odoo-consulting/).*
+Prepare a covered question, an unsupported question, an outdated source and a request to perform an excluded action. Record whether the answer cites appropriate information and whether the prohibited operation can actually occur.
+
+A fluent answer should not be the only pass condition. The owner needs a way to identify an unsupported answer and route it to a person.
+
+## How should the scope expand?
+
+Add a capability only after its inputs, business rule and failure owner are understood. Recheck source freshness when a procedure changes, and review access when the agent's purpose changes.
+
+Connecting an external assistant is a separate architecture decision; the [MCP guide](/blog/2026/11/05/odoo-20-mcp-server/) covers that boundary. Record proposed tests and actual results separately in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/).
+
+*Official references reviewed on 27 November 2026. Examples and test cases are illustrative proposals, not completed customer tests. Check the installed version, edition, hosting and provider requirements.*
