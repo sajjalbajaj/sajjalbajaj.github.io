@@ -72,6 +72,10 @@ defaults:
       layout: case-study
 
 exclude:
+  - SECURITY.md
+  - CLAUDE.md
+  - PROJECT_MEMORY.md
+  - docs/ai
   - scripts
   - design-system
   - README.md

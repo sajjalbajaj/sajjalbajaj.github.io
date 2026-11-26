@@ -30,3 +30,19 @@ content-review/
 
 # Local Bundler settings (Ruby gems for local preview live outside the repo)
 .bundle/
+
+# Credentials and local data must never enter the public repository.
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+__pycache__/
+
+# Private authoring records.
+CLAUDE.md
+PROJECT_MEMORY.md
+docs/ai/

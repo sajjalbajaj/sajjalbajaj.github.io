@@ -76,6 +76,15 @@ Open `styles.css` and tweak the tokens under `:root` (light) and `:root[data-the
 colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in both blocks. Text links use
 `--link` (darker amber in light mode for WCAG AA contrast).
 
+## Security maintenance
+
+See `SECURITY.md` for private reporting and repository controls. Run
+`python3 -m unittest discover -s scripts -p 'test_*.py'` and
+`python3 scripts/check_publish.py` before publication. After a Jekyll build, run
+`python3 scripts/check_publish.py --site _site` to check the generated artifact too.
+The Pages workflow runs these checks before upload. Dependabot proposes dependency
+updates and the security workflow analyses source code; review the results before merging.
+
 ## Accessibility & performance
 - Semantic landmarks, keyboard focus styles, `aria-live` on the Q&A answer.
 - Full `prefers-reduced-motion` support (animations, typing, and count-up all disable).
