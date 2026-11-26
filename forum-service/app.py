@@ -5,7 +5,6 @@ import hmac
 import io
 import json
 import os
-import re
 import secrets
 import smtplib
 import sqlite3
@@ -207,13 +206,22 @@ def config(site):
                    posting_ready=len(SECRET) >= 32)
 
 
+def valid_email(value):
+    # Use delimiter checks instead of a backtracking expression on untrusted input.
+    if value.count('@') != 1 or any(character.isspace() for character in value):
+        return False
+    local, _, domain = value.partition('@')
+    host, dot, suffix = domain.rpartition('.')
+    return bool(local and host and dot and suffix)
+
+
 @app.post('/api/<site>/identity')
 def identity(site):
     data = request.get_json()
     name = text_field(data, 'name', 100)
     email = text_field(data, 'email', 254).lower()
     phone = text_field(data, 'phone', 40, False)
-    if not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+', email):
+    if not valid_email(email):
         abort(400, 'Enter a valid email address.')
     public_url = urlparse(os.environ.get('FORUM_PUBLIC_URL', ''))
     if public_url.scheme != 'https' or not public_url.netloc:

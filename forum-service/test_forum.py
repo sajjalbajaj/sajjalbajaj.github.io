@@ -19,6 +19,18 @@ import worker
 
 
 class ForumTest(unittest.TestCase):
+    def test_email_validation_without_backtracking(self):
+        for address in ('reader@example.com', 'reader+tag@sub.example.co.uk'):
+            self.assertTrue(app.valid_email(address))
+        for address in ('', '@example.com', 'a@@example.com', 'reader@example',
+                        'reader@.com', 'reader@example.', 'a b@example.com',
+                        'reader@example.\ncom', '!' * 20000):
+            self.assertFalse(app.valid_email(address), address[:60])
+        response = self.client.post('/api/sajjal/identity', json={
+            'name': 'Test reader', 'email': '!' * 240,
+        })
+        self.assertEqual(response.status_code, 400)
+
     def setUp(self):
         self.client = app.app.test_client()
         with app.database() as db:
