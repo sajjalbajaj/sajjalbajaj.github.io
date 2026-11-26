@@ -15,6 +15,9 @@
   }
   let current = null;
   let topics = [];
+  let topicsLoaded = false;
+  const pageSize = 10;
+  let page = 1;
   let attachedFiles = [];
   let requestKey = '';
   let parentId = '';
@@ -51,26 +54,54 @@
   const post = (path, body, headers) => api(path, {method:'POST', body:JSON.stringify(body), headers});
   function publicLink(topic, reply) {
     const url = new URL(location.href);
-    url.search = new URLSearchParams({topic, ...(reply ? {post:reply} : {})});
+    url.searchParams.set('topic', topic);
+    url.searchParams.delete('post');
+    if (reply) url.searchParams.set('post', reply);
+    url.hash = '';
+    return url.toString();
+  }
+  function restoreListState() {
+    const params = new URLSearchParams(location.search);
+    $('#f-search').value = params.get('q') || '';
+    $('#f-filter').value = params.get('status') || 'all';
+    if (!$('#f-filter').value) $('#f-filter').value = 'all';
+    const requested = Number(params.get('page'));
+    page = Number.isSafeInteger(requested) && requested > 0 ? requested : 1;
+  }
+  function listUrl() {
+    const url = new URL(location.href);
+    ['topic','post','q','status','page'].forEach(key => url.searchParams.delete(key));
+    const search = $('#f-search').value.trim();
+    if (search) url.searchParams.set('q', search);
+    if ($('#f-filter').value !== 'all') url.searchParams.set('status', $('#f-filter').value);
+    if (page > 1) url.searchParams.set('page', page);
     url.hash = '';
     return url.toString();
   }
   function showList() {
     current = null;
-    const needle = $('#f-search').value.toLowerCase();
+    const needle = $('#f-search').value.trim().toLowerCase();
     const filter = $('#f-filter').value;
     const matches = topics.filter(topic => `${topic.title} ${topic.context}`.toLowerCase().includes(needle) && (filter === 'all' || (filter === 'unanswered' ? topic.replies === 0 : topic.state === filter)));
-    $('#f-content').innerHTML = matches.length ? matches.map(topic => `<article class="f-topic"><div class="f-meta"><span class="f-status">${escape(topic.state)}</span><time>${escape(date(topic.created))}</time><span>${topic.replies} ${topic.replies === 1 ? 'reply' : 'replies'}</span></div><h2><button data-topic="${escape(topic.id)}">${escape(topic.title)}</button></h2><p class="f-context">${escape(topic.context)}</p></article>`).join('') : '<p class="f-empty">No discussions here yet. Ask the first question or try another search.</p>';
+    const pages = Math.max(1, Math.ceil(matches.length / pageSize));
+    page = Math.min(page, pages);
+    const start = (page - 1) * pageSize;
+    const visible = matches.slice(start, start + pageSize);
+    const numbers = Array.from({length:pages}, (_, index) => index + 1).filter(number => number === 1 || number === pages || Math.abs(number - page) <= 1);
+    const controls = numbers.map((number, index) => `${index && number - numbers[index - 1] > 1 ? '<span class="f-page-gap" aria-hidden="true">…</span>' : ''}<button data-page="${number}" aria-label="Page ${number}"${number === page ? ' aria-current="page"' : ''}>${number}</button>`).join('');
+    $('#f-content').innerHTML = `<p class="f-results" role="status" aria-live="polite" tabindex="-1">${matches.length ? `Showing ${start + 1}–${Math.min(start + pageSize, matches.length)} of ${matches.length} discussions` : 'No matching discussions'}</p>` + (visible.length ? visible.map(topic => `<article class="f-topic"><div class="f-meta"><span class="f-status">${escape(topic.state)}</span><time>${escape(date(topic.created))}</time><span>${topic.replies} ${topic.replies === 1 ? 'reply' : 'replies'}</span></div><h2><button data-topic="${escape(topic.id)}">${escape(topic.title)}</button></h2><p class="f-context">${escape(topic.context)}</p></article>`).join('') : '<p class="f-empty">No discussions here yet. Ask the first question or try another search.</p>') + (pages > 1 ? `<nav class="f-pagination" aria-label="Discussion pages"><button data-page="${page - 1}"${page === 1 ? ' disabled' : ''}>Previous</button><div class="f-page-numbers">${controls}</div><button data-page="${page + 1}"${page === pages ? ' disabled' : ''}>Next</button><span class="f-page-summary">Page ${page} of ${pages}</span></nav>` : '');
+    history.replaceState({}, '', listUrl());
   }
   async function loadList() {
     const result = await api('/topics');
     topics = result.topics;
+    topicsLoaded = true;
     showList();
   }
   async function openTopic(id, replyId) {
     current = await api(`/topics/${encodeURIComponent(id)}`);
     const topic = current.topic;
-    $('#f-content').innerHTML = `<button class="f-link" id="f-back">← All discussions</button><div class="f-meta"><span class="f-status">${escape(topic.state)}</span><time>${escape(date(topic.created))}</time></div><h2>${escape(topic.title)}</h2><p class="f-context">${escape(topic.context)}</p><div class="f-settings"><label for="f-thread-sub">Email notifications</label><select id="f-thread-sub"><option value="all">All questions and answers</option><option value="direct">Direct replies only</option><option value="none">No emails</option></select><button class="f-link" id="f-save-sub">Save preference</button></div>${topic.accepted ? '<p class="f-notice">An accepted answer is marked below. <button class="f-link" data-jump="'+escape(topic.accepted)+'">Go to answer</button></p>' : ''}<div id="f-posts"></div>${current.can_resolve ? '<button class="f-link" id="f-reopen">Reopen discussion</button>' : ''}`;
+    $('#f-content').innerHTML = `<button class="f-link" id="f-back">All discussions</button><div class="f-meta"><span class="f-status">${escape(topic.state)}</span><time>${escape(date(topic.created))}</time></div><h2>${escape(topic.title)}</h2><p class="f-context">${escape(topic.context)}</p><div class="f-settings"><label for="f-thread-sub">Email notifications</label><select id="f-thread-sub"><option value="all">All questions and answers</option><option value="direct">Direct replies only</option><option value="none">No emails</option></select><button class="f-link" id="f-save-sub">Save preference</button></div>${topic.accepted ? '<p class="f-notice">An accepted answer is marked below. <button class="f-link" data-jump="'+escape(topic.accepted)+'">Go to answer</button></p>' : ''}<div id="f-posts"></div>${current.can_resolve ? '<button class="f-link" id="f-reopen">Reopen discussion</button>' : ''}`;
     $('#f-thread-sub').value = current.subscription;
     if (!['all','direct','none'].includes(current.subscription)) $('#f-thread-sub').value = 'all';
     const postsById = new Map(current.posts.map(reply => [reply.id, reply]));
@@ -136,7 +167,14 @@
       if (target.hasAttribute('data-close')) return target.closest('dialog').close();
       if (target.dataset.topic) { history.pushState({},'',publicLink(target.dataset.topic)); await openTopic(target.dataset.topic); }
       if (target.dataset.jump) jump(target.dataset.jump);
-      if (target.id === 'f-back') { history.pushState({},'',location.pathname); await loadList(); }
+      if (target.id === 'f-back') { history.pushState({},'',listUrl()); await loadList(); }
+      if (target.dataset.page) {
+        page = Number(target.dataset.page);
+        history.pushState({}, '', listUrl());
+        showList();
+        $('#f-content .f-results').focus({preventScroll:true});
+        $('#f-content').scrollIntoView({behavior:'smooth',block:'start'});
+      }
       if (target.id === 'f-ask') compose();
       if (target.id === 'f-signin') $('#f-identity').showModal();
       if (target.dataset.reply) compose(current.posts.find(reply => reply.id === target.dataset.reply));
@@ -149,8 +187,13 @@
       if (target.dataset.hide) { await post('/moderate',{post:target.dataset.hide,hidden:true},{'X-Admin-Key':adminKey}); await openTopic(current.topic.id); }
     } catch (error) { message(error.message); }
   });
-  $('#f-search').addEventListener('input', showList);
-  $('#f-filter').addEventListener('change', showList);
+  const resetList = () => {
+    page = 1;
+    if (topicsLoaded) showList();
+    else loadList().catch(error => message(error.message));
+  };
+  $('#f-search').addEventListener('input', resetList);
+  $('#f-filter').addEventListener('change', resetList);
   $('#f-title').addEventListener('input', () => {
     saveDraft();
     const phrase = $('#f-title').value.toLowerCase();
@@ -249,6 +292,7 @@
       const config = await api('/config');
       if (!config.email_ready) message('The forum server is connected. Email verification and notifications are awaiting the email-provider configuration.');
       else if (!config.posting_ready) message('Forum authentication is awaiting configuration.');
+      restoreListState();
       if (query.has('topic')) await openTopic(query.get('topic'),query.get('post'));
       else await loadList();
       if (justVerified && current) {
@@ -256,6 +300,6 @@
       }
     } catch (error) { message(error.message); }
   }
-  window.addEventListener('popstate', () => { const params=new URLSearchParams(location.search); (params.has('topic') ? openTopic(params.get('topic'),params.get('post')) : loadList()).catch(error => message(error.message)); });
+  window.addEventListener('popstate', () => { const params=new URLSearchParams(location.search); restoreListState(); (params.has('topic') ? openTopic(params.get('topic'),params.get('post')) : loadList()).catch(error => message(error.message)); });
   start();
 })();

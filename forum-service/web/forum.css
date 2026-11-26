@@ -355,3 +355,43 @@ html[data-theme=dark] .forum-app {
     padding:20px;
   }
 }
+
+.f-results {
+  color:var(--f-muted);
+  font-size:14px;
+  scroll-margin-top:100px;
+}
+.f-pagination,.f-page-numbers {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.f-pagination {
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid var(--f-line);
+}
+.forum-app .f-pagination button {
+  min-height:44px;
+  min-width:44px;
+}
+.forum-app .f-pagination button[aria-current=page] {
+  background:var(--f-tint);
+  border-color:var(--f-accent);
+  color:var(--f-accent);
+  font-weight:700;
+}
+.forum-app .f-pagination button:disabled {
+  cursor:default;
+}
+.f-page-gap,.f-page-summary {
+  color:var(--f-muted);
+  font-size:14px;
+}
+.f-page-summary {
+  flex-basis:100%;
+}
+#f-content {
+  scroll-margin-top:100px;
+}
