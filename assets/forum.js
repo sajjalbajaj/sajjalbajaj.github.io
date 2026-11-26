@@ -16,6 +16,7 @@
   let current = null;
   let topics = [];
   let attachedFiles = [];
+  let requestKey = '';
   let parentId = '';
   let parentName = '';
   let composingReply = false;
@@ -30,7 +31,7 @@
     <div class="f-layout"><section id="f-content" aria-label="Discussions"></section><aside class="f-aside"><h3>A useful question gets further</h3><p>${site === 'sajjal' ? 'Include your Odoo version, edition, hosting, and the app involved. Tell us what you tried.' : 'Include the tool, version, guide step, and what you expected to happen.'}</p><h3>Your contact details stay private</h3><p>Your question appears as “Question author”. You can choose a public name when answering someone else, or reply as a guest.</p><h3>Answers from the guides</h3><p>When a published guide answers your question, an automated reply appears under ${escape(ownerName)}’s name with its source. Target response time is within 10 minutes.</p><button class="f-link" id="f-owner">Owner tools</button></aside></div>
     <dialog id="f-identity"><form id="f-identity-form"><div class="f-dialog-head"><h2>Keep your conversation going</h2><button type="button" data-close aria-label="Close">×</button></div><p class="f-muted">Verify your email to ask a question, post by name, and receive replies. These contact details stay private.</p><label for="f-name">Private name *</label><input id="f-name" name="name" autocomplete="name" required maxlength="100"><label for="f-email">Private email *</label><input id="f-email" type="email" name="email" autocomplete="email" required maxlength="254"><label for="f-phone">Phone · optional</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"><div class="f-actions"><button class="f-primary">Send verification link</button></div><p class="f-muted" id="f-identity-message" role="status"></p></form></dialog>
     <dialog id="f-compose"><form id="f-compose-form"><div class="f-dialog-head"><h2 id="f-compose-title">Ask the community</h2><button type="button" data-close aria-label="Close">×</button></div><div id="f-question-fields"><label for="f-title">Question title *</label><input id="f-title" maxlength="180"><label for="f-context">${site === 'sajjal' ? 'Odoo version, edition, hosting, and app' : 'Tool, version, environment, and guide step'}</label><input id="f-context" maxlength="1000" placeholder="${site === 'sajjal' ? 'For example, Odoo 19 Enterprise · Odoo.sh · Sales' : 'For example, Python 3.12 · Ubuntu · Step 4'}"><p id="f-related" class="f-muted"></p></div><div id="f-reply-fields" hidden><label for="f-mode">Public author</label><select id="f-mode"><option value="named">Use a public display name</option><option value="guest">Reply as guest</option></select><label for="f-display">Public display name</label><input id="f-display" maxlength="80"><label class="f-check"><input type="checkbox" id="f-followup">This reply includes a follow-up question</label></div><label for="f-body">Message *</label><textarea id="f-body" required maxlength="20000" placeholder="What happened? What have you tried? What would you like help with?"></textarea><label for="f-files">Attachments · optional</label><input id="f-files" type="file" multiple accept="image/jpeg,image/png,image/webp,video/mp4,application/pdf,text/plain"><small>Up to 5 files, 25 MB each. Screenshots, MP4, PDF, or text logs. Files will be public. Remove passwords and customer details before uploading.</small><div id="f-file-list" class="f-file-list"></div><label for="f-subscription">Email notifications for this thread</label><select id="f-subscription"><option value="all">All questions and answers</option><option value="direct">Direct replies only</option><option value="none">No emails</option></select><p class="f-muted" id="f-author-preview"></p><details><summary>Preview message</summary><div id="f-preview" class="f-preview"></div></details><div class="f-actions"><button class="f-primary" id="f-submit">Publish</button><span class="f-saved">Your draft is saved in this browser.</span></div><p id="f-compose-message" role="status"></p></form></dialog>
-    <dialog id="f-admin"><div class="f-dialog-head"><h2>Owner tools</h2><button data-close aria-label="Close">×</button></div><form id="f-admin-form"><label for="f-admin-key">Owner access key</label><input id="f-admin-key" type="password" required autocomplete="off"><div class="f-actions"><button class="f-primary">Open moderation</button></div></form><div id="f-admin-results"></div></dialog>`;
+    <dialog id="f-admin"><div class="f-dialog-head"><h2>Owner tools</h2><button data-close aria-label="Close">×</button></div><form id="f-admin-form"><label for="f-admin-key">Owner access key · optional when signed in with the owner email</label><input id="f-admin-key" type="password" autocomplete="off"><div class="f-actions"><button class="f-primary">Open moderation</button></div></form><div id="f-admin-results"></div></dialog>`;
   const $ = selector => root.querySelector(selector);
   const message = text => { $('#f-message').textContent = text; };
   const saveToken = value => { token = value; sessionStorage.setItem(storageKey, token); };
@@ -40,6 +41,10 @@
     if (token) headers.Authorization = `Bearer ${token}`;
     const response = await fetch(`${apiBase}/api/${site}${path}`, {...options, headers});
     const result = await response.json();
+    if (response.status === 401 && token) {
+      saveToken('');
+      if (options.method !== 'POST') return api(path,options);
+    }
     if (!response.ok) throw new Error(result.error || 'The request failed. Please try again.');
     return result;
   }
@@ -92,11 +97,12 @@
   }
   function saveDraft() {
     const key = composingReply ? `${storageKey}-reply-draft` : `${storageKey}-draft`;
-    localStorage.setItem(key, JSON.stringify({title:$('#f-title').value,body:$('#f-body').value,context:$('#f-context').value,parent:parentId,topic:current?.topic.id}));
+    localStorage.setItem(key, JSON.stringify({title:$('#f-title').value,body:$('#f-body').value,context:$('#f-context').value,parent:parentId,topic:current?.topic.id,request_key:requestKey}));
     $('#f-preview').textContent = $('#f-body').value;
   }
   function compose(reply) {
     composingReply = Boolean(reply);
+    requestKey = crypto.randomUUID();
     parentId = reply?.id || '';
     parentName = reply?.display || '';
     attachedFiles = [];
@@ -109,11 +115,12 @@
     $('#f-compose-title').textContent = composingReply ? `Reply to ${parentName}` : 'Ask the community';
     $('#f-body').value = '';
     if (reply) {
-      try { const draft = JSON.parse(localStorage.getItem(`${storageKey}-reply-draft`) || '{}'); if (draft.parent === reply.id) $('#f-body').value = draft.body || ''; } catch (_) { /* Ignore an invalid draft. */ }
+      try { const draft = JSON.parse(localStorage.getItem(`${storageKey}-reply-draft`) || '{}'); if (draft.parent === reply.id) { $('#f-body').value = draft.body || ''; requestKey = draft.request_key || requestKey; } } catch (_) { /* Ignore an invalid draft. */ }
     }
     if (!reply) {
       let draft = {};
       try { draft = JSON.parse(localStorage.getItem(`${storageKey}-draft`) || '{}'); } catch (_) { /* Ignore an old draft with an invalid format. */ }
+      requestKey = draft.request_key || requestKey;
       $('#f-title').value = draft.title || (query.get('title') ? `Question about ${query.get('title')}`.slice(0,180) : '');
       $('#f-context').value = draft.context || (query.get('guide') || '');
       $('#f-body').value = draft.body || '';
@@ -180,10 +187,22 @@
       if (selected.length > 5 || selected.some(file => file.size > 25*1024*1024)) throw new Error('Choose up to five files of 25 MB each.');
       for (let index = attachedFiles.length; index < selected.length; index++) {
         $('#f-compose-message').textContent = `Uploading ${index + 1} of ${selected.length}…`;
-        const form = new FormData(); form.append('file',selected[index]);
+        const form = new FormData();
+        let file = selected[index];
+        if (file.type === 'image/webp') {
+          const bitmap = await createImageBitmap(file);
+          const canvas = document.createElement('canvas');
+          canvas.width = bitmap.width; canvas.height = bitmap.height;
+          canvas.getContext('2d').drawImage(bitmap,0,0);
+          bitmap.close();
+          const blob = await new Promise(resolve => canvas.toBlob(resolve,'image/jpeg',0.9));
+          if (!blob) throw new Error('The image could not be converted. Please upload JPG or PNG.');
+          file = new File([blob],file.name.replace(/\.webp$/i,'.jpg'),{type:'image/jpeg'});
+        }
+        form.append('file',file);
         attachedFiles.push((await api('/uploads',{method:'POST',body:form})).id);
       }
-      const body = {body:$('#f-body').value,files:attachedFiles,subscription:$('#f-subscription').value};
+      const body = {body:$('#f-body').value,files:attachedFiles,subscription:$('#f-subscription').value,request_key:requestKey};
       let result;
       if (composingReply) {
         Object.assign(body,{parent:parentId,guest,display:$('#f-display').value,question:$('#f-followup').checked});
@@ -228,7 +247,8 @@
       if (hash.has('verify')) { saveToken((await post('/verify',{token:hash.get('verify')})).token); history.replaceState({},'',location.pathname+location.search); message('Email verified. Open “Ask a question” to restore and publish your draft.'); }
       if (hash.has('unsubscribe')) { await post('/unsubscribe',{token:hash.get('unsubscribe')}); history.replaceState({},'',location.pathname+location.search); message('Unsubscribed from this discussion.'); }
       const config = await api('/config');
-      if (!config.email_ready || !config.posting_ready) message('Forum setup is in progress. Email verification and posting will open after the owner completes configuration.');
+      if (!config.email_ready) message('The forum server is connected. Email verification and notifications are awaiting the email-provider configuration.');
+      else if (!config.posting_ready) message('Forum authentication is awaiting configuration.');
       if (query.has('topic')) await openTopic(query.get('topic'),query.get('post'));
       else await loadList();
       if (justVerified && current) {
