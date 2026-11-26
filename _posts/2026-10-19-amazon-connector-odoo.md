@@ -14,7 +14,7 @@ faqs:
     a: "Odoo's documented connector supports multiple seller accounts and multiple marketplaces per seller account. Confirm the marketplace list and tax and settlement setup for your business before enabling each account."
 ---
 
-If your business sells through Amazon and also uses Odoo, importing the order is only one part of the job. The company still needs a clear view of which stock Amazon holds, which orders the warehouse must ship, what Amazon has already fulfilled, and how marketplace settlements reach the accounts.
+**Short answer:** If your business sells through Amazon and also uses Odoo, importing the order is only one part of the job. The company still needs a clear view of which stock Amazon holds, which orders the warehouse must ship, what Amazon has already fulfilled, and how marketplace settlements reach the accounts.
 
 Odoo 19 includes an Amazon connector in the Sales app. It synchronizes orders and related order lines, including product quantities and certain shipping or gift-wrapping charges. It can notify Amazon when an FBM shipment is confirmed in Odoo, synchronize available quantities for FBM products, and support multiple seller accounts and marketplaces. The connector does not replace Seller Central for every marketplace task.
 

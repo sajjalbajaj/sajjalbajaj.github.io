@@ -7,6 +7,8 @@ hub: services
 description: "The project management mistakes that quietly erode margins in Odoo, from untracked time to disconnected billing, and how to run projects that stay profitable."
 ---
 
+**Short answer:** Project mistakes rarely announce themselves; they show up as margins that are thinner than expected. Honest time tracking, connected billing, live profitability and a bit of structure are what turn projects from a hopeful guess into a managed, profitable activity. For a services business, that discipline is the difference between busy and profitable.
+
 For services businesses, projects are where the money is made or lost, and Odoo Project can show you which, if you use
 it well. The common mistakes here are quiet ones that erode margins without anyone noticing. Continuing this series on
 common Odoo mistakes, here is Project.
@@ -49,11 +51,6 @@ actually deliver protects both margins and reputations.
 - Give tasks clear stages, owners and deadlines.
 - Use planning to commit only to what the team can deliver.
 
-## My take
-
-Project mistakes rarely announce themselves; they show up as margins that are thinner than expected. Honest time
-tracking, connected billing, live profitability and a bit of structure are what turn projects from a hopeful guess into
-a managed, profitable activity. For a services business, that discipline is the difference between busy and profitable.
 
 Next in this series: common mistakes in Odoo Marketing.
 

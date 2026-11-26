@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo's drag-and-drop website builder lets you create a professional site with no code, and why building it inside your ERP is a real advantage."
 ---
 
+**Short answer:** Odoo Website puts a capable, professional site within reach without a developer for every change, and because it is part of your ERP, it connects straight into how your business actually runs. Start with the essentials, keep it on-brand, and let it grow.
+
 A website used to mean a developer, a content management system and a lot of back and forth. Odoo turns
 it into something you can build yourself, visually, inside the same system that runs your business. This
 starts a short series on Odoo Website and eCommerce.
@@ -52,11 +54,6 @@ site can grow with you.
 - Always check how pages look on mobile.
 - Use forms that feed into your CRM, so enquiries are captured, not lost.
 
-## My take
-
-Odoo Website puts a capable, professional site within reach without a developer for every change, and
-because it is part of your ERP, it connects straight into how your business actually runs. Start with the
-essentials, keep it on-brand, and let it grow.
 
 Next in the series: getting that site found on Google with Odoo's built-in SEO tools.
 

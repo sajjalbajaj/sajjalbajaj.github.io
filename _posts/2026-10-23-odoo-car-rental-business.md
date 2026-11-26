@@ -14,7 +14,7 @@ faqs:
     a: "Those workflows should not be assumed from the standard Rental documentation. They may require additional fields, documents, integrations or a specialist rental system."
 ---
 
-A car rental operation has one asset per reservation, a changing fleet condition, and a tight handover window. Odoo 19 Rental can manage rental quotations and orders, schedule rental periods, process pickup and return, and invoice from a connected workflow. A successful car rental setup depends on modeling each vehicle and its downtime clearly.
+**Short answer:** A car rental operation has one asset per reservation, a changing fleet condition, and a tight handover window. Odoo 19 Rental can manage rental quotations and orders, schedule rental periods, process pickup and return, and invoice from a connected workflow. A successful car rental setup depends on modeling each vehicle and its downtime clearly.
 
 This builds on the [Odoo Rental overview](/blog/2026/09/09/odoo-rental/) with a car fleet and branch workflow.
 

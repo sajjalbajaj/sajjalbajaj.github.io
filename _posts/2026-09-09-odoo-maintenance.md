@@ -7,6 +7,8 @@ hub: manufacturing
 description: "How Odoo Maintenance helps you look after equipment with preventive and corrective maintenance, so breakdowns are rarer and less costly."
 ---
 
+**Short answer:** Maintenance is about trading expensive, disruptive breakdowns for cheaper, planned upkeep. Odoo gives you the equipment register, preventive schedules and request tracking to make that shift, connected to the operations that rely on the machines. For anyone running equipment, staying ahead of failure is money in the bank.
+
 Equipment that breaks down at the wrong moment can stop production, blow budgets and frustrate everyone.
 Looking after it deliberately, rather than reacting when it fails, saves real money. Continuing this run
 through more Odoo apps, here is Maintenance.
@@ -48,11 +50,6 @@ informs decisions across the business.
 - Capture issues as maintenance requests so nothing is forgotten.
 - Use maintenance history to guide repair-or-replace decisions.
 
-## My take
-
-Maintenance is about trading expensive, disruptive breakdowns for cheaper, planned upkeep. Odoo gives you the
-equipment register, preventive schedules and request tracking to make that shift, connected to the operations
-that rely on the machines. For anyone running equipment, staying ahead of failure is money in the bank.
 
 Next in this run: managing repair jobs with Odoo Repairs.
 

@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to setting up multi-company in Odoo, so you can run several companies in one system with the right separation and shared data."
 ---
 
+**Short answer:** Multi-company is a genuinely powerful capability that rewards deliberate setup and punishes carelessness. Confirming you really need it, configuring each company properly, understanding the shared-versus-separate split and getting user access right are what keep it clean. Done well, you run several companies smoothly in one system; done hastily, you get confused books. So plan it, do not just switch it on.
+
 If your business is really several companies, Odoo can run them all in one system, with shared data where it helps and
 separation where it matters. It is powerful, and it needs deliberate setup. To round off this series of practical Odoo
 how-to guides, here is multi-company.
@@ -49,12 +51,6 @@ where a careless multi-company setup produces confusing, mismatched records.
 - Give users the right access to the right companies.
 - Set up inter-company transactions deliberately if your companies trade.
 
-## My take
-
-Multi-company is a genuinely powerful capability that rewards deliberate setup and punishes carelessness. Confirming you
-really need it, configuring each company properly, understanding the shared-versus-separate split and getting user access
-right are what keep it clean. Done well, you run several companies smoothly in one system; done hastily, you get confused
-books. So plan it, do not just switch it on.
 
 This series has walked through setting up even more of Odoo step by step, across manufacturing, services, HR, marketing
 and the structure of the system itself. Between these guides and the earlier ones, we have covered a great deal of a real

@@ -7,6 +7,8 @@ hub: hr
 description: "The HR mistakes that undermine Odoo's people apps, from incomplete employee records to unused self-service, and how to run HR that people actually trust."
 ---
 
+**Short answer:** HR mistakes are quiet but far-reaching, because so much else depends on people data. Complete records, real self-service, properly configured time off and sensible access controls are what make the HR apps trustworthy and useful. Get the foundation right and everything built on it, payroll included, gets easier.
+
 HR data underpins more than people realise: payroll, time off, appraisals, even project costing all lean on it. When
 the HR side is set up carelessly, the effects ripple outward. Continuing this series on common Odoo mistakes, here is
 HR.
@@ -49,11 +51,6 @@ see it. It protects both people and the business.
 - Treat HR data as feeding payroll, costing and planning, not an island.
 - Control access to sensitive employee information carefully.
 
-## My take
-
-HR mistakes are quiet but far-reaching, because so much else depends on people data. Complete records, real
-self-service, properly configured time off and sensible access controls are what make the HR apps trustworthy and
-useful. Get the foundation right and everything built on it, payroll included, gets easier.
 
 Next in this series: common mistakes in Odoo Payroll.
 

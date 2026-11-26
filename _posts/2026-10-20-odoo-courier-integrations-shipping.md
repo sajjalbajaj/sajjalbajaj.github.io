@@ -14,7 +14,7 @@ faqs:
     a: "At minimum, keep the warehouse and customer addresses accurate and maintain product weights. The carrier may also require package dimensions, phone numbers, service selection and other account-specific information."
 ---
 
-When shipping is handled by email and a separate courier portal, warehouse staff copy addresses, weigh packages twice and paste tracking numbers into customer messages. A carrier integration can move those steps into Odoo: calculate a rate, add a delivery charge, create a shipment label, and store the tracking reference on the delivery.
+**Short answer:** When shipping is handled by email and a separate courier portal, warehouse staff copy addresses, weigh packages twice and paste tracking numbers into customer messages. A carrier integration can move those steps into Odoo: calculate a rate, add a delivery charge, create a shipment label, and store the tracking reference on the delivery.
 
 Odoo 19 supports several carrier connectors. The available list varies by region and includes Shiprocket for India, plus providers and aggregators such as DHL Express, UPS, FedEx, Sendcloud and EasyPost in their supported markets. The presence of a connector does not guarantee a particular service, rate or pickup is available for every pin code or product.
 

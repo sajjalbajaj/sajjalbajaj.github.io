@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to setting up Odoo Knowledge, so your company's know-how lives in one organised, searchable place instead of in people's heads."
 ---
 
+**Short answer:** Knowledge tackles the quiet risk in every business: important know-how living only in people's heads or scattered files. A good structure, clear articles, sensible access and an easy contribution culture turn that into an organised, searchable resource. Keep it current and connected to the work, and it becomes the place people go for answers, which saves time and protects the business when people are busy or move on.
+
 Every business runs on knowledge that too often lives only in people's heads or scattered documents: how things are
 done, answers to common questions, reference material. Odoo Knowledge gives it a home. Setting it up well is what makes
 that knowledge findable. To round off this series of practical Odoo how-to guides, here is Knowledge.
@@ -49,12 +51,6 @@ work rather than having to go looking, which is what gets a knowledge base actua
 - Make contributing quick and normal so it stays current.
 - Connect knowledge to where work happens so it gets used.
 
-## My take
-
-Knowledge tackles the quiet risk in every business: important know-how living only in people's heads or scattered files.
-A good structure, clear articles, sensible access and an easy contribution culture turn that into an organised,
-searchable resource. Keep it current and connected to the work, and it becomes the place people go for answers, which
-saves time and protects the business when people are busy or move on.
 
 This series has now walked through setting up a great deal of Odoo, app by app, across finance, sales, operations,
 services, HR, marketing and productivity. Together with the earlier guides, it forms a practical, hands-on map of a real

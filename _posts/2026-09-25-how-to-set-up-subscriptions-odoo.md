@@ -7,6 +7,8 @@ hub: sales
 description: "A plain-English guide to setting up recurring billing in Odoo Subscriptions, so you can charge customers automatically and manage renewals with ease."
 ---
 
+**Short answer:** Subscriptions turn recurring revenue from a manual billing chore into something the system runs for you. Clear subscription products, the right recurrence, automated invoicing and clean renewal handling are what make it work, and the metrics tell you how the base is doing. For any recurring-revenue business, that automation and visibility are a real relief and a real advantage.
+
 If your business earns recurring revenue, memberships, retainers, software, services, Odoo Subscriptions automates the
 billing so you are not raising the same invoices by hand every month. Setting it up right is what makes that recurring
 revenue run smoothly. Continuing this series of practical Odoo how-to guides, here is subscriptions.
@@ -49,12 +51,6 @@ customers, which is exactly what a subscription business needs to watch.
 - Set up renewals and handle upgrades, downgrades and cancellations cleanly.
 - Watch recurring revenue and churn to manage the business.
 
-## My take
-
-Subscriptions turn recurring revenue from a manual billing chore into something the system runs for you. Clear
-subscription products, the right recurrence, automated invoicing and clean renewal handling are what make it work, and
-the metrics tell you how the base is doing. For any recurring-revenue business, that automation and visibility are a
-real relief and a real advantage.
 
 Next in this series: how to set up bank reconciliation.
 

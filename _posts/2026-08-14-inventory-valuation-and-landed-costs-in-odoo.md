@@ -7,6 +7,8 @@ hub: inventory
 description: "How Odoo values your stock, the difference between costing methods, and how landed costs capture the true cost of getting goods to your door."
 ---
 
+**Short answer:** Inventory valuation is where your warehouse meets your accounts. Pick a costing method with your accountant, lean towards automated valuation so stock and books stay in sync, and use landed costs to capture what goods really cost you. Do that, and the numbers you run the business on are numbers you can trust.
+
 Your stock is money sitting on a shelf, and your accounts need to reflect that. Inventory valuation
 is how Odoo puts a value on what you hold and keeps it in step with your books. Add landed costs, and
 you get the true cost of your goods, not just the sticker price. Here is how it works, without the
@@ -55,12 +57,8 @@ numbers. Get it wrong, or ignore landed costs, and you may think you are more pr
 For any business where stock is a big part of the picture, this is not optional detail, it is the
 truth of your finances.
 
-## My take
+Manufacturers also need component and operation costs to reach the finished product correctly. See [how Odoo costs manufactured products](/blog/2026/10/16/how-odoo-costs-manufactured-products/) before comparing production cost with inventory valuation.
 
-Inventory valuation is where your warehouse meets your accounts. Pick a costing method with your
-accountant, lean towards automated valuation so stock and books stay in sync, and use landed costs to
-capture what goods really cost you. Do that, and the numbers you run the business on are numbers you
-can trust.
 
 This completes the Inventory pillar of the series. Next we move on to the other core Odoo apps.
 

@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Frontdesk gives you a simple, professional way to manage visitors checking in, notify hosts automatically, and keep a clear record."
 ---
 
+**Short answer:** Frontdesk is a small, focused app that upgrades a surprisingly visible part of your business: how visitors are received. Self-service check-in, automatic notifications and a clear record replace the dog-eared sign-in book with something professional and useful. A minor app, but a nice touch that reflects an organised business.
+
 The way visitors are greeted says something about a business, and a paper sign-in book at reception is both
 dated and easily lost. Odoo Frontdesk offers a simple, modern alternative. To round off this run through more
 Odoo apps, here is Frontdesk.
@@ -47,11 +49,6 @@ your connected system.
 - Keep the visitor record for security and knowing who is on site.
 - Treat it as part of your connected workplace, not a standalone device.
 
-## My take
-
-Frontdesk is a small, focused app that upgrades a surprisingly visible part of your business: how visitors are
-received. Self-service check-in, automatic notifications and a clear record replace the dog-eared sign-in book
-with something professional and useful. A minor app, but a nice touch that reflects an organised business.
 
 This run has covered more of Odoo's apps beyond the core series. There is always more to explore, and I will
 keep adding fresh guides over time.

@@ -102,6 +102,8 @@ Review adoption, failed actions, manual overrides, records waiting without an ow
 
 Read [How to Set Up Users and Access Rights in Odoo](/blog/2026/09/21/how-to-set-up-odoo-users-access-rights/) for the connected workflow and earlier version context.
 
+Before adopting this feature in production, decide [whether and when to upgrade to Odoo 20](/blog/2026/08/10/odoo-20-migration-should-you-upgrade-and-when/) and use the [practical Odoo 20 migration guide](/blog/2026/08/10/upgrading-to-odoo-20-migration-guide/) to plan testing and go-live.
+
 ## Official Odoo 20 source
 
 1. [Official Odoo 20 documentation or release notes](https://www.odoo.com/documentation/20.0/applications/general/users/access_rights.html)

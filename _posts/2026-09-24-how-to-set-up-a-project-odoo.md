@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up a project in Odoo, with stages, tasks and owners, so work stays organised, visible and on track."
 ---
 
+**Short answer:** A project set up well almost runs itself; a project set up carelessly becomes a source of confusion. Clear stages, well-broken-down tasks, real owners and deadlines, and connected time tracking for billable work are what keep a project organised and profitable. The setup takes minutes and shapes everything that follows, which makes it time very well spent.
+
 Odoo Project turns a pile of work into something organised and visible, but only if it is set up with a bit of thought.
 Getting the structure right at the start keeps a project on track rather than drifting. Continuing this series of
 practical Odoo how-to guides, here is setting up a project.
@@ -49,12 +51,6 @@ invoiced. If the project is internal, you may not need this, but for services wo
 - Give every task an owner and, where it matters, a deadline.
 - Connect timesheets and billing for client or billable work.
 
-## My take
-
-A project set up well almost runs itself; a project set up carelessly becomes a source of confusion. Clear stages,
-well-broken-down tasks, real owners and deadlines, and connected time tracking for billable work are what keep a project
-organised and profitable. The setup takes minutes and shapes everything that follows, which makes it time very well
-spent.
 
 Next in this series: how to set up your online store.
 

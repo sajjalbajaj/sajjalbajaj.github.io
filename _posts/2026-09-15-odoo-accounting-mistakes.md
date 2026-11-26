@@ -7,6 +7,8 @@ hub: accounting
 description: "The accounting mistakes that cause the most pain in Odoo, from a rushed chart of accounts to skipping bank reconciliation, and how to keep your books clean."
 ---
 
+**Short answer:** Accounting punishes shortcuts more than any other area, but the mistakes are predictable and preventable. A well-designed chart of accounts, regular reconciliation, correct tax setup and proper corrections keep your books clean and audit-ready. Get the foundations right and Odoo accounting becomes a source of confidence rather than anxiety.
+
 Accounting is the one area where mistakes are least forgiving, because the numbers have to be right and auditors will
 notice if they are not. The good news is that the common Odoo accounting mistakes are well known and avoidable.
 Continuing this series on common Odoo mistakes, here is Accounting.
@@ -49,11 +51,6 @@ numbers actually useful, rather than just compliant.
 - Correct entries the right way; never edit history away.
 - Use analytic accounting if you want profitability by project or department.
 
-## My take
-
-Accounting punishes shortcuts more than any other area, but the mistakes are predictable and preventable. A
-well-designed chart of accounts, regular reconciliation, correct tax setup and proper corrections keep your books clean
-and audit-ready. Get the foundations right and Odoo accounting becomes a source of confidence rather than anxiety.
 
 Next in this series: common mistakes in Odoo Manufacturing.
 

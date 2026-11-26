@@ -7,6 +7,8 @@ hub: website
 description: "A plain-English guide to building a website in Odoo, from pages to design blocks, so you get a professional site connected to the rest of your business."
 ---
 
+**Short answer:** Odoo's website builder lets you create a genuinely professional site without code, and its real strength is the connection to your business, so a form becomes a lead and a page becomes a sale. Plan your structure, keep the design clean and consistent, wire in the connections and mind the SEO basics, and you get a website that works for the business rather than just sitting there.
+
 A website is often the first thing a customer sees, and Odoo's website builder lets you create one without code and,
 crucially, connected to the rest of your business. Setting it up well gives you a professional site that does more than
 look good. Continuing this series of practical Odoo how-to guides, here is building a website.
@@ -49,12 +51,6 @@ helps search engines send you visitors, which is the whole point of being online
 - Connect forms, shop and events so the site works, not just informs.
 - Cover the SEO basics as you build each page.
 
-## My take
-
-Odoo's website builder lets you create a genuinely professional site without code, and its real strength is the
-connection to your business, so a form becomes a lead and a page becomes a sale. Plan your structure, keep the design
-clean and consistent, wire in the connections and mind the SEO basics, and you get a website that works for the business
-rather than just sitting there.
 
 Next in this series: how to set up Documents.
 

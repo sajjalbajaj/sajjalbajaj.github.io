@@ -14,7 +14,7 @@ faqs:
     a: "Use product specific packaging and units of measure so cases, bags and individual units are handled consistently in purchasing, stock and sales."
 ---
 
-Pet supply businesses often sell the same products through a retail counter, an online store, marketplaces and wholesale accounts. Food also brings expiry dates and batch traceability, while accessories add sizes, colors and product variants. Odoo can connect these channels through shared product, stock and order records if the catalog is designed with care.
+**Short answer:** Pet supply businesses often sell the same products through a retail counter, an online store, marketplaces and wholesale accounts. Food also brings expiry dates and batch traceability, while accessories add sizes, colors and product variants. Odoo can connect these channels through shared product, stock and order records if the catalog is designed with care.
 
 ## Build a product catalog that staff can use
 

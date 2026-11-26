@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo handles product variants and optional products in Sales, so you can offer choices and upsells without a messy product list."
 ---
 
+**Short answer:** Variants and optional products are how Odoo lets you sell the way real businesses actually sell: with choice and sensible extras. Set attributes up thoughtfully and offer relevant add-ons, and you get a clean catalogue, accurate stock, and quotations that quietly lift your average order value.
+
 Very few businesses sell a single, fixed product. You have sizes, colours, options and add-ons. Managed
 badly, that becomes a sprawling, unmanageable product list. Odoo handles it cleanly with variants and
 optional products. Here is how.
@@ -49,11 +51,6 @@ become an opportunity to sell a little more, all without extra manual effort.
 - Offer a few relevant optional products, not a long list that overwhelms.
 - Keep attributes consistent across similar products so your catalogue stays logical.
 
-## My take
-
-Variants and optional products are how Odoo lets you sell the way real businesses actually sell: with
-choice and sensible extras. Set attributes up thoughtfully and offer relevant add-ons, and you get a
-clean catalogue, accurate stock, and quotations that quietly lift your average order value.
 
 Next in the series: getting pricing right with pricelists and discounts.
 

@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20: What's Getting Upgraded From Odoo 19"
 date: 2026-09-05 11:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Upgrade, ERP, Migration, ERP Migration, Accounting, Finance]
 hub: planning
 description: "Beyond the brand-new features, what existing parts of Odoo are getting better in Odoo 20? A preview of the upgrades to payroll, accounting, CRM, inventory and more."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -53,12 +55,6 @@ Alongside the app-level upgrades, Odoo 20 is expected to bring performance and r
 better handling of larger workloads and improved offline functionality. These are the quiet upgrades that make the whole
 system feel snappier and more dependable, which everyone benefits from even if no one points at a single new button.
 
-## My take
-
-The upgrades in Odoo 20 tell a consistent story: the core apps you rely on, payroll, accounting, CRM, inventory,
-marketing, getting simpler and smarter, on top of a faster, more reliable foundation. For existing users, this is often
-where the real value of an upgrade lives, in the daily work getting a little better across the board. As always, confirm
-the specifics at launch, then weigh which improvements matter most to you.
 
 *Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
 Confirmed details come at launch. Weighing an upgrade to Odoo 20? [Get in touch](/services/odoo-migration/).*

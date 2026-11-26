@@ -7,6 +7,8 @@ hub: website
 description: "The website and eCommerce mistakes that cost sales in Odoo, from a disconnected shop to neglected product data, and how to build a store that actually converts."
 ---
 
+**Short answer:** eCommerce on Odoo shines when it is genuinely connected and let down when it is treated as a separate site with neglected data. Rich products, accurate stock, basic SEO and a clean checkout are not advanced tactics; they are the fundamentals. Get them right and the connected shop does what it promises: sells more with less manual work behind it.
+
 The point of running your shop on Odoo is that the website is connected to the rest of the business. Yet many stores
 throw that advantage away with a few common mistakes, and lose sales in the process. Continuing this series on common
 Odoo mistakes, here is Website and eCommerce.
@@ -49,11 +51,6 @@ people who wanted to buy actually do.
 - Cover the SEO basics so people can find your products.
 - Keep checkout short, clear and free of surprises.
 
-## My take
-
-eCommerce on Odoo shines when it is genuinely connected and let down when it is treated as a separate site with
-neglected data. Rich products, accurate stock, basic SEO and a clean checkout are not advanced tactics; they are the
-fundamentals. Get them right and the connected shop does what it promises: sells more with less manual work behind it.
 
 Next in this series: common mistakes in Odoo HR.
 

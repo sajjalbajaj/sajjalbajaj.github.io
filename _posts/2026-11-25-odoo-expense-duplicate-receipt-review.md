@@ -2,6 +2,7 @@
 layout: post
 title: "Odoo Expenses: Detect Duplicate Claims Before Reimbursement"
 date: 2026-11-25 10:00:00 +0530
+last_modified_at: 2026-11-26
 tags: [Odoo, Odoo 19, ERP, Best Practices, Accounting, Finance, Business Automation, Compliance]
 hub: accounting
 description: "Review Odoo expense claims for duplicate receipts, business purpose, payment source and prior reimbursement before approving or posting them."
@@ -12,7 +13,7 @@ faqs:
     a: "Compare employee, merchant, date, amount and payment source against existing claims and card transactions."
 ---
 
-**Short answer:** Approval should establish that the expense is business related, supported and not already claimed or paid through another channel.
+**Short answer:** Before approving an expense, establish that it relates to the business, has supporting evidence and has not already been claimed or paid through another channel. Compare the receipt, employee claim and payment records before authorising reimbursement.
 
 ## Applies to
 

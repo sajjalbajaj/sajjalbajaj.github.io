@@ -2,10 +2,13 @@
 layout: post
 title: "Common Inventory and Warehouse Problems (and How ERP Fixes Them)"
 date: 2026-07-26 09:00:00 +0530
+last_modified_at: 2026-11-26
 tags: [ERP, Inventory, Warehouse, Odoo, Supply Chain, Stock Control, WMS, Inventory Management]
 hub: inventory
 description: "The inventory and warehouse problems that quietly cost businesses money, what really causes them, and how a well-configured ERP and WMS fix them."
 ---
+
+**Short answer:** Inventory problems often involve inconsistent units, missed movements, unclear locations or unreliable replenishment data. Trace a discrepancy from receipt through dispatch before deciding whether the cause is configuration, data or operating practice.
 
 Inventory and warehouse problems rarely announce themselves. They show up quietly as tied-up
 cash, missed shipments and frustrated customers. After implementing ERP for businesses that
@@ -54,16 +57,18 @@ A well-configured ERP with warehouse management turns this around:
 - Barcode and mobile scanning that make every movement fast and accurate.
 - Locations, bins and put-away rules, so nothing gets lost.
 - Lot and serial tracking for full traceability.
-- One connected system where a single scan updates stock, orders and accounting at once.
+- Connected stock and order records, with accounting effects determined by the configured valuation
+  and invoicing rules rather than by scanning alone.
 
 Odoo, for example, handles all of this out of the box, tied straight to sales, purchase and
 accounting.
 
-## My take
-
-The software is not the hard part. Most inventory and warehouse problems are really process
-and data problems wearing a technology costume. Fix the process, clean the data, then let the
-ERP enforce the good habits. Do that, and the quiet losses stop.
 
 If any of these sound familiar, that is exactly the kind of thing a well-run ERP fixes. I am
 happy to talk it through.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

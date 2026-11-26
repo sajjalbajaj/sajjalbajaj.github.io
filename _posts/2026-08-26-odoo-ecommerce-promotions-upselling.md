@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo eCommerce helps you lift sales with promotions, coupons, discounts and upselling, so each visitor and order is worth more."
 ---
 
+**Short answer:** Promotions, coupons and upselling are how you get more from the visitors and orders you already have, which is usually cheaper than chasing new ones. Odoo builds these into the same system as your pricing, stock and reporting, so you can run offers consistently and see what really works. Used thoughtfully, they lift sales without cheapening your brand.
+
 Attracting visitors is expensive, so it pays to get more value from each one. Promotions, coupons and
 upselling are how you lift both conversion and average order value. To close the series on Odoo Website and
 eCommerce, here is how Odoo helps you sell more.
@@ -51,12 +53,6 @@ just give away margin. That lets you do more of what works and drop what does no
 - Try a free-shipping threshold to lift average order value.
 - Watch the numbers and keep what genuinely works.
 
-## My take
-
-Promotions, coupons and upselling are how you get more from the visitors and orders you already have, which
-is usually cheaper than chasing new ones. Odoo builds these into the same system as your pricing, stock and
-reporting, so you can run offers consistently and see what really works. Used thoughtfully, they lift sales
-without cheapening your brand.
 
 This completes the Website and eCommerce part of the series. Next we move on to HR and People.
 

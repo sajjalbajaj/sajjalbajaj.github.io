@@ -7,6 +7,8 @@ hub: sales
 description: "A plain-English guide to setting up Odoo Point of Sale, from products and payment to hardware and offline mode, so your shop floor runs smoothly."
 ---
 
+**Short answer:** Point of Sale rewards careful setup because any rough edge shows live, at the counter, in front of customers. Clean products, a thoughtful configuration, working payments, connected hardware and a plan for offline are what make it fast and reliable. Set it up as part of your connected system and the till does far more than take money; it keeps stock and accounts in step with every sale.
+
 Odoo Point of Sale turns a till into part of your connected business, so every sale updates stock and accounts
 automatically. Setting it up well is what makes the shop floor fast for staff and smooth for customers. Continuing this
 series of practical Odoo how-to guides, here is setting up point of sale.
@@ -49,12 +51,6 @@ Planning for offline is what keeps the queue moving through a network blip.
 - Connect your hardware: scanners, printers, drawers, card machines.
 - Understand and set up offline mode before you rely on the till.
 
-## My take
-
-Point of Sale rewards careful setup because any rough edge shows live, at the counter, in front of customers. Clean
-products, a thoughtful configuration, working payments, connected hardware and a plan for offline are what make it fast
-and reliable. Set it up as part of your connected system and the till does far more than take money; it keeps stock and
-accounts in step with every sale.
 
 Next in this series: how to set up subscriptions.
 

@@ -2,6 +2,7 @@
 layout: post
 title: "What is an ERP, and why it matters"
 date: 2026-07-21 09:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Inventory Management, Stock Control, Invoicing, Sales Management, Business Automation, ERP Cost, Spreadsheets]
 hub: planning
 description: "A plain-English introduction to ERP systems and the value they bring."
@@ -16,9 +17,7 @@ faqs:
     a: "Accounting software handles your books. An ERP goes wider, connecting finance with inventory, sales, purchasing and operations in one system, so the whole business runs on shared, real-time data."
 ---
 
-**ERP** stands for *Enterprise Resource Planning*. In plain English, it's a single
-system that runs the core of a business: finance, inventory, sales, purchasing, HR
-and more, on **one shared database**.
+**Short answer:** ERP means Enterprise Resource Planning: software that connects core processes such as sales, purchasing, inventory and finance through shared records. Its value depends on reliable data and agreed workflows, not just putting several apps in one system.
 
 ## Why one system?
 
@@ -40,3 +39,9 @@ involved early.
 
 That last point is where most projects succeed or fail. Technology follows process,
 not the other way around.
+
+## Related official documentation
+
+- [SAP's ERP overview](https://www.sap.com/resources/what-is-erp)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

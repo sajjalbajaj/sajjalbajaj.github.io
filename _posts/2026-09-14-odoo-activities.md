@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Activities let you schedule follow-ups, calls and to-dos against any record, so the next step is always clear and nothing gets forgotten."
 ---
 
+**Short answer:** Activities may be the most quietly valuable feature in all of Odoo. By turning every "I must follow up" into a dated, owned action sitting on the right record, they close the gap where so much work goes to die. Simple, everywhere, and genuinely the difference between things getting done and things getting forgotten.
+
 The difference between a deal that closes and one that goes cold is often just the follow-up that nobody made. Odoo
 Activities exist to make sure the next step never gets forgotten. Continuing this run through more Odoo apps, here is
 Activities.
@@ -48,11 +50,6 @@ connected system as everything else.
 - Watch overdue activities as a warning sign, especially in your pipeline.
 - Use them everywhere; almost any record can carry a follow-up.
 
-## My take
-
-Activities may be the most quietly valuable feature in all of Odoo. By turning every "I must follow up" into a dated,
-owned action sitting on the right record, they close the gap where so much work goes to die. Simple, everywhere, and
-genuinely the difference between things getting done and things getting forgotten.
 
 Next in this run: getting your data in and out with Odoo import and export.
 

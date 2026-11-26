@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for a Coffee Business: Problems It Solves"
 date: 2026-08-23 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Coffee, Food and Beverage, Manufacturing, SME]
 hub: industries
 description: "The problems coffee roasters and producers face, from bean traceability and roast yield to blends, freshness and multiple sales channels, and how Odoo solves them."
 ---
 
-A coffee business looks simple from the outside and is anything but: sourcing, roasting, blending,
-freshness and selling across several channels all at once. Continuing the series on industry problems
-and how ERP solves them, here is coffee.
+**Short answer:** A coffee business needs to connect sourcing, roasting, blending, packaging and sales with batch and freshness records. Model quantities and production losses explicitly so stock and cost information reflect the actual process.
 
 ## Problem: no traceability from bean to bag
 
@@ -57,3 +56,10 @@ multi-channel selling. I set Odoo up around how a coffee operation actually runs
 
 If these challenges sound like your day, that is exactly what I help coffee businesses solve. Happy to
 talk it through.
+
+## Related official documentation
+
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

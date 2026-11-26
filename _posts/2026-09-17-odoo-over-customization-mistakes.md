@@ -7,6 +7,8 @@ hub: planning
 description: "Why over-customising is one of the costliest Odoo mistakes, how it inflates cost and complicates upgrades, and how to know when customising is actually right."
 ---
 
+**Short answer:** Over-customising is seductive because each individual change seems reasonable, and the cost only shows up later at upgrade time. The discipline that pays off is defaulting to the standard, using configuration first, and customising only where it genuinely matters. A leaner system is cheaper to run, easier to upgrade and, more often than not, works better too.
+
 Odoo is highly customisable, which is a genuine strength and also a trap. The urge to bend it to match exactly how you
 worked before leads to one of the most expensive mistakes in the whole platform. Continuing this series on common Odoo
 mistakes, here is over-customisation.
@@ -49,12 +51,6 @@ that and simply refusing to adapt.
 - Reserve real customisation for what is genuinely core to your business.
 - Keep the total amount of customisation as low as you sensibly can.
 
-## My take
-
-Over-customising is seductive because each individual change seems reasonable, and the cost only shows up later at
-upgrade time. The discipline that pays off is defaulting to the standard, using configuration first, and customising
-only where it genuinely matters. A leaner system is cheaper to run, easier to upgrade and, more often than not, works
-better too.
 
 Next in this series: the mistakes that go wrong at go-live.
 

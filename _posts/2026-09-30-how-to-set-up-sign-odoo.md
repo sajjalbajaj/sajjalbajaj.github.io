@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to setting up Odoo Sign, so you can send documents for electronic signature and get contracts signed in minutes, not days."
 ---
 
+**Short answer:** Sign removes one of the slowest, most tedious steps in doing business: getting things signed. Templates, clear fields, a smooth sending flow and status tracking turn a multi-day print-and-scan ordeal into a few minutes of work for everyone. Keep the signed documents connected to their records and the whole thing is not just faster but better organised too. A small setup with an outsized payoff.
+
 Chasing a signature by printing, signing, scanning and emailing is slow and dated. Odoo Sign lets you send documents for
 electronic signature and get them back in minutes. Setting it up is quick and the time saving is real. Continuing this
 series of practical Odoo how-to guides, here is Sign.
@@ -49,12 +51,6 @@ context, properly filed and easy to find when you need them later.
 - Track signature status so you can follow up at the right time.
 - Keep signed documents connected to the relevant records.
 
-## My take
-
-Sign removes one of the slowest, most tedious steps in doing business: getting things signed. Templates, clear fields, a
-smooth sending flow and status tracking turn a multi-day print-and-scan ordeal into a few minutes of work for everyone.
-Keep the signed documents connected to their records and the whole thing is not just faster but better organised too. A
-small setup with an outsized payoff.
 
 Next in this series: how to set up Field Service.
 

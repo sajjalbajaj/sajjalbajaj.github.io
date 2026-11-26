@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to setting up Odoo Discuss, so your team can chat and collaborate inside the same system where the work actually happens."
 ---
 
+**Short answer:** Discuss earns its place by keeping team communication in the same system as the work, so conversations happen in context rather than in a separate app. Organised channels, the right use of direct messages, connection to records and well-tuned notifications are what make it work. It will not replace every chat tool for everyone, but for talking about the work itself, being right there alongside it is a real advantage.
+
 Team communication scattered across separate chat apps, email and messages means conversations live apart from the work
 they are about. Odoo Discuss brings messaging into the same system as everything else. Setting it up well keeps talk and
 work together. Continuing this series of practical Odoo how-to guides, here is Discuss.
@@ -49,12 +51,6 @@ about work, precisely because it lives where the work does.
 - Tune notifications so they inform without overwhelming.
 - Keep Discuss focused on work communication.
 
-## My take
-
-Discuss earns its place by keeping team communication in the same system as the work, so conversations happen in context
-rather than in a separate app. Organised channels, the right use of direct messages, connection to records and
-well-tuned notifications are what make it work. It will not replace every chat tool for everyone, but for talking about
-the work itself, being right there alongside it is a real advantage.
 
 Next in this series: how to set up Appraisals.
 

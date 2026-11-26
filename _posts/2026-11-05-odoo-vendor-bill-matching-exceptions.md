@@ -74,6 +74,8 @@ A resolved exception should leave a clear explanation of the correct quantity, a
 
 Read [Vendor Bills and Three-Way Matching in Odoo](/blog/2026/08/17/vendor-bills-and-three-way-matching-in-odoo/) for the connected workflow.
 
+If the mismatch comes from goods sent back to the supplier, continue with [Odoo Supplier Returns: Follow the Goods Through to the Credit](/blog/2026/11/05/odoo-supplier-return-credit-reconciliation/).
+
 ## Official references
 
 1. [Control policies](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/control_bills.html)

@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo makes bank reconciliation fast with statement imports and smart matching, so your books always agree with your bank."
 ---
 
+**Short answer:** Bank reconciliation in Odoo is a genuine quality-of-life improvement. Bring your bank data in automatically, let smart matching do the heavy lifting, and confirm with a click. Keep it current, and your books stay in lockstep with your bank, which means every number you rely on is real.
+
 Bank reconciliation, making sure your books agree with your actual bank account, is one of those jobs that
 used to eat hours and get put off. Odoo turns it into a quick, almost enjoyable routine. Here is how it
 works and why it matters.
@@ -51,11 +53,6 @@ properly, assigning them to the right account as you reconcile, so nothing is le
 - Confirm the easy matches quickly, and give attention to the exceptions.
 - Assign fees and adjustments to the right accounts rather than leaving them unmatched.
 
-## My take
-
-Bank reconciliation in Odoo is a genuine quality-of-life improvement. Bring your bank data in automatically,
-let smart matching do the heavy lifting, and confirm with a click. Keep it current, and your books stay in
-lockstep with your bank, which means every number you rely on is real.
 
 Next in the series: the backbone of your books, the chart of accounts and journals.
 

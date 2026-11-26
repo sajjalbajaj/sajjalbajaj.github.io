@@ -72,6 +72,8 @@ Review an exception from both sides: what the customer expects and what the supp
 
 ## Related
 
+Start with [ERP for Dropshipping: Odoo Route, Order Flow and Controls](/blog/2026/08/28/erp-for-dropshipping/) if you need the standard workflow before working through exceptions.
+
 Read [Odoo Supplier Returns: Follow the Goods Through to the Credit](/blog/2026/11/05/odoo-supplier-return-credit-reconciliation/) for the connected workflow.
 
 ## Official references

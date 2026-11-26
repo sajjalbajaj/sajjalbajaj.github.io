@@ -14,7 +14,7 @@ faqs:
     a: "Odoo Appointments supports self-service booking based on configured user or resource availability. A clinic should test provider calendars, chair or room capacity, buffers and confirmation messages before publishing slots."
 ---
 
-Dental practices coordinate dentists, hygienists, chairs, reception, payments and a steady flow of consumables. Odoo can help connect the administrative side of this work. It can organize appointment availability, customer enquiries, purchasing, stock and accounting. Clinical charting and treatment planning need a system designed and approved for those records.
+**Short answer:** Dental practices coordinate dentists, hygienists, chairs, reception, payments and a steady flow of consumables. Odoo can help connect the administrative side of this work. It can organize appointment availability, customer enquiries, purchasing, stock and accounting. Clinical charting and treatment planning need a system designed and approved for those records.
 
 ## Start with a chair and provider schedule
 

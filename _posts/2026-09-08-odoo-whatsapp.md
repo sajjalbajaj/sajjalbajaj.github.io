@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo's WhatsApp integration lets you reach customers on the channel they already use, for confirmations, updates and conversations, from your ERP."
 ---
 
+**Short answer:** WhatsApp integration meets customers on the channel they already live in, for the timely, transactional messages that genuinely help. Kept respectful and connected to your Odoo data, it becomes a natural part of how you communicate, rather than another disconnected inbox. For many businesses, that reach is significant.
+
 For a huge number of customers, WhatsApp is simply how they communicate. Meeting them there, from inside
 your business system, is powerful. Odoo integrates WhatsApp so you can. Continuing the series on Odoo
 Productivity, here is WhatsApp.
@@ -48,11 +50,6 @@ the same records.
 - Let conversations connect to the customer and order records.
 - Choose the right channel for each message: WhatsApp, SMS or email.
 
-## My take
-
-WhatsApp integration meets customers on the channel they already live in, for the timely, transactional
-messages that genuinely help. Kept respectful and connected to your Odoo data, it becomes a natural part of
-how you communicate, rather than another disconnected inbox. For many businesses, that reach is significant.
 
 Next in the series: setting up users, companies and access.
 

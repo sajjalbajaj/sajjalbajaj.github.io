@@ -7,6 +7,8 @@ hub: marketing
 description: "Which marketing metrics actually matter, and how Odoo helps you measure the whole journey from campaign to revenue instead of vanity numbers."
 ---
 
+**Short answer:** Measuring marketing well is about connecting activity to outcomes, and that is exactly where Odoo's one-system approach pays off: campaign to lead to customer to revenue, all visible. Watch the metrics that tie to real business results, and let them guide where your marketing effort and money go.
+
 Marketing without measurement is just spending and hoping. But measuring the wrong things is almost as bad
 as measuring nothing. To close the series on Odoo Marketing, here is how to measure what actually matters.
 
@@ -52,11 +54,6 @@ what feels busy.
 - Use dashboards to see the whole journey in one place.
 - Act on the numbers: invest in what converts, drop what does not.
 
-## My take
-
-Measuring marketing well is about connecting activity to outcomes, and that is exactly where Odoo's one-system
-approach pays off: campaign to lead to customer to revenue, all visible. Watch the metrics that tie to real
-business results, and let them guide where your marketing effort and money go.
 
 This completes the Marketing part of the series. Next we move on to Services and Project.
 

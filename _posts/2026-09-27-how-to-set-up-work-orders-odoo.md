@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Work Orders: Set Up Work Centres in Odoo 20"
 date: 2026-09-27 08:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Work Centers, Shop Floor]
 hub: manufacturing
 description: "Set up Odoo 20 work orders and work centres: enable the feature, define capacity and costs, add BoM operations, plan work and use Shop Floor."
@@ -32,6 +32,21 @@ This is the setup guide. For an explanation of what work centres and work orders
   quality checks and IoT triggers are Enterprise only.
 - **Apps:** Manufacturing and Inventory; Maintenance if you want equipment on work centres.
 
+## What is the difference between an operation, a work centre and a work order?
+
+An operation describes a production step on the bill of materials. A work centre is the resource assigned to that
+step. A work order records the execution of that operation for a manufacturing order. These records answer three
+different questions: what must happen, where it can happen and what happened on this production run.
+
+| Record | Illustrative example | What to verify |
+|---|---|---|
+| BoM operation | Pack the finished product | Instructions and expected duration |
+| Work centre | Packing Bench 1 | Working hours, capacity and hourly cost |
+| Work order | Packing work for the current manufacturing order | Recorded time and completion |
+
+Use Odoo's [work centre configuration reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.html)
+to distinguish resource settings from operation settings before changing a duration or capacity.
+
 ## Before you start
 
 1. **List where work actually happens.** A work centre is a machine, line, bench or team you schedule work on. If
@@ -40,7 +55,7 @@ This is the setup guide. For an explanation of what work centres and work orders
 3. **Know your costs** if you want manufacturing order costs to include labour or machine time: a cost per hour
    for each work centre.
 4. **Have bills of materials ready** for the products you make. See
-   [how to set up a bill of materials in Odoo 19](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/).
+   [how to set up a bill of materials in Odoo 20](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/).
 
 ## Step by step
 
@@ -68,9 +83,9 @@ Go to **Manufacturing ‣ Configuration ‣ Settings**, tick **Work Orders** in 
 
 1. Open the BoM (**Manufacturing ‣ Products ‣ Bills of Materials**) and go to the **Operations** tab.
 2. Click **Add a line**, name the **Operation** (for example *Cut*), and choose the **Work Center**.
-3. Choose **Duration Computation**: compute from tracked time (based on the last few work orders) or set a
-   **Default Duration** manually.
-4. Add instructions in the **Work Sheet** tab if operators need them.
+3. Choose **Duration Computation**: the Odoo 20 BoM reference describes **Computed**, based on recent work orders,
+   or **Fixed**, with a **Default Duration**. Check the labels in the installed build.
+4. Where Quality is installed, add operator steps through the operation's **Instructions** tab.
 5. Repeat for each step, in production order. Use **Consumed in Operation** on the Components tab to tie components
    to the step that uses them.
 
@@ -143,8 +158,8 @@ that match the real shifts.
 
 ## Official references
 
-- Odoo 20 documentation: [Work centers](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/using_work_centers.html)
-- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/bill_configuration.html)
+- Odoo 20 documentation: [Work centers](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.html)
+- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
 - Odoo 19 documentation: [Shop Floor overview](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.html)
 
 *Updated on 17 November 2026 using the official Odoo 20 work centre and bill of materials documentation. The example

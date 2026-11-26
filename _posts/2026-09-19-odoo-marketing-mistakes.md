@@ -7,6 +7,8 @@ hub: marketing
 description: "The marketing mistakes that waste effort in Odoo, from blasting one message to everyone to ignoring the results, and how to market smarter with connected data."
 ---
 
+**Short answer:** Marketing on Odoo rewards using the connection to your data and punishes ignoring it. Segmentation, a link to sales, attention to results and clean lists are what turn marketing from noise into something measurable and effective. The tools are capable; the mistakes are almost all about not using the connected data that makes them worth having.
+
 Marketing in Odoo is powerful precisely because it sits on the same data as sales and contacts, so it can be targeted
 and measured. The common mistakes almost all come from ignoring that advantage. Continuing this series on common Odoo
 mistakes, here is Marketing.
@@ -49,11 +51,6 @@ switch on and forget.
 - Keep your lists clean and honour unsubscribes.
 - Revisit automation regularly rather than setting it and forgetting.
 
-## My take
-
-Marketing on Odoo rewards using the connection to your data and punishes ignoring it. Segmentation, a link to sales,
-attention to results and clean lists are what turn marketing from noise into something measurable and effective. The
-tools are capable; the mistakes are almost all about not using the connected data that makes them worth having.
 
 Next in this series: common mistakes in Odoo Point of Sale.
 

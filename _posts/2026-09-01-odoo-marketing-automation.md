@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo Marketing Automation lets you build campaigns that respond to what people do, nurturing leads automatically without manual chasing."
 ---
 
+**Short answer:** Marketing Automation turns nurturing from an impossible manual task into something that runs on autopilot, responding to what people actually do. Built on your Odoo data and connected to your CRM, it quietly moves leads toward becoming customers. Keep it helpful, and it becomes one of your hardest-working tools.
+
 Most leads are not ready to buy the moment they arrive, and manually following up with each one over weeks
 is impossible at scale. Marketing Automation solves that by nurturing leads for you. Continuing the series
 on Odoo Marketing, here is automation.
@@ -48,11 +50,6 @@ engaged rather than unsubscribing.
 - Space messages sensibly, helpful beats frequent.
 - Measure the flow and refine the steps that underperform.
 
-## My take
-
-Marketing Automation turns nurturing from an impossible manual task into something that runs on autopilot,
-responding to what people actually do. Built on your Odoo data and connected to your CRM, it quietly moves
-leads toward becoming customers. Keep it helpful, and it becomes one of your hardest-working tools.
 
 Next in the series: bringing people together with Odoo Events.
 

@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Appointments lets clients book time with you online, based on real availability, cutting out the back-and-forth of scheduling."
 ---
 
+**Short answer:** Appointments removes one of the most tedious small frictions in business: arranging meetings. Letting people book real, available time themselves is convenient for them, professional for you, and frees you from the scheduling back-and-forth. A small tool that quietly saves a lot of time.
+
 Scheduling a meeting by email is a slow dance: what times suit you, no not then, how about this, and round
 again. Odoo Appointments removes that friction by letting people book your time directly. Continuing the
 series on Odoo Services and Project, here is appointments.
@@ -45,11 +47,6 @@ separate app you have to reconcile.
 - Use confirmations and reminders to cut no-shows.
 - Let bookings flow into your calendar and contacts automatically.
 
-## My take
-
-Appointments removes one of the most tedious small frictions in business: arranging meetings. Letting people
-book real, available time themselves is convenient for them, professional for you, and frees you from the
-scheduling back-and-forth. A small tool that quietly saves a lot of time.
 
 Next in the series: turning logged time into invoices.
 

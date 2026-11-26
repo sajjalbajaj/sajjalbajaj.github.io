@@ -7,6 +7,8 @@ hub: manufacturing
 description: "How Odoo handles subcontracting: outsourcing production to a partner while keeping full control of components, stock and costs."
 ---
 
+**Short answer:** Subcontracting is a normal, sensible way to produce, and Odoo lets you do it without losing sight of your materials, stock or costs. Model the arrangement honestly, whether you supply the parts or the subcontractor does, and you keep full control of a process that physically happens outside your walls. For businesses built around outsourced production, this is one of Odoo's quietly valuable features.
+
 Not every business makes everything in-house. Many outsource part or all of production to a
 subcontractor, and I have set this up for several clients who work exactly this way. The challenge is
 keeping control of your components, stock and costs when the actual work happens somewhere else. Odoo
@@ -54,12 +56,6 @@ accurate throughout. The work is outsourced, but the visibility is not.
 - Track the components you send out so nothing goes missing off your books.
 - Reconcile finished goods received against what you expected.
 
-## My take
-
-Subcontracting is a normal, sensible way to produce, and Odoo lets you do it without losing sight of
-your materials, stock or costs. Model the arrangement honestly, whether you supply the parts or the
-subcontractor does, and you keep full control of a process that physically happens outside your walls.
-For businesses built around outsourced production, this is one of Odoo's quietly valuable features.
 
 Next in the series: keeping standards high with quality control.
 

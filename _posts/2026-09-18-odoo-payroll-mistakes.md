@@ -7,6 +7,8 @@ hub: hr
 description: "The payroll mistakes that cause the most trouble in Odoo, from wrong salary structures to disconnected inputs, and how to run payroll people can trust."
 ---
 
+**Short answer:** Payroll leaves no room for casual setup, because errors hit people directly and the law is watching. Correct salary structures, connected inputs, current legal rules and a verification step before posting are what make payroll dependable. It is worth getting expert help on the local specifics; the cost of getting payroll wrong is far higher than the cost of getting it right.
+
 Payroll is the one process where mistakes are noticed instantly, because people check their pay closely and rightly get
 upset when it is wrong. It also has to satisfy the law. That makes getting it right non-negotiable. Continuing this
 series on common Odoo mistakes, here is Payroll.
@@ -49,12 +51,8 @@ records as a matter of routine.
 - Verify every run before posting and paying it.
 - Keep payslips and records clean and accessible.
 
-## My take
+For the complete process these checks protect, read the [Odoo Payroll overview covering work entries, salary rules and payslip validation](/blog/2026/08/29/odoo-payroll-overview/).
 
-Payroll leaves no room for casual setup, because errors hit people directly and the law is watching. Correct salary
-structures, connected inputs, current legal rules and a verification step before posting are what make payroll
-dependable. It is worth getting expert help on the local specifics; the cost of getting payroll wrong is far higher
-than the cost of getting it right.
 
 Next in this series: common mistakes in Odoo Project.
 

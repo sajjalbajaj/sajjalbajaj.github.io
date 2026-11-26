@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Knowledge gives your business a living wiki for processes, guides and shared information, so what your team knows is written down and findable."
 ---
 
+**Short answer:** Knowledge turns what your business knows from something fragile and scattered into something written, organised and findable. That protects you against knowledge walking out the door, speeds up onboarding, and keeps everyone working the same way. For a growing team, it is genuinely valuable.
+
 Most of what a business knows lives in people's heads and scattered documents, which is risky and
 inefficient. When someone leaves or is away, the knowledge goes with them. Odoo Knowledge gives that
 information a home. Continuing the series on Odoo Productivity, here is Knowledge.
@@ -48,11 +50,6 @@ quiet investments that pays off steadily.
 - Keep it current, living documentation beats a perfect but stale manual.
 - Point people to Knowledge rather than re-explaining the same things.
 
-## My take
-
-Knowledge turns what your business knows from something fragile and scattered into something written,
-organised and findable. That protects you against knowledge walking out the door, speeds up onboarding, and
-keeps everyone working the same way. For a growing team, it is genuinely valuable.
 
 Next in the series: taming your files with Documents.
 

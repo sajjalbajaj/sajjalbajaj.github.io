@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for Construction: Problems It Solves"
 date: 2026-08-22 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Construction, Project Management, SME, Digital Transformation]
 hub: industries
 description: "The problems construction businesses face, from project costing and site materials to subcontractors and progress billing, and how an ERP like Odoo solves them."
 ---
 
-Construction runs on projects, sites, subcontractors and tight margins, and when each of those is
-tracked separately, money quietly leaks. Continuing the series on industry problems and how ERP solves
-them, here is construction.
+**Short answer:** Construction ERP should connect project budgets, purchasing, site materials, subcontractor commitments and billing. Define how costs are assigned to projects and how site teams record progress before relying on project margin reports.
 
 ## Problem: you cannot tell if a project is profitable
 
@@ -58,3 +57,10 @@ and progress billing. I set Odoo up around how construction projects actually ru
 
 If your projects are hard to cost and control, that is exactly what I help construction businesses fix.
 Happy to talk through the first step.
+
+## Related official documentation
+
+- [Odoo 19 Project documentation](https://www.odoo.com/documentation/19.0/applications/services/project.html)
+- [Odoo 19 Accounting and Invoicing documentation](https://www.odoo.com/documentation/19.0/applications/finance/accounting.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

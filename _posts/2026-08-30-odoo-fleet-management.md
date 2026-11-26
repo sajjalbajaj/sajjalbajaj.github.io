@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Fleet helps you manage company vehicles, from assignments and contracts to costs and maintenance, in one organised place."
 ---
 
+**Short answer:** Fleet is a focused app for a real need: if you run vehicles, they are too costly to manage on scraps of paper. Odoo Fleet gives you one place for vehicles, assignments, contracts, costs and maintenance, so your fleet is controlled rather than a source of surprises.
+
 If your business runs vehicles, cars, vans, delivery trucks, they are a significant cost and
 responsibility that is easy to lose track of. Odoo Fleet brings vehicle management into one organised
 place. Continuing the series on Odoo HR and People, here is fleet.
@@ -46,11 +48,6 @@ rather than managed on the side.
 - Record running costs to understand what your fleet really costs.
 - Stay ahead of maintenance and services rather than reacting to breakdowns.
 
-## My take
-
-Fleet is a focused app for a real need: if you run vehicles, they are too costly to manage on scraps of
-paper. Odoo Fleet gives you one place for vehicles, assignments, contracts, costs and maintenance, so your
-fleet is controlled rather than a source of surprises.
 
 Next in the series: growing your team through Odoo Referrals.
 

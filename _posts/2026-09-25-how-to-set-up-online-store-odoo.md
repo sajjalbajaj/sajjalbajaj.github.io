@@ -7,6 +7,8 @@ hub: website
 description: "A plain-English guide to setting up your online store in Odoo eCommerce, from products to payment and delivery, so you can start selling online properly."
 ---
 
+**Short answer:** An online store on Odoo works best when you use its connection to the rest of the business: products, stock, sales and accounting all in step. Good product data, a clean shop, working payment and clear delivery are the essentials, and accurate stock ties it together. Get these right and you have a store that sells smoothly and stays in step with your operations automatically.
+
 Setting up a shop with Odoo eCommerce means your online store is connected to your stock, sales and accounting from day
 one. Getting the setup right is what makes it sell smoothly rather than frustrate buyers. Continuing this series of
 practical Odoo how-to guides, here is setting up an online store.
@@ -49,12 +51,6 @@ and the shop never sells what you cannot deliver.
 - Configure delivery methods and charges, clearly shown at checkout.
 - Rely on accurate stock so the shop shows what is really available.
 
-## My take
-
-An online store on Odoo works best when you use its connection to the rest of the business: products, stock, sales and
-accounting all in step. Good product data, a clean shop, working payment and clear delivery are the essentials, and
-accurate stock ties it together. Get these right and you have a store that sells smoothly and stays in step with your
-operations automatically.
 
 Next in this series: how to set up your point of sale.
 

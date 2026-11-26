@@ -7,6 +7,8 @@ hub: planning
 description: "The mistakes that most often derail an Odoo implementation, from over-customising to skipping training, and how to avoid them from the start."
 ---
 
+**Short answer:** None of these mistakes are about the software; they are about how the project is run. The good news is that means they are all avoidable. Learn the standard, phase the rollout, clean the data, train the people, own the project and support it after launch, and most of what derails Odoo projects simply never happens.
+
 Most Odoo implementations that go badly do not fail because the software is wrong. They fail because of a handful of
 avoidable mistakes made along the way. Having seen a fair few projects, here are the ones that come up again and again,
 and how to steer clear of them. This kicks off a short series on common Odoo mistakes.
@@ -56,11 +58,6 @@ plan for a settling-in period, with support on hand, come out far better than th
 - Name a clear internal project owner.
 - Plan for support after go-live, not just up to it.
 
-## My take
-
-None of these mistakes are about the software; they are about how the project is run. The good news is that means they
-are all avoidable. Learn the standard, phase the rollout, clean the data, train the people, own the project and support
-it after launch, and most of what derails Odoo projects simply never happens.
 
 Next in this series: common mistakes in Odoo Inventory.
 

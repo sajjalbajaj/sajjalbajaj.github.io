@@ -14,7 +14,7 @@ faqs:
     a: "Odoo Sales, Inventory and eCommerce can support connected order and stock workflows. Channel pricing, bundles, returns and synchronization rules should be tested before rollout."
 ---
 
-A skincare product may contain several ingredients, packaging parts and label versions, then move through production, a quality check, a warehouse and multiple sales channels. Odoo can connect many of these commercial and stock steps. The key is to design batch traceability and product data before the first formula is loaded.
+**Short answer:** A skincare product may contain several ingredients, packaging parts and label versions, then move through production, a quality check, a warehouse and multiple sales channels. Odoo can connect many of these commercial and stock steps. The key is to design batch traceability and product data before the first formula is loaded.
 
 I have also documented a [skincare manufacturer's Odoo and WooCommerce project](/case-studies/skincare-manufacturer-odoo-woocommerce-sync/), where product data caused sync failures across channels.
 

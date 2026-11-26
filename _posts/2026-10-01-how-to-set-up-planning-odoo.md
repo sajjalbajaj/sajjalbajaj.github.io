@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up Odoo Planning, so you can schedule shifts and resources clearly, and everyone knows who is doing what and when."
 ---
 
+**Short answer:** Planning turns scheduling from a stressful, error-prone juggle into a clear, shared picture of who is doing what and when. Well-set-up resources, sensible shifts, role matching and good communication are what make it work, and the visibility lets you catch gaps and overloads before they bite. For any business that schedules people or resources, that clarity is a genuine relief.
+
 Whether you run shifts, allocate people to jobs, or manage resources across a week, Planning gives you a clear schedule
 everyone can see. Setting it up well is what turns a scheduling headache into something visible and manageable.
 Continuing this series of practical Odoo how-to guides, here is Planning.
@@ -49,12 +51,6 @@ time is far better than discovering the problem on the day.
 - Publish and communicate schedules so everyone knows their shifts.
 - Watch for unfilled shifts and overloaded people, and fix them early.
 
-## My take
-
-Planning turns scheduling from a stressful, error-prone juggle into a clear, shared picture of who is doing what and
-when. Well-set-up resources, sensible shifts, role matching and good communication are what make it work, and the
-visibility lets you catch gaps and overloads before they bite. For any business that schedules people or resources, that
-clarity is a genuine relief.
 
 Next in this series: how to set up Attendances.
 

@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo eCommerce handles payments and checkout, from payment providers to a smooth buying flow, and how it ties into your accounts automatically."
 ---
 
+**Short answer:** Checkout and payment are where all your other effort pays off or falls down. Odoo gives you a smooth checkout, connections to the payment providers customers expect, and a direct link into your accounts. Make the flow simple and trustworthy, and you convert more of the interest you worked hard to create.
+
 You can attract visitors and win them over on the product page, but if checkout is confusing or payment is
 awkward, the sale still slips away. Checkout is where intent becomes revenue. Continuing the series on Odoo
 Website and eCommerce, here is payments and checkout.
@@ -45,11 +47,6 @@ Getting this stage right protects the revenue you worked to earn.
 - Show honest, complete pricing before the final step, no surprises.
 - Let the order and payment flow into Odoo accounting rather than reconciling by hand.
 
-## My take
-
-Checkout and payment are where all your other effort pays off or falls down. Odoo gives you a smooth
-checkout, connections to the payment providers customers expect, and a direct link into your accounts.
-Make the flow simple and trustworthy, and you convert more of the interest you worked hard to create.
 
 Next in the series: getting orders to customers, with shipping and delivery.
 

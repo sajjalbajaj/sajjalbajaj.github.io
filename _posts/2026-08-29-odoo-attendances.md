@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Attendances tracks when employees check in and out, giving accurate work-time data that feeds planning, payroll and fair records."
 ---
 
+**Short answer:** Attendances turns a fuzzy, often-disputed area into clean data: who worked, when, for how long, captured simply and used across HR. It is a straightforward app that brings fairness and accuracy to something most businesses handle poorly.
+
 Knowing who is at work, and for how long, matters for planning, payroll and fairness. Done on paper or
 memory, it is inaccurate and disputed. Odoo Attendances makes it simple and reliable. Continuing the series
 on Odoo HR and People, here is attendances.
@@ -47,11 +49,8 @@ disagreements before they start.
 - Let attendance feed planning and payroll instead of re-keying it.
 - Review patterns to make better staffing and management decisions.
 
-## My take
+For the next step from attendance records to payroll control, read the [Odoo Payroll overview and implementation checklist](/blog/2026/08/29/odoo-payroll-overview/).
 
-Attendances turns a fuzzy, often-disputed area into clean data: who worked, when, for how long, captured
-simply and used across HR. It is a straightforward app that brings fairness and accuracy to something most
-businesses handle poorly.
 
 Next in the series: growing your people with Odoo Appraisals.
 

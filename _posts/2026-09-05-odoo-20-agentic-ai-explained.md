@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20 and Agentic AI: The Headline of This Release"
 date: 2026-09-05 10:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, AI, Automation, ERP, Upgrade, Business Automation, Digital Transformation]
 hub: planning
 description: "Agentic AI is the flagship of Odoo 20. What it means, how it differs from earlier AI in Odoo, and what it could do for your business, in plain English."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -51,12 +53,6 @@ drudgery while keeping people in control of decisions that matter. Setting sensi
 reviewing its work, is what makes it a genuine help rather than a risk. Automation should serve your judgement, not
 replace it.
 
-## My take
-
-Agentic AI is the most interesting thing about Odoo 20, because it hints at software that does work rather than just
-helps with it. That is genuinely significant if it lands well. The smart response is neither hype nor dismissal:
-understand it, watch what is actually confirmed at launch, and adopt it deliberately, on the routine tasks first, with a
-human firmly in the loop. Used that way, it could be a real lift for how businesses run on Odoo.
 
 *Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
 Details are confirmed at launch. Want to use Odoo's automation well? [Get in touch](/services/odoo-consulting/).*

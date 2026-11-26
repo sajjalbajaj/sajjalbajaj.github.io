@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo CRM uses predictive lead scoring to rank your leads by likelihood to convert, so your sales team spends time on the deals that matter."
 ---
 
+**Short answer:** Predictive lead scoring turns your own sales history into a simple, powerful advantage: a ranked list of who to call first. Use it to focus your team's limited time on the leads most likely to convert, keep your data clean so the scores stay honest, and let judgement ride alongside the numbers.
+
 Not all leads are equal, but sales teams often treat them as if they are, working whatever is newest or
 loudest. Predictive lead scoring in Odoo CRM fixes that by ranking leads on how likely they are to convert,
 so effort goes where it pays off. Here is how it works, in plain English.
@@ -50,11 +52,6 @@ Lead scoring is one of the ways AI is quietly becoming useful inside everyday bu
 replace your salespeople; it points them at the right doors to knock on first. That is exactly the kind of
 practical, in-the-flow help that makes AI worth having.
 
-## My take
-
-Predictive lead scoring turns your own sales history into a simple, powerful advantage: a ranked list of who
-to call first. Use it to focus your team's limited time on the leads most likely to convert, keep your data
-clean so the scores stay honest, and let judgement ride alongside the numbers.
 
 Next in the series: staying on top of deals with activities, forecasting and reporting.
 

@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Lunch lets employees order meals from your chosen vendors, tracks who ordered what, and takes the daily chaos out of office lunch."
 ---
 
+**Short answer:** Lunch is a small, cheerful app that solves a real if minor daily headache. By letting people order for themselves from managed vendors and keeping the costs straight, it removes the friction from a nice workplace perk. Not a business-critical app, but a genuinely pleasant one, and a good example of Odoo covering the little things too.
+
 Ordering lunch for an office sounds trivial until you are the one collecting everyone's order, chasing money and
 phoning the same vendor every day. Odoo Lunch turns that little daily scramble into something orderly. Kicking off
 another run through more Odoo apps, here is Lunch.
@@ -46,11 +48,6 @@ separate spreadsheet someone maintains. It is one more everyday thing handled in
 - Use the order and cost tracking to keep the money side clear.
 - Treat it as part of your workplace tools, not a side spreadsheet.
 
-## My take
-
-Lunch is a small, cheerful app that solves a real if minor daily headache. By letting people order for themselves from
-managed vendors and keeping the costs straight, it removes the friction from a nice workplace perk. Not a
-business-critical app, but a genuinely pleasant one, and a good example of Odoo covering the little things too.
 
 Next in this run: keeping your data clean with Odoo Data Cleaning.
 

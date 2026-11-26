@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to setting up Odoo Documents, so your files are organised, shared and connected to your business instead of scattered across drives."
 ---
 
+**Short answer:** Documents solves the quiet, universal problem of files scattered everywhere by bringing them into one organised, access-controlled, connected place. A sensible folder structure, the right access, easy filing and connections to records are what make it genuinely useful. Add workflows and it becomes part of how work flows, not just where files sit, which is a real step up from a shared drive.
+
 Business files have a way of scattering: some on one person's drive, some in email, some in a shared folder nobody
 maintains. Odoo Documents brings them into one organised, connected place. Setting it up well is what keeps files
 findable. Continuing this series of practical Odoo how-to guides, here is Documents.
@@ -49,12 +51,6 @@ record sees its documents right there rather than hunting for them elsewhere.
 - Use workflows to route documents through validation or processing.
 - Connect documents to the records they relate to.
 
-## My take
-
-Documents solves the quiet, universal problem of files scattered everywhere by bringing them into one organised,
-access-controlled, connected place. A sensible folder structure, the right access, easy filing and connections to records
-are what make it genuinely useful. Add workflows and it becomes part of how work flows, not just where files sit, which
-is a real step up from a shared drive.
 
 Next in this series: how to set up Sign for electronic signatures.
 

@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo CRM keeps deals moving with scheduled activities, and how forecasting and reporting turn your pipeline into reliable numbers."
 ---
 
+**Short answer:** Activities, forecasting and reporting are what make Odoo CRM more than a contact list. Follow up consistently, forecast honestly, and learn from your reports, and your sales become predictable and improvable instead of a matter of luck. That is the difference between hoping for revenue and managing it.
+
 Capturing and scoring leads is only half the job. Deals get won by following up consistently and by knowing
 what your pipeline is really worth. Odoo CRM handles both with activities, forecasting and reporting. Here
 is how they keep your sales on track.
@@ -51,11 +53,8 @@ engine, which is the whole point of a CRM.
 - Review your reports regularly and act on what they show, rather than just reading them.
 - Use the numbers in coaching, to help the team improve, not just to keep score.
 
-## My take
+Forecasts depend on consistent stages and close probabilities. Start with the [Odoo CRM pipeline setup guide](/blog/2026/09/24/how-to-set-up-crm-pipeline-odoo/) if those foundations are not yet stable.
 
-Activities, forecasting and reporting are what make Odoo CRM more than a contact list. Follow up
-consistently, forecast honestly, and learn from your reports, and your sales become predictable and
-improvable instead of a matter of luck. That is the difference between hoping for revenue and managing it.
 
 This completes the Sales and CRM part of the series. Next we move on to Accounting and Finance.
 

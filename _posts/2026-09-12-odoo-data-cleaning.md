@@ -7,6 +7,8 @@ hub: integrations
 description: "How Odoo Data Cleaning finds duplicate contacts, merges records and standardises formatting, so your database stays trustworthy over time."
 ---
 
+**Short answer:** Data Cleaning is one of those tools you appreciate more the longer you use a system. Duplicates and inconsistencies are inevitable, and left alone they slowly erode trust in your data. Having built-in detection, merging and rules keeps the database honest, which makes everything built on top of it more reliable. Boring, essential, worth it.
+
 Every business database slowly gets messy. Duplicate contacts creep in, the same company is spelt three ways, phone
 numbers are formatted every which way. Odoo Data Cleaning exists to fight that drift. Continuing this run through more
 Odoo apps, here is Data Cleaning.
@@ -48,11 +50,6 @@ improves everything else.
 - Standardise formats like phone numbers and names for reliable searching.
 - Set rules so cleaning is ongoing, not a once-a-year scramble.
 
-## My take
-
-Data Cleaning is one of those tools you appreciate more the longer you use a system. Duplicates and inconsistencies are
-inevitable, and left alone they slowly erode trust in your data. Having built-in detection, merging and rules keeps the
-database honest, which makes everything built on top of it more reliable. Boring, essential, worth it.
 
 Next in this run: making calls from your system with Odoo VoIP.
 

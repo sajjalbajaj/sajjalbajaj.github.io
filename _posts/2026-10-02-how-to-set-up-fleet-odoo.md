@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Fleet, so your company vehicles, their costs, contracts and maintenance are all tracked in one place."
 ---
 
+**Short answer:** Fleet takes the scattered, easily neglected job of managing vehicles and makes it organised and visible. Accurate vehicle records, real cost tracking, managed contracts and scheduled maintenance are what turn a fleet from a source of surprise bills into something you actively control. For any business with more than a couple of vehicles, that oversight quickly pays for the small effort of setting it up.
+
 If your business runs vehicles, cars, vans, trucks, keeping track of them, their costs and their upkeep is a job in
 itself. Odoo Fleet brings it all into one place. Setting it up well is what turns a scattered set of vehicle records into
 clear oversight. To close out this run of practical Odoo how-to guides, here is Fleet.
@@ -49,12 +51,6 @@ makes it obvious who is responsible for each vehicle.
 - Schedule maintenance so upkeep is planned, not forgotten.
 - Assign vehicles to drivers for clear accountability.
 
-## My take
-
-Fleet takes the scattered, easily neglected job of managing vehicles and makes it organised and visible. Accurate vehicle
-records, real cost tracking, managed contracts and scheduled maintenance are what turn a fleet from a source of surprise
-bills into something you actively control. For any business with more than a couple of vehicles, that oversight quickly
-pays for the small effort of setting it up.
 
 This run of how-to guides has covered a broad sweep of Odoo, from the core financial and sales apps to operations,
 services, HR, marketing and productivity. Each guide stands alone, and together they map out much of a real

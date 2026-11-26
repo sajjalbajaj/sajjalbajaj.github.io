@@ -7,6 +7,8 @@ hub: planning
 description: "The go-live mistakes that turn a good Odoo project rocky, from launching without testing to pulling support too soon, and how to land it smoothly."
 ---
 
+**Short answer:** Go-live is where preparation pays off or shortcuts catch up with you. Real testing, a settling-in period, ready support, a fallback plan and attention to the people are what turn a launch into a smooth transition rather than a rocky few weeks. The software being ready is only half of it; landing it well is the other half.
+
 Go-live is the moment a project becomes real, and it is also where good projects can stumble at the last step. The
 software may be ready, but launching badly can still make the first weeks painful. To round off this series on common
 Odoo mistakes, here is go-live.
@@ -49,11 +51,6 @@ People who feel supported adopt the system; people who feel dropped work around 
 - Have a fallback plan so a problem does not stop the business.
 - Look after the people, not just the technology.
 
-## My take
-
-Go-live is where preparation pays off or shortcuts catch up with you. Real testing, a settling-in period, ready support,
-a fallback plan and attention to the people are what turn a launch into a smooth transition rather than a rocky few
-weeks. The software being ready is only half of it; landing it well is the other half.
 
 This series has walked through the mistakes that most often trip up Odoo projects, across implementation, the core apps,
 data and go-live. Almost none of them are about the software; they are about how the work is done. Avoid them, and Odoo

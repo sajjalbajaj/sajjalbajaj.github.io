@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Time Off, with leave types, allocations and approvals, so leave is requested, approved and tracked without the paperwork."
 ---
 
+**Short answer:** Time off is a small process that causes real friction when handled manually, and Odoo Time Off removes almost all of it. Leave types that match your policies, correct allocations, a clear approval flow and employee self-service turn leave management into something quick and transparent. Connect it to planning and you also stop leave from catching projects and shifts by surprise.
+
 Managing leave with emails and spreadsheets is error-prone and time-consuming. Odoo Time Off handles requests,
 approvals and balances in one place, but it needs setting up to match your real policies. Continuing this series of
 practical Odoo how-to guides, here is time off.
@@ -49,12 +51,6 @@ team's availability accurate and visible.
 - Enable self-service so employees request and track their own leave.
 - Connect time off to calendars and planning for visible availability.
 
-## My take
-
-Time off is a small process that causes real friction when handled manually, and Odoo Time Off removes almost all of it.
-Leave types that match your policies, correct allocations, a clear approval flow and employee self-service turn leave
-management into something quick and transparent. Connect it to planning and you also stop leave from catching projects
-and shifts by surprise.
 
 Next in this series: how to set up appointments.
 

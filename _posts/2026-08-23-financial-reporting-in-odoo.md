@@ -7,6 +7,8 @@ hub: accounting
 description: "The key financial reports in Odoo, the profit and loss, balance sheet and cash view, explained simply, and why real-time reporting changes decisions."
 ---
 
+**Short answer:** Financial reporting is where all the bookkeeping pays off in understanding. Odoo gives you the profit and loss, balance sheet and cash view in real time, so you always know where you stand. Use them often, watch cash as well as profit, and drill in when something surprises you. Live numbers you trust are the foundation of good decisions.
+
 All the invoices, bills and reconciliation add up to one thing: reports that tell you how the business is
 really doing. Odoo produces the core financial statements automatically and in real time, which is a genuine
 advantage. Here are the key reports, explained without the accountancy jargon.
@@ -55,12 +57,6 @@ line. The reports are a starting point for questions, not just a printout.
 - Use the ability to drill into the numbers when something looks off.
 - Combine financial and analytic reporting to see not just the result, but where it came from.
 
-## My take
-
-Financial reporting is where all the bookkeeping pays off in understanding. Odoo gives you the profit and
-loss, balance sheet and cash view in real time, so you always know where you stand. Use them often, watch
-cash as well as profit, and drill in when something surprises you. Live numbers you trust are the foundation
-of good decisions.
 
 Next in the series: spreading costs and income correctly with assets and deferrals.
 

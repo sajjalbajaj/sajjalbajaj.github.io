@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo handles assets, depreciation, deferred revenue and deferred expenses, spreading big costs and income over time so profit reflects reality."
 ---
 
+**Short answer:** Assets and deferrals are how Odoo keeps your profit honest over time. By spreading big costs and prepaid income across the periods they truly belong to, your monthly numbers stop lurching and start telling the truth. Set them up with your accountant, and your reports become a fair reflection of how the business is really doing.
+
 Some money should not hit your accounts all at once. A machine you will use for years, a subscription a
 customer paid up front for twelve months, an insurance premium covering the whole year. Odoo handles these
 with assets and deferrals, so your profit reflects reality rather than lumpy timing. Here is the plain-English
@@ -57,12 +59,6 @@ For anyone making big purchases or taking payment up front, this is what keeps t
 - Spread prepaid costs like insurance across the period they cover.
 - Agree the useful lives and methods with your accountant, so it is done consistently.
 
-## My take
-
-Assets and deferrals are how Odoo keeps your profit honest over time. By spreading big costs and prepaid
-income across the periods they truly belong to, your monthly numbers stop lurching and start telling the
-truth. Set them up with your accountant, and your reports become a fair reflection of how the business is
-really doing.
 
 This completes the Accounting and Finance part of the series. Next we move on to Website and eCommerce.
 

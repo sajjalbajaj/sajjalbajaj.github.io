@@ -7,6 +7,8 @@ hub: manufacturing
 description: "The manufacturing mistakes that cause the most trouble in Odoo, from inaccurate bills of materials to ignored work centres, and how to avoid them."
 ---
 
+**Short answer:** Manufacturing in Odoo works beautifully when the data underneath it is clean, and falls apart when it is not. Accurate, controlled bills of materials, modelled work centers and reliable component stock are the foundation. Get those right and the shop floor runs on the system rather than around it, which is the whole point.
+
 Manufacturing is unforgiving of bad data, because a wrong bill of materials or a missing work center shows up
 immediately on the shop floor. Most Odoo manufacturing problems trace back to a few common mistakes. Continuing this
 series on common Odoo mistakes, here is Manufacturing.
@@ -49,11 +51,6 @@ the features built for it rather than bolting on spreadsheets.
 - Keep component inventory accurate so orders do not stall.
 - Use Odoo's subcontracting features instead of manual workarounds.
 
-## My take
-
-Manufacturing in Odoo works beautifully when the data underneath it is clean, and falls apart when it is not. Accurate,
-controlled bills of materials, modelled work centers and reliable component stock are the foundation. Get those right
-and the shop floor runs on the system rather than around it, which is the whole point.
 
 Next in this series: common mistakes in Odoo CRM and Sales.
 

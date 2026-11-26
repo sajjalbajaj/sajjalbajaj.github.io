@@ -14,7 +14,7 @@ faqs:
     a: "Odoo documents after sales workflows that can include returns, refunds, repairs and field service tasks, depending on the installed apps and configuration."
 ---
 
-Support requests arrive through email, phone, website forms, chat and messaging apps. When each channel creates a separate queue, requests can be missed or answered twice. Odoo Helpdesk brings tickets into team pipelines with stages, assignments and service measures. Clinics, veterinary businesses and skincare brands can use the same foundation while keeping their different customer information and escalation rules clear.
+**Short answer:** Support requests arrive through email, phone, website forms, chat and messaging apps. When each channel creates a separate queue, requests can be missed or answered twice. Odoo Helpdesk brings tickets into team pipelines with stages, assignments and service measures. Clinics, veterinary businesses and skincare brands can use the same foundation while keeping their different customer information and escalation rules clear.
 
 For the general setup, see [how to set up Helpdesk in Odoo](/blog/2026/09/28/how-to-set-up-helpdesk-odoo/). This guide focuses on routing requests for specific industries.
 

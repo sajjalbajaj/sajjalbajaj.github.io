@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Discuss keeps team communication in the same place as your work, with channels, direct messages and conversations tied to real records."
 ---
 
+**Short answer:** Discuss is not trying to replace every chat tool, but by keeping communication tied to the actual work and records, it removes the disconnect that separate messaging apps create. When the conversation lives with the work, context is preserved and less falls through the cracks.
+
 Most business chat happens away from the work it is about, in a separate messaging app, disconnected from
 the records it concerns. Odoo Discuss keeps communication where the work is. This starts a short series on
 Odoo Productivity, the final part of the Odoo guide series.
@@ -47,11 +49,6 @@ tools together.
 - Let Odoo notify you about what you are involved in.
 - Keep work-related conversation in context rather than a separate app.
 
-## My take
-
-Discuss is not trying to replace every chat tool, but by keeping communication tied to the actual work and
-records, it removes the disconnect that separate messaging apps create. When the conversation lives with the
-work, context is preserved and less falls through the cracks.
 
 Next in the series: capturing what your business knows with Knowledge.
 

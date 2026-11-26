@@ -2,10 +2,13 @@
 layout: post
 title: "Invoicing Policies in Odoo Sales: Ordered vs Delivered"
 date: 2026-08-19 08:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 19, Sales, Accounting, ERP, Warehouse Management, Invoicing, Cash Flow]
 hub: sales
 description: "How Odoo's invoicing policies decide when you can bill a customer, on ordered or delivered quantities, and how to choose the right one."
 ---
+
+**Short answer:** An invoicing policy determines when ordered or delivered quantities become billable. Choose it to match the commercial agreement and test partial deliveries, service acceptance and corrections before using it for live billing.
 
 Here is a question that quietly matters a lot: when should you invoice a customer, when they order, or
 when you deliver? Odoo lets you decide per product with invoicing policies, and getting this right keeps
@@ -55,11 +58,6 @@ instead of forcing everything into one all-or-nothing invoice.
 - Use ordered quantities for services and cases where you bill on agreement or up front.
 - Check the policy on new products, so billing behaves the way you expect.
 
-## My take
-
-Invoicing policy is a small setting with a real impact on your cash flow and your customer relationships.
-Bill physical goods on delivery, bill services on order, and let Odoo keep invoicing aligned with what has
-genuinely happened. Do that, and your billing stays accurate, timely and dispute-free.
 
 Next in the series: recurring revenue with subscriptions.
 

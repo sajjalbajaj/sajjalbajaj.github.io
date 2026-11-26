@@ -14,7 +14,7 @@ faqs:
     a: "They may be counting different records or dates, such as quotations versus confirmed orders, order date versus invoice date, tax-inclusive versus tax-exclusive amounts, refunds, or company currencies. Define each metric before comparing totals."
 ---
 
-Power BI can turn Odoo transactions into management views for sales, purchasing, stock, production and finance. A dashboard is only trustworthy when the numbers have a clear definition and the refresh process keeps working after the person who built it moves on.
+**Short answer:** Power BI can turn Odoo transactions into management views for sales, purchasing, stock, production and finance. A dashboard is only trustworthy when the numbers have a clear definition and the refresh process keeps working after the person who built it moves on.
 
 There is no one connection pattern for every Odoo database. Hosting plan, version, data volume, security requirements and refresh expectations determine the right design. For Odoo 19, the external JSON-2 API is a documented option for integrations, but Odoo says external API access is available only on Custom pricing plans. Confirm API access and limits before promising a design.
 

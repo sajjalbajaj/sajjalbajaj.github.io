@@ -7,6 +7,8 @@ hub: hr
 description: "How the Odoo Employees app acts as the central hub for your people data, and why keeping HR in the same system as the rest of your business helps."
 ---
 
+**Short answer:** The Employees app is the quiet foundation of Odoo HR. It is not glamorous, but getting your people data organised in one connected place makes everything else, leave, attendance, appraisals, payroll, simpler and more reliable. Start here and build out.
+
 Your people are your biggest asset, and their information is scattered across contracts, spreadsheets and
 inboxes in most businesses. The Odoo Employees app pulls it into one place. This starts a short series on
 Odoo HR and People.
@@ -48,11 +50,6 @@ app by app.
 - Keep contracts and key documents attached to each employee record.
 - Maintain the records as people join, move and leave, so HR data stays trustworthy.
 
-## My take
-
-The Employees app is the quiet foundation of Odoo HR. It is not glamorous, but getting your people data
-organised in one connected place makes everything else, leave, attendance, appraisals, payroll, simpler and
-more reliable. Start here and build out.
 
 Next in the series: filling roles with Odoo Recruitment.
 

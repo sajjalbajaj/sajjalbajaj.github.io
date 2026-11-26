@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20 in India: Availability, GST and What Indian Businesses Can Expect"
 date: 2026-09-05 13:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, India, GST, ERP, Accounting, Finance, Taxes]
 hub: planning
 description: "When is Odoo 20 available in India, and what does it mean for GST, e-invoicing, TDS and Indian payroll? A clear guide for Indian businesses on Odoo."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -50,12 +52,6 @@ production database before you start entering transactions. Applying it cleanly 
 entries is difficult and usually needs professional data work. So if you are starting fresh on Odoo, get the India
 localization in place first.
 
-## My take
-
-For Indian businesses, Odoo 20 is reassuring on the thing that matters most, compliance, while bringing the same
-forward-looking improvements everyone else gets. The GST, e-invoicing, e-way bill, TDS, TCS and Indian payroll support
-carry forward, and you are on the same global timeline for the new version. The advice is the same as anywhere: plan the
-upgrade for after the first stable patch, and get it set up correctly, especially the localization.
 
 *Based on Odoo's public roadmap and its India localization, ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/).
 Final details are confirmed at launch. Want Odoo set up right for India? [Get in touch](/services/odoo-implementation/).*

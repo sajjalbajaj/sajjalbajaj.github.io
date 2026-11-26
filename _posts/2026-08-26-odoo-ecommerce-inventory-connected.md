@@ -7,6 +7,8 @@ hub: website
 description: "Why running your online store inside the same system as your inventory is Odoo eCommerce's biggest advantage, and how it prevents overselling and chaos."
 ---
 
+**Short answer:** The reason to run your store in Odoo is not just convenience, it is that the shop and the inventory are the same system. That connection quietly removes the overselling, drift and firefighting that separate systems create. One catalog, one stock, every channel in agreement. For anyone selling online and elsewhere, that is a genuine advantage.
+
 The single biggest headache in online selling is keeping the shop and the stockroom in agreement. Sell
 something you do not have, and you disappoint a customer. Hold stock you cannot see online, and you miss
 sales. Odoo solves this by making the shop and the inventory one system. Continuing the series on Odoo
@@ -49,12 +51,6 @@ plans on complete information.
 - Let online demand feed your reordering and planning like any other sales.
 - Manage all channels in one place for a true view of stock and sales.
 
-## My take
-
-The reason to run your store in Odoo is not just convenience, it is that the shop and the inventory are the
-same system. That connection quietly removes the overselling, drift and firefighting that separate systems
-create. One catalog, one stock, every channel in agreement. For anyone selling online and elsewhere, that
-is a genuine advantage.
 
 Next in the series: lifting sales with promotions, coupons and upselling.
 

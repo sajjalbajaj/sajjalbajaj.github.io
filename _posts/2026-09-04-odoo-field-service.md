@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Field Service helps you plan, dispatch and complete on-site jobs, from scheduling technicians to logging work and billing, in one system."
 ---
 
+**Short answer:** Field Service brings order to the genuinely hard problem of coordinating on-site work: planning, dispatch, on-site logging and billing, all connected. Get the right person to the right job with the right information, capture the work cleanly, and bill accurately. For any field-based business, that end-to-end flow is a big step up from phones and paper.
+
 If your business sends people out to do work, installs, repairs, maintenance, visits, coordinating it is a
 real challenge: the right person, at the right place, with the right information, and a clean record
 afterwards. Odoo Field Service manages exactly that. Continuing the series on Odoo Services and Project,
@@ -49,12 +51,6 @@ business, not a separate paper trail.
 - Log time and parts on site, while it is accurate.
 - Let completed jobs flow into billing rather than chasing job sheets.
 
-## My take
-
-Field Service brings order to the genuinely hard problem of coordinating on-site work: planning, dispatch,
-on-site logging and billing, all connected. Get the right person to the right job with the right
-information, capture the work cleanly, and bill accurately. For any field-based business, that end-to-end
-flow is a big step up from phones and paper.
 
 Next in the series: letting clients book your time with Appointments.
 

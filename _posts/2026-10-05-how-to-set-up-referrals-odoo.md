@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Referrals, so your employees help you hire great people by recommending candidates, with rewards to match."
 ---
 
+**Short answer:** Referrals taps one of the best hiring sources you have, your own employees and their networks, and gives it structure, incentives and tracking. Connecting it to real openings, offering worthwhile rewards, keeping referring easy and tracking fairly are what make it work. Set up well, it quietly improves your hiring while making employees feel part of building the team, which is a nice bonus.
+
 Some of the best hires come through recommendations from your own people, because employees know who would fit. Odoo
 Referrals turns that into a proper program with rewards and tracking. Setting it up well is what gets employees actually
 referring. Continuing this series of practical Odoo how-to guides, here is Referrals.
@@ -49,12 +51,6 @@ are paid as promised, they keep participating; when it feels murky, they stop.
 - Keep the program visible and engaging so people remember it.
 - Track referrals fairly so rewards are paid correctly.
 
-## My take
-
-Referrals taps one of the best hiring sources you have, your own employees and their networks, and gives it structure,
-incentives and tracking. Connecting it to real openings, offering worthwhile rewards, keeping referring easy and
-tracking fairly are what make it work. Set up well, it quietly improves your hiring while making employees feel part of
-building the team, which is a nice bonus.
 
 Next in this series: how to set up Maintenance.
 

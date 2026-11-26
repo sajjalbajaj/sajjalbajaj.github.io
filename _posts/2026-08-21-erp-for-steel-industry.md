@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for the Steel Industry: Problems It Solves"
 date: 2026-08-21 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Steel, Manufacturing, Inventory Management, SME]
 hub: industries
 description: "The specific problems steel businesses face, from weight-based inventory and off-cuts to batch traceability and volatile material prices, and how Odoo solves them."
 ---
 
-The steel industry has operational challenges most generic systems were never built for: material
-measured by weight and dimension, expensive stock, off-cuts, and prices that move constantly.
-Continuing the series on industry problems and how ERP solves them, here is steel.
+**Short answer:** Steel operations need consistent weight and dimension records, material traceability and visibility of offcuts and processing costs. Start an ERP design with those requirements and demonstrate the stock movements before selecting additional automation.
 
 ## Problem: inventory is not simple units
 
@@ -58,3 +57,10 @@ and the pressure of volatile prices. I configure Odoo around how a steel busines
 
 If these are your daily headaches, that is exactly what I help steel businesses solve. Let's talk it
 through.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

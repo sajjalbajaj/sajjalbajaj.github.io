@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo handles customer invoicing end to end: raising invoices from orders, sending them, and tracking payment so you get paid faster."
 ---
 
+**Short answer:** Customer invoicing in Odoo is built to shorten the gap between doing the work and getting paid. Raise invoices from orders, send them straight away, track them to payment, and follow up overdue ones as a habit. Do that, and your cash flow gets noticeably healthier.
+
 Getting paid is the lifeblood of a business, and the smoother your invoicing, the faster the cash arrives.
 Odoo makes customer invoicing quick to raise, easy to send, and simple to track through to payment. Here
 is how the flow works.
@@ -55,11 +57,6 @@ payment, the whole cycle is quicker and cleaner than juggling separate tools.
 - Watch your overdue list and follow up consistently.
 - Use credit notes for corrections, so your books stay clean and traceable.
 
-## My take
-
-Customer invoicing in Odoo is built to shorten the gap between doing the work and getting paid. Raise
-invoices from orders, send them straight away, track them to payment, and follow up overdue ones as a habit.
-Do that, and your cash flow gets noticeably healthier.
 
 Next in the series: the other side of the ledger, vendor bills and payments.
 

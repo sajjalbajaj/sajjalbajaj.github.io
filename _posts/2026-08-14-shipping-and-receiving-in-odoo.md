@@ -7,6 +7,8 @@ hub: inventory
 description: "How Odoo handles goods coming in and going out, from simple one-step flows to multi-step receiving and dispatch, plus carriers and reservations."
 ---
 
+**Short answer:** Shipping and receiving is where inventory meets the real world of vans, boxes and deadlines. Odoo's step-based flows let you model exactly how goods move through your business, no more and no less. Start simple, match the steps to reality, and both your receipts and your dispatches stay fast and accurate.
+
 Stock is only useful when it moves: in from suppliers, out to customers. Odoo gives you real control
 over these inbound and outbound flows, from dead simple to genuinely sophisticated. Here is how
 shipping and receiving works.
@@ -55,12 +57,8 @@ Begin with the simplest flow that is honest about your process. If you do not in
 do not add an inspection step just because it exists. Add steps only where they reflect real work.
 You can always increase the detail as your operation grows.
 
-## My take
+If a supplier ships directly to your customer, the warehouse flow changes. Read [how dropshipping works in Odoo and what to configure](/blog/2026/08/28/erp-for-dropshipping/) before deciding whether the order should bypass your own stock locations.
 
-Shipping and receiving is where inventory meets the real world of vans, boxes and deadlines. Odoo's
-step-based flows let you model exactly how goods move through your business, no more and no less.
-Start simple, match the steps to reality, and both your receipts and your dispatches stay fast and
-accurate.
 
 Next in the series: how Odoo decides which stock to pick first, with removal strategies.
 

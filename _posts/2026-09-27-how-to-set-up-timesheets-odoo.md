@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up timesheets in Odoo, so time is recorded easily, projects show their true cost, and billable work gets invoiced."
 ---
 
+**Short answer:** Timesheets are only as good as the discipline behind them, so the whole game is making them easy enough that people actually keep them. Do that, connect them to projects and billing, and you get true project costs and fully billed work, which for a services business is transformative. It is humble data that quietly drives profitability.
+
 For any business that sells time or wants to know where its hours go, timesheets are the raw data everything else
 depends on. Setting them up so they are quick to fill and connected to projects is what makes them work. Continuing this
 series of practical Odoo how-to guides, here is timesheets.
@@ -49,11 +51,6 @@ time, that visibility is genuinely valuable for pricing and planning.
 - Connect timesheets to billing so no billable time is lost.
 - Use the reporting to see where your hours really go.
 
-## My take
-
-Timesheets are only as good as the discipline behind them, so the whole game is making them easy enough that people
-actually keep them. Do that, connect them to projects and billing, and you get true project costs and fully billed work,
-which for a services business is transformative. It is humble data that quietly drives profitability.
 
 Next in this series: how to set up your helpdesk.
 

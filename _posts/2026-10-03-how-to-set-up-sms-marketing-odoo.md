@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up Odoo SMS Marketing, so you can reach customers directly on their phones with short, timely, high-open-rate messages."
 ---
 
+**Short answer:** SMS Marketing is a high-impact channel precisely because texts get read, which makes it powerful and easy to abuse. The winning approach is restraint: a permission-based audience, short and clear messages, used sparingly for genuinely valuable moments. Set up that way, SMS reaches customers when it really matters, without wearing out its welcome. Used carelessly, it burns the channel fast.
+
 Text messages get read, often within minutes, which makes SMS a powerful channel for timely, important messages. Odoo
 SMS Marketing lets you send them from the same contact data as everything else. Setting it up well, and using it with
 restraint, is the key. Continuing this series of practical Odoo how-to guides, here is SMS Marketing.
@@ -49,12 +51,6 @@ effective, because the moment it feels like spam, people tune out or unsubscribe
 - Use SMS for timely, high-value moments, not routine blasts.
 - Respect frequency and consent to keep the channel effective.
 
-## My take
-
-SMS Marketing is a high-impact channel precisely because texts get read, which makes it powerful and easy to abuse. The
-winning approach is restraint: a permission-based audience, short and clear messages, used sparingly for genuinely
-valuable moments. Set up that way, SMS reaches customers when it really matters, without wearing out its welcome. Used
-carelessly, it burns the channel fast.
 
 Next in this series: how to set up Social Marketing.
 

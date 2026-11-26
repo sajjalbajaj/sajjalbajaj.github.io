@@ -7,6 +7,8 @@ hub: manufacturing
 description: "How Odoo builds quality control into your operations with quality control points, check types and alerts, so quality is a step, not an afterthought."
 ---
 
+**Short answer:** Quality control works best when it is built in, not bolted on. Odoo's control points put the right check at the right moment, its check types keep it practical, and its alerts turn problems into trackable, improvable data. Start small, focus on where quality really matters, and let the system make good quality the default.
+
 Quality problems are expensive: rejected goods, unhappy customers, wasted materials. The best way to
 avoid them is to build quality checks into your everyday operations rather than hoping people remember.
 That is exactly what the Quality app in Odoo does. Here is how it works.
@@ -54,12 +56,6 @@ which is exactly why it actually gets done.
 - Encourage your team to raise quality alerts, and actually review them.
 - Watch for patterns in alerts and fix root causes, not just symptoms.
 
-## My take
-
-Quality control works best when it is built in, not bolted on. Odoo's control points put the right
-check at the right moment, its check types keep it practical, and its alerts turn problems into
-trackable, improvable data. Start small, focus on where quality really matters, and let the system make
-good quality the default.
 
 Next in the series: sourcing what you need, starting with the purchasing workflow.
 

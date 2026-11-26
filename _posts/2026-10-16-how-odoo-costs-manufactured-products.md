@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Manufacturing Costs: Components, Operations and Real Cost"
 date: 2026-10-16 09:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Manufacturing, MRP, Accounting, Finance, Inventory Management]
 hub: manufacturing
 description: "Understand Odoo 20 manufacturing costs: component value, work centre and employee cost, expected versus real cost, BoM price, WIP and variances."
@@ -30,6 +30,18 @@ order overview before deciding whether a difference is a data error, a productio
 - **Edition:** costing methods, Compute Price from BoM, the BoM Overview and the MO Overview are in Community and
   Enterprise. Employee costs on operations and the **Production Analysis** report are Enterprise only.
 - **Apps:** Manufacturing, Inventory, and Invoicing or Accounting.
+
+## Why are MO Cost and Real Cost different in Odoo?
+
+MO Cost starts from the planned component quantities and operation costs. Real Cost reflects recorded consumption,
+time and applicable employee rates. Extra material, longer operations or a different employee rate can explain a
+difference while production is running. Check those inputs before changing the product cost to make the figures agree.
+
+In Odoo's [manufacturing order cost documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html),
+the MO Cost column updates to the Real Cost when production is completed. Matching columns on a finished order do
+not prove the original plan was accurate. If your review needs the original estimate, retain that baseline before
+completion and compare it with the recorded outcome. This is a review recommendation, not a claim that the overview
+preserves an unchanged historical estimate.
 
 ## Which costing method does a manufactured product use?
 
@@ -143,7 +155,7 @@ percentage split. Those usually mean periodic journal entries or customisation.
 
 ## Official references
 
-- Odoo 20 documentation: [Manufacturing order costs](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/mo_costs.html)
+- Odoo 20 documentation: [Manufacturing order costs](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html)
 - Odoo 20 documentation: [Production analysis](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/workflows/production_analysis.html)
 - Odoo 19 documentation: [Work-in-progress costs](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.html)
 - Odoo 19 documentation: [By-products](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/workflows/byproducts.html)

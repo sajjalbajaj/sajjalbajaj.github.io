@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English guide to setting up bank reconciliation in Odoo, so your records match your actual bank balance and your books stay accurate."
 ---
 
+**Short answer:** Bank reconciliation is one of those routines that is painless when set up well and miserable when neglected. A connected or imported bank feed, good match suggestions, sensible rules and the habit of reconciling regularly keep your books in step with reality. Get this running smoothly and you always know your true cash position, which is exactly what accounting is for.
+
 Bank reconciliation is where your accounting meets reality: it matches what your books say against what your bank
 statement says. Setting it up well makes keeping your books accurate quick rather than painful. Continuing this series
 of practical Odoo how-to guides, here is bank reconciliation.
@@ -49,12 +51,6 @@ left for months become a stressful puzzle. Build the routine and it stays easy.
 - Set up rules for recurring transactions like fees and regular payments.
 - Reconcile regularly so discrepancies stay small and easy to fix.
 
-## My take
-
-Bank reconciliation is one of those routines that is painless when set up well and miserable when neglected. A connected
-or imported bank feed, good match suggestions, sensible rules and the habit of reconciling regularly keep your books in
-step with reality. Get this running smoothly and you always know your true cash position, which is exactly what
-accounting is for.
 
 Next in this series: how to set up expense management.
 

@@ -7,6 +7,8 @@ hub: inventory
 description: "The inventory mistakes that quietly wreck stock accuracy in Odoo, from ignoring units of measure to skipping reordering rules, and how to fix them."
 ---
 
+**Short answer:** Inventory rewards care at setup and punishes shortcuts. Almost every "Odoo inventory is wrong" complaint traces back to units of measure, missing reordering rules or a system nobody reconciles. Get those right and stock accuracy stops being a running battle and becomes something you can actually rely on.
+
 Inventory is where a lot of businesses feel the pain of a badly set up system, because stock either says one thing and
 reality says another. Most of the time it traces back to a few common mistakes. Continuing this series on common Odoo
 mistakes, here is Inventory.
@@ -49,11 +51,6 @@ here pays back every day.
 - Use lot and serial tracking if your industry needs traceability.
 - Give your warehouse a sensible location structure from the start.
 
-## My take
-
-Inventory rewards care at setup and punishes shortcuts. Almost every "Odoo inventory is wrong" complaint traces back to
-units of measure, missing reordering rules or a system nobody reconciles. Get those right and stock accuracy stops
-being a running battle and becomes something you can actually rely on.
 
 Next in this series: common mistakes in Odoo Accounting.
 

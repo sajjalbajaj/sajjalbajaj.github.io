@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20: What to Expect and How to Prepare"
 date: 2026-07-31 09:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, AI, Digital Transformation, Bookkeeping, Business Intelligence, Data Analytics, Business Automation]
 hub: planning
 description: "A grounded preview of Odoo 20, based on the official roadmap: the AI direction, the features being discussed, and how businesses should prepare for the upgrade."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -71,12 +73,6 @@ You do not need to wait for launch to get ready:
 3. **Keep configurations clean.** The tidier your current setup, the smoother the move.
 4. **Pick your moment.** Plan the upgrade for a quiet business period, not your busiest month.
 
-## My take
-
-Odoo 20 looks like a genuine step in a clear direction: AI that assists inside real workflows, and
-a platform that keeps trying to remove friction. That is a good direction. But the fundamentals of
-a successful upgrade have not changed. Understand what you run, test your customizations, wait for
-stability, and move deliberately.
 
 If you are on an older Odoo version and wondering whether and when to move, that is exactly the kind
 of planning I help with. Happy to map out a sensible path when the time is right.

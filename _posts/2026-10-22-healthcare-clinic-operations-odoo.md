@@ -14,7 +14,7 @@ faqs:
     a: "Odoo's sales, invoicing, accounting, purchasing and inventory apps can support administrative workflows. Tax, insurance, payment and regulatory requirements must be checked for the clinic's jurisdiction."
 ---
 
-A clinic needs more than a calendar. Reception must coordinate providers and rooms, finance needs reliable invoices and payments, and managers need to see whether common supplies are running low. Odoo can support many of these business operations through its standard apps. It should not be described as a complete clinical record system simply because it can store contacts and appointments.
+**Short answer:** A clinic needs more than a calendar. Reception must coordinate providers and rooms, finance needs reliable invoices and payments, and managers need to see whether common supplies are running low. Odoo can support many of these business operations through its standard apps. It should not be described as a complete clinical record system simply because it can store contacts and appointments.
 
 ## Map the clinic's administrative workflow
 

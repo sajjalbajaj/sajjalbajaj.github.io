@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up Odoo Email Marketing, so you can send targeted campaigns to the right people and see what actually works."
 ---
 
+**Short answer:** Email Marketing on Odoo is powerful because it sits on your real contact data, making campaigns targeted and results visible. Sound deliverability, segmented lists, clean emails, deliberate targeting and a habit of measuring are what turn it from noise into a genuine channel. The tool is capable; the results come from using the data and the feedback it gives you.
+
 Email remains one of the most effective ways to reach customers, and Odoo Email Marketing lets you do it on your own
 contact data, so campaigns are targeted and measurable. Setting it up well is what makes email work rather than annoy.
 Continuing this series of practical Odoo how-to guides, here is Email Marketing.
@@ -49,12 +51,6 @@ the numbers means repeating mistakes; using them means getting steadily better.
 - Target each campaign to the right audience deliberately.
 - Measure results and let them shape your next campaign.
 
-## My take
-
-Email Marketing on Odoo is powerful because it sits on your real contact data, making campaigns targeted and results
-visible. Sound deliverability, segmented lists, clean emails, deliberate targeting and a habit of measuring are what turn
-it from noise into a genuine channel. The tool is capable; the results come from using the data and the feedback it gives
-you.
 
 Next in this series: how to set up SMS Marketing.
 

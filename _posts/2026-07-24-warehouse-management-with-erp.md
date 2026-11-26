@@ -2,10 +2,13 @@
 layout: post
 title: "Warehouse Management with ERP: From Chaos to Control"
 date: 2026-07-24 15:00:00 +0530
+last_modified_at: 2026-11-26
 tags: [ERP, Warehouse, Odoo, WMS, Logistics, Supply Chain, Inventory Management, Stock Control]
 hub: inventory
 description: "What a warehouse management system (WMS) actually does, and how ERP turns receiving, put-away, picking and packing into a smooth, accurate operation."
 ---
+
+**Short answer:** Warehouse management connects receiving, storage, picking and dispatch to recorded stock movements. Map the real physical flow first, then configure locations, scanning and responsibilities to match it.
 
 A warehouse is where your ERP meets the real, physical world. You can have perfect stock
 numbers on screen, but if picking is slow and errors are common, your customers still feel it.
@@ -45,13 +48,14 @@ stays accurate everywhere.
 ## How ERP and Odoo help
 
 An ERP with built-in warehouse management, like Odoo, connects the floor to the rest of the
-business. A single scan on the warehouse floor updates stock, orders and accounting instantly,
-with no double entry.
+business. Scanning helps record physical operations, while validation of stock movements and the
+configured valuation and invoicing rules determine what changes in stock and accounting.
 
-## My take
-
-Map your real physical flow first: how goods arrive, get stored, get picked and ship. Then
-configure the WMS to match it, add scanning, and keep it simple. That is how a warehouse goes
-from chaos to control.
 
 Planning a warehouse setup or cleanup in your ERP? Happy to help you design it.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

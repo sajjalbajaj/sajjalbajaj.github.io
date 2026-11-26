@@ -8,6 +8,8 @@ hub: inventory
 description: "How Odoo handles product configuration: product types, units of measure and packaging, and why getting these right keeps your inventory accurate."
 ---
 
+**Short answer:** Product configuration is not glamorous, but it is where inventory accuracy is won or lost. Decide your product types deliberately, set your units of measure and conversions carefully, and use packaging where it reflects how you really trade. Do that, and every feature built on top of your products behaves.
+
 Every accurate inventory starts with well-defined products. Before Odoo can track, value or move
 anything, it needs to know what the thing is. This post covers the three configuration basics:
 product types, units of measure, and packaging.
@@ -60,12 +62,6 @@ wrong and Odoo may not track stock at all. Get a unit conversion wrong and your 
 drift. Skip packaging and everyday handling becomes clumsy. A little care here saves a lot of
 cleanup later.
 
-## My take
-
-Product configuration is not glamorous, but it is where inventory accuracy is won or lost. Decide
-your product types deliberately, set your units of measure and conversions carefully, and use
-packaging where it reflects how you really trade. Do that, and every feature built on top of your
-products behaves.
 
 Next in the series: tracking individual items with lot and serial numbers.
 

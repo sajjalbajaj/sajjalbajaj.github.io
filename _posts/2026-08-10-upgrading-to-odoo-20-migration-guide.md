@@ -2,11 +2,13 @@
 layout: post
 title: "Upgrading to Odoo 20: A Practical Migration Guide"
 date: 2026-08-10 09:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Migration, ERP Implementation, Digital Transformation, Inventory Management, Stock Control, Business Automation]
 hub: planning
 description: "A practical, step-by-step guide to planning your Odoo 20 migration: how Odoo upgrades work, what to test, and how to reach go-live without surprises."
 ---
+
+**Short answer:** Plan an Odoo migration by inventorying modules and integrations, upgrading a test copy, validating business workflows and rehearsing cutover and recovery. Read the historical release notes in context and base production approval on your own acceptance evidence.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -92,12 +94,6 @@ Have help on hand for the first busy days after go-live. Watch for friction, ans
 and fix small issues before they become frustrations. A well-tested upgrade usually makes this quiet,
 which is exactly the goal.
 
-## My take
-
-An Odoo 20 migration succeeds on the same things every ERP project does: know what you run, respect
-your customizations, test on a copy, and move deliberately. Do that and an upgrade becomes a
-non-event. Skip the testing and it becomes a bad week. Prepare now, move once the release settles, and
-you get the best of both.
 
 Planning your move to Odoo 20? I am happy to review your setup and help you scope the upgrade
 sensibly.

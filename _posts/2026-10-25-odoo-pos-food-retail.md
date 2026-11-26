@@ -14,7 +14,7 @@ faqs:
     a: "Odoo supports tracked POS products with lots or serial numbers, but the business must configure products and traceability. Validate expiry and recipe consumption needs for the food operation."
 ---
 
-A food counter needs to take orders quickly, charge the correct price, send preparation details to the kitchen and close the day cleanly. Odoo Point of Sale supports shops and restaurants, with restaurant tools for tables, kitchen notifications and bills. A good setup starts with product and menu data, then tests the full order from sale to stock and payment.
+**Short answer:** A food counter needs to take orders quickly, charge the correct price, send preparation details to the kitchen and close the day cleanly. Odoo Point of Sale supports shops and restaurants, with restaurant tools for tables, kitchen notifications and bills. A good setup starts with product and menu data, then tests the full order from sale to stock and payment.
 
 For the basic register setup, see [how to set up Point of Sale in Odoo](/blog/2026/09/25/how-to-set-up-point-of-sale-odoo/). This guide focuses on food service operations.
 

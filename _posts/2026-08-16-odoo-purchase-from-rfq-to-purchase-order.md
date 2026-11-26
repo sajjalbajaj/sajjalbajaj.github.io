@@ -7,6 +7,8 @@ hub: purchase
 description: "A plain-English walk through Odoo Purchase: how requests for quotation become purchase orders, and how buying connects to stock and accounting."
 ---
 
+**Short answer:** Odoo Purchase brings order and visibility to buying. The flow from RFQ to purchase order is simple, but the real value is how it ties into stock and accounting, so nothing falls through the cracks. Get your vendors and products set up cleanly, and purchasing becomes a controlled, transparent process instead of a scatter of emails.
+
 Buying well is quietly one of the biggest levers in any business: get the right goods, at the right
 price, at the right time. Odoo Purchase turns that into a clean, controlled process. Here is how it
 flows, from first enquiry to a confirmed order.
@@ -51,12 +53,8 @@ others.
 - Confirm orders promptly so inventory and planning see what is incoming.
 - Record receipts as goods arrive, rather than in a batch later, to keep stock accurate.
 
-## My take
+For orders that the supplier will send straight to the customer, continue with the [Odoo dropshipping workflow from sales order to supplier delivery](/blog/2026/08/28/erp-for-dropshipping/).
 
-Odoo Purchase brings order and visibility to buying. The flow from RFQ to purchase order is simple, but
-the real value is how it ties into stock and accounting, so nothing falls through the cracks. Get your
-vendors and products set up cleanly, and purchasing becomes a controlled, transparent process instead of
-a scatter of emails.
 
 Next in the series: matching what you ordered, received and were billed.
 

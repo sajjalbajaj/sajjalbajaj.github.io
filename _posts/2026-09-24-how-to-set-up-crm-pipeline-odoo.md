@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo CRM Pipeline: Stages, Activities and Follow Ups"
 date: 2026-09-24 09:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Setup, CRM, Sales, Sales Management, Lead Management]
 hub: sales
 description: "Set up an Odoo 20 CRM pipeline with clear stages, opportunity owners, next activities, activity plans, lost reasons and useful sales reviews."
@@ -28,7 +28,21 @@ This article focuses on pipeline design and operating discipline. For the wider 
 This guide follows Odoo 20 CRM stages, activities and activity plans. The main principles also apply to Odoo 19.
 Confirm the screens in the installed edition before training users or documenting acceptance criteria.
 
-## Define your stages
+## What should be recorded on an active Odoo opportunity?
+
+I recommend a named salesperson, a stage supported by a clear sales decision, and a next activity with a responsible
+person and due date. These are operating standards for the team, not a claim that Odoo makes every field mandatory.
+Keep the customer need and the latest agreed next step in the record so another colleague can continue the conversation.
+
+A stage describes progress; an activity describes the next action. For example, an illustrative opportunity may be
+in **Proposal** while its next activity is a call to review the scope with the buyer. Moving the card does not mean
+that call occurred. Record the interaction and complete the activity when the work is done.
+
+Odoo's [activity and activity plan documentation](https://www.odoo.com/documentation/20.0/applications/sales/crm/optimize/utilize_activities.html)
+explains how activities are scheduled and completed. A plan can schedule a repeatable sequence, but the team still
+needs to perform the actions and record the outcome.
+
+## How should you choose CRM pipeline stages?
 
 The heart of the pipeline is its stages, the steps a deal passes through from first contact to won. Set these to reflect
 your real sales process: something like new, qualified, proposal, negotiation, won. Keep them few and meaningful. A

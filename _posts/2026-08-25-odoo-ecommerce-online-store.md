@@ -7,6 +7,8 @@ hub: website
 description: "How to set up an online store with Odoo eCommerce, and why running your shop inside your ERP means stock, orders and accounts stay in sync automatically."
 ---
 
+**Short answer:** The strength of Odoo eCommerce is not that it is a shop, plenty of tools sell online. It is that the shop is part of your business, sharing stock, orders and accounts with everything else. That connection removes the syncing headaches that plague bolt-on webshops. Set it up on your real catalog and let it run as one system.
+
 Selling online is no longer optional for many businesses, but bolting a separate webshop onto a business
 that runs elsewhere creates a whole new syncing problem. Odoo eCommerce avoids that by making your shop
 part of the same system as your stock, sales and accounts. Continuing the series on Odoo Website and
@@ -48,12 +50,6 @@ buying experience right, and expand as you learn what sells and how customers be
 - Trust the shared stock, so online and offline never fight over the same inventory.
 - Launch focused, then expand your range as you go.
 
-## My take
-
-The strength of Odoo eCommerce is not that it is a shop, plenty of tools sell online. It is that the shop
-is part of your business, sharing stock, orders and accounts with everything else. That connection removes
-the syncing headaches that plague bolt-on webshops. Set it up on your real catalog and let it run as one
-system.
 
 Next in the series: making product pages that convert, with variants and a clear catalog.
 

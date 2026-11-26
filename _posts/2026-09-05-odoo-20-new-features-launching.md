@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20: The New Features Launching"
 date: 2026-09-05 12:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Features, ERP, AI, Automation, Upgrade, Business Automation]
 hub: planning
 description: "What genuinely new features is Odoo 20 launching? A plain-English preview of the fresh additions, from agentic AI to a redesigned mobile app and new industries."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -50,12 +52,6 @@ The through-line of Odoo 20's new features is intelligence and reach: smarter au
 experience on mobile, ready-made solutions for more industries, and stronger foundations underneath. It is less about a
 long checklist of small additions and more about a few meaningful steps forward.
 
-## My take
-
-If the new features land as the roadmap suggests, agentic AI is the one to watch, because it genuinely changes what an
-ERP can take off your hands. The redesigned mobile app and new industry verticals are practical, valuable additions too.
-As always, the smart move is to see what is actually confirmed at launch, then decide which of these new capabilities
-matter for your business before you plan an upgrade around them.
 
 *Based on Odoo's public roadmap ahead of the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026).
 The confirmed feature list comes at launch. Want to know what Odoo 20 means for you? [Get in touch](/services/odoo-consulting/).*

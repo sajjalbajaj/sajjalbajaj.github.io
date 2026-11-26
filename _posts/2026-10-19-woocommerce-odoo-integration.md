@@ -14,7 +14,7 @@ faqs:
     a: "Choose one invoice process with your accountant. The answer depends on the country, tax rules, payment flow, and whether the store or Odoo is responsible for the legal invoice. Avoid issuing duplicate invoices from both systems."
 ---
 
-WooCommerce and Odoo can work well together when the storefront stays focused on selling and Odoo manages the operational record: products, inventory, purchasing, fulfillment and accounting. The difficult part is not moving an order through an API. It is deciding how a product, tax, payment or return should be represented on both sides.
+**Short answer:** WooCommerce and Odoo can work well together when the storefront stays focused on selling and Odoo manages the operational record: products, inventory, purchasing, fulfillment and accounting. The difficult part is not moving an order through an API. It is deciding how a product, tax, payment or return should be represented on both sides.
 
 Odoo's version 19 documentation describes standard connectors for some commerce channels, including Shopify and Amazon, but does not document a built-in WooCommerce connector. In practice, a WooCommerce-to-Odoo integration is usually delivered through a third-party module, middleware or custom development. That makes careful provider selection and acceptance testing especially important.
 

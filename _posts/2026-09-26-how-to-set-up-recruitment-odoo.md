@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Recruitment, so you can post jobs, manage candidates through clear stages, and hire without losing track of anyone."
 ---
 
+**Short answer:** Recruitment in Odoo brings the same clarity to hiring that a good pipeline brings to sales: every candidate visible, every stage clear, nobody lost in an inbox. Well-set-up job positions, sensible stages and a clean flow into onboarding are what make it work. For any business that hires regularly, that structure turns recruitment from a scramble into a managed process.
+
 Hiring is a pipeline much like sales, and managing it in Odoo Recruitment keeps every candidate visible and every step
 on track instead of buried in an inbox. To round off this series of practical Odoo how-to guides, here is recruitment.
 
@@ -48,12 +50,6 @@ onboarding begins on a solid footing. Recruitment and HR become one continuous f
 - Move candidates through stages and record feedback as you go.
 - Connect hiring to employee onboarding for a smooth handover.
 
-## My take
-
-Recruitment in Odoo brings the same clarity to hiring that a good pipeline brings to sales: every candidate visible,
-every stage clear, nobody lost in an inbox. Well-set-up job positions, sensible stages and a clean flow into onboarding
-are what make it work. For any business that hires regularly, that structure turns recruitment from a scramble into a
-managed process.
 
 This series has walked through setting up more of Odoo step by step, across manufacturing, sales, projects, retail,
 finance and people. Each guide stands on its own, and together they show how the pieces of a real implementation fit. I

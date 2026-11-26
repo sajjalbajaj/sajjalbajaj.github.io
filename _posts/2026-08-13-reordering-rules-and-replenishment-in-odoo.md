@@ -8,6 +8,8 @@ hub: inventory
 description: "Which replenishment strategy fits which product in Odoo: reordering rules, replenish on order (MTO) and lead times explained, with links to the setup steps."
 ---
 
+**Short answer:** Replenishment is where Odoo quietly saves you money and stress. Done well, it means fewer stockouts, less cash frozen in excess inventory, and a lot less firefighting. Start with your critical products, set sensible min and max levels, keep your lead times real, and let the system do the watching.
+
 Running out of stock loses sales. Holding too much ties up cash. The art of inventory is staying in
 the sweet spot between them, and Odoo automates most of that work through replenishment. Here is how
 reordering rules, replenish on order and lead times fit together, and when to use each.
@@ -54,11 +56,6 @@ A few practical pointers:
 - Keep supplier and manufacturing lead times honest and up to date.
 - Use make-to-order for items you should not stock, and rules for items you should.
 
-## My take
-
-Replenishment is where Odoo quietly saves you money and stress. Done well, it means fewer stockouts,
-less cash frozen in excess inventory, and a lot less firefighting. Start with your critical products,
-set sensible min and max levels, keep your lead times real, and let the system do the watching.
 
 Next in the series: keeping your on-hand numbers honest with inventory adjustments.
 

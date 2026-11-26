@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English explanation of the chart of accounts and journals in Odoo, the backbone that organises every financial transaction."
 ---
 
+**Short answer:** The chart of accounts and journals are the backbone of your books, and Odoo handles the double-entry detail so you can work with everyday documents instead. Understand the structure just enough to read your own numbers, set it up well with your accountant, and the rest of Odoo Accounting makes far more sense.
+
 Behind Odoo's friendly invoices and payments sits the real structure of your accounting: the chart of
 accounts and the journals. You do not need to be an accountant to understand them, and a little clarity here
 helps everything else make sense. Let us explain them simply.
@@ -57,11 +59,6 @@ own numbers, set things up sensibly, and have a better conversation with your ac
   do not need to.
 - When in doubt about setup, involve your accountant early; the foundation is worth getting right.
 
-## My take
-
-The chart of accounts and journals are the backbone of your books, and Odoo handles the double-entry detail
-so you can work with everyday documents instead. Understand the structure just enough to read your own
-numbers, set it up well with your accountant, and the rest of Odoo Accounting makes far more sense.
 
 Next in the series: tracking profitability with analytic accounting.
 

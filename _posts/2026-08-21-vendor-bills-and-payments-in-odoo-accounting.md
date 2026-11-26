@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo manages vendor bills and supplier payments, including reading bills automatically and paying accurately, so money out stays under control."
 ---
 
+**Short answer:** Vendor bills and payments are where you protect your cash going out. Let Odoo read your bills to save time, match them against orders and receipts so you only pay what is right, and pay against recorded bills so your accounts stay accurate. Control here is quiet, but it is worth real money.
+
 Money going out needs as much control as money coming in. Vendor bills and payments are where you make sure
 you pay the right suppliers, the right amounts, at the right time. Odoo makes this accurate and largely
 automatic. Here is how it works.
@@ -49,11 +51,8 @@ notes and corrections that keep your books clean and your audit trail intact, ra
 - Keep an eye on due dates so you pay on time without paying early unnecessarily.
 - Record supplier credit notes properly rather than adjusting figures by hand.
 
-## My take
+When a credit follows a physical return, use the [Odoo supplier return and credit reconciliation guide](/blog/2026/11/05/odoo-supplier-return-credit-reconciliation/) to connect the receipt reversal, vendor credit and remaining payable balance.
 
-Vendor bills and payments are where you protect your cash going out. Let Odoo read your bills to save time,
-match them against orders and receipts so you only pay what is right, and pay against recorded bills so your
-accounts stay accurate. Control here is quiet, but it is worth real money.
 
 Next in the series: getting tax right with taxes and fiscal positions.
 

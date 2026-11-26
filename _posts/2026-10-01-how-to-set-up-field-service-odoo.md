@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up Odoo Field Service, so on-site jobs are scheduled, dispatched and invoiced smoothly, from the office to the technician."
 ---
 
+**Short answer:** Field Service shines by connecting the office and the field into one flow: schedule, dispatch, do the work, record it, invoice it. Clear services, good scheduling, mobile-equipped technicians and a link to billing are what make it work. Set up well, it removes the gaps where field businesses usually lose time and money, keeping everyone in step from the first call to the final invoice.
+
 If your business sends people out to do work on site, installs, repairs, maintenance, Field Service coordinates the whole
 thing from scheduling to invoicing. Setting it up well is what connects the office and the technician in the field.
 Continuing this series of practical Odoo how-to guides, here is Field Service.
@@ -49,12 +51,6 @@ completed job to invoice is what turns field work into properly captured revenue
 - Capture time and materials at the point of work.
 - Connect completed jobs to invoicing for accurate billing.
 
-## My take
-
-Field Service shines by connecting the office and the field into one flow: schedule, dispatch, do the work, record it,
-invoice it. Clear services, good scheduling, mobile-equipped technicians and a link to billing are what make it work. Set
-up well, it removes the gaps where field businesses usually lose time and money, keeping everyone in step from the first
-call to the final invoice.
 
 Next in this series: how to set up Planning.
 

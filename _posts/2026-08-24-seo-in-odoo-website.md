@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo Website's built-in SEO tools help your pages get found on Google, from titles and meta descriptions to sitemaps and clean, fast pages."
 ---
 
+**Short answer:** SEO is not magic, and Odoo will not do it all for you, but it gives you the practical tools that matter: per-page titles and descriptions, clean URLs, an automatic sitemap and fast, mobile-friendly pages. Pair those with genuinely useful content and you give your site a real chance to be found.
+
 A beautiful website is worth little if no one finds it. Search engines are how most people discover a
 business, so being findable matters. The good news is that Odoo Website has practical SEO tools built in.
 Continuing the series on Odoo Website and eCommerce, here is SEO.
@@ -50,11 +52,6 @@ helpful content, clear headings, honest answers, real value, is what makes the d
 - Make sure your pages are fast and look right on mobile.
 - Let Odoo generate the sitemap, and submit your site to Google Search Console.
 
-## My take
-
-SEO is not magic, and Odoo will not do it all for you, but it gives you the practical tools that matter:
-per-page titles and descriptions, clean URLs, an automatic sitemap and fast, mobile-friendly pages. Pair
-those with genuinely useful content and you give your site a real chance to be found.
 
 Next in the series: filling out your site with pages, blogs and forms.
 

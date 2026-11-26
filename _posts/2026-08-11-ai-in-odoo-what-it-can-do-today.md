@@ -2,10 +2,13 @@
 layout: post
 title: "AI in Odoo: What It Can Actually Do Today"
 date: 2026-08-11 09:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [Odoo, AI, ERP, Automation, Stock Control, Procurement, Supply Chain, Invoicing]
 hub: planning
 description: "A grounded look at what Odoo's AI can really do today, from invoice digitisation and lead scoring to content generation and natural-language queries."
 ---
+
+**Short answer:** Assess Odoo AI against a specific workflow, such as document processing or assistance with text and records. Check the installed version, supported features and access requirements before assuming an advertised capability is available in your database.
 
 There is a lot of noise about AI in ERP, so let me cut through it for Odoo specifically. Forget the
 hype for a moment. Here is what Odoo's AI can genuinely do today, based on features that actually
@@ -69,12 +72,6 @@ switched off, so you may be sitting on value you have not turned on. Second, AI 
 data. Point it at duplicated, messy records and you get fast, confident mistakes. Clean data first, and
 keep a human reviewing anything that matters.
 
-## My take
-
-Odoo's AI today is genuinely useful and refreshingly practical: read my invoices, rank my leads, draft
-my content, summarise my threads. It is not magic, and it does not replace judgement. But used well, on
-clean data, it removes a real chunk of the tedious work. Start with one feature that maps to a real
-pain, and build from there.
 
 Curious what Odoo's AI could do for your business? Tell me where the manual grind is, and I can point
 you to the feature that helps.

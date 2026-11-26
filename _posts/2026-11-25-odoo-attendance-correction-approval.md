@@ -2,6 +2,7 @@
 layout: post
 title: "Odoo Attendance Corrections: Review the Evidence Before Payroll"
 date: 2026-11-25 09:00:00 +0530
+last_modified_at: 2026-11-26
 tags: [Odoo, Odoo 19, ERP, Best Practices, ERP Implementation, Business Automation, Setup, Compliance]
 hub: services
 description: "Control Odoo attendance corrections with employee explanations, manager review and payroll cutoffs so missing checkouts do not become silent edits."
@@ -12,7 +13,7 @@ faqs:
     a: "No. It is one signal and must be interpreted within the organisation's policy and evidence."
 ---
 
-**Short answer:** Correct the source attendance record with a reason and accountable review before payroll consumes the hours.
+**Short answer:** Correct an attendance record only after confirming the actual shift, recording the reason and assigning an accountable reviewer. Check whether payroll has already used the hours before deciding how to carry the correction through.
 
 ## Applies to
 

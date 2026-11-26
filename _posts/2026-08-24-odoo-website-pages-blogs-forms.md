@@ -7,6 +7,8 @@ hub: website
 description: "How to build out an Odoo website with pages, a blog and forms that capture leads, and why having it all connected to your CRM matters."
 ---
 
+**Short answer:** Pages, blog and forms are how a website earns its keep: informing, attracting and converting. Odoo lets you build all three yourself, and connects the leads straight into your CRM, so your site becomes a real part of how you win customers, not just a brochure.
+
 Once your Odoo site exists, the value comes from filling it with the right content: pages that inform, a
 blog that attracts visitors, and forms that turn those visitors into leads. Continuing the series on Odoo
 Website and eCommerce, here is how to build it out.
@@ -51,11 +53,6 @@ system, from first visit to first conversation.
 - Connect your forms to your CRM so leads are captured automatically.
 - Follow up new leads quickly, speed is one of the biggest factors in winning them.
 
-## My take
-
-Pages, blog and forms are how a website earns its keep: informing, attracting and converting. Odoo lets
-you build all three yourself, and connects the leads straight into your CRM, so your site becomes a real
-part of how you win customers, not just a brochure.
 
 Next in the series: turning the site into a shop with Odoo eCommerce.
 

@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo Surveys helps you gather feedback from customers and employees, from building the survey to analysing the responses, all in one place."
 ---
 
+**Short answer:** Surveys turn opinion and guesswork into real feedback you can act on. Odoo makes them easy to build, share and analyse, and keeps the results connected to the rest of your business. Ask good questions, listen properly, and act, and feedback becomes a genuine driver of improvement.
+
 Guessing what your customers or employees think is risky. Asking them directly, and actually listening, is
 far better. Odoo Surveys makes gathering and understanding feedback simple. Continuing the series on Odoo
 Marketing, here is surveys.
@@ -47,11 +49,6 @@ and track whether changes help over time.
 - Share surveys where your audience already is.
 - Act on what you learn, and close the loop with respondents where you can.
 
-## My take
-
-Surveys turn opinion and guesswork into real feedback you can act on. Odoo makes them easy to build, share
-and analyse, and keeps the results connected to the rest of your business. Ask good questions, listen
-properly, and act, and feedback becomes a genuine driver of improvement.
 
 Next in the series: building and segmenting your marketing audience.
 

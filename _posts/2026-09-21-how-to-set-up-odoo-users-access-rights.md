@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to adding users and setting access rights in Odoo, so everyone can do their job and nobody can see or change what they should not."
 ---
 
+**Short answer:** Setting up users and access rights well is what makes Odoo both usable and safe. Role-based access, sparing use of admin rights and regular reviews mean people can do their jobs without being able to break or see things they should not. It takes a little thought up front, but it saves both security headaches and frustrated users down the line.
+
 Once your company basics are set, the next step is people: who uses Odoo and what they are allowed to do. Get this right
 and the system is both usable and safe. Continuing this series of practical Odoo how-to guides, here is users and access
 rights.
@@ -49,11 +51,6 @@ not a one-time setup, and it keeps the system secure.
 - Keep administrator rights to the few who genuinely need them.
 - Review users and access regularly to keep it matched to reality.
 
-## My take
-
-Setting up users and access rights well is what makes Odoo both usable and safe. Role-based access, sparing use of admin
-rights and regular reviews mean people can do their jobs without being able to break or see things they should not. It
-takes a little thought up front, but it saves both security headaches and frustrated users down the line.
 
 Next in this series: how to set up email in Odoo.
 

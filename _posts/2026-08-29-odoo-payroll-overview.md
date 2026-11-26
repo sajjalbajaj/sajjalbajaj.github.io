@@ -2,15 +2,15 @@
 layout: post
 title: "Odoo Payroll: Work Entries, Payslips and Accounting in Odoo 20"
 date: 2026-08-29 10:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, HR, Payroll, Accounting, Employees, Best Practices]
 hub: hr
 description: "Understand Odoo 20 Payroll: employee pay data, work entries, salary structures, payslips, pay runs, localizations, validation and accounting entries."
 faqs:
   - q: "What information does Odoo Payroll use to calculate a payslip?"
     a: "It uses the employee's pay and working schedule, work entry values, salary structure and rules, plus applicable inputs, attachments and localization settings."
-  - q: "Can Odoo Payroll use attendance and time off data?"
-    a: "Yes. Work entries can reflect working schedules and information from apps such as Attendances, Time Off, Planning or Timesheets, depending on the configuration."
+  - q: "Does calculating an Odoo payslip mean the employee has been paid?"
+    a: "No. Calculation produces salary lines; validation, accounting and payment are separate steps. Confirm the payment through the applicable bank or payment process before treating the payroll as settled."
   - q: "Does Odoo Payroll automatically provide every country's statutory rules?"
     a: "No. The correct country localization must be installed and validated. Legal and tax requirements should be reviewed by a qualified local payroll owner."
 ---
@@ -27,6 +27,16 @@ This overview explains the full flow before configuration. For common control fa
 
 This article follows the official Odoo 20 Payroll documentation and also notes concepts familiar to Odoo 19 users.
 Payroll is country specific, so screens, reports and legal rules depend on the localization installed for the company.
+
+## Does calculating an Odoo payslip mean the employee has been paid?
+
+No. Calculating a payslip produces salary lines from the configured inputs and rules. Validation, accounting and
+payment are later steps. A calculated amount or payslip PDF does not establish that the employee's bank account
+received the money. Confirm payment through the applicable bank or payment process before treating the run as settled.
+
+The [Odoo payslip workflow](https://www.odoo.com/documentation/20.0/applications/hr/payroll/payslips.html)
+distinguishes computation, validation, journal posting and payment. Available payment methods depend on the installed
+localisation and setup. Demonstrate the complete process on representative employees before approving payroll for use.
 
 ## Built on your HR data
 
@@ -53,7 +63,7 @@ Work entries are the bridge between scheduled time and the payslip. Review confl
 processing a pay run. Correct the source record when possible so the explanation remains consistent across HR and
 payroll rather than applying an unexplained manual input only on the payslip.
 
-For the operating review, see [Odoo payroll work entry conflicts](/blog/2026/11/27/odoo-payroll-work-entry-conflicts/).
+For the operating review, see [common payroll mistakes and validation checks](/blog/2026/09/18/odoo-payroll-mistakes/).
 
 ## Payslips and records
 

@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo Rental manages renting products out, from availability and pricing to pickup and return, so a rental business runs on one connected system."
 ---
 
+**Short answer:** Rental solves the specific problem selling-focused systems cannot: the same item, out and back, over time. Odoo gives you availability, duration pricing, and pickup and return in one place, connected to the rest of the business. For any rental operation, that is the difference between control and chaos.
+
 Renting out products is a different beast from selling them: the same item goes out and comes back, again and
 again, and you have to track availability, timing and condition. Continuing this run through more Odoo apps,
 here is Rental.
@@ -48,11 +50,6 @@ income landing in your accounts.
 - Manage both pickup and return so you always know what is out.
 - Let rental orders and income flow through your normal Odoo processes.
 
-## My take
-
-Rental solves the specific problem selling-focused systems cannot: the same item, out and back, over time.
-Odoo gives you availability, duration pricing, and pickup and return in one place, connected to the rest of
-the business. For any rental operation, that is the difference between control and chaos.
 
 Next in this run: keeping equipment running with Odoo Maintenance.
 

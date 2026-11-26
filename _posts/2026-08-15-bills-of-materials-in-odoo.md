@@ -8,6 +8,8 @@ hub: manufacturing
 description: "A plain-English guide to Bills of Materials in Odoo: what a BoM is, plus kits, product variants, multi-level BoMs and by-products explained."
 ---
 
+**Short answer:** The Bill of Materials is the foundation of Odoo Manufacturing, and time spent getting it right pays back on every single order. Model your products honestly, use kits, variants and multi-level BoMs where they fit, and the rest of production planning and costing rests on solid ground.
+
 If you make things, the Bill of Materials is the single most important record you will set up. Every
 manufacturing order, cost and stock movement flows from it. Odoo goes well beyond a simple parts
 list, so here is a plain-English guide to Bills of Materials and the useful variations.
@@ -63,11 +65,6 @@ A few practical habits:
 - Reach for kits when there is no real production step, just a bundle.
 - Review BoMs when your product or process changes, so the recipe stays true.
 
-## My take
-
-The Bill of Materials is the foundation of Odoo Manufacturing, and time spent getting it right pays
-back on every single order. Model your products honestly, use kits, variants and multi-level BoMs where
-they fit, and the rest of production planning and costing rests on solid ground.
 
 Next in the series: where the work happens, with work centers and work orders.
 

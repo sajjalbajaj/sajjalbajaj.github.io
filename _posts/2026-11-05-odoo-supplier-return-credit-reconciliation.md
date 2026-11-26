@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo Supplier Reconciliation: Returns, Credits and Replacements"
 date: 2026-11-05 09:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Best Practices, Purchase, Inventory, Accounting, Supply Chain]
 hub: purchase
 description: "Reconcile Odoo supplier returns with vendor credits, replacements, lot identity, dispatch evidence and outstanding balances so stock and accounts agree."
@@ -11,6 +11,8 @@ faqs:
     a: "No. The physical return and the financial adjustment are separate processes. Record and reconcile the supplier credit or replacement outcome."
   - q: "Can a supplier replace goods instead of issuing a credit?"
     a: "That depends on the agreement. Record the accepted replacement and its receipt separately so the original return does not become an unexplained shortage."
+  - q: "Which records should be checked before closing a supplier return?"
+    a: "Review the original receipt, return movement, supplier agreement and accepted credit or replacement. Explain any outstanding quantity or balance with purchasing, warehouse and finance before closing the case."
 ---
 
 **Short answer:** Odoo supplier reconciliation should connect the original receipt, the quantity returned, the
@@ -23,6 +25,23 @@ sent a replacement. Stock and finance therefore need separate records that can b
 Odoo 20 Inventory, Purchase and vendor accounting, with the same control principles applicable to Odoo 19. Return
 authorisation and disposition are business decisions. Finance should approve the applicable credit treatment and
 the installed release should be demonstrated before the process is accepted.
+
+## Which records prove that a supplier return is resolved?
+
+Review the original receipt, return movement, supplier agreement and accepted settlement together. A warehouse return
+records goods leaving; a vendor credit records a financial adjustment; a replacement receipt records goods arriving.
+None of these records alone proves that every obligation has been settled.
+
+| Record | What it supports | What still needs checking |
+|---|---|---|
+| Return movement and dispatch evidence | Quantity sent back | Supplier acceptance and any dispute |
+| Supplier agreement | Credit, replacement or other agreed outcome | Whether that outcome was completed |
+| Vendor credit | Recorded financial adjustment | Application to the bill or refund status |
+| Replacement receipt | Replacement quantity received | Condition, acceptance and remaining quantity |
+
+Odoo documents [vendor credit notes](https://www.odoo.com/documentation/20.0/applications/finance/accounting/customer_invoices/credit_notes.html#record-a-vendor-refund)
+separately from stock returns. I would close the case only when accepted quantities, settlement and any remaining
+balance have an explanation agreed by purchasing, warehouse and finance.
 
 ## What should be agreed before dispatch?
 

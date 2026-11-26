@@ -7,6 +7,8 @@ hub: sales
 description: "A plain-English walk through Odoo Sales: how quotations become sales orders, and how selling connects to inventory, delivery and invoicing."
 ---
 
+**Short answer:** Odoo Sales makes selling smooth and, more importantly, connected. The flow from quotation to sales order is simple, but the value is in what happens next: stock, delivery and invoicing all move together from a single confirmed order. Get your products and customers set up well, and your sales process becomes fast, transparent and reliable.
+
 Selling is where your business turns effort into revenue, so the tool you sell with matters. Odoo Sales
 takes a customer's interest and carries it cleanly through to a confirmed order, a delivery and an
 invoice. Here is how that flow works, from first quote to firm order.
@@ -51,12 +53,8 @@ the original order. You always know where any order stands: quoted, confirmed, d
 - Confirm orders promptly so inventory and fulfilment can react.
 - Let the connection to inventory and invoicing do the work, rather than tracking orders separately.
 
-## My take
+When a confirmed sales order should trigger a supplier delivery instead of a warehouse delivery, use the [Odoo dropshipping setup guide](/blog/2026/08/28/erp-for-dropshipping/) to understand the route and document flow.
 
-Odoo Sales makes selling smooth and, more importantly, connected. The flow from quotation to sales order
-is simple, but the value is in what happens next: stock, delivery and invoicing all move together from a
-single confirmed order. Get your products and customers set up well, and your sales process becomes fast,
-transparent and reliable.
 
 Next in the series: handling product variants and optional extras in Sales.
 

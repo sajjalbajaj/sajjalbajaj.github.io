@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to using Odoo Studio, so you can tailor Odoo to your business, adding fields, adjusting screens and building simple apps, without code."
 ---
 
+**Short answer:** Studio is a genuinely useful tool that puts sensible customisation within reach without code, and its main risk is overuse. Configuration first, small well-chosen changes, real restraint, and knowing when to call a developer are what make it a strength rather than a source of fragility. Used with discipline, Studio lets you shape Odoo to your business while keeping it lean and upgradable.
+
 Sometimes standard Odoo is not quite the shape your business needs, and you want to add a field or adjust a screen. Odoo
 Studio lets you make many such changes yourself, without code. Using it wisely is the key. To round off this run of
 practical Odoo how-to guides, here is Studio.
@@ -49,12 +51,6 @@ right changes it is excellent; for the wrong ones, it is a tempting way to build
 - Keep customisations minimal; each one is a future upgrade cost.
 - Involve a developer for complex logic, integrations and heavy work.
 
-## My take
-
-Studio is a genuinely useful tool that puts sensible customisation within reach without code, and its main risk is
-overuse. Configuration first, small well-chosen changes, real restraint, and knowing when to call a developer are what
-make it a strength rather than a source of fragility. Used with discipline, Studio lets you shape Odoo to your business
-while keeping it lean and upgradable.
 
 This run of how-to guides has now covered a very broad sweep of Odoo, across marketing, communication, HR, operations and
 customisation, on top of all the earlier ones. Together they form a practical, hands-on map of setting up a real Odoo

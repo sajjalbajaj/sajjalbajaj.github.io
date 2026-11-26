@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up Odoo Social Marketing, so you can manage your social posts and monitor engagement from one place inside your business."
 ---
 
+**Short answer:** Social Marketing removes the scatter of managing platforms one login at a time, bringing posting, scheduling and monitoring into one connected place. Connected accounts, a planned schedule, channel-appropriate posts and attention to engagement are what make it work. Sitting inside Odoo alongside your other marketing, it helps you run social as part of a coherent whole rather than a separate, time-eating chore.
+
 Managing several social media accounts by logging into each one is a scattered, time-consuming way to work. Odoo Social
 Marketing brings them together, so you post and monitor from one place, connected to the rest of your business. Setting it
 up well saves real time. Continuing this series of practical Odoo how-to guides, here is Social Marketing.
@@ -49,12 +51,6 @@ system is what lets you run marketing as a whole rather than as disconnected pie
 - Monitor engagement to learn what resonates.
 - Treat social as part of your wider, connected marketing.
 
-## My take
-
-Social Marketing removes the scatter of managing platforms one login at a time, bringing posting, scheduling and
-monitoring into one connected place. Connected accounts, a planned schedule, channel-appropriate posts and attention to
-engagement are what make it work. Sitting inside Odoo alongside your other marketing, it helps you run social as part of a
-coherent whole rather than a separate, time-eating chore.
 
 Next in this series: how to set up Live Chat.
 

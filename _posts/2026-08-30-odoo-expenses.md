@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo Expenses lets employees submit expenses easily, managers approve them quickly, and everything flows into accounting without manual re-entry."
 ---
 
+**Short answer:** Expenses is a small app that removes a disproportionate amount of hassle. Easy submission, quick approval and a direct line into accounting mean less paperwork, faster reimbursement and happier employees. It is exactly the kind of everyday friction an ERP should quietly remove.
+
 Expense claims are a classic source of friction: paper receipts, chased forms, slow reimbursement and
 manual entry into the accounts. Odoo Expenses smooths the whole flow. Continuing the series on Odoo HR and
 People, here is expenses.
@@ -48,11 +50,6 @@ across drawers and inboxes.
 - Let approved expenses flow into accounting rather than re-keying them.
 - Use the records for clear reporting and easier compliance.
 
-## My take
-
-Expenses is a small app that removes a disproportionate amount of hassle. Easy submission, quick approval
-and a direct line into accounting mean less paperwork, faster reimbursement and happier employees. It is
-exactly the kind of everyday friction an ERP should quietly remove.
 
 Next in the series: managing vehicles with Odoo Fleet.
 

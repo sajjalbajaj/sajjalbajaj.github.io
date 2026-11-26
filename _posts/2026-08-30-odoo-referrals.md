@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Referrals turns your employees into a hiring channel, making it easy for them to refer great candidates and get rewarded for it."
 ---
 
+**Short answer:** Referrals is a smart way to turn the networks of people you already trust into a hiring advantage. By making it easy and rewarding, and connecting it to recruitment, Odoo helps you tap one of the best sources of great hires. For a growing team, that is well worth switching on.
+
 Some of the best hires come through the people you already trust. Your employees know talented people, and
 a referral often means a better cultural fit and a faster hire. Odoo Referrals makes tapping that easy. To
 close the series on Odoo HR and People, here is referrals.
@@ -48,11 +50,6 @@ one of the highest-value, lowest-cost recruitment tools you have.
 - Offer meaningful rewards and recognise successful referrals.
 - Let referred candidates flow into your normal recruitment pipeline.
 
-## My take
-
-Referrals is a smart way to turn the networks of people you already trust into a hiring advantage. By making
-it easy and rewarding, and connecting it to recruitment, Odoo helps you tap one of the best sources of great
-hires. For a growing team, that is well worth switching on.
 
 This completes the HR and People part of the series. Next we move on to Marketing.
 

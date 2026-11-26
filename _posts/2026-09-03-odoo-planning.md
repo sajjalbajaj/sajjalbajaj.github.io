@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Planning helps you schedule people and resources, balance workloads and see who is doing what, so work is assigned clearly and fairly."
 ---
 
+**Short answer:** Planning turns good intentions into an actual, visible schedule. It answers the who and when that delivery depends on, helps you balance workload fairly, and connects to the rest of your project and time data. For any team juggling multiple pieces of work, that clarity is worth a great deal.
+
 Knowing what needs doing is only half of delivery; the other half is knowing who will do it and when. Odoo
 Planning is where you schedule your people and resources. Continuing the series on Odoo Services and
 Project, here is planning.
@@ -47,11 +49,6 @@ informed by reality and improves over time.
 - Watch workload across the team and rebalance before people burn out.
 - Plan around real availability of both people and resources.
 
-## My take
-
-Planning turns good intentions into an actual, visible schedule. It answers the who and when that delivery
-depends on, helps you balance workload fairly, and connects to the rest of your project and time data. For
-any team juggling multiple pieces of work, that clarity is worth a great deal.
 
 Next in the series: supporting customers with Odoo Helpdesk.
 

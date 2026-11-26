@@ -7,6 +7,8 @@ hub: planning
 description: "A wrap-up of the Odoo 19 guide series: the one idea that ties every app together, and how to think about putting Odoo to work in your business."
 ---
 
+**Short answer:** Odoo is a lot of apps, but really it is one idea: run your whole business on one connected system, and the disconnection that causes most of the daily pain simply goes away. Start where it hurts, keep the fundamentals right, and grow into it. That is how a collection of features becomes a business that runs smoothly.
+
 Over this series we have walked through Odoo app by app: inventory, manufacturing, purchasing, sales, CRM,
 accounting, website and eCommerce, HR, marketing, services and projects, and the productivity tools. To
 close it, here is the single idea that ties all of it together.
@@ -44,12 +46,6 @@ Odoo, planning an implementation, migrating, or trying to get more from a system
 exactly what I do. I help businesses turn these connected capabilities into a setup that fits how they
 actually work.
 
-## My take
-
-Odoo is a lot of apps, but really it is one idea: run your whole business on one connected system, and the
-disconnection that causes most of the daily pain simply goes away. Start where it hurts, keep the
-fundamentals right, and grow into it. That is how a collection of features becomes a business that runs
-smoothly.
 
 Thanks for following the series. If you have a question about Odoo or your business, I am always happy to
 talk it through.

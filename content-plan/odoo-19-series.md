@@ -208,27 +208,27 @@ verified 19.0 doc URLs (and the 20.0 page checked), service CTA, no em dashes.
   Import external identifiers; blank field corrections; product variant retirement; unit conversion
   discrepancies; shared company data; staff departure handovers; document sharing; signature evidence;
   email aliases and reply routing.
-- Batch 33 (queued): accounting decisions and financial controls, 2026-11-22 to 2026-11-24.
+- Batch 33 (complete): accounting decisions and financial controls, 2026-11-22 to 2026-11-24.
   Cash discount eligibility; credit note and refund completion; unmatched bank transactions; analytic
   distribution changes; invoice sequence gaps; customer statement disputes; intercompany counterparts;
   consolidation readiness; post dated check controls.
-- Batch 34 (queued): people operations and payroll readiness, 2026-11-25 to 2026-11-27.
+- Batch 34 (complete): people operations and payroll readiness, 2026-11-25 to 2026-11-27.
   Time off accrual changes; attendance corrections; duplicate expense claims; contract renewals;
   duplicate candidate records; appraisal goal changes; payroll work entry conflicts; fleet odometer
   anomalies; referral reward eligibility.
-- Batch 35 (queued): marketing, website and customer journey controls, 2026-11-28 to 2026-11-30.
+- Batch 35 (complete): marketing, website and customer journey controls, 2026-11-28 to 2026-11-30.
   Email bounce and blacklist review; UTM naming; event attendance and no shows; survey anonymity;
   eLearning certification renewal; website redirects; eCommerce returns and exchanges; missed live
   chat routing; marketing subscription and unsubscribe governance.
-- Batch 36 (queued): finance close and accounting evidence, 2026-12-01 to 2026-12-03.
+- Batch 36 (complete): finance close and accounting evidence, 2026-12-01 to 2026-12-03.
   Duplicate vendor bills; payment batch approvals; fixed asset capitalisation and disposal; deferred
   revenue; deferred expenses; foreign exchange differences; accounting lock date reopening; fiscal
   position mapping; manual journal entries and reversals.
-- Batch 37 (queued): inventory, engineering and equipment controls, 2026-12-04 to 2026-12-06.
+- Batch 37 (complete): inventory, engineering and equipment controls, 2026-12-04 to 2026-12-06.
   Lot and serial corrections; negative stock and valuation; landed cost corrections; quality alert root
   cause closure; PLM change effectivity; overdue preventive maintenance; repair parts and warranty billing;
   replenishment route conflicts; removal strategy exceptions.
-- Batch 38 (queued): workplace and customer administration, 2026-12-07 to 2026-12-09.
+- Batch 38 (complete): workplace and customer administration, 2026-12-07 to 2026-12-09.
   Approval request evidence; planning shift conflicts; employee equipment returns; document retention;
   Knowledge permissions; appointment cancellations and no shows; Frontdesk visitor handoffs; VoIP missed
   calls; Social Marketing publishing access.

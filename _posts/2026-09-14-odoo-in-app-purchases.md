@@ -7,6 +7,8 @@ hub: integrations
 description: "How Odoo In-App Purchases let you use paid external services like SMS, lead enrichment and document scanning on a pay-per-use basis, without contracts."
 ---
 
+**Short answer:** IAP is a quietly clever piece of the platform. It lets you reach for genuinely useful external services, texts, lead enrichment, bill scanning, without the friction of contracts and separate accounts, paying only for what you use. For small businesses that want capability without commitment, that on-demand model is exactly right.
+
 Some useful features rely on outside services that cost money to run: sending an SMS, enriching a lead, scanning a
 document. Odoo In-App Purchases, or IAP, let you use these on demand without a separate contract. Continuing this run
 through more Odoo apps, here is IAP.
@@ -48,11 +50,6 @@ than in yet another tool.
 - Watch your usage; heavy, steady use may justify a dedicated service.
 - Remember results land back on the right record in your system.
 
-## My take
-
-IAP is a quietly clever piece of the platform. It lets you reach for genuinely useful external services, texts, lead
-enrichment, bill scanning, without the friction of contracts and separate accounts, paying only for what you use. For
-small businesses that want capability without commitment, that on-demand model is exactly right.
 
 Next in this run: tracking follow-ups with Odoo Activities.
 

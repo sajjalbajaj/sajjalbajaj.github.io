@@ -7,6 +7,8 @@ hub: manufacturing
 description: "How Odoo Repairs helps you manage repair jobs, from logging the item and parts used to tracking status and billing, all connected to inventory."
 ---
 
+**Short answer:** Repairs turns a fiddly, easy-to-lose process into tracked jobs connected to your stock, customers and billing. You know what is on the bench, what it is costing, and what to charge, and nothing gets forgotten. For any business that fixes things, that structure is a real step up from paper and memory.
+
 If your business fixes things, whether under warranty, as a service, or on returned goods, repair jobs have
 their own flow: receive the item, diagnose it, use parts, and return it fixed. Continuing this run through
 more Odoo apps, here is Repairs.
@@ -46,11 +48,6 @@ when and why. Over time that is useful both for service and for spotting recurri
 - Keep the status current so customers get clear answers.
 - Bill chargeable repairs from the recorded parts and labour.
 
-## My take
-
-Repairs turns a fiddly, easy-to-lose process into tracked jobs connected to your stock, customers and billing.
-You know what is on the bench, what it is costing, and what to charge, and nothing gets forgotten. For any
-business that fixes things, that structure is a real step up from paper and memory.
 
 Next in this run: speeding up the warehouse with Barcode.
 

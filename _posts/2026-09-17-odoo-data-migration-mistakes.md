@@ -7,6 +7,8 @@ hub: planning
 description: "The data import and migration mistakes that haunt Odoo projects, from importing dirty data to bad field mapping, and how to get it right the first time."
 ---
 
+**Short answer:** The import is where a project's data quality is decided, and shortcuts here echo for years. Clean data, careful mapping, staged loading and proper validation are what separate a system people trust from one they fight. It is unglamorous work, but getting the import right is one of the highest-value things you can do on a whole project.
+
 The data import is one of the most decisive steps of any Odoo project, and one of the most commonly botched. Get it
 right and you start with a system you trust; get it wrong and you spend months cleaning up. Continuing this series on
 common Odoo mistakes, here is data import and migration.
@@ -49,11 +51,6 @@ dragging everything across by default.
 - Validate after import: counts, spot checks, relationships.
 - Bring only the data you need; archive the rest.
 
-## My take
-
-The import is where a project's data quality is decided, and shortcuts here echo for years. Clean data, careful mapping,
-staged loading and proper validation are what separate a system people trust from one they fight. It is unglamorous
-work, but getting the import right is one of the highest-value things you can do on a whole project.
 
 Next in this series: the mistake of over-customising Odoo.
 

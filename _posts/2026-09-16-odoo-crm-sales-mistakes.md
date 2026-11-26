@@ -7,6 +7,8 @@ hub: sales
 description: "The CRM and sales mistakes that quietly cost deals in Odoo, from an overcomplicated pipeline to neglected follow-ups, and how to fix them."
 ---
 
+**Short answer:** CRM mistakes are rarely technical; they are about discipline. The system makes it easy to keep a clean pipeline, log activity and schedule follow-ups, but it cannot do those things for you. Teams that build the habit of updating as they go get a CRM that genuinely helps them sell. Teams that do not get an expensive contact list.
+
 CRM and Sales are where revenue is won or lost, so mistakes here cost real money, usually quietly, in deals that go cold
 rather than errors you can see. Most of them are habits rather than settings. Continuing this series on common Odoo
 mistakes, here is CRM and Sales.
@@ -49,11 +51,6 @@ not using it.
 - Keep contact data clean so the team trusts the CRM.
 - Actually use the reporting to see where deals win and stall.
 
-## My take
-
-CRM mistakes are rarely technical; they are about discipline. The system makes it easy to keep a clean pipeline, log
-activity and schedule follow-ups, but it cannot do those things for you. Teams that build the habit of updating as they
-go get a CRM that genuinely helps them sell. Teams that do not get an expensive contact list.
 
 Next in this series: common mistakes in Odoo Purchase.
 

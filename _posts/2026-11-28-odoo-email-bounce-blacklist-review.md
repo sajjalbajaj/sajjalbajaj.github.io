@@ -12,7 +12,7 @@ faqs:
     a: "No. Imports should preserve recorded subscription and blacklist decisions unless a valid process supports a change."
 ---
 
-**Short answer:** Respect the recipient's recorded choice and separate temporary delivery problems from global marketing exclusion.
+**Short answer:** Review bounced email, mailing list opt-outs and marketing blacklisting as separate conditions. Check the delivery history and the recipient's recorded preference before changing a contact's eligibility; a delivery problem is not permission to reverse an unsubscribe.
 
 ## Applies to
 

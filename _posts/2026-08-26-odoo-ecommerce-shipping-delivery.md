@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo eCommerce handles shipping and delivery, from shipping methods and rates to connecting couriers, so orders reach customers smoothly."
 ---
 
+**Short answer:** Shipping is where an online promise becomes a real-world delivery, and getting it right protects both margin and customer trust. Odoo lets you set clear shipping options, connect couriers, and fulfil online orders through the same inventory process as everything else. Handle it well and customers come back.
+
 Getting the sale is only half the job in eCommerce. The order still has to reach the customer, and
 shipping is where cost, expectation and experience all meet. Continuing the series on Odoo Website and
 eCommerce, here is shipping and delivery.
@@ -44,11 +46,6 @@ customers informed is far easier.
 - Connect couriers if you ship in volume, to automate rates, labels and tracking.
 - Let online orders flow into your normal inventory and delivery process.
 
-## My take
-
-Shipping is where an online promise becomes a real-world delivery, and getting it right protects both
-margin and customer trust. Odoo lets you set clear shipping options, connect couriers, and fulfil online
-orders through the same inventory process as everything else. Handle it well and customers come back.
 
 Next in the series: how eCommerce and inventory work as one connected store.
 

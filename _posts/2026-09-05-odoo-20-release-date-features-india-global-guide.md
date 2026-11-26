@@ -2,11 +2,13 @@
 layout: post
 title: "Odoo 20: Release Date, Global and India Availability, and What's New (2026 Preview)"
 date: 2026-09-05 15:00:00 +0530
-last_modified_at: 2026-10-04
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Upgrade, ERP, India, Migration, ERP Migration, Accounting]
 hub: planning
 description: "A complete preview of Odoo 20: when it launches, when it is available globally and in India, the new features expected, and what is getting upgraded from Odoo 19."
 ---
+
+**Short answer:** This article records Odoo 20 expectations from before its release. Use it as historical context, and verify current features, localisation and availability against Odoo's official documentation before planning an implementation.
 
 > **Update, 4 October 2026:** Odoo 20 has now been released; it was launched at Odoo Experience 2026 in late September. This article was written before launch, so treat its feature details as pre-launch expectations and check the confirmed changes in Odoo's official [Odoo 20 release notes](https://www.odoo.com/odoo-20-release-notes) before planning an upgrade. The upgrade advice still applies: wait for a stable release, test on a copy of your database, and plan custom modules first.
 
@@ -59,12 +61,6 @@ after the first stable patch, not on launch day. If you are choosing an ERP now,
 travel. And if you are in India, you get the same release as everyone else, with the local compliance you need carried
 through.
 
-## My take
-
-Odoo 20 looks like a meaningful release, less about piling on features and more about making the system smarter and
-simpler, with agentic AI as the flagship. The best move for most businesses is not to rush, but to understand what is
-coming, plan the upgrade for after the first stable patch, and get expert help to do it cleanly. I will be following the
-launch closely and sharing what is actually confirmed.
 
 *Based on Odoo's public roadmap and the [Odoo Experience 2026 launch](https://www.odoo.com/) (24-26 September 2026). The
 official feature set is confirmed at launch. Planning an Odoo 20 upgrade? [Get in touch](/services/odoo-migration/).*

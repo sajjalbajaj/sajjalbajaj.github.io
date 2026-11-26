@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Appraisals brings structure to performance reviews, making them regular, fair and useful for both employees and managers."
 ---
 
+**Short answer:** Appraisals turns performance reviews from an awkward, irregular chore into a structured, fair and useful process with a record over time. Done well, reviews help people grow and feel valued, and Odoo gives you the structure to do them consistently.
+
 Performance reviews are easy to put off and easy to do badly: irregular, unstructured and forgotten as soon
 as they finish. Odoo Appraisals gives them a proper structure. Continuing the series on Odoo HR and People,
 here is appraisals.
@@ -48,11 +50,6 @@ starting from a blank page.
 - Use the history to follow up on goals and track development.
 - Make sure reviews lead to something: goals, growth or recognition.
 
-## My take
-
-Appraisals turns performance reviews from an awkward, irregular chore into a structured, fair and useful
-process with a record over time. Done well, reviews help people grow and feel valued, and Odoo gives you the
-structure to do them consistently.
 
 Next in the series: paying your people with Odoo Payroll.
 

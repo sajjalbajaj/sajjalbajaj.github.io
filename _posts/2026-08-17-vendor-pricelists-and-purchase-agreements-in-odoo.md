@@ -7,6 +7,8 @@ hub: purchase
 description: "How Odoo manages vendor pricelists and purchase agreements like blanket orders and calls for tenders, to buy at better, agreed prices."
 ---
 
+**Short answer:** Buying is not just about placing orders, it is about buying well. Vendor pricelists keep the right prices at your fingertips, blanket orders lock in good terms for regular purchases, and calls for tenders bring rigour to the big decisions. Used together, they turn purchasing from reactive to strategic.
+
 Once your buying is under control, the next win is buying smarter: at agreed prices, from the right
 suppliers, on terms that suit you. Odoo helps with two features that are easy to overlook: vendor
 pricelists and purchase agreements. Here is what they do and when to use them.
@@ -50,11 +52,6 @@ structure and fairness to sourcing, especially for larger or important buys.
 - Use calls for tenders to make bigger sourcing decisions transparent and comparable.
 - Review supplier performance over time, not just price, when deciding who to favour.
 
-## My take
-
-Buying is not just about placing orders, it is about buying well. Vendor pricelists keep the right prices
-at your fingertips, blanket orders lock in good terms for regular purchases, and calls for tenders bring
-rigour to the big decisions. Used together, they turn purchasing from reactive to strategic.
 
 Next in the series: letting Odoo trigger purchasing for you, automatically.
 

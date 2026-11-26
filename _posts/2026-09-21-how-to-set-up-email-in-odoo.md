@@ -7,6 +7,8 @@ hub: admin
 description: "A plain-English guide to configuring outgoing and incoming email in Odoo, so quotations, invoices and notifications actually reach people reliably."
 ---
 
+**Short answer:** Email setup is easy to overlook and quietly important, because so much of what Odoo does ends in an email someone needs to receive. Reliable outgoing mail from a proper domain, incoming mail where it adds value, and a quick test before you rely on it are what keep your communication landing where it should. Get it right and email just works.
+
 Odoo sends a lot of email: quotations, invoices, order confirmations, notifications. For all of that to work, email has
 to be set up properly, and it is an area where a little care prevents a lot of "did they get it?" confusion. Continuing
 this series of practical Odoo how-to guides, here is email.
@@ -49,11 +51,6 @@ discovering later that customers never received what you sent.
 - Set up incoming email where replies, leads or tickets should flow in.
 - Always test with real documents before relying on it.
 
-## My take
-
-Email setup is easy to overlook and quietly important, because so much of what Odoo does ends in an email someone needs
-to receive. Reliable outgoing mail from a proper domain, incoming mail where it adds value, and a quick test before you
-rely on it are what keep your communication landing where it should. Get it right and email just works.
 
 Next in this series: how to set up your chart of accounts.
 

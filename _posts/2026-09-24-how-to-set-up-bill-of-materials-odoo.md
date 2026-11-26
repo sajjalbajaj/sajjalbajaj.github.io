@@ -2,7 +2,7 @@
 layout: post
 title: "Odoo 20 Bill of Materials: Components, Operations and Setup"
 date: 2026-09-24 08:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Production Planning]
 hub: manufacturing
 description: "Set up an Odoo 20 bill of materials with components, quantities, operations, work centres, consumption rules, by-products and a practical example."
@@ -32,6 +32,17 @@ This is the setup guide. For how manufacturing orders use the BoM from confirmat
   Enterprise. Detailed step instructions (which need the Quality app), BoM versioning through PLM and the Shop
   Floor app are Enterprise only.
 - **Apps:** Manufacturing and Inventory.
+
+## What is the difference between a bill of materials and a manufacturing order?
+
+A bill of materials defines what a product needs: components, quantities and any operations. A manufacturing order
+uses that definition for a particular production quantity and records the work carried out. Editing a recipe and
+confirming that a batch was produced are therefore separate actions.
+
+For an illustrative batch, a BoM for 10 finished units requiring 20 components means a planned run of 30 finished
+units needs 60 components, before any extra consumption. Check the BoM quantity and units of measure before treating
+a larger component requirement as an error. Odoo's [BoM setup reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
+explains the output quantity and component structure.
 
 ## Before you start
 
@@ -68,9 +79,10 @@ This is the setup guide. For how manufacturing orders use the BoM from confirmat
 
 1. Enable **Work Orders** in **Manufacturing ‣ Configuration ‣ Settings** (Operations section).
 2. Back on the BoM, open the **Operations** tab and click **Add a line**.
-3. Enter the **Operation** name, choose the **Work Center**, and choose how duration is tracked: computed from
-   tracked time, or set manually with a **Default Duration**.
-4. Add instructions in the **Work Sheet** tab (text, a PDF or a link), then **Save & Close** or **Save & New**.
+3. Enter the **Operation** name and choose the **Work Center**. The Odoo 20 BoM documentation describes
+   **Duration Computation** as **Fixed**, with a **Default Duration**, or **Computed**, based on recent work orders.
+4. Where Quality is installed, add steps through the operation's **Instructions** tab. Each step is a quality
+   control point; supplementary PDFs belong on the step's **Attachment** tab. Save the step and the operation.
 
 ### 4. Set consumption and timing (Miscellaneous tab)
 
@@ -139,7 +151,7 @@ components and aren't manufactured.
 
 ## Official references
 
-- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/bill_configuration.html)
+- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
 - Odoo 20 documentation: [Manufacturing product configuration](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/configure_manufacturing_product.html)
 - Odoo 20 documentation: [Manufacturing](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing.html)
 

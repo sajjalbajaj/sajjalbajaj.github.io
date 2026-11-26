@@ -7,6 +7,8 @@ hub: integrations
 description: "How Odoo Spreadsheet gives you familiar spreadsheet power connected to live business data, so your analysis updates itself instead of going stale."
 ---
 
+**Short answer:** Spreadsheet gives you the best of both worlds: the flexibility and familiarity of a spreadsheet, with data that stays live because it comes from Odoo. That kills the biggest weakness of the exported spreadsheet, going stale instantly, and saves the endless rebuild cycle. For anyone who lives in spreadsheets, it is a genuine upgrade.
+
 People love spreadsheets for a reason: they are flexible and familiar. The problem is that a spreadsheet of
 business data is out of date the moment you export it. Odoo Spreadsheet keeps the flexibility but connects it
 to live data. Continuing the series on Odoo Productivity, here is Spreadsheet.
@@ -46,12 +48,6 @@ spreadsheets.
 - Keep heavy, standardised reporting in dedicated tools, and use Spreadsheet for exploration.
 - Remember the data is live, so your analysis stays current.
 
-## My take
-
-Spreadsheet gives you the best of both worlds: the flexibility and familiarity of a spreadsheet, with data
-that stays live because it comes from Odoo. That kills the biggest weakness of the exported spreadsheet, going
-stale instantly, and saves the endless rebuild cycle. For anyone who lives in spreadsheets, it is a genuine
-upgrade.
 
 Next in the series: tailoring Odoo yourself with Studio.
 

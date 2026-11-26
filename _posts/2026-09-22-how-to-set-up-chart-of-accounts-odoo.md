@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English guide to setting up your chart of accounts in Odoo, the backbone of your books, so your financial reporting is right from day one."
 ---
 
+**Short answer:** The chart of accounts rewards care up front more than almost any other accounting setup, because it is the foundation every report is built on and it is painful to change later. Start from the local template, adapt it thoughtfully with your accountant, and get it right before you post real data. Do that and your financial reporting is trustworthy from the very first month.
+
 The chart of accounts is the backbone of your accounting: every transaction lands in one of its accounts, and every
 financial report is built from it. Setting it up well is one of the most important early accounting tasks. Continuing
 this series of practical Odoo how-to guides, here is the chart of accounts.
@@ -49,12 +51,6 @@ setup, because everything downstream depends on it.
 - Involve your accountant early to get the structure right.
 - Finalise it before posting real transactions; reworking later is hard.
 
-## My take
-
-The chart of accounts rewards care up front more than almost any other accounting setup, because it is the foundation
-every report is built on and it is painful to change later. Start from the local template, adapt it thoughtfully with
-your accountant, and get it right before you post real data. Do that and your financial reporting is trustworthy from
-the very first month.
 
 Next in this series: how to set up taxes and fiscal positions.
 

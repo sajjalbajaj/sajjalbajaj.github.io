@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up Odoo Helpdesk, with teams, ticket channels and stages, so customer requests are captured and nothing gets lost."
 ---
 
+**Short answer:** A well-set-up helpdesk is what makes support a strength rather than a scramble. Teams that match your reality, the right intake channels, clear stages and firm ownership ensure every request is captured and moved along. Add a knowledge base and SLAs and you have support that customers can rely on, which is one of the quieter but most powerful ways to keep them.
+
 Good support keeps the customers you worked hard to win, and a helpdesk that captures every request and moves it along
 is how you deliver it. Setting up Odoo Helpdesk well is what makes support organised rather than chaotic. Continuing this
 series of practical Odoo how-to guides, here is the helpdesk.
@@ -49,11 +51,6 @@ reactive helpdesk into a professional, dependable support operation.
 - Assign every ticket an owner, manually or automatically.
 - Add a knowledge base and SLAs for efficient, dependable support.
 
-## My take
-
-A well-set-up helpdesk is what makes support a strength rather than a scramble. Teams that match your reality, the right
-intake channels, clear stages and firm ownership ensure every request is captured and moved along. Add a knowledge base
-and SLAs and you have support that customers can rely on, which is one of the quieter but most powerful ways to keep them.
 
 Next in this series: how to set up time off.
 

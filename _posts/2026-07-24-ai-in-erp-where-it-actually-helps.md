@@ -2,9 +2,12 @@
 layout: post
 title: "AI in ERP: Where It Actually Helps"
 date: 2026-07-24 09:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [AI, ERP, Automation, Odoo, Digital Transformation, Inventory Management, Stock Control, Procurement]
 description: "A practical look at where AI genuinely adds value in ERP, from forecasting and document automation to natural-language reporting, plus where to be careful."
 ---
+
+**Short answer:** AI is most useful in ERP when it supports a defined task such as extracting document data or reviewing exceptions. Start with clean inputs, human review and a measurable acceptance condition before expanding automation.
 
 Every ERP conversation now includes AI. Some of it is hype, but a real share of it
 genuinely helps. After implementing ERP for a range of businesses, here is where I see AI
@@ -54,12 +57,11 @@ process, it makes the right next step obvious.
 - **Ignore the hype.** If a feature does not save real time or money on a real task, it is a
   demo, not a solution.
 
-## My take
-
-Start small and specific. Pick one painful, high-volume task, such as invoice entry or
-forecasting, get the data clean, add AI there, and measure the result. Done this way, AI and
-ERP are a genuinely powerful pairing rather than a buzzword. That is exactly the kind of
-practical, Intel-powered AI direction I have been leaning into alongside Odoo and Microsoft
-implementations.
 
 If you are weighing where AI fits in your ERP, I am always happy to talk it through.
+
+## Related official documentation
+
+- [Odoo 19 AI documentation](https://www.odoo.com/documentation/19.0/applications/productivity/ai.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

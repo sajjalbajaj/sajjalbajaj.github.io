@@ -14,7 +14,7 @@ faqs:
     a: "Start with a read-only question such as checking order status or summarizing stock for a named warehouse. Verify access rights, record rules, answer accuracy and logs before considering any record-changing action."
 ---
 
-An AI assistant that can answer “Which customer orders are waiting for stock?” is useful only if it reads the right records and respects the same access rules as the people using Odoo. If it can also change quantities, confirm orders or create payments, the design needs stronger controls.
+**Short answer:** An AI assistant that can answer “Which customer orders are waiting for stock?” is useful only if it reads the right records and respects the same access rules as the people using Odoo. If it can also change quantities, confirm orders or create payments, the design needs stronger controls.
 
 The Model Context Protocol (MCP) is a standard way for an AI application to discover and call tools exposed by a server. It does not connect itself to Odoo. Odoo 19 documents an external JSON-2 API, so an Odoo integration can place a small MCP server between the assistant and that API:
 

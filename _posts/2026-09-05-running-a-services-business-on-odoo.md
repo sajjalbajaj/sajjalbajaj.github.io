@@ -7,6 +7,8 @@ hub: services
 description: "How the Odoo services apps fit together to run a whole services business, from winning work to delivering, supporting, billing and understanding profit."
 ---
 
+**Short answer:** Run piece by piece, a services business leaks time, revenue and margin at every handover. Run on one connected system, from winning work to understanding profit, and those leaks close. That end-to-end connection is the real reason a services firm benefits from Odoo, and it is exactly the kind of setup I help businesses put in place.
+
 Across this part of the series we have looked at the pieces, project, timesheets, planning, helpdesk, field
 service, appointments and billing. To close it, here is how they fit together to run a whole services
 business on Odoo.
@@ -52,12 +54,6 @@ visible, without the leaks that separate tools create.
 - Keep support organised so client relationships stay strong.
 - Bill from recorded work, and measure profit per project.
 
-## My take
-
-Run piece by piece, a services business leaks time, revenue and margin at every handover. Run on one
-connected system, from winning work to understanding profit, and those leaks close. That end-to-end
-connection is the real reason a services firm benefits from Odoo, and it is exactly the kind of setup I help
-businesses put in place.
 
 This completes the Services and Project part of the series. Next we move on to Productivity.
 

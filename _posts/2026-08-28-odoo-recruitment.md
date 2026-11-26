@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Recruitment manages hiring, from posting a job to tracking candidates through stages to making a hire, all in one organised pipeline."
 ---
 
+**Short answer:** Recruitment done in spreadsheets and inboxes loses good candidates and wastes time. Odoo turns hiring into an organised pipeline where every applicant is visible and every step is tracked, then hands the new hire cleanly to the Employees app. That structure helps you hire better and faster.
+
 Hiring is one of the most important things a business does, and one of the easiest to let become chaotic:
 CVs in inboxes, notes on paper, candidates falling through the cracks. Odoo Recruitment brings order to it.
 Continuing the series on Odoo HR and People, here is recruitment.
@@ -49,11 +51,6 @@ market.
 - Keep every candidate in the pipeline so none slip through.
 - Move a new hire's details into their employee record rather than re-entering them.
 
-## My take
-
-Recruitment done in spreadsheets and inboxes loses good candidates and wastes time. Odoo turns hiring into
-an organised pipeline where every applicant is visible and every step is tracked, then hands the new hire
-cleanly to the Employees app. That structure helps you hire better and faster.
 
 Next in the series: managing leave with Odoo Time Off.
 

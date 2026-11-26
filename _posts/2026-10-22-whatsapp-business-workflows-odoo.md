@@ -14,7 +14,7 @@ faqs:
     a: "Odoo's documentation lists the WhatsApp app as Enterprise only. Confirm edition and hosting requirements for your database before planning a rollout."
 ---
 
-WhatsApp often becomes the unofficial system for order questions, appointment reminders and delivery updates. Odoo 19 can connect business conversations to sales and service records, but the integration has specific account, template and edition requirements. A useful rollout starts by choosing a few expected messages and tying each one to a real Odoo workflow.
+**Short answer:** WhatsApp often becomes the unofficial system for order questions, appointment reminders and delivery updates. Odoo 19 can connect business conversations to sales and service records, but the integration has specific account, template and edition requirements. A useful rollout starts by choosing a few expected messages and tying each one to a real Odoo workflow.
 
 For a short introduction, see [WhatsApp in Odoo](/blog/2026/09/08/odoo-whatsapp/). This guide focuses on designing and testing the workflows.
 

@@ -7,6 +7,8 @@ hub: manufacturing
 description: "A plain-English guide to setting up quality control in Odoo, with control points and checks that catch problems before they reach your customers."
 ---
 
+**Short answer:** Quality control in Odoo works because it builds checks into your actual process rather than leaving them to memory. Well-placed control points, the right check types and proper handling of failures catch problems where they are cheap to fix. Use the resulting data to improve, and quality control becomes a source of genuine competitive strength, not just a safeguard.
+
 Quality problems caught early are cheap; quality problems caught by your customer are expensive. Odoo Quality lets you
 build checks into your operations so issues are caught where they happen. Continuing this series of practical Odoo
 how-to guides, here is quality control.
@@ -49,12 +51,6 @@ That is how quality control shifts from a cost to an investment.
 - Use quality alerts so failures are tracked and resolved.
 - Use the data to fix root causes, not just catch defects.
 
-## My take
-
-Quality control in Odoo works because it builds checks into your actual process rather than leaving them to memory.
-Well-placed control points, the right check types and proper handling of failures catch problems where they are cheap to
-fix. Use the resulting data to improve, and quality control becomes a source of genuine competitive strength, not just a
-safeguard.
 
 Next in this series: how to set up timesheets.
 

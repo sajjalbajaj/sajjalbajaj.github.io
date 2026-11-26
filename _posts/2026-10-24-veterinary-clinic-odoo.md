@@ -14,7 +14,7 @@ faqs:
     a: "Odoo supports appointment scheduling and WhatsApp or other messaging workflows when configured. Confirm channel eligibility, consent, templates and the exact reminder trigger before using it with clients."
 ---
 
-A veterinary clinic coordinates pet owners, veterinarians, rooms, supplies and follow-up visits. Odoo can support the administrative side with appointments, purchasing, inventory, accounting and support tickets. It should not be treated as a veterinary clinical system unless the required medical records and safeguards have been implemented and reviewed.
+**Short answer:** A veterinary clinic coordinates pet owners, veterinarians, rooms, supplies and follow-up visits. Odoo can support the administrative side with appointments, purchasing, inventory, accounting and support tickets. It should not be treated as a veterinary clinical system unless the required medical records and safeguards have been implemented and reviewed.
 
 ## Organize appointment capacity
 

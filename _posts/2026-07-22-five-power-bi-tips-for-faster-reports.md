@@ -2,12 +2,12 @@
 layout: post
 title: "Five Power BI tips for faster reports"
 date: 2026-07-22 09:00:00 +0530
+last_modified_at: 2026-11-26
 tags: [Power BI, Data, Analytics, Business Intelligence, Reporting, Data Analytics]
 description: "Practical ways to make Power BI reports load faster and stay maintainable."
 ---
 
-Slow Power BI reports are almost always a *data model* problem, not a visuals problem.
-Here are five tips I reach for again and again.
+**Short answer:** Start a Power BI performance review with the data model: remove unused data, review relationships, use measures appropriately and check date tables and high cardinality columns. Measure performance before and after each change so you know which change helped.
 
 ## 1. Import only what you need
 
@@ -34,5 +34,12 @@ shared, marked **Date dimension** instead.
 High-cardinality columns (like unique IDs and free text) compress poorly. Remove or
 reduce them where you can.
 
-Apply these and most reports get noticeably snappier, often without touching a single
-visual.
+Measure the effect of each change before keeping it. If the model is not the bottleneck,
+inspect visual queries, the data source and capacity rather than assuming another model
+change will solve the delay.
+
+## Related official documentation
+
+- [Microsoft's Power BI optimisation guidance](https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

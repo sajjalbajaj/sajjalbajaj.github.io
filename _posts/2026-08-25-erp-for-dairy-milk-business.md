@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for a Dairy and Milk Business: Problems It Solves"
 date: 2026-08-25 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Dairy, Food and Beverage, Inventory Management, SME]
 hub: industries
 description: "The problems dairy and milk businesses face, from perishability and batch traceability to farmer procurement and route distribution, and how Odoo solves them."
 ---
 
-Few industries move as fast or spoil as quickly as dairy. Milk and its products are perishable,
-traceability is essential, and the business runs from farmer collection all the way to daily delivery.
-Continuing the series on industry problems and how ERP solves them, here is dairy.
+**Short answer:** Dairy ERP requirements include collection, quality checks, perishable stock, production and distribution traceability. Define the process and required controls first, then verify which requirements need standard apps, integrations or specialist functionality.
 
 ## Problem: perishability and short shelf life
 
@@ -58,3 +57,10 @@ procurement and route distribution. I set Odoo up around how a dairy operation g
 
 If this is your daily reality, that is exactly what I help dairy businesses solve. Happy to talk it
 through.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

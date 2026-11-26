@@ -1,7 +1,7 @@
 # Sajjal Bajaj: personal site (www.sajjalbajaj.in)
 
 A Jekyll site published to GitHub Pages by the "Build and deploy site" GitHub Action (on push to `main`
-and daily, so future-dated posts publish on their date). Light/dark theme, scroll reveals, count-up stats,
+and daily at 10:30 IST, so future-dated posts publish on their date). Light/dark theme, scroll reveals, count-up stats,
 a canned Q&A and a canned chat assistant; no front-end framework.
 
 ## How the site is put together (Oct 2026)
@@ -83,32 +83,28 @@ colors, radius, fonts. The accent is amber (`--accent: #F2A81D`); change it in b
 - No external JS/CSS except Google Fonts (and Google Analytics, only if a GA4 ID is configured).
 
 ## Writing a new blog post (daily)
-The blog is powered by **Jekyll**, which GitHub Pages builds automatically, you don't
-need Ruby or any local tools to publish.
+The blog uses Jekyll and GitHub Pages. Start each article from `blog-post-template.md`.
 
-1. Create a file in `_posts/` named `YYYY-MM-DD-title-with-dashes.md`.
-2. Start it with this header, then write in Markdown:
-   ```markdown
-   ---
-   layout: post
-   title: "Your post title"
-   date: 2026-07-24 09:00:00 +0530
-   tags: [ERP, Power BI]
-   description: "One-line summary used for SEO and social link previews."
-   ---
+1. Create `_posts/YYYY-MM-DD-title-with-dashes.md`. Set the publication date and time,
+   description, eight relevant existing tags, subject hub and two or three useful FAQs.
+2. Open with `**Short answer:**` and answer the title directly. Explain version and
+   edition limits, use natural question headings where useful, and include practical
+   examples. Use British spelling and avoid em and en dashes.
+3. Check technical claims against specific official sources. Verify internal links are
+   published by the article's scheduled time. Clearly label historical previews and
+   illustrative examples. Do not invent results, prices or product capabilities.
+4. Run `ruby scripts/check_content.rb --strict _posts/YYYY-MM-DD-title-with-dashes.md`.
+   Review the rendered article when a Jekyll environment is available. The checker
+   validates structure; source accuracy and usefulness require editorial review.
+5. Review the diff and commit only the intended files. Push when publication is authorised.
+   Scheduled posts appear after a successful build that includes their publication time.
 
-   Your **Markdown** content here…
-   ```
-3. Commit and push:
-   ```bash
-   git add . && git commit -m "post: your title" && git push
-   ```
+The content quality workflow checks all articles and applies the stricter standard to
+new files. It reports separately from deployment. Use `ruby scripts/check_content.rb --json`
+for the full editorial audit; missing FAQs or question headings in older posts are review
+prompts, not instructions to add repetitive filler.
 
-GitHub rebuilds and publishes within a minute or two. The post appears on the **Blog**
-page (`/blog/`) with its date, reading time and tags, and is added to the **RSS feed**
-(`/feed.xml`) and `sitemap.xml` automatically.
-
-Tips:
-- Reuse the same tag spelling so the tag filter groups posts correctly.
-- The first paragraph becomes the card excerpt.
-- SEO / Open-Graph meta tags are generated per post for good Google + LinkedIn/X previews.
+Jekyll adds published posts to the blog, RSS feed, sitemap and `llms.txt` directory. The
+post layout renders visible FAQs and their matching structured data from the same fields.
+Do not add duplicate schema blocks to article bodies. Clear answers and accurate sources
+help readers and search systems, but do not guarantee rankings or AI citations.

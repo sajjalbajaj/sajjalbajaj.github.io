@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Helpdesk turns customer support into an organised, trackable process with tickets, teams and SLAs, so nothing gets missed."
 ---
 
+**Short answer:** Helpdesk turns support from a stressful scramble into an organised, measurable process where every request is tracked and every promise is visible. Because it lives in Odoo, support sees the whole customer, and you learn enough to actually improve. For any business serious about service, that structure is essential.
+
 Customer support handled through a shared inbox quickly becomes chaos: messages missed, duplicated replies,
 no idea what is outstanding. Odoo Helpdesk brings order to it. Continuing the series on Odoo Services and
 Project, here is helpdesk.
@@ -48,11 +50,6 @@ forever.
 - Use SLAs to track and meet your response promises.
 - Watch the patterns and fix recurring issues at the root.
 
-## My take
-
-Helpdesk turns support from a stressful scramble into an organised, measurable process where every request
-is tracked and every promise is visible. Because it lives in Odoo, support sees the whole customer, and you
-learn enough to actually improve. For any business serious about service, that structure is essential.
 
 Next in the series: managing on-site work with Field Service.
 

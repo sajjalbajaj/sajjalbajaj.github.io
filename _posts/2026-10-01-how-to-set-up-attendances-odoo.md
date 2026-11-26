@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Attendances, so employees can check in and out easily and you have an accurate record of hours worked."
 ---
 
+**Short answer:** Attendances gives you an accurate, effortless record of hours worked, which quietly supports payroll, planning and fairness. The keys are an easy check-in method people actually use, sensible use of the resulting data, and transparency about why you track it. Set up well, it replaces paper and guesswork with reliable data, without becoming something employees feel uneasy about.
+
 Knowing who is at work and for how long matters for payroll, planning and simple fairness. Odoo Attendances lets
 employees check in and out and gives you an accurate record without paper timesheets or a punch clock. Continuing this
 series of practical Odoo how-to guides, here is Attendances.
@@ -49,12 +51,6 @@ the purpose, accurate records for pay and planning, is what makes it work smooth
 - Use the hours data for payroll and planning where relevant.
 - Be transparent about tracking and control who sees the data.
 
-## My take
-
-Attendances gives you an accurate, effortless record of hours worked, which quietly supports payroll, planning and
-fairness. The keys are an easy check-in method people actually use, sensible use of the resulting data, and transparency
-about why you track it. Set up well, it replaces paper and guesswork with reliable data, without becoming something
-employees feel uneasy about.
 
 Next in this series: how to set up Surveys.
 

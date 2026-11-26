@@ -7,6 +7,8 @@ hub: hr
 description: "A plain-English guide to setting up Odoo Appraisals, so performance reviews are structured, fair and actually happen, instead of being forgotten."
 ---
 
+**Short answer:** Appraisals in Odoo work by giving performance reviews the structure and prompting they need to happen consistently and fairly. A clear process, consistent templates, real scheduling, genuine employee involvement and follow-up on outcomes are what make them valuable. Done this way, appraisals stop being a dreaded formality and become a useful rhythm of feedback and growth for people and the business alike.
+
 Performance reviews are easy to put off and easy to do badly, yet done well they help people grow and the business
 improve. Odoo Appraisals gives them structure so they actually happen and mean something. Setting it up well is the key.
 Continuing this series of practical Odoo how-to guides, here is Appraisals.
@@ -49,12 +51,6 @@ something that actually helps people develop and the business improve.
 - Involve employees with a self-assessment or their own input.
 - Capture goals and next steps, and follow up on them.
 
-## My take
-
-Appraisals in Odoo work by giving performance reviews the structure and prompting they need to happen consistently and
-fairly. A clear process, consistent templates, real scheduling, genuine employee involvement and follow-up on outcomes
-are what make them valuable. Done this way, appraisals stop being a dreaded formality and become a useful rhythm of
-feedback and growth for people and the business alike.
 
 Next in this series: how to set up Referrals.
 

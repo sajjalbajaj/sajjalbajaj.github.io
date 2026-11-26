@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo Events helps you run events end to end, from a registration page and ticketing to attendee management and follow-up, all in one system."
 ---
 
+**Short answer:** Events brings the whole lifecycle, registration, ticketing, promotion, attendee management and follow-up, into one system, so running an event is organised rather than chaotic. And because attendees land in Odoo, the relationships you build carry straight through to sales. That end-to-end connection is what makes it worthwhile.
+
 Events, whether a webinar, a workshop, a conference or a local meetup, are a great way to build
 relationships, but the logistics can be a headache. Odoo Events handles the whole lifecycle. Continuing the
 series on Odoo Marketing, here is events.
@@ -46,12 +48,6 @@ connections you make at an event feed straight into the rest of your business.
 - Keep attendee management organised for a smooth event day.
 - Always follow up afterwards, that is where much of the value is.
 
-## My take
-
-Events brings the whole lifecycle, registration, ticketing, promotion, attendee management and follow-up,
-into one system, so running an event is organised rather than chaotic. And because attendees land in Odoo,
-the relationships you build carry straight through to sales. That end-to-end connection is what makes it
-worthwhile.
 
 Next in the series: listening to your audience with Odoo Surveys.
 

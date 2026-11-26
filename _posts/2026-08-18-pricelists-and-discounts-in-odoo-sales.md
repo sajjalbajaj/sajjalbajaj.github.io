@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo pricelists and discounts let you price the right way for each customer, quantity or period, without constant manual overrides."
 ---
 
+**Short answer:** Pricelists turn pricing from a manual chore into a reliable system. Model your real pricing situations, lean on rules rather than overrides, and keep discounts deliberate. Your team quotes consistently, your promotions behave, and you keep a clear eye on your margins, which is exactly what good pricing control looks like.
+
 Pricing is rarely one-size-fits-all. Different customers, quantities, currencies and promotions all pull
 your prices in different directions. Odoo pricelists let you handle that properly, so the right price
 applies automatically instead of being typed in by hand every time. Here is how they work.
@@ -51,12 +53,6 @@ from the second world to the first.
 - Keep discounting deliberate and visible, and set who can apply it.
 - Review your pricelists periodically as costs and strategy change.
 
-## My take
-
-Pricelists turn pricing from a manual chore into a reliable system. Model your real pricing situations,
-lean on rules rather than overrides, and keep discounts deliberate. Your team quotes consistently, your
-promotions behave, and you keep a clear eye on your margins, which is exactly what good pricing control
-looks like.
 
 Next in the series: deciding when to invoice with invoicing policies.
 

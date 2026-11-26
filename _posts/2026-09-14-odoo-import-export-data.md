@@ -7,6 +7,8 @@ hub: integrations
 description: "How Odoo lets you import your existing data from spreadsheets and export records back out, which matters most when you are getting started or moving systems."
 ---
 
+**Short answer:** Import and export are unglamorous but decisive. A careful import gives you a system you can trust from day one, and easy export means your data is never held hostage. For anyone starting with Odoo or moving from another system, getting this right is quietly one of the most important things you will do.
+
 Every business that adopts a new system arrives with data already: customers in a spreadsheet, a product list, open
 invoices. Getting that in, and being able to get data back out, is what Odoo's import and export tools are for. To round
 off this run through more Odoo apps, here is data import and export.
@@ -48,11 +50,6 @@ database, is much of the point of adopting Odoo in the first place.
 - Export when you need to report externally or simply keep your own backup.
 - Treat the initial import as a serious step, not an afterthought.
 
-## My take
-
-Import and export are unglamorous but decisive. A careful import gives you a system you can trust from day one, and
-easy export means your data is never held hostage. For anyone starting with Odoo or moving from another system, getting
-this right is quietly one of the most important things you will do.
 
 This run has covered even more of Odoo's apps, from small everyday tools to the essentials that hold the system
 together. There is always more ground to cover, and I will keep adding fresh guides over time.

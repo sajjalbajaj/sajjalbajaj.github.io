@@ -7,6 +7,8 @@ hub: website
 description: "How to build product pages that convert in Odoo eCommerce, handle variants cleanly, and organise your catalog so customers find what they want."
 ---
 
+**Short answer:** Your product pages are your online sales team, so it is worth making them clear, informative and easy to buy from. Odoo lets you design them yourself, handle variants cleanly, and keep the catalog organised, all on top of accurate, ERP-connected data. Get these right and more visitors turn into customers.
+
 In an online shop, the product page is where the sale is won or lost. It has to inform, reassure and make
 buying easy. Continuing the series on Odoo Website and eCommerce, here is how Odoo handles product pages,
 variants and your catalog.
@@ -48,11 +50,6 @@ buying, the more likely they are to buy.
 - Organise products into sensible categories and keep search working.
 - Add the extra detail that answers questions and builds buying confidence.
 
-## My take
-
-Your product pages are your online sales team, so it is worth making them clear, informative and easy to
-buy from. Odoo lets you design them yourself, handle variants cleanly, and keep the catalog organised, all
-on top of accurate, ERP-connected data. Get these right and more visitors turn into customers.
 
 Next in the series: getting paid, with payments and checkout.
 

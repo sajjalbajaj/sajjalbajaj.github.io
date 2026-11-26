@@ -7,6 +7,8 @@ hub: accounting
 description: "How analytic accounting in Odoo lets you track profitability by project, department or product, beyond what standard accounts show."
 ---
 
+**Short answer:** Analytic accounting turns your books from a single verdict into a management tool. By tagging transactions with the dimensions that matter to you, Odoo shows where your money is really made and lost. For anyone running projects, departments or multiple product lines, that visibility is worth its weight in gold.
+
 Your standard accounts tell you whether the whole business made money. But they do not easily tell you which
 project, department or product made it, or lost it. That deeper view is what analytic accounting gives you,
 and in Odoo it is genuinely useful. Here is what it does, in plain English.
@@ -53,11 +55,6 @@ project-based and multi-line businesses especially, it is one of the most valuab
 - Make tagging part of the normal flow, so the data stays complete.
 - Actually review the analytic reports, and act on what they reveal.
 
-## My take
-
-Analytic accounting turns your books from a single verdict into a management tool. By tagging transactions
-with the dimensions that matter to you, Odoo shows where your money is really made and lost. For anyone
-running projects, departments or multiple product lines, that visibility is worth its weight in gold.
 
 Next in the series: reading the results, with financial reporting.
 

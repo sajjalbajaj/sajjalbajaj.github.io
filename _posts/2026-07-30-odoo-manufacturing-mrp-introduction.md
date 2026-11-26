@@ -2,10 +2,13 @@
 layout: post
 title: "Odoo for Manufacturing: A Practical Introduction to MRP"
 date: 2026-07-30 09:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Manufacturing, MRP, Inventory, Inventory Management, Stock Control, Production Planning]
 hub: manufacturing
 description: "A plain-English introduction to Odoo Manufacturing (MRP): bills of materials, work orders, routings and how they connect to inventory."
 ---
+
+**Short answer:** Odoo manufacturing connects bills of materials, production orders, component stock and work execution. Define accurate recipes and record actual consumption before relying on production plans or cost reports.
 
 If your business makes things, whether you assemble, build or produce, a spreadsheet and a
 whiteboard only get you so far. This is where **Odoo Manufacturing (MRP)** comes in. Here is a
@@ -83,11 +86,12 @@ No, and you should not try. Start lean:
 Get the foundation right, keep it clean, and expand from there. That is the same advice I give for
 any ERP rollout, and it holds especially true for manufacturing.
 
-## My take
-
-For small and mid-sized manufacturers, Odoo MRP turns making things into a controlled, visible
-process instead of a daily scramble. The magic is not any single feature. It is that production,
-stock, purchasing and sales finally speak to each other.
 
 If you make products and your current setup is held together by spreadsheets and memory, this is
 exactly the kind of problem Odoo solves well. Happy to help you map it out.
+
+## Related official documentation
+
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

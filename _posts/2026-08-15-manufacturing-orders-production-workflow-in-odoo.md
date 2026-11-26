@@ -7,6 +7,8 @@ hub: manufacturing
 description: "How a manufacturing order works in Odoo from draft to done, how it consumes components and produces finished goods, and how it keeps stock accurate."
 ---
 
+**Short answer:** The manufacturing order is where planning becomes product. Follow its workflow, let Odoo consume components and create finished goods automatically, and record the messy real-world bits honestly, and your production and your stock stay perfectly in step. That connection is the whole reason to run manufacturing inside your ERP.
+
 The Bill of Materials is the recipe and work orders are the steps. The manufacturing order is the
 instruction that ties them together and actually gets something made. Understanding its workflow is
 the key to running production smoothly in Odoo.
@@ -57,12 +59,8 @@ A few pointers:
 - Record actual consumption and any scrap, rather than assuming the recipe was followed exactly.
 - Use the stages to keep everyone clear on what is planned, running and finished.
 
-## My take
+Once the production flow is stable, review [how Odoo calculates manufactured product cost](/blog/2026/10/16/how-odoo-costs-manufactured-products/) from components, operations and actual execution data.
 
-The manufacturing order is where planning becomes product. Follow its workflow, let Odoo consume
-components and create finished goods automatically, and record the messy real-world bits honestly, and
-your production and your stock stay perfectly in step. That connection is the whole reason to run
-manufacturing inside your ERP.
 
 Next in the series: outsourcing production with subcontracting.
 

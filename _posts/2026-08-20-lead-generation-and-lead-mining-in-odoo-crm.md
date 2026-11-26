@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo CRM captures leads from your website, email and forms, and how lead mining helps you find new prospects to fill the pipeline."
 ---
 
+**Short answer:** Lead generation is the fuel of your sales engine. Let Odoo capture leads automatically from your website and email, enrich them so you know who is worth pursuing, and use lead mining to go find more when you need them. Keep the intake organised, and your pipeline never runs dry.
+
 A pipeline is only as good as what goes into it. If new leads are not flowing in, even the best sales
 process runs dry. Odoo CRM gives you several ways to capture leads and even to go looking for new ones.
 Here is how lead generation and lead mining work.
@@ -54,11 +56,6 @@ is what keeps the whole sales engine fed.
 - Qualify honestly, so your pipeline reflects real opportunities, not every stray enquiry.
 - Use lead mining to top up the pipeline deliberately, targeting the prospects that fit you best.
 
-## My take
-
-Lead generation is the fuel of your sales engine. Let Odoo capture leads automatically from your website
-and email, enrich them so you know who is worth pursuing, and use lead mining to go find more when you need
-them. Keep the intake organised, and your pipeline never runs dry.
 
 Next in the series: focusing effort with predictive lead scoring.
 

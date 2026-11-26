@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for Manufacturing: The Problems It Solves"
 date: 2026-08-20 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Manufacturing, Production Planning, SME, Digital Transformation]
 hub: industries
 description: "The everyday problems manufacturers face, from raw material shortages to unclear product costs, and how an ERP like Odoo solves each one."
 ---
 
-Manufacturing is full of moving parts, and when they are tracked in spreadsheets and memory, small
-problems quickly become expensive ones. This is the first in a series on the problems specific
-industries face and how an ERP like Odoo solves them. We start with manufacturing.
+**Short answer:** Manufacturing ERP connects component demand, production orders, inventory and product costs. Accurate bills of materials and recorded production activity are essential before the business can rely on planning and cost information.
 
 ## Problem: raw material shortages stop production
 
@@ -61,3 +60,9 @@ your shop floor actually works.
 
 If any of these problems sound familiar, that is exactly what I help manufacturers fix. Happy to talk
 through where to start.
+
+## Related official documentation
+
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

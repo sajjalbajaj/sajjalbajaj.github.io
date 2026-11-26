@@ -7,6 +7,8 @@ hub: accounting
 description: "How Odoo handles taxes and fiscal positions so the right tax is applied automatically to every transaction, at home and across borders."
 ---
 
+**Short answer:** Taxes and fiscal positions are where Odoo quietly saves you from a whole category of errors. Set the taxes up properly, use fiscal positions to handle the different situations automatically, and every transaction carries the correct tax without anyone having to think about it. Get this foundation right, and tax stops being a worry.
+
 Tax is one of those things that has to be exactly right, every time, or it causes real problems. The good
 news is that Odoo is built to apply the correct tax automatically, so it is not something your team has to
 remember on each transaction. Here is how taxes and fiscal positions work, in plain English.
@@ -51,12 +53,6 @@ This is exactly the kind of setup worth investing a little care in up front.
 - Assign fiscal positions to the right contacts, so the automation kicks in.
 - Review your tax setup when rules change or you start selling into new places.
 
-## My take
-
-Taxes and fiscal positions are where Odoo quietly saves you from a whole category of errors. Set the taxes up
-properly, use fiscal positions to handle the different situations automatically, and every transaction
-carries the correct tax without anyone having to think about it. Get this foundation right, and tax stops
-being a worry.
 
 Next in the series: matching your books to your bank with reconciliation.
 

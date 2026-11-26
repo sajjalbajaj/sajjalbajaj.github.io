@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo turns project work and logged time into accurate invoices, so services businesses bill for everything they do without the manual scramble."
 ---
 
+**Short answer:** Billing is where a services business either captures the value it created or quietly loses some of it. By connecting timesheets and projects to invoicing, Odoo makes sure the work you do is the work you bill, accurately and promptly. Close that gap and both your revenue and your cash flow improve.
+
 For a services business, billing is where delivery becomes revenue, and it is often where money leaks:
 hours forgotten, work under-billed, invoices delayed. Odoo connects the work to the invoice so nothing is
 lost. Continuing the series on Odoo Services and Project, here is billing project work.
@@ -48,11 +50,6 @@ two ends of the same thread.
 - Bill promptly from recorded work rather than reconstructing later.
 - Use the connected data to justify invoices and speed up payment.
 
-## My take
-
-Billing is where a services business either captures the value it created or quietly loses some of it. By
-connecting timesheets and projects to invoicing, Odoo makes sure the work you do is the work you bill,
-accurately and promptly. Close that gap and both your revenue and your cash flow improve.
 
 Next in the series: knowing whether a project actually made money.
 

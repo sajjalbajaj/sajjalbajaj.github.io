@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo handles users, access rights and multiple companies, so the right people see the right things and your setup is secure and organised."
 ---
 
+**Short answer:** Users, access rights and companies are the quiet foundation of a secure, well-run Odoo. Set access by role, keep it tidy, and use multi-company support where it fits, and the whole system stays safe and clear as you grow. It is exactly the kind of foundational setup worth getting right with expert help.
+
 Behind every well-run Odoo system is sensible setup: the right people with the right access, and, for some,
 more than one company in the same system. It is not glamorous, but it matters. Continuing the series on Odoo
 Productivity, here is users, companies and access.
@@ -47,11 +49,6 @@ thoughtfully at the start, and reviewing as the business changes, rather than le
 - Use multi-company support if you run more than one entity.
 - Review access regularly, especially when people join or leave.
 
-## My take
-
-Users, access rights and companies are the quiet foundation of a secure, well-run Odoo. Set access by role,
-keep it tidy, and use multi-company support where it fits, and the whole system stays safe and clear as you
-grow. It is exactly the kind of foundational setup worth getting right with expert help.
 
 Next in the series: a wrap-up of the whole Odoo guide.
 

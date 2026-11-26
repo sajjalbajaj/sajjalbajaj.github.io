@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Calendar keeps meetings and activities in one place, connected to your contacts and work, and syncs with Google and Outlook."
 ---
 
+**Short answer:** Calendar is quietly one of the more useful connective apps, because a schedule tied to your actual work stays accurate in a way a standalone calendar never does. With Google and Outlook sync it does not force you to switch, and with records linked to events your day carries real context. Simple, but genuinely helpful.
+
 A calendar is only useful if it reflects what you are actually doing, and a calendar cut off from your work quickly
 drifts out of date. Odoo Calendar sits inside the system where the work happens. Continuing this run through more Odoo
 apps, here is Calendar.
@@ -46,11 +48,6 @@ separate thing to maintain.
 - Use shared availability to arrange team meetings without the email chain.
 - Let the calendar reflect work from across Odoo rather than duplicating it.
 
-## My take
-
-Calendar is quietly one of the more useful connective apps, because a schedule tied to your actual work stays accurate
-in a way a standalone calendar never does. With Google and Outlook sync it does not force you to switch, and with
-records linked to events your day carries real context. Simple, but genuinely helpful.
 
 Next in this run: capturing small tasks with Odoo To-do.
 

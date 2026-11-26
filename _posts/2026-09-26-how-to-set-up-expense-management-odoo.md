@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English guide to setting up Odoo Expenses, so employees can submit costs easily, managers approve them, and everything flows into your accounts."
 ---
 
+**Short answer:** Expense management is a small process with an outsized capacity to annoy, and Odoo Expenses defuses that by making submission, approval and posting flow smoothly. Good categories, easy mobile submission, a clear approval path and a connection to your accounts are what make it work. Set it up well and a perennial source of paperwork friction quietly disappears.
+
 Employee expenses are a small process that causes a lot of friction when handled with paper receipts and spreadsheets.
 Odoo Expenses streamlines the whole thing, from submission to reimbursement. Continuing this series of practical Odoo
 how-to guides, here is expense management.
@@ -49,12 +51,6 @@ gets done and the cleaner your expense records stay.
 - Connect approved expenses to accounting and reimbursement.
 - Keep the process simple to keep people using it.
 
-## My take
-
-Expense management is a small process with an outsized capacity to annoy, and Odoo Expenses defuses that by making
-submission, approval and posting flow smoothly. Good categories, easy mobile submission, a clear approval path and a
-connection to your accounts are what make it work. Set it up well and a perennial source of paperwork friction quietly
-disappears.
 
 Next in this series: how to set up recruitment.
 

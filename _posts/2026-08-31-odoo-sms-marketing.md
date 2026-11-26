@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo SMS Marketing lets you reach customers directly on their phones, when and how it works best, and how it fits with the rest of your marketing."
 ---
 
+**Short answer:** SMS Marketing is a direct, immediate channel that works best used sparingly and relevantly. Odoo lets you run it from the same data and system as the rest of your marketing, so it is targeted and measured rather than a standalone gamble. Respect the channel and it rewards you.
+
 A text message lands where almost nothing else does: directly on the phone, usually read within minutes.
 Used well, SMS is a powerful, immediate channel. Continuing the series on Odoo Marketing, here is SMS
 Marketing.
@@ -48,11 +50,6 @@ channels.
 - Keep messages short, clear and with a single purpose.
 - Combine with email: rich content by email, urgent nudges by SMS.
 
-## My take
-
-SMS Marketing is a direct, immediate channel that works best used sparingly and relevantly. Odoo lets you
-run it from the same data and system as the rest of your marketing, so it is targeted and measured rather
-than a standalone gamble. Respect the channel and it rewards you.
 
 Next in the series: managing your social channels with Social Marketing.
 

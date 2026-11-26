@@ -7,6 +7,8 @@ hub: manufacturing
 description: "A plain-English guide to setting up Odoo Maintenance, so your equipment is looked after with planned upkeep and breakdowns are handled without chaos."
 ---
 
+**Short answer:** Maintenance shifts equipment care from reactive firefighting to planned upkeep, which is almost always cheaper and less disruptive. Well-recorded equipment, scheduled preventive maintenance, an orderly way to handle breakdowns and use of the resulting data are what make it work. For any business that depends on machines or assets, that shift protects both your operations and your budget.
+
 Equipment that breaks down unexpectedly disrupts everything, and neglected upkeep leads straight to breakdowns. Odoo
 Maintenance helps you look after your machines and assets with both planned and reactive maintenance. Setting it up well
 protects your operations. To close out this run of practical Odoo how-to guides, here is Maintenance.
@@ -49,12 +51,6 @@ decisions is what turns upkeep from pure cost into smarter asset management.
 - Give the maintenance team a clear view of scheduled and reactive work.
 - Use maintenance history to decide what to service more or replace.
 
-## My take
-
-Maintenance shifts equipment care from reactive firefighting to planned upkeep, which is almost always cheaper and less
-disruptive. Well-recorded equipment, scheduled preventive maintenance, an orderly way to handle breakdowns and use of the
-resulting data are what make it work. For any business that depends on machines or assets, that shift protects both your
-operations and your budget.
 
 Next in this series: how to set up Studio to customise Odoo.
 

@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Project helps you plan and deliver work with tasks, stages and clear ownership, keeping projects on track and everyone on the same page."
 ---
 
+**Short answer:** Odoo Project turns vague intentions into visible, owned, trackable work. The value is clarity: everyone knows what needs doing, who owns it and where it stands. Get that right, and delivery becomes calmer and more predictable, which is what good project management is really about.
+
 Delivering work on time and on budget is hard when tasks live in heads, chats and scattered lists. Odoo
 Project brings structure to how work gets done. This starts a short series on Odoo Services and Project.
 
@@ -47,11 +49,6 @@ series.
 - Keep discussion and files on the task, so context is not lost.
 - Review the board regularly so nothing stalls unnoticed.
 
-## My take
-
-Odoo Project turns vague intentions into visible, owned, trackable work. The value is clarity: everyone
-knows what needs doing, who owns it and where it stands. Get that right, and delivery becomes calmer and
-more predictable, which is what good project management is really about.
 
 Next in the series: tracking the time that work takes with Timesheets.
 

@@ -7,6 +7,8 @@ hub: services
 description: "The helpdesk mistakes that frustrate customers in Odoo, from lost tickets to no clear ownership, and how to run support that keeps people happy."
 ---
 
+**Short answer:** Helpdesk mistakes cost you the customers you already have, which makes them expensive in a quiet way. Clear ownership, sensible priorities, connected context and a knowledge base are what turn support from a source of frustration into a reason customers stay. Run it deliberately, with the metrics in view, and support becomes a strength rather than a leak.
+
 Support is where you keep the customers you worked hard to win, so mistakes in the helpdesk cost you loyalty as well as
 time. Most come from tickets that fall through gaps and support that runs disconnected from the rest of the business.
 Continuing this series on common Odoo mistakes, here is Helpdesk.
@@ -49,11 +51,6 @@ leave. Use the reporting to manage support deliberately, not by gut feel.
 - Build a knowledge base for the questions you answer repeatedly.
 - Watch response and resolution metrics to manage support well.
 
-## My take
-
-Helpdesk mistakes cost you the customers you already have, which makes them expensive in a quiet way. Clear ownership,
-sensible priorities, connected context and a knowledge base are what turn support from a source of frustration into a
-reason customers stay. Run it deliberately, with the metrics in view, and support becomes a strength rather than a leak.
 
 Next in this series: common mistakes with Odoo reporting and dashboards.
 

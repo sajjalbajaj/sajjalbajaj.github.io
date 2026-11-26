@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up Odoo Events, from registration to tickets, so you can run events online and in person without the usual chaos."
 ---
 
+**Short answer:** Events involve enough moving parts that doing them without a system is genuinely stressful, and Odoo Events brings them together neatly. A clear event, proper registration and tickets, a good page, automated communication and real follow-up are what make an event run smoothly and actually pay off. Connected to your CRM, it turns events into a source of business, not just an occasion.
+
 Running an event, a webinar, a conference, a workshop, involves a lot of moving parts: registration, tickets,
 communication, attendees. Odoo Events pulls them into one place. Setting it up well is what keeps an event organised
 rather than chaotic. Continuing this series of practical Odoo how-to guides, here is events.
@@ -49,12 +51,6 @@ turns an event from a one-off into something that actually feeds your business.
 - Automate confirmations, reminders and follow-up communications.
 - Use the CRM connection to turn attendee interest into pipeline.
 
-## My take
-
-Events involve enough moving parts that doing them without a system is genuinely stressful, and Odoo Events brings them
-together neatly. A clear event, proper registration and tickets, a good page, automated communication and real follow-up
-are what make an event run smoothly and actually pay off. Connected to your CRM, it turns events into a source of
-business, not just an occasion.
 
 Next in this series: how to set up marketing automation.
 

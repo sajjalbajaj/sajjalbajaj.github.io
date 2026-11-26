@@ -7,6 +7,8 @@ hub: website
 description: "A plain-English guide to setting up Odoo Live Chat, so visitors on your website can get instant answers and you can turn conversations into leads and sales."
 ---
 
+**Short answer:** Live Chat meets visitors at the exact moment they have a question, which is when a quick answer is most valuable. Placing it well, staffing it honestly, using canned responses and connecting chats to leads and tickets are what make it work. Beyond the immediate help, the conversations are a goldmine of insight into what your visitors want, which makes Live Chat doubly worth setting up.
+
 When someone is on your website with a question, a quick answer can be the difference between a sale and a lost visitor.
 Odoo Live Chat lets you talk to visitors in real time, right from your site. Setting it up well is what turns visitors
 into conversations. Continuing this series of practical Odoo how-to guides, here is Live Chat.
@@ -49,12 +51,6 @@ tool; it is a steady stream of insight into what your visitors actually need.
 - Connect chats to leads and tickets in the rest of Odoo.
 - Learn from the questions visitors ask to improve your site.
 
-## My take
-
-Live Chat meets visitors at the exact moment they have a question, which is when a quick answer is most valuable. Placing
-it well, staffing it honestly, using canned responses and connecting chats to leads and tickets are what make it work.
-Beyond the immediate help, the conversations are a goldmine of insight into what your visitors want, which makes Live Chat
-doubly worth setting up.
 
 Next in this series: how to set up Discuss for team communication.
 

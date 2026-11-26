@@ -7,6 +7,8 @@ hub: admin
 description: "The multi-company and access-rights mistakes that cause confusion and risk in Odoo, from giving everyone admin to muddled company setup, and how to get it right."
 ---
 
+**Short answer:** Access rights and multi-company are where convenience and safety pull against each other, and shortcuts here create quiet risk. Role-based access, a deliberate multi-company setup and periodic reviews are what keep the system both usable and secure. It is unglamorous work, but it protects the business, and it is far easier to do well from the start than to untangle later.
+
 Access rights and multi-company setup are the least glamorous parts of Odoo and among the most consequential, because
 getting them wrong means either people cannot do their jobs or they can see and do far too much. To round off this
 series on common Odoo mistakes, here is multi-company and access rights.
@@ -49,12 +51,6 @@ no longer needed. Security is a habit, not a one-time task.
 - Treat company separation and access control as two different tools.
 - Review access regularly so it stays matched to reality.
 
-## My take
-
-Access rights and multi-company are where convenience and safety pull against each other, and shortcuts here create
-quiet risk. Role-based access, a deliberate multi-company setup and periodic reviews are what keep the system both usable
-and secure. It is unglamorous work, but it protects the business, and it is far easier to do well from the start than to
-untangle later.
 
 This series has now walked through the mistakes that most often trip up Odoo, across the core apps, the people and
 service apps, the shop floor, reporting and security. The pattern throughout is clear: almost none of these are the

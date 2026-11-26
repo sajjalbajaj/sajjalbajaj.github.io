@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up Odoo Surveys, so you can gather feedback, run quizzes and collect data with results that flow into your business."
 ---
 
+**Short answer:** Surveys is a straightforward tool that is only as valuable as the thought behind it. A clear purpose, well-built and concise questions, the right audience and, above all, acting on the results are what make it worthwhile. Connected to your contacts and data, the answers flow back into the business rather than sitting in a spreadsheet, which is what turns feedback into improvement.
+
 Whether you want customer feedback, employee input or a quiz for training, Surveys lets you ask questions and gather
 answers, with results that connect to the rest of your system. Setting one up well is what gets you useful responses.
 Continuing this series of practical Odoo how-to guides, here is Surveys.
@@ -49,12 +51,6 @@ are where surveys pay off. Close the loop by acting on what you learn.
 - Share it with the right audience using your contacts.
 - Review the results and actually act on them.
 
-## My take
-
-Surveys is a straightforward tool that is only as valuable as the thought behind it. A clear purpose, well-built and
-concise questions, the right audience and, above all, acting on the results are what make it worthwhile. Connected to
-your contacts and data, the answers flow back into the business rather than sitting in a spreadsheet, which is what turns
-feedback into improvement.
 
 Next in this series: how to set up Knowledge.
 

@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo connects marketing to sales, so the interest your campaigns create flows straight into your CRM pipeline instead of getting lost."
 ---
 
+**Short answer:** The biggest win in marketing is often not a better campaign, it is closing the gap between marketing and sales. Odoo does that by keeping both in one system, so interest becomes pipeline without loss, and you can finally see which marketing actually drives revenue. That connection is worth more than any single feature.
+
 Marketing and sales are often two separate worlds, and the gap between them is where leads get lost.
 Marketing creates interest, then hands over a list, and things fall through the cracks. In Odoo, they live
 in one system. Continuing the series on Odoo Marketing, here is where marketing meets CRM.
@@ -48,11 +50,6 @@ it, rather than judging marketing on vanity metrics.
 - Feed sales outcomes back to marketing to learn what really works.
 - Judge marketing on pipeline and revenue, not just opens and clicks.
 
-## My take
-
-The biggest win in marketing is often not a better campaign, it is closing the gap between marketing and
-sales. Odoo does that by keeping both in one system, so interest becomes pipeline without loss, and you can
-finally see which marketing actually drives revenue. That connection is worth more than any single feature.
 
 Next in the series: measuring your marketing.
 

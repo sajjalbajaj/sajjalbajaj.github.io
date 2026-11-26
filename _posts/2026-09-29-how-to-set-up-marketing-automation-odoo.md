@@ -7,6 +7,8 @@ hub: marketing
 description: "A plain-English guide to setting up marketing automation in Odoo, so the right message reaches the right people automatically based on what they do."
 ---
 
+**Short answer:** Marketing automation is powerful precisely because it acts on your real contact data and people's behaviour, sending relevant messages without constant manual effort. The key is setting it up thoughtfully: the right audience, a human-feeling journey, behaviour-based triggers and ongoing refinement. Done with care it is a genuine multiplier; done carelessly it just annoys people, so the setup mindset matters as much as the tool.
+
 Marketing automation lets you send the right message to the right person at the right time without doing it by hand each
 time. Odoo Marketing Automation builds these journeys on your own contact data. Setting it up thoughtfully is what makes
 it effective rather than annoying. Continuing this series of practical Odoo how-to guides, here is marketing automation.
@@ -49,12 +51,6 @@ you tend and improve is what keeps it working over time.
 - Keep timing, frequency and tone relevant and human.
 - Monitor performance and refine journeys regularly.
 
-## My take
-
-Marketing automation is powerful precisely because it acts on your real contact data and people's behaviour, sending
-relevant messages without constant manual effort. The key is setting it up thoughtfully: the right audience, a
-human-feeling journey, behaviour-based triggers and ongoing refinement. Done with care it is a genuine multiplier; done
-carelessly it just annoys people, so the setup mindset matters as much as the tool.
 
 Next in this series: how to set up multi-company in Odoo.
 

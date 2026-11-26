@@ -2,10 +2,13 @@
 layout: post
 title: "Getting Started with AI in Odoo: Where It Pays Off First"
 date: 2026-08-11 11:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [Odoo, AI, ERP, Digital Transformation, Procurement, Supply Chain, Invoicing, Bookkeeping]
 hub: planning
 description: "A practical guide to getting started with AI in Odoo: which feature to turn on first, how to keep a human in control, and how to measure the payoff."
 ---
+
+**Short answer:** Start an Odoo AI rollout with one defined task, clean data and an owner who reviews the output. Test permissions and failure cases before expanding the feature to more users or allowing it to change records.
 
 If you run Odoo, you may already be sitting on AI features you have never switched on. The question is
 not "should we use AI," it is "where do we start so it actually pays off?" Here is the practical path I
@@ -65,11 +68,13 @@ next area. If not, adjust or try a different starting point.
 4. Measure the result over a few weeks.
 5. If it works, move to the next area and repeat.
 
-## My take
-
-Getting value from AI in Odoo is not about flipping every switch. It is about choosing one real
-problem, feeding it clean data, keeping a person in control, and measuring the result. Do that and AI
-stops being a buzzword and starts quietly giving your team hours back. Then you widen the circle.
 
 Want help deciding where AI fits first in your Odoo setup? Tell me where the manual work piles up, and
 I can help you pick the highest-value starting point.
+
+## Related official documentation
+
+- [Odoo 19 AI documentation](https://www.odoo.com/documentation/19.0/applications/productivity/ai.html)
+- [Odoo 19 AI agent configuration](https://www.odoo.com/documentation/19.0/applications/productivity/ai/agents.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

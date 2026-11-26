@@ -7,6 +7,8 @@ hub: website
 description: "How Odoo eLearning lets you build and deliver online courses, for training staff, onboarding customers, or selling knowledge as a product."
 ---
 
+**Short answer:** eLearning turns knowledge that lives in people's heads and repeated conversations into structured, self-paced courses that scale. Whether for staff, customers or as a product, it lets you teach once and reach many, all connected to the rest of your Odoo business. For any organisation that trains people, that leverage is real.
+
 Sharing knowledge, training staff, onboarding customers, or teaching a skill, does not scale when it happens
 one conversation at a time. Odoo eLearning lets you package it into courses. Continuing this run through more
 Odoo apps, here is eLearning.
@@ -48,11 +50,6 @@ is part of the same connected business.
 - Track completion where it matters, for onboarding or compliance.
 - Consider selling courses if your knowledge is valuable to others.
 
-## My take
-
-eLearning turns knowledge that lives in people's heads and repeated conversations into structured, self-paced
-courses that scale. Whether for staff, customers or as a product, it lets you teach once and reach many, all
-connected to the rest of your Odoo business. For any organisation that trains people, that leverage is real.
 
 Next in this run: connecting hardware with Odoo IoT.
 

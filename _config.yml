@@ -72,6 +72,8 @@ defaults:
       layout: case-study
 
 exclude:
+  - scripts
+  - design-system
   - README.md
   - Gemfile
   - Gemfile.lock

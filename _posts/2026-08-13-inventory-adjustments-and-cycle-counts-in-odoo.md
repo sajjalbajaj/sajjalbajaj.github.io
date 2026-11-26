@@ -7,6 +7,8 @@ hub: inventory
 description: "How Odoo keeps physical and system stock in sync with inventory adjustments and cycle counts, and why regular counting beats one big year-end count."
 ---
 
+**Short answer:** Inventory accuracy is not a once-a-year project, it is a habit. Use adjustments to correct reality when you find it, and cycle counts to find it continuously. Count little and often, focus on what matters most, and your stock figures become numbers you can actually rely on, which is the whole point of an inventory system.
+
 However good your system is, physical stock and system stock drift apart over time: miscounts,
 breakages, unrecorded movements. Inventory adjustments are how you bring them back in line, and cycle
 counts are how you do it without shutting down once a year. Here is how Odoo handles both.
@@ -48,12 +50,6 @@ A few habits keep adjustments meaningful:
 - Prioritise high-value and high-movement items for frequent counts.
 - Use the accuracy you build to trust your system for planning and promising to customers.
 
-## My take
-
-Inventory accuracy is not a once-a-year project, it is a habit. Use adjustments to correct reality
-when you find it, and cycle counts to find it continuously. Count little and often, focus on what
-matters most, and your stock figures become numbers you can actually rely on, which is the whole point
-of an inventory system.
 
 Next in the series: how goods flow in and out with shipping and receiving.
 

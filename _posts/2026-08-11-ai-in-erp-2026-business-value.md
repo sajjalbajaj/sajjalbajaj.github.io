@@ -2,9 +2,12 @@
 layout: post
 title: "AI in ERP: From Buzzword to Business Value in 2026"
 date: 2026-08-11 13:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, AI, Automation, Digital Transformation, Inventory Management, Stock Control, Invoicing, Bank Reconciliation]
 description: "Where AI in ERP has actually reached in 2026: the real use cases, the shift toward AI agents, and how to turn the hype into measurable value."
 ---
+
+**Short answer:** Evaluate AI in ERP by the task it improves, the evidence needed to trust the output and the effort required to review exceptions. Begin with a measurable use case and retain human control over consequential actions.
 
 A couple of years ago, "AI in ERP" was mostly a slide in a sales deck. In 2026 it is real, shipping in
 the systems businesses use every day. But real does not mean magic. Here is an honest look at where AI
@@ -63,12 +66,13 @@ Do not boil the ocean. Pick one high-volume, low-risk task where AI already exis
 the data it uses. Turn it on with a human approving the output. Measure the time saved and the quality.
 If it works, expand. That disciplined loop is how the hype becomes real value.
 
-## My take
-
-AI in ERP has crossed from buzzword to genuinely useful, and it is heading toward agents that do real
-work inside your systems. But the fundamentals have not changed: clean data, sensible guardrails, and a
-specific problem to solve. Get those right and AI quietly makes your ERP better. Skip them and you have
-bought expensive disappointment.
 
 Wondering where AI fits in your ERP without the hype? Tell me your platform and your biggest manual
 grind, and I can help you find a sensible first step.
+
+## Related official documentation
+
+- [Odoo 19 AI documentation](https://www.odoo.com/documentation/19.0/applications/productivity/ai.html)
+- [Microsoft's Business Central documentation](https://learn.microsoft.com/en-us/dynamics365/business-central/welcome)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

@@ -7,6 +7,8 @@ hub: sales
 description: "The point-of-sale mistakes that cause pain in Odoo retail, from a disconnected till to messy product setup, and how to run a shop floor that just works."
 ---
 
+**Short answer:** Point of Sale is unforgiving of setup shortcuts because problems appear live, at the counter. A connected till, clean products, a working offline plan and accurate stock are what make it smooth for staff and customers alike. Run it as part of the whole system and the POS does far more than take payment; it keeps the business in step with every sale.
+
 Point of Sale is where the customer meets your business, so mistakes here are felt immediately, by staff mid-sale and by
 customers waiting. Most trace back to setup and to treating the till as separate. Continuing this series on common Odoo
 mistakes, here is Point of Sale.
@@ -49,11 +51,6 @@ you how the shop is doing, if you look.
 - Keep the POS-to-inventory link working so stock stays accurate.
 - Use POS reporting to see what sells and staff accordingly.
 
-## My take
-
-Point of Sale is unforgiving of setup shortcuts because problems appear live, at the counter. A connected till, clean
-products, a working offline plan and accurate stock are what make it smooth for staff and customers alike. Run it as
-part of the whole system and the POS does far more than take payment; it keeps the business in step with every sale.
 
 Next in this series: common mistakes in Odoo Helpdesk.
 

@@ -14,7 +14,7 @@ faqs:
     a: "Not automatically. Compare the exact workflows, apps, edition availability, hosting and support needs for your Odoo version. Prove the required production process in a representative database before signing up."
 ---
 
-“Community or Enterprise?” sounds like a software question, but the decision affects hosting, support, upgrades, customization and who is responsible when the system needs attention. The sensible answer comes from the work your business needs to run, not from comparing a feature list in isolation.
+**Short answer:** “Community or Enterprise?” sounds like a software question, but the decision affects hosting, support, upgrades, customization and who is responsible when the system needs attention. The sensible answer comes from the work your business needs to run, not from comparing a feature list in isolation.
 
 First separate two decisions that are often mixed together:
 

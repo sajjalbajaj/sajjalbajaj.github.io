@@ -7,6 +7,8 @@ hub: marketing
 description: "Why your audience and how you segment it matter more than any single campaign, and how Odoo helps you target the right people with the right message."
 ---
 
+**Short answer:** The unglamorous truth of marketing is that audience and segmentation matter more than any single clever campaign. Odoo's advantage is that your audience is your real, connected business data, ready to segment and use across every channel. Get this right and every campaign you run works harder.
+
 You can write the perfect email, but if it goes to the wrong people it still fails. In marketing, the
 audience often matters more than the message. Continuing the series on Odoo Marketing, here is building and
 segmenting your audience.
@@ -49,11 +51,6 @@ relevant marketing out.
 - Match the message to the segment, relevance drives results.
 - Respect consent and preferences to protect trust and deliverability.
 
-## My take
-
-The unglamorous truth of marketing is that audience and segmentation matter more than any single clever
-campaign. Odoo's advantage is that your audience is your real, connected business data, ready to segment and
-use across every channel. Get this right and every campaign you run works harder.
 
 Next in the series: connecting marketing to sales.
 

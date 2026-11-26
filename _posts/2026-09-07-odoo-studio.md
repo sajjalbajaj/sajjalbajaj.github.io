@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Studio lets you tailor Odoo to your business, adding fields, adjusting screens and building simple apps, often without writing code."
 ---
 
+**Short answer:** Studio is what lets Odoo bend to your business without a developer for every change. Used with discipline, it handles the many small adjustments that make software actually fit, while leaving genuinely complex work to proper development. That balance, tailored but tidy, is exactly what keeps an ERP both useful and maintainable.
+
 Every business is a little different, and standard software rarely fits perfectly. Odoo Studio lets you
 tailor Odoo to how you actually work, often without a developer. Continuing the series on Odoo Productivity,
 here is Studio.
@@ -47,12 +49,6 @@ upgrade-friendly; a sprawl of ad-hoc tweaks does the opposite. Change with purpo
 - Know when a need is complex enough for proper development instead.
 - Keep customization disciplined and documented, so upgrades stay smooth.
 
-## My take
-
-Studio is what lets Odoo bend to your business without a developer for every change. Used with discipline, it
-handles the many small adjustments that make software actually fit, while leaving genuinely complex work to
-proper development. That balance, tailored but tidy, is exactly what keeps an ERP both useful and
-maintainable.
 
 Next in the series: business messaging with WhatsApp.
 

@@ -8,6 +8,8 @@ hub: purchase
 description: "How Odoo automates purchasing with reordering rules, make-to-order and vendor lead times, so you reorder the right amounts at the right time."
 ---
 
+**Short answer:** Automated purchasing is where inventory and buying come together to save real time and money. Let reordering rules and make-to-order do the watching, feed them accurate lead times, and keep a human eye on the suggestions. Purchasing stops being a scramble and becomes a calm, reliable routine, which is exactly what a good ERP should give you.
+
 The best purchasing is the kind you barely have to think about: stock tops itself up before you run out,
 without over-ordering. Odoo gets you close to that by linking purchasing to inventory and automating the
 routine buying. Here is how the pieces fit.
@@ -58,12 +60,6 @@ The combination is what makes purchasing feel effortless:
 - Use make-to-order for what you should not stock, and rules for what you should.
 - Review the suggestions Odoo makes, especially early on, and tune your min and max levels.
 
-## My take
-
-Automated purchasing is where inventory and buying come together to save real time and money. Let
-reordering rules and make-to-order do the watching, feed them accurate lead times, and keep a human eye
-on the suggestions. Purchasing stops being a scramble and becomes a calm, reliable routine, which is
-exactly what a good ERP should give you.
 
 This completes the Manufacturing and Purchase part of the series. Next we move on to Sales and CRM.
 

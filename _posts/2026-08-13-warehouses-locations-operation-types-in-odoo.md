@@ -8,6 +8,8 @@ hub: inventory
 description: "How Odoo structures physical stock with warehouses, locations and operation types, and why this structure powers everything from picking to reporting."
 ---
 
+**Short answer:** Warehouses, locations and operation types are the skeleton of Odoo Inventory. Set them up to reflect how your space and your movements actually work, and everyday operations become fast and accurate. Start at the level of detail you need today, knowing Odoo can go far deeper when you are ready.
+
 If products are the "what" of inventory, warehouses and locations are the "where." Odoo's structure
 here is more thoughtful than most people expect, and understanding it unlocks a lot of the app's
 power. Let us walk through warehouses, locations and operation types.
@@ -59,11 +61,6 @@ movement between locations, you get:
 You can start simple, one warehouse, a few locations, and grow into zones, bins and advanced routes
 as your operation matures, without redoing the foundation.
 
-## My take
-
-Warehouses, locations and operation types are the skeleton of Odoo Inventory. Set them up to reflect
-how your space and your movements actually work, and everyday operations become fast and accurate.
-Start at the level of detail you need today, knowing Odoo can go far deeper when you are ready.
 
 Next in the series: keeping stock topped up automatically with reordering rules.
 

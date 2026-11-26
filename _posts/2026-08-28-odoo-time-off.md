@@ -7,6 +7,8 @@ hub: hr
 description: "How Odoo Time Off handles leave requests, approvals and balances, giving employees and managers a clear, self-service way to manage time off."
 ---
 
+**Short answer:** Time Off replaces a fiddly, error-prone manual process with a clear, self-service one: employees request, managers approve, balances update automatically, and everyone can see who is away. It is a small app that removes a surprising amount of daily friction.
+
 Managing leave by email and spreadsheet is a small, constant drain: requests get lost, balances are
 unclear, and clashes are spotted too late. Odoo Time Off makes it simple and self-service. Continuing the
 series on Odoo HR and People, here is time off.
@@ -47,11 +49,8 @@ HR living inside one ERP.
 - Keep approvals prompt so people can plan with certainty.
 - Use the visibility of who is off to plan around capacity.
 
-## My take
+If approved leave affects salary calculations, review the [Odoo Payroll overview for work entries, payslips and validation](/blog/2026/08/29/odoo-payroll-overview/) before designing the handoff.
 
-Time Off replaces a fiddly, error-prone manual process with a clear, self-service one: employees request,
-managers approve, balances update automatically, and everyone can see who is away. It is a small app that
-removes a surprising amount of daily friction.
 
 Next in the series: tracking working time with Odoo Attendances.
 

@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Documents helps you store, organise and automate handling of your files, keeping paperwork tidy and connected to the rest of your business."
 ---
 
+**Short answer:** Documents turns file chaos into an organised, partly automated system that connects to the rest of your business. Less searching, less version confusion, less manual filing. It is not glamorous, but for a business buried in paperwork, getting documents under control is a real relief.
+
 Every business drowns a little in files: contracts, invoices, scans, forms, spread across drives, inboxes
 and desks. Odoo Documents brings order and even automation to all of it. Continuing the series on Odoo
 Productivity, here is Documents.
@@ -47,11 +49,6 @@ file, and easier compliance when you need to find something. Tidy files are quie
 - Automate routine filing and validation where you can.
 - Connect documents to the records and processes they belong to.
 
-## My take
-
-Documents turns file chaos into an organised, partly automated system that connects to the rest of your
-business. Less searching, less version confusion, less manual filing. It is not glamorous, but for a
-business buried in paperwork, getting documents under control is a real relief.
 
 Next in the series: signing agreements digitally with Odoo Sign.
 

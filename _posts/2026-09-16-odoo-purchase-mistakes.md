@@ -7,6 +7,8 @@ hub: purchase
 description: "The purchasing mistakes that cost money in Odoo, from skipping the three-way match to ignoring vendor pricelists, and how to buy smarter."
 ---
 
+**Short answer:** Purchase is one of the easiest areas to leak money in, and one of the easiest to control if you use Odoo's tools. The three-way match, vendor pricelists and approval rules exist precisely to stop the common, costly mistakes. Turn them on and purchasing becomes disciplined and defensible rather than a matter of trust and hope.
+
 Purchasing is where money leaves the business, so mistakes here are expensive in the most direct way. Odoo has strong
 tools to control buying, but only if you use them. Continuing this series on common Odoo mistakes, here is Purchase.
 
@@ -48,11 +50,6 @@ runs more smoothly.
 - Put approval controls on higher-value purchase orders.
 - Keep vendor data clean, just as you would customer data.
 
-## My take
-
-Purchase is one of the easiest areas to leak money in, and one of the easiest to control if you use Odoo's tools. The
-three-way match, vendor pricelists and approval rules exist precisely to stop the common, costly mistakes. Turn them on
-and purchasing becomes disciplined and defensible rather than a matter of trust and hope.
 
 Next in this series: common mistakes when importing and migrating data.
 

@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo Point of Sale runs your shop or counter and stays connected to inventory, sales and accounting, so in-person selling is part of one system."
 ---
 
+**Short answer:** Point of Sale turns in-person selling into part of your one connected system rather than an island. Fast at the counter, reliable when the network is not, and joined up with stock and accounts, it means a shop and its back office finally speak the same language. For any business selling face to face, that connection is the real win.
+
 The main Odoo guide series covered the core apps. This starts a new run looking at more of Odoo's apps,
 beginning with one that matters to any business selling face to face: Point of Sale.
 
@@ -47,12 +49,6 @@ clearly.
 - Let POS sales flow into accounting rather than reconciling separately.
 - Use the single view of stock and sales across counter and online.
 
-## My take
-
-Point of Sale turns in-person selling into part of your one connected system rather than an island. Fast at
-the counter, reliable when the network is not, and joined up with stock and accounts, it means a shop and its
-back office finally speak the same language. For any business selling face to face, that connection is the
-real win.
 
 Next in this run: renting products out with Odoo Rental.
 

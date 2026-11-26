@@ -14,7 +14,7 @@ faqs:
     a: "Choose one system as the authority for each field. A common setup keeps product master data and available stock in Odoo, while Shopify owns storefront content and checkout. Map SKUs and locations before enabling two-way stock updates."
 ---
 
-Shopify is a strong storefront, and Odoo is built to run the operational work behind an order. Connecting them can remove re-keying, but only if the business agrees which system owns products, stock, fulfillment, taxes and customer communication. The connector is the last step in that design, not a substitute for it.
+**Short answer:** Shopify is a strong storefront, and Odoo is built to run the operational work behind an order. Connecting them can remove re-keying, but only if the business agrees which system owns products, stock, fulfillment, taxes and customer communication. The connector is the last step in that design, not a substitute for it.
 
 This guide covers the documented Odoo 19 Shopify connector. It is intended for businesses already using Shopify that want Sales and Inventory activity recorded in Odoo. For a new store, compare the cost of keeping Shopify with Odoo's own eCommerce before adding another system.
 

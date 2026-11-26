@@ -2,7 +2,7 @@
 layout: post
 title: "ERP for Dropshipping: How Odoo Connects Orders and Suppliers"
 date: 2026-08-28 14:00:00 +0530
-last_modified_at: 2026-11-17
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Odoo 20, Dropshipping, Procurement, Inventory, Sales, Automation]
 hub: industries
 description: "See how ERP supports dropshipping in Odoo 20, from sales orders and supplier purchasing to direct delivery, margins, exceptions and customer updates."
@@ -24,7 +24,23 @@ This guide explains where that connected workflow helps and where operating cont
 configuration steps, also read [Odoo Purchase from RFQ to purchase order](/blog/2026/08/16/odoo-purchase-from-rfq-to-purchase-order/)
 and [shipping and receiving in Odoo](/blog/2026/08/14/shipping-and-receiving-in-odoo/).
 
-## How the Odoo dropshipping workflow connects
+## What is the difference between dropshipping and warehouse fulfilment?
+
+With dropshipping, the supplier dispatches goods to the customer. With warehouse fulfilment, your business receives
+and stores goods before dispatching them. Choose the route that matches the physical movement; a sales order alone
+does not establish where the goods were held or whether they were delivered.
+
+| Question | Dropshipping | Warehouse fulfilment |
+|---|---|---|
+| Who stores the goods before dispatch? | Supplier | Your warehouse or fulfilment provider |
+| Where do the goods go? | Supplier to customer | Supplier to warehouse, then customer |
+| What evidence should customer service check? | Supplier confirmation and delivery evidence | Warehouse dispatch and delivery evidence |
+
+Odoo's [dropshipping documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping.html)
+describes the linked quotation, purchase order and vendor to customer movement. Supplier stock feeds and marketplace
+connections need their own integration and validation; the dropship route does not provide them by itself.
+
+## How does the Odoo dropshipping workflow connect orders?
 
 The product must be available for sale and purchase, have an appropriate vendor and use the **Dropship** route. When
 a customer order is confirmed, Odoo creates a linked supplier request for quotation. Confirming that supplier order
@@ -40,8 +56,8 @@ changes, shortages, cancellations and customer communication.
 In dropshipping, speed matters: a customer order needs to reach the right supplier fast, and doing that
 by hand for every order does not scale.
 
-**How Odoo solves it:** a dropship route lets a confirmed sales order automatically raise a purchase
-order to your supplier, so orders flow through without manual re-keying.
+**How Odoo solves it:** a correctly configured dropship route creates a linked supplier request for quotation.
+That quotation becomes a purchase order after confirmation, preserving a review point before the purchase proceeds.
 
 ## Problem: you do not hold the stock
 

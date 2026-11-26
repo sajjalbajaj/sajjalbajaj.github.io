@@ -7,6 +7,8 @@ hub: marketing
 description: "How Odoo Social Marketing lets you post, schedule and monitor your social media channels from one place, alongside the rest of your marketing."
 ---
 
+**Short answer:** Social Marketing will not replace a genuine social strategy, but it removes the scattered, time-consuming mechanics of running several channels. Managing, scheduling and measuring from one place, alongside the rest of your marketing, lets you be consistent without it eating your day.
+
 Keeping up with social media across several platforms, posting, scheduling, watching for responses, is a
 scattered, time-consuming job. Odoo Social Marketing brings it into one place. Continuing the series on Odoo
 Marketing, here is social.
@@ -46,11 +48,6 @@ system.
 - Watch what performs and lean into what your audience engages with.
 - Keep social aligned with your other marketing, not separate from it.
 
-## My take
-
-Social Marketing will not replace a genuine social strategy, but it removes the scattered, time-consuming
-mechanics of running several channels. Managing, scheduling and measuring from one place, alongside the rest
-of your marketing, lets you be consistent without it eating your day.
 
 Next in the series: putting it on autopilot with Marketing Automation.
 

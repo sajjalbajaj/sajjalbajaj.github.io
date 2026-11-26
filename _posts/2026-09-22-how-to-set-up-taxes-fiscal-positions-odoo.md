@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English guide to configuring taxes and fiscal positions in Odoo, so the right tax is applied automatically on every invoice and bill."
 ---
 
+**Short answer:** Taxes and fiscal positions are where a bit of careful setup prevents a lot of ongoing errors. The taxes themselves come largely ready from the country template; the real win is using fiscal positions so the correct tax applies automatically for every kind of customer. Set that up and tested, and your invoices are right without anyone having to remember the rules.
+
 Tax is fiddly, and getting it wrong means wrong invoices and awkward corrections. Odoo handles tax well once it is set
 up properly, and fiscal positions are the clever part that applies the right tax automatically. Continuing this series
 of practical Odoo how-to guides, here is taxes and fiscal positions.
@@ -49,12 +51,6 @@ rather than discovering them on a real customer invoice.
 - Create a fiscal position for each real situation you deal with.
 - Test with real invoice scenarios before relying on the setup.
 
-## My take
-
-Taxes and fiscal positions are where a bit of careful setup prevents a lot of ongoing errors. The taxes themselves come
-largely ready from the country template; the real win is using fiscal positions so the correct tax applies
-automatically for every kind of customer. Set that up and tested, and your invoices are right without anyone having to
-remember the rules.
 
 Next in this series: how to set up your products.
 

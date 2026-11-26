@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo helps you see whether a project actually made money, by bringing its costs and revenue together, so a busy business is also a profitable one."
 ---
 
+**Short answer:** Knowing whether each project made money is one of the most valuable things a services business can see, and one of the most commonly missing. Odoo brings project costs and revenue together, so you can stop guessing and start managing profitability deliberately. Busy is good; profitable is better.
+
 Plenty of busy services businesses are less profitable than they think, because some projects quietly lose
 money while others carry them. The only way to know is to measure profitability per project. To continue the
 series on Odoo Services and Project, here is project profitability.
@@ -48,11 +50,6 @@ decisions, and in Odoo it is right there to act on.
 - Use analytic accounting to see revenue and cost by project.
 - Act on the findings: reprice, refocus, or tighten scope.
 
-## My take
-
-Knowing whether each project made money is one of the most valuable things a services business can see, and
-one of the most commonly missing. Odoo brings project costs and revenue together, so you can stop guessing
-and start managing profitability deliberately. Busy is good; profitable is better.
 
 Next in the series: running a whole services business on Odoo.
 

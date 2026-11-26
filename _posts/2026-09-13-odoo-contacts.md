@@ -7,6 +7,8 @@ hub: admin
 description: "How Odoo Contacts acts as the shared address book for your whole system, so customers, vendors and people are recorded once and used everywhere."
 ---
 
+**Short answer:** Contacts rarely gets attention because it is not flashy, but it is the quiet backbone of the whole system. One accurate record per person or company, used everywhere, is what lets sales, invoicing and support all speak about the same people correctly. Invest in keeping it clean and every other app gets better for free.
+
 Almost everything a business does involves a person or a company: a customer, a supplier, an employee. Odoo Contacts is
 the shared address book that holds them all, and it quietly underpins the rest of the system. Continuing this run
 through more Odoo apps, here is Contacts.
@@ -47,11 +49,6 @@ by every other app. Get this right and the whole system speaks about the same pe
 - Store addresses, tax and payment details on the record so they flow downstream.
 - Treat Contacts as the foundation; accuracy here pays off everywhere.
 
-## My take
-
-Contacts rarely gets attention because it is not flashy, but it is the quiet backbone of the whole system. One accurate
-record per person or company, used everywhere, is what lets sales, invoicing and support all speak about the same
-people correctly. Invest in keeping it clean and every other app gets better for free.
 
 Next in this run: adding paid features on demand with Odoo In-App Purchases.
 

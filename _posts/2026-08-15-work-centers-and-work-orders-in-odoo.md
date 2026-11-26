@@ -8,6 +8,8 @@ hub: manufacturing
 description: "How Odoo models the shop floor with work centers, operations and work orders, giving you real-time production tracking and capacity planning."
 ---
 
+**Short answer:** Work centers and work orders turn Odoo from a stock system into a real manufacturing tool. They give you live shop-floor visibility, accurate costing, and the data to plan and improve. Start with your core operations, get the flow working, and expand the detail as your team gets comfortable.
+
 A Bill of Materials tells Odoo what a product is made of. Work centers and work orders tell it how the
 product is actually made, step by step, on your shop floor. For anything beyond simple assembly, this
 is where Odoo Manufacturing earns its keep.
@@ -58,11 +60,6 @@ You do not need to model every nuance on day one:
 - Get operators comfortable starting and finishing work orders before adding more detail.
 - Add capacity and performance analysis once the basics are flowing.
 
-## My take
-
-Work centers and work orders turn Odoo from a stock system into a real manufacturing tool. They give
-you live shop-floor visibility, accurate costing, and the data to plan and improve. Start with your
-core operations, get the flow working, and expand the detail as your team gets comfortable.
 
 Next in the series: pulling it together with manufacturing orders and the production workflow.
 

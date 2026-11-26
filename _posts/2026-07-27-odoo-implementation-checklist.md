@@ -2,6 +2,7 @@
 layout: post
 title: "Odoo Implementation Checklist: A Practical Guide"
 date: 2026-07-27 11:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, ERP Implementation, Digital Transformation, SME, Inventory Management, Stock Control, Procurement]
 hub: planning
 description: "A practical, step-by-step Odoo implementation checklist from an ERP consultant, from first conversation to a smooth go-live."
@@ -15,6 +16,8 @@ faqs:
   - q: "Should I customize Odoo or use standard features?"
     a: "Configure Odoo's standard features first, because they are proven and upgrade-safe. Only build custom modules for genuine gaps, and document every one."
 ---
+
+**Short answer:** Plan an Odoo implementation around agreed scope, process mapping, clean data, configuration, user testing and support ownership. Each milestone should have evidence of a working business outcome before the project moves forward.
 
 An Odoo implementation succeeds or fails long before you touch the software. After running
 plenty of them, here is the checklist I actually use, from first conversation to a smooth
@@ -81,10 +84,12 @@ go-live. Work through it roughly in order.
 - Hold a short review: what worked, what to improve.
 - Plan phase two once phase one is stable.
 
-## My take
-
-Most Odoo projects that struggle skipped the boring parts: process mapping, data cleanup and
-testing. Do those well, keep customizations lean, and go-live becomes a non-event, which is
-exactly what you want.
 
 Planning an Odoo implementation? I am happy to review your plan or run it with you.
+
+## Related official documentation
+
+- [Odoo 19 import and export guidance](https://www.odoo.com/documentation/19.0/applications/essentials/export_import_data.html)
+- [Odoo 19 hosting guidance](https://www.odoo.com/documentation/19.0/administration/hosting.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

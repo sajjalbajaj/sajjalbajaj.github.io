@@ -7,6 +7,8 @@ hub: services
 description: "A plain-English guide to setting up Odoo Appointments, so customers and colleagues can book time with you online without the back-and-forth emails."
 ---
 
+**Short answer:** Appointments quietly removes one of the most tedious little tasks in business: arranging a time to meet. Well-set-up appointment types, accurate availability and a calendar connection let people book straight into your real free slots with no email tennis. Share the link and scheduling largely takes care of itself, which is exactly the kind of small, constant time saving that adds up.
+
 Arranging a meeting by email is a slow game of "does this time work for you?". Odoo Appointments lets people book
 directly into your available slots, and setting it up removes that back-and-forth for good. Continuing this series of
 practical Odoo how-to guides, here is appointments.
@@ -49,12 +51,6 @@ for those cases. That is where it pays off most.
 - Share your booking link widely: signature, website, direct messages.
 - Use it for customer bookings and internal scheduling alike.
 
-## My take
-
-Appointments quietly removes one of the most tedious little tasks in business: arranging a time to meet. Well-set-up
-appointment types, accurate availability and a calendar connection let people book straight into your real free slots
-with no email tennis. Share the link and scheduling largely takes care of itself, which is exactly the kind of small,
-constant time saving that adds up.
 
 Next in this series: how to set up events.
 

@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for Trading and Distribution: Problems It Solves"
 date: 2026-08-26 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Trading, Procurement, Inventory Management, SME]
 hub: industries
 description: "The problems trading and distribution businesses face, from thin margins and multi-warehouse stock to pricing and landed costs, and how Odoo solves them."
 ---
 
-Trading and distribution live or die on margin, stock and speed: buy well, hold the right inventory,
-sell fast and keep costs tight. Continuing the series on industry problems and how ERP solves them, here
-is trading and distribution.
+**Short answer:** Trading and distribution ERP connects supplier purchasing, stock availability, customer orders and margins. Keep product data, prices, lead times and transaction recording consistent before relying on replenishment and delivery promises.
 
 ## Problem: margins are thin and easily lost
 
@@ -58,3 +57,10 @@ operates.
 
 If margin and stock control are your daily battle, that is exactly what I help trading businesses solve.
 Happy to talk through the first step.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+- [Odoo 19 Accounting and Invoicing documentation](https://www.odoo.com/documentation/19.0/applications/finance/accounting.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

@@ -2,6 +2,7 @@
 layout: post
 title: "Why ERP Projects Fail (and How to Make Yours Succeed)"
 date: 2026-08-01 09:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, ERP Implementation, Digital Transformation, SME, Stock Control, Lead Management, ERP Migration, ERP Cost]
 hub: planning
 description: "The real reasons ERP projects fail are rarely technical. Here are the common causes and the practical habits that keep an implementation on track."
@@ -15,6 +16,8 @@ faqs:
   - q: "How do I avoid scope creep in an ERP project?"
     a: "Agree a tight first phase and protect it. Park extra ideas in a phase-two list. You can always add more once the core is live and working."
 ---
+
+**Short answer:** ERP projects can fail when scope, ownership, data quality or acceptance criteria remain unclear. Reduce that risk by agreeing business outcomes, testing representative transactions and preparing users and support owners before go-live.
 
 ERP projects have a reputation for going wrong: over budget, behind schedule, or quietly resented
 by the people who have to use the system. After being part of enough of them, I can tell you the
@@ -82,11 +85,12 @@ Notice what almost none of these are about: the software itself. Modern ERP plat
 and proven. Projects fail on scope, data, people and planning, which is good news, because those
 are all things you can control.
 
-## My take
-
-A successful ERP project is not about picking the perfect system. It is about clear outcomes, tight
-scope, clean data, and bringing your people along. Get those right and the software mostly takes
-care of itself.
 
 If you are planning an ERP project and want it to land well, that is exactly the kind of thing I
 help with. Happy to sanity-check your plan before you commit.
+
+## Related official documentation
+
+- [Odoo 19 import and export guidance](https://www.odoo.com/documentation/19.0/applications/essentials/export_import_data.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

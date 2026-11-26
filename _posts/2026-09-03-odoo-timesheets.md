@@ -7,6 +7,8 @@ hub: services
 description: "How Odoo Timesheets makes logging time simple, so you know where hours really go, bill accurately, and understand project profitability."
 ---
 
+**Short answer:** Timesheets are the quiet foundation of a healthy services business. Logged well, they tell you where your most valuable resource, time, really goes, and they feed accurate billing and real profitability insight. Keep logging simple, and the data becomes something you genuinely run the business on.
+
 For any business that sells or manages time, knowing where the hours actually go is essential, for billing,
 for pricing and for knowing which work pays. Odoo Timesheets makes capturing that simple. Continuing the
 series on Odoo Services and Project, here is timesheets.
@@ -48,11 +50,6 @@ Friday-afternoon guess.
 - Use the data to bill accurately and to understand profitability.
 - Watch where time actually goes, and act on what it reveals.
 
-## My take
-
-Timesheets are the quiet foundation of a healthy services business. Logged well, they tell you where your
-most valuable resource, time, really goes, and they feed accurate billing and real profitability insight.
-Keep logging simple, and the data becomes something you genuinely run the business on.
 
 Next in the series: scheduling your team with Planning.
 

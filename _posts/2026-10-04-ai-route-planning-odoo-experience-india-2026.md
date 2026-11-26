@@ -18,11 +18,7 @@ about_event:
   url: "https://www.odoo.com/event/odoo-experience-2026-india-10174/page/oxp26-india-introduction"
 ---
 
-At Odoo Experience India 2026 I represented Master Software Solutions as an exhibitor and gave a presentation
-on its AI-based Route Planning and Optimization module for Odoo: a tool that assigns delivery orders to drivers
-and builds routes inside Odoo using Google Maps.
-This is my account of what the module is for, what my part was, and the practical lessons that apply to any
-business planning deliveries from its ERP.
+**Short answer:** At Odoo Experience India 2026 I represented Master Software Solutions as an exhibitor and gave a presentation on its AI-based Route Planning and Optimization module for Odoo: a tool that assigns delivery orders to drivers and builds routes inside Odoo using Google Maps. This is my account of what the module is for, what my part was, and the practical lessons that apply to any business planning deliveries from its ERP.
 
 ## Watch the event session
 

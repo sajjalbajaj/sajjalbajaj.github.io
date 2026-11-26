@@ -7,6 +7,8 @@ hub: purchase
 description: "How Odoo handles vendor bills and three-way matching between purchase order, receipt and invoice, so you never overpay a supplier."
 ---
 
+**Short answer:** Three-way matching is one of those unglamorous controls that pays for itself. Odoo makes it natural by keeping orders, receipts and bills connected, so you pay for what you agreed and what you actually got, nothing more. Choose your bill control policy thoughtfully, and your supplier payments become both faster and safer.
+
 Paying suppliers sounds simple until you are paying for goods you did not receive, or at prices you did
 not agree. Three-way matching is the control that stops that, and Odoo builds it in. Here is how vendor
 bills and matching work, without the accounting jargon.
@@ -55,12 +57,8 @@ which is exactly how overpayments happen.
 - Keep receipts recorded promptly, since matching depends on them being accurate.
 - Use the link between bill and order so payments are traceable end to end.
 
-## My take
+Returns need the same traceability in reverse. Read [how to reconcile an Odoo supplier return with its vendor credit](/blog/2026/11/05/odoo-supplier-return-credit-reconciliation/) so the returned quantity, stock movement and financial adjustment agree.
 
-Three-way matching is one of those unglamorous controls that pays for itself. Odoo makes it natural by
-keeping orders, receipts and bills connected, so you pay for what you agreed and what you actually got,
-nothing more. Choose your bill control policy thoughtfully, and your supplier payments become both faster
-and safer.
 
 Next in the series: getting better terms with vendor pricelists and purchase agreements.
 

@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo CRM organises leads and opportunities into a visual pipeline, so your sales team always knows what to work on next."
 ---
 
+**Short answer:** The pipeline is the beating heart of Odoo CRM. Set stages that reflect how you sell, keep it up to date, and it gives your team clarity on what to do next and gives you a real view of future revenue. It is simple, and that simplicity is exactly why it works.
+
 Sales opportunities slip through the cracks when there is no clear picture of where each one stands. Odoo
 CRM fixes that with a visual pipeline that shows every deal, its stage, and what needs to happen next.
 Here is how managing your pipeline works.
@@ -52,11 +54,8 @@ shared visibility is what turns individual effort into a coordinated sales opera
 - Record activities and notes on each deal so the context stays complete.
 - Use the board in your sales meetings, so it becomes how the team actually works.
 
-## My take
+For the configuration sequence behind those principles, follow the [step-by-step Odoo CRM pipeline setup guide](/blog/2026/09/24/how-to-set-up-crm-pipeline-odoo/).
 
-The pipeline is the beating heart of Odoo CRM. Set stages that reflect how you sell, keep it up to date, and
-it gives your team clarity on what to do next and gives you a real view of future revenue. It is simple, and
-that simplicity is exactly why it works.
 
 Next in the series: filling the pipeline with lead generation and lead mining.
 

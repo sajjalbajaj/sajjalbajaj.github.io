@@ -14,7 +14,7 @@ faqs:
     a: "Yes. Odoo can remain the source for orders and inventory while a route planning service receives delivery data and returns assignments or route details through an integration. Define which system owns each field and how exceptions sync back."
 ---
 
-Route optimization is often used to mean several different things: grouping orders by delivery area, assigning loads to vehicles, sequencing stops, accounting for vehicle capacity, avoiding traffic or time windows, and tracking driver progress. Odoo 19 documents a Dispatch Management System for planning shipments, vehicle assignments and delivery routes. A business should verify whether its required optimization rules are available natively or need a specialized route planning integration.
+**Short answer:** Route optimization is often used to mean several different things: grouping orders by delivery area, assigning loads to vehicles, sequencing stops, accounting for vehicle capacity, avoiding traffic or time windows, and tracking driver progress. Odoo 19 documents a Dispatch Management System for planning shipments, vehicle assignments and delivery routes. A business should verify whether its required optimization rules are available natively or need a specialized route planning integration.
 
 For a field example of a separate Odoo route planning module, see the [Odoo Experience India route planning recap](/blog/2026/10/04/ai-route-planning-odoo-experience-india-2026/).
 

@@ -7,6 +7,8 @@ hub: inventory
 description: "What removal strategies are in Odoo and how FIFO, LIFO and FEFO decide which stock to pick first, with plain examples of when to use each."
 ---
 
+**Short answer:** Removal strategies are a small setting with an outsized impact. Pick FIFO as a sensible default, reach for FEFO the moment expiry dates are in play, and use LIFO only when you have a specific reason. Set it once, and Odoo makes the right call on every pick.
+
 When you have the same product sitting in several places or from several batches, which units should
 you ship first? That decision is a removal strategy, and Odoo automates it. It sounds like a small
 detail, but for perishable or tracked goods it is a big one. Here are the main strategies in plain
@@ -54,11 +56,6 @@ Left to people, "which one do I pick" gets decided by whatever is nearest or eas
 expired goods slip out and old stock gathers dust. Letting Odoo enforce the strategy removes the guess
 and the human error, and quietly protects both your margins and your customers.
 
-## My take
-
-Removal strategies are a small setting with an outsized impact. Pick FIFO as a sensible default, reach
-for FEFO the moment expiry dates are in play, and use LIFO only when you have a specific reason. Set it
-once, and Odoo makes the right call on every pick.
 
 Next in the series: connecting stock to your accounts with inventory valuation.
 

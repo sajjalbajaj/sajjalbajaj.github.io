@@ -7,6 +7,8 @@ hub: sales
 description: "How Odoo Subscriptions manages recurring revenue, automatic invoicing and renewals, and why predictable income changes a business."
 ---
 
+**Short answer:** If any part of your business can be sold on a repeating basis, subscriptions are worth serious thought. Odoo automates the invoicing and renewals and shows you the recurring numbers that matter, turning predictable revenue from an admin headache into a genuine strength.
+
 Recurring revenue is one of the most valuable things a business can build: predictable income you can plan
 around, rather than starting each month from zero. If you sell anything on a repeating basis, Odoo
 Subscriptions is built to manage it. Here is what it does.
@@ -54,11 +56,6 @@ removes the admin that would otherwise make subscriptions a burden.
 - Watch your recurring revenue and churn, not just one-off sales.
 - Handle upsells and cancellations promptly so billing always reflects reality.
 
-## My take
-
-If any part of your business can be sold on a repeating basis, subscriptions are worth serious thought.
-Odoo automates the invoicing and renewals and shows you the recurring numbers that matter, turning
-predictable revenue from an admin headache into a genuine strength.
 
 Next in the series: managing opportunities with the Odoo CRM pipeline.
 

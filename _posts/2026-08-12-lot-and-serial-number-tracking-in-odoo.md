@@ -7,6 +7,8 @@ hub: inventory
 description: "How Odoo tracks individual items with lot and serial numbers, when to use each, and how it powers traceability and recalls."
 ---
 
+**Short answer:** Lot and serial tracking turns your inventory from "how many" into "exactly which," and that difference is the foundation of real traceability, safer recalls and compliance. Use lots for batches, serials for unique items, and switch it on where it matters. When you need it, nothing else comes close.
+
 Sometimes knowing you have fifty units is not enough. You need to know exactly which fifty, where
 they came from, and where they went. That is what lot and serial number tracking in Odoo is for, and
 for many businesses it is essential.
@@ -53,12 +55,6 @@ Tracking adds discipline. Every receipt, transfer and delivery now needs the rig
 so your process and your team have to keep up. Turn it on where it genuinely adds value, not
 everywhere by default, or you add friction without benefit.
 
-## My take
-
-Lot and serial tracking turns your inventory from "how many" into "exactly which," and that
-difference is the foundation of real traceability, safer recalls and compliance. Use lots for
-batches, serials for unique items, and switch it on where it matters. When you need it, nothing else
-comes close.
 
 Next in the series: warehouses, locations and operation types.
 

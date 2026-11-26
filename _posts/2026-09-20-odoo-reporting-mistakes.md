@@ -7,6 +7,8 @@ hub: integrations
 description: "The reporting mistakes that leave Odoo users flying blind, from never using built-in reports to trusting dashboards built on dirty data, and how to fix them."
 ---
 
+**Short answer:** Reporting is where the value of having everything in one system is finally cashed in, and it is often left on the table. Using the built-in tools, trusting clean data, focusing on decision-driving numbers and actually looking at them are what turn Odoo from a system that records the business into one that helps you steer it. That shift is worth making.
+
 One of the best reasons to run your business on Odoo is that all the data sits in one place, ready to report on. Yet
 many businesses barely use that, or use it badly. Continuing this series on common Odoo mistakes, here is reporting and
 dashboards.
@@ -49,11 +51,6 @@ useful rather than a one-size-fits-nobody wall of figures.
 - Review reporting regularly so it shapes how you run the business.
 - Tailor reports to what each audience actually needs.
 
-## My take
-
-Reporting is where the value of having everything in one system is finally cashed in, and it is often left on the table.
-Using the built-in tools, trusting clean data, focusing on decision-driving numbers and actually looking at them are
-what turn Odoo from a system that records the business into one that helps you steer it. That shift is worth making.
 
 Next in this series: common mistakes with multi-company and access rights.
 

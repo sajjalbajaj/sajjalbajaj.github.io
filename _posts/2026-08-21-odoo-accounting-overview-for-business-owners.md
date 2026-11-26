@@ -7,6 +7,8 @@ hub: accounting
 description: "A plain-English overview of Odoo Accounting: what it does, how it connects to the rest of your business, and why it needs so little manual work."
 ---
 
+**Short answer:** Odoo Accounting gives you real, proper accounting with far less manual effort, because it is wired into the rest of your business. Set the foundations up well with your accountant, let the connections and automation do the routine work, and you get finances that are accurate, current and genuinely useful for running the company.
+
 Accounting is where a business finally sees the truth about itself: what it earns, what it spends, and
 what it is worth. Odoo Accounting is a full, modern accounting system, and because it sits inside the same
 platform as your sales, purchasing and stock, a lot of the work happens on its own. Here is the overview
@@ -56,12 +58,6 @@ financial reports, and assets and deferrals. Each in plain English.
 - Automate what you can, bank imports, bill reading, so your team reviews rather than types.
 - Work with your accountant on setup, then let the system do the heavy lifting day to day.
 
-## My take
-
-Odoo Accounting gives you real, proper accounting with far less manual effort, because it is wired into the
-rest of your business. Set the foundations up well with your accountant, let the connections and automation
-do the routine work, and you get finances that are accurate, current and genuinely useful for running the
-company.
 
 Next in the series: getting paid, with customer invoicing.
 

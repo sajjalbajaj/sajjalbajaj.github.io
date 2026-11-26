@@ -14,7 +14,7 @@ faqs:
     a: "No. ERP traceability can support operational records, but it does not replace food safety controls, required inspections, regulatory reporting or staff training."
 ---
 
-Food distributors manage supplier lots, different shelf lives, customer delivery commitments and the cost of stock that expires before it sells. Odoo Inventory can support lot traceability, expiration dates and FEFO picking. The quality of the result depends on the receipt and picking process, along with accurate product and date data.
+**Short answer:** Food distributors manage supplier lots, different shelf lives, customer delivery commitments and the cost of stock that expires before it sells. Odoo Inventory can support lot traceability, expiration dates and FEFO picking. The quality of the result depends on the receipt and picking process, along with accurate product and date data.
 
 ## Capture the lot at receiving
 

@@ -7,6 +7,8 @@ hub: inventory
 description: "A plain-English overview of Odoo Inventory: what it does, how the pieces fit together, and why it is both a stock system and a full warehouse management tool."
 ---
 
+**Short answer:** Odoo Inventory rewards a bit of upfront thought. Treat it as a warehouse management system, not just a stock list, and set up the foundations properly, and it becomes one of the most powerful parts of your ERP. Rush it, and you inherit the messy data that undermines everything else.
+
 Odoo Inventory is one of the most capable apps in the whole suite, and one of the most
 misunderstood. People think of it as a simple stock counter, but it is really a full warehouse
 management system. This guide gives you the big picture before we dig into the details in the rest
@@ -61,11 +63,6 @@ your products cleanly, set up your warehouse and locations, and get everyday rec
 flowing accurately. Once that foundation is solid, layer in reordering rules, advanced routes and
 valuation. That is exactly the order we will follow through this series.
 
-## My take
-
-Odoo Inventory rewards a bit of upfront thought. Treat it as a warehouse management system, not just
-a stock list, and set up the foundations properly, and it becomes one of the most powerful parts of
-your ERP. Rush it, and you inherit the messy data that undermines everything else.
 
 In the next posts we will break down each area in plain English, starting with how products are
 defined.

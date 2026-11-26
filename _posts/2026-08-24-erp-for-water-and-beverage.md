@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for Water and Beverage Businesses: Problems It Solves"
 date: 2026-08-24 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Water, Food and Beverage, Inventory Management, SME]
 hub: industries
 description: "The problems water and beverage businesses face, from batch production and returnable containers to route delivery and thin margins, and how Odoo solves them."
 ---
 
-Water and beverage businesses run on high volumes, thin margins and constant delivery, with returnable
-containers and batch production adding their own twists. Continuing the series on industry problems and
-how ERP solves them, here is water and beverage.
+**Short answer:** Water and beverage operations need linked production, stock, delivery and billing records, with clear treatment of returnable containers. Define container ownership and movement rules alongside the product workflow before configuring the ERP.
 
 ## Problem: batch production is hard to track
 
@@ -57,3 +56,10 @@ routes and the pressure of thin margins. I configure Odoo around how the operati
 
 If this is your world, that is exactly what I help beverage businesses solve. Happy to talk through
 where to start.
+
+## Related official documentation
+
+- [Odoo 19 Manufacturing documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html)
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.

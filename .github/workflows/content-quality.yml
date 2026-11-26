@@ -1,0 +1,39 @@
+name: Check article structure
+
+on:
+  push:
+    paths: ['_posts/**', 'scripts/check_content.rb', '.github/workflows/content-quality.yml']
+  pull_request:
+    paths: ['_posts/**', 'scripts/check_content.rb', '.github/workflows/content-quality.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Check every article
+        run: ruby scripts/check_content.rb
+      - name: Apply the full standard to new articles
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        shell: bash
+        run: |
+          if [[ -z "$BASE_SHA" || "$BASE_SHA" =~ ^0+$ ]]; then
+            BASE_SHA=$(git hash-object -t tree /dev/null)
+          fi
+          added_posts=$(mktemp)
+          git diff --name-only --diff-filter=A -z "$BASE_SHA" "$HEAD_SHA" -- '_posts/*.md' > "$added_posts"
+          mapfile -d '' posts < "$added_posts"
+          rm "$added_posts"
+          if (( ${#posts[@]} )); then
+            ruby scripts/check_content.rb --strict "${posts[@]}"
+          fi

@@ -2,10 +2,13 @@
 layout: post
 title: "Getting Inventory Management Right with ERP"
 date: 2026-07-24 13:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Inventory, Odoo, Supply Chain, Stock Control, Inventory Management, Warehouse Management, Procurement]
 hub: inventory
 description: "Practical inventory management with ERP: real-time stock, reorder rules, multi-location and lot tracking, and the common mistakes to avoid."
 ---
+
+**Short answer:** Inventory management starts with accurate products, units, locations and stock movements. Use replenishment rules and regular counts alongside those records, then investigate differences rather than repeatedly correcting the closing balance.
 
 Inventory is where a surprising amount of money hides. Hold too much and cash sits on the
 shelf. Hold too little and you lose sales and disappoint customers. Getting inventory right
@@ -48,9 +51,11 @@ Modern ERP like Odoo handles multi-location stock, reorder rules, lot and serial
 valuation out of the box, with everything tied to sales, purchase and accounting. The software
 is the easy part. The value comes from clean data and disciplined processes.
 
-## My take
-
-Start with clean, accurate stock data, set sensible reorder rules, and run regular cycle
-counts. Do that, and inventory stops being a guessing game.
 
 Fighting your inventory? That is exactly the kind of problem a well-configured ERP solves.
+
+## Related official documentation
+
+- [Odoo 19 Inventory documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory.html)
+
+Use these references for product behaviour and availability. The implementation recommendations in this article are practical guidance to assess against your own requirements.

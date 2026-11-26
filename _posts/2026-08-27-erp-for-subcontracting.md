@@ -2,14 +2,13 @@
 layout: post
 title: "ERP for Subcontracting Businesses: Problems It Solves"
 date: 2026-08-27 14:00:00 +0530
+last_modified_at: 2026-11-25
 tags: [ERP, Odoo, Subcontracting, Manufacturing, Inventory Management, SME]
 hub: industries
 description: "The problems subcontracting businesses face, from tracking components off-site to receiving finished goods and costing, and how Odoo solves them."
 ---
 
-Subcontracting means part of your production happens somewhere else, which is efficient but hard to
-control: your materials sit at a partner's site, and you still have to keep stock and costs accurate.
-Continuing the series on industry problems and how ERP solves them, here is subcontracting.
+**Short answer:** Subcontracting needs visibility of materials sent outside the business, work expected back and the related costs. Define ownership, replenishment and receipt controls so the records explain both the goods and the subcontractor's obligation.
 
 ## Problem: components sent out go off the books
 
@@ -58,3 +57,9 @@ arrangements.
 
 If outsourced production is central to your business, that is exactly what I help you get in control.
 Happy to talk it through.
+
+## Related official documentation
+
+- [Odoo 19 subcontracting documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/subcontracting.html)
+
+These references describe the standard apps. Industry-specific controls, pricing rules and integrations must be demonstrated in the proposed setup.
