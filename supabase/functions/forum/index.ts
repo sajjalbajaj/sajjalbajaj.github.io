@@ -149,7 +149,7 @@ async function topic(site: string, topicId: string, visible = true) {
   return result[0];
 }
 async function mailReady(site: string) {
-  return Boolean(Deno.env.get('BREVO_API_KEY') && Deno.env.get(`MAIL_FROM_${site.toUpperCase()}`));
+  return Boolean(Deno.env.get('BREVO_API_KEY')?.trim() && Deno.env.get(`MAIL_FROM_${site.toUpperCase()}`)?.trim());
 }
 async function mutate(site: string, current: any, action: string, data: any, isOwner = false) {
   return rpc('forum_mutate', {
@@ -396,6 +396,9 @@ async function processGuide(job: any, cache: Map<string, any[]>) {
 }
 async function processMail(mail: any) {
   if (!await mailReady(mail.site)) throw Error('Email provider awaiting configuration');
+  const apiKey = Deno.env.get('BREVO_API_KEY')!.trim();
+  const senderEmail = Deno.env.get(`MAIL_FROM_${mail.site.toUpperCase()}`)!.trim();
+  if (apiKey.startsWith('xsmtpsib-')) throw Error('Brevo SMTP key supplied. A transactional API key is required.');
   let body = mail.body;
   if (mail.person && mail.topic) {
     const token = await sign({site:mail.site,person:mail.person,topic:mail.topic,purpose:'unsubscribe'},31536000);
@@ -408,11 +411,19 @@ async function processMail(mail: any) {
     headers.References = headers['In-Reply-To'];
   }
   const result = await fetch('https://api.brevo.com/v3/smtp/email',{
-    method:'POST',headers:{'api-key':Deno.env.get('BREVO_API_KEY')!,'Content-Type':'application/json'},
-    body:JSON.stringify({sender:{name:SITES[mail.site].owner,email:Deno.env.get(`MAIL_FROM_${mail.site.toUpperCase()}`)},to:[{email:mail.recipient}],subject:mail.subject,textContent:body,headers}),
+    method:'POST',headers:{'api-key':apiKey,'Content-Type':'application/json'},
+    body:JSON.stringify({sender:{name:SITES[mail.site].owner,email:senderEmail},to:[{email:mail.recipient}],subject:mail.subject,textContent:body,headers}),
     signal:AbortSignal.timeout(15000),
   });
-  if (!result.ok) throw Error(`Email provider returned ${result.status}`);
+  if (!result.ok) {
+    const detail = await result.json().catch(() => ({}));
+    const message = String(detail.message || '').toLowerCase();
+    // Store only categorized provider errors, never credentials or raw response data.
+    if (message.includes('ip') && (message.includes('unrecogn') || message.includes('unauthoriz'))) throw Error('Brevo blocked the server IP. Authorize the recognized request in Brevo.');
+    if (message.includes('key not found')) throw Error('Brevo did not recognize the API key. Check its value and active status.');
+    if (message.includes('permission') || message.includes('access denied for resource')) throw Error('Brevo API key lacks the required transactional email permission.');
+    throw Error(`Email provider returned ${result.status}`);
+  }
   await update('mail',{id:`eq.${mail.id}`},{sent:now(),error:null,claimed_until:null});
 }
 async function worker(req: Request) {
