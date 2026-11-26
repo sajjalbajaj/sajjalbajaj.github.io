@@ -86,3 +86,7 @@ exclude:
   - content-review
 
   - forum-service
+  - supabase
+
+# Forum API hosted on Supabase Edge Functions.
+forum_api: "https://gyhwaesybhbwqmcylzxz.supabase.co/functions/v1/forum"

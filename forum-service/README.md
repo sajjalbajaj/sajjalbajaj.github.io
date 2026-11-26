@@ -1,5 +1,7 @@
 # Community forums
 
+The current hosted deployment is documented in [Supabase backend setup](../supabase/README.md).
+
 This service provides independent Sajjal and Ankush discussions using one implementation. The web application stores private identities in SQLite and uploaded files on a persistent volume. Public API responses select public fields explicitly. A separate persistent worker processes guide answers and SMTP notifications.
 
 ## Start the service
