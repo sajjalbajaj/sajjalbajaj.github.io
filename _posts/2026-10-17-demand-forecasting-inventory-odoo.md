@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Demand Forecasting in Odoo Inventory: What It Can and Can't Do"
+seo_title: "Odoo 19 Demand Forecasting: Stock, Reordering and MPS"
 date: 2026-10-17 09:00:00 +0530
 last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, Inventory, Inventory Management, Stock Control, Supply Chain, Procurement, Purchase]
 hub: inventory
-description: "Separate Odoo stock forecasts from demand estimates. Check historical purchase suggestions, replenishment timing and MPS with worked quantity examples."
+description: "Plan stock in Odoo 19 with forecasts, reordering rules and historical demand. Use worked examples to check purchase quantities and late receipts."
 faqs:
   - q: "Is Odoo's forecasted stock a prediction of future customer demand?"
     a: "The Forecasted report projects stock from recorded incoming and outgoing operations and their dates. It does not establish how much unrecorded demand customers will generate. Historical purchase suggestions and MPS demand inputs answer a different planning question."

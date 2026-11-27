@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Odoo 20 Bill of Materials: Components, Operations and Setup"
+seo_title: "Odoo 20 Bill of Materials Setup: Components and Operations"
 date: 2026-09-24 08:00:00 +0530
 tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Production Planning]
 hub: manufacturing
-description: "Configure an Odoo 20 bill of materials, check batch scaling and operation settings, and diagnose wrong components, missing operations and readiness."
+description: "Set up an Odoo 20 bill of materials with components and operations. Follow a quantity-scaling example and troubleshoot common setup problems."
 last_modified_at: 2026-11-27
 faqs:
   - q: "Why are component quantities multiplied on my manufacturing order?"

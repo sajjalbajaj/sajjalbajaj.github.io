@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Odoo Manufacturing Costs: Components, Operations and Real Cost"
+seo_title: "Odoo 20 Manufacturing Costs: MO Cost vs Real Cost"
 date: 2026-10-16 09:00:00 +0530
 tags: [Odoo, Odoo 20, Odoo 19, Manufacturing, MRP, Accounting, Finance, Inventory Management]
 hub: manufacturing
-description: "Explain Odoo 20 manufacturing cost differences with a planned-to-real cost bridge, component and time checks, valuation boundaries and a worksheet."
+description: "Compare Odoo 20 MO Cost and Real Cost using a worked calculation. Download a blank worksheet to trace component quantities, time and cost differences."
 last_modified_at: 2026-11-27
 faqs:
   - q: "Why do MO Cost and Real Cost match after completion?"

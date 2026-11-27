@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Batch, Wave and Cluster Picking in Odoo 19 (Step by Step)"
+seo_title: "Odoo 19 Batch, Wave and Cluster Picking: Setup Guide"
 date: 2026-10-15 09:00:00 +0530
 last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, Setup, Inventory, Warehouse Management, Logistics, Distribution, Barcode]
 hub: inventory
-description: "Choose and set up batch, wave or cluster picking in Odoo 19, compare Odoo 20 changes, and diagnose missing lines, tote errors and incomplete deliveries."
+description: "Set up batch, wave and cluster picking in Odoo 19. Compare methods, assign order totes and troubleshoot missing lines and incomplete deliveries."
 faqs:
   - q: "What is the difference between batch, wave and cluster picking?"
     a: "A batch groups transfers for shared picking. A wave groups selected lines after splitting transfers. Cluster picking separates orders into their own packages during the pick. Choose according to product overlap, available containers and the handoff to packing, rather than order count alone."
