@@ -94,6 +94,11 @@ updates and the security workflow analyses source code; review the results befor
 ## Writing a new blog post (daily)
 The blog uses Jekyll and GitHub Pages. Start each article from `blog-post-template.md`.
 
+Read `content-plan/search-and-ai-content-standard.md` before planning a new topic. Keep the demand
+evidence and full Search Console exports in the private `content-review/` directory. Prefer improving
+the existing article that answers an intent over creating another page for a synonym or version label.
+An article needs a useful, original contribution as well as correct formatting and sources.
+
 1. Create `_posts/YYYY-MM-DD-title-with-dashes.md`. Set the publication date and time,
    description, eight relevant existing tags, subject hub and two or three useful FAQs.
 2. Open with `**Short answer:**` and answer the title directly. Explain version and
@@ -125,3 +130,11 @@ Jekyll adds published posts to the blog, RSS feed, sitemap and `llms.txt` direct
 post layout renders visible FAQs and their matching structured data from the same fields.
 Do not add duplicate schema blocks to article bodies. Clear answers and accurate sources
 help readers and search systems, but do not guarantee rankings or AI citations.
+
+Google's generative AI guidance retains ordinary SEO fundamentals and prioritises useful original
+content. It does not require `llms.txt`, artificial content chunks or special AI schema. Keep that file
+as an optional content directory. Measure Google AI impressions in the dedicated Search Console report
+where available, and keep them distinct from clicks, visits and enquiries. A before/after comparison
+must use comparable periods and account for publication dates and reporting delays.
+Google retired FAQ rich results in May 2026. Visible FAQs can still help readers; their markup is not
+a promise of a Google FAQ display or AI visibility.

@@ -43,6 +43,11 @@ Add descriptive links to relevant published articles and the matching subject at
 Replace this paragraph with the specific official references checked for the article. Add a truthful source review date and explain verification limitations. End with a brief link to the relevant consulting service.
 
 <!-- Editorial checklist, remove before publishing:
+Before drafting, read content-plan/search-and-ai-content-standard.md and check the private topic brief.
+Record the reader problem, existing URL owning that intent, source requirements and original contribution.
+Use Search Console demand as evidence, not as a reason to create a page for every query variation.
+Refresh an existing guide when the proposed article would answer the same question.
+Keep private Search Console metrics and exports out of front matter, articles and public Git history.
 Answer the question before the narrative introduction. Use natural question headings where helpful.
 Keep FAQs consistent with the body; the post layout renders visible text and schema together.
 Do not add extra Article, FAQPage or speculative AI schema in the body.
@@ -54,4 +59,11 @@ Run python3 scripts/check_originality.py --strict _posts/YYYY-MM-DD-slug.md.
 Show the observed result only when a test was actually executed. Otherwise label the scenario illustrative.
 Do not target a minimum length by repeating controls from another guide. Resolve sources and technical completeness first.
 Passing automated checks does not verify facts or guarantee search or AI visibility.
+Include diagnostic branches, a worked comparison, useful original resource or verified experience where it adds value.
+Do not claim first-hand tests or customer results without evidence. Label proposed cases explicitly.
+Use relevant images or official videos when they explain the task; describe them accessibly and credit the source.
+An outbound source link is not a backlink to this site. Do not fabricate external mentions.
+No fixed page length, special AI schema, repeated answer blocks or synonym pages for AI query fan-out.
+llms.txt is a content directory, not a Google ranking control. Do not promise inclusion or citations.
+Google retired FAQ rich results in May 2026. FAQs must help readers, not promise a special Search display.
 -->
