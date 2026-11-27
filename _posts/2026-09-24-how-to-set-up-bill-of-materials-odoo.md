@@ -2,158 +2,137 @@
 layout: post
 title: "Odoo 20 Bill of Materials: Components, Operations and Setup"
 date: 2026-09-24 08:00:00 +0530
-last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Setup, Manufacturing, MRP, Inventory Management, Production Planning]
 hub: manufacturing
-description: "Set up an Odoo 20 bill of materials with components, quantities, operations, work centres, consumption rules, by-products and a practical example."
+description: "Configure an Odoo 20 bill of materials, check batch scaling and operation settings, and diagnose wrong components, missing operations and readiness."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What is the difference between a manufacturing BoM and a kit in Odoo?"
-    a: "A BoM of type Manufacture this Product is used to make the product through manufacturing orders, consuming components into a finished item. A Kit is a set of unassembled components sold together: Odoo delivers the components rather than producing the kit."
-  - q: "Why is there no Operations tab on my Odoo 20 bill of materials?"
-    a: "The Work Orders setting is off. Enable it in Manufacturing, Configuration, Settings, in the Operations section, and the Operations tab appears on BoMs."
-  - q: "Should components be consumed exactly as the BoM says?"
-    a: "That depends on the process. The Flexible Consumption field on the BoM's Miscellaneous tab can block deviations, allow them, or allow them with a warning. Processes with natural variation, such as roasting or cutting, usually need Allowed or Allowed with Warning."
+  - q: "Why are component quantities multiplied on my manufacturing order?"
+    a: "BoM components are defined for the BoM's output quantity. For example, a recipe for ten kits with twenty brackets scales to sixty brackets for thirty kits, before any rounding or additional consumption."
+  - q: "Why is there no Operations tab on the BoM?"
+    a: "The documented setup requires Work Orders in Manufacturing settings. Check that setting and the user's access before concluding the BoM is incomplete."
+  - q: "Is the BoM output quantity the same as Batch Size Value?"
+    a: "No. BoM Quantity defines the component recipe basis. Odoo 20 separately documents batch-size behaviour for splitting demand; demonstrate the intended replenishment flow rather than assuming the two fields are interchangeable."
 ---
 
-**Short answer:** in Odoo 20, go to **Manufacturing ‣ Products ‣ Bills of Materials ‣ New**, choose the
-**Product**, set the **Quantity** the BoM produces, keep **BoM Type** as **Manufacture this Product**, and list
-each component with its quantity on the **Components** tab. Enable **Work Orders** in Manufacturing settings
-if you also want to record operations and work centres. The BoM becomes the production blueprint used to reserve
-components, create work orders, calculate expected cost and document how the product should be made.
+**Short answer:** In Odoo 20, create a bill of materials under **Manufacturing ‣ Products ‣ Bills of Materials**, select the finished product and output quantity, then add the components required for that quantity. Enable Work Orders when operations are needed. Validate the scaled quantities, operation settings and resulting order before using the BoM in production.
 
-This is the setup guide. For how manufacturing orders use the BoM from confirmation to completion, see
-[manufacturing orders and the production workflow in Odoo](/blog/2026/08/15/manufacturing-orders-production-workflow-in-odoo/).
+This guide explains the blueprint. The [manufacturing-order workflow](/blog/2026/08/15/manufacturing-orders-production-workflow-in-odoo/) explains how a particular order records production, and the [costing guide](/blog/2026/10/16/how-odoo-costs-manufactured-products/) explains the cost evidence.
 
-## Applies to
+## What needs to exist before creating a BoM?
 
-- **Odoo version:** Odoo 20. The core setup remains familiar to Odoo 19 users, but this guide now follows the
-  official Odoo 20 bill of materials documentation.
-- **Edition:** Bills of materials, operations and work orders are in the Manufacturing app in both Community and
-  Enterprise. Detailed step instructions (which need the Quality app), BoM versioning through PLM and the Shop
-  Floor app are Enterprise only.
-- **Apps:** Manufacturing and Inventory.
+Create the finished product and components with the correct units and tracking choices. Identify whether the business intends to manufacture a finished item, deliver a kit or use a subcontracting process.
 
-## What is the difference between a bill of materials and a manufacturing order?
+The steps here follow a manufacturing BoM in Manufacturing and Inventory. Advanced instructions and version-management functions depend on the relevant applications, such as Quality and PLM, and their permissions.
 
-A bill of materials defines what a product needs: components, quantities and any operations. A manufacturing order
-uses that definition for a particular production quantity and records the work carried out. Editing a recipe and
-confirming that a batch was produced are therefore separate actions.
+If replenishment should create manufacturing orders, review the product's routes and the actual replenishment rule separately. A BoM describes how to make something; its existence is not proof that the correct procurement route will be selected.
 
-For an illustrative batch, a BoM for 10 finished units requiring 20 components means a planned run of 30 finished
-units needs 60 components, before any extra consumption. Check the BoM quantity and units of measure before treating
-a larger component requirement as an error. Odoo's [BoM setup reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
-explains the output quantity and component structure.
+## How do you create the basic manufacturing blueprint?
 
-## Before you start
+Follow the [official Odoo 20 BoM reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html):
 
-1. **Create the finished product and every component as products first**, with the right units of measure. See
-   [how to set up products and units of measure](/blog/2026/09/22/how-to-set-up-products-in-odoo/).
-2. **Make the finished product a tracked good** if you hold it in stock, and decide whether it needs lots or serial
-   numbers.
-3. **Enable the Manufacture route** on the finished product's **Inventory** tab if reordering rules or
-   make-to-order should create manufacturing orders automatically.
-4. **Get the recipe from production, not from memory.** Weigh or count real batches, including losses.
+1. Open **Manufacturing ‣ Products ‣ Bills of Materials** and choose **New**.
+2. Select the **Product**, and a particular variant where the recipe is variant-specific.
+3. Enter **Quantity**, the output represented by this recipe.
+4. Add a meaningful **Reference** where similar BoMs exist.
+5. Set **BoM Type** to **Manufacture this product**.
+6. On **Components**, add the products and quantities required for the stated output.
 
-## Step by step
+Include packaging if it is actually consumed and should be represented in production. Do not leave out a carton merely because it is inexpensive if the warehouse needs to reserve and consume it.
 
-### 1. Create the BoM
+Use the component table's optional columns for **Apply on Variants** and **Consumed in Operation** where relevant. A blank variant restriction means the component applies across variants, so review that choice deliberately.
 
-1. Go to **Manufacturing ‣ Products ‣ Bills of Materials** and click **New**. (Or use the **Bill of Materials**
-   smart button on the product form.)
-2. **Product:** the finished product.
-3. **Quantity:** how many units this BoM produces, for example 1 bag or a batch of 50.
-4. **BoM Type:** **Manufacture this Product**.
+## How should quantity scaling be checked?
 
-### 2. Add components
+Component quantities are relative to the BoM output. They are not always quantities for a single finished unit.
 
-1. On the **Components** tab, click **Add a line**.
-2. Choose the **Component** and enter the **Quantity** needed to produce the BoM's quantity, in the component's unit.
-3. Repeat for every component, including packaging such as bags, labels and boxes, if you want them consumed and
-   costed.
-4. Optional columns, shown through the column settings icon on the Components tab:
-   - **Apply on Variants**, when a component is used only for some variants;
-   - **Consumed in Operation**, to tie a component to the operation that uses it;
-   - **Manual Consumption**, to make operators confirm the quantity consumed.
+Consider this explicitly illustrative assembly recipe:
 
-### 3. Add operations (optional)
+| Recipe basis | Brackets | Screws | Cartons |
+| --- | ---: | ---: | ---: |
+| BoM output: 10 kits | 20 units | 80 units | 10 units |
+| Manufacturing order: 30 kits | 60 units | 240 units | 30 units |
 
-1. Enable **Work Orders** in **Manufacturing ‣ Configuration ‣ Settings** (Operations section).
-2. Back on the BoM, open the **Operations** tab and click **Add a line**.
-3. Enter the **Operation** name and choose the **Work Center**. The Odoo 20 BoM documentation describes
-   **Duration Computation** as **Fixed**, with a **Default Duration**, or **Computed**, based on recent work orders.
-4. Where Quality is installed, add steps through the operation's **Instructions** tab. Each step is a quality
-   control point; supplementary PDFs belong on the step's **Attachment** tab. Save the step and the operation.
+The scaling factor is 30 divided by 10, or three. Check all units before using that factor. A kilogram component and a unit component need their own correct quantities; they are not directly interchangeable.
 
-### 4. Set consumption and timing (Miscellaneous tab)
+Create a proposed test order at a different quantity from the BoM, then inspect the component requirement. This often reveals a recipe entered per item while the output field describes a whole batch.
 
-- **Manufacturing Readiness:** whether an order counts as ready when the first operation's components are available,
-  or only when all components are.
-- **Flexible Consumption:** **Blocked**, **Allowed** or **Allowed with Warning** when operators consume a different
-  quantity from the BoM.
-- **Manuf Lead Time:** days to complete a manufacturing order after confirmation.
-- **Days to prepare Manufacturing Order:** days needed to get components or sub-assemblies ready.
+## How are operations and work centres added?
 
-### 5. Add by-products (optional)
+Enable **Work Orders** in **Manufacturing ‣ Configuration ‣ Settings**, then return to the BoM's **Operations** tab. Add an operation, choose its work centre and review any variant restriction.
 
-Enable **By-Products** in Manufacturing settings, then list residual products on the BoM's **By-products** tab.
+Odoo 20's BoM reference separates two decisions:
 
-## Worked example: a 250 g bag of roasted coffee
+| Setting | Purpose | Review question |
+| --- | --- | --- |
+| Cost based on | Actual or theoretical operation cost basis | Which recorded or estimated inputs should drive this cost? |
+| Duration Computation | Fixed or computed duration estimate | Is there a reliable time baseline or sufficient relevant history? |
+| Default Duration | Starting duration where applicable | Is the unit and production quantity basis correct? |
 
-A roaster sells **House Blend, roasted, 250 g bag**. Roasting loses moisture, so a bag needs more green coffee than
-it holds. Their own test batches show about 17 percent loss.
+Do not treat a computed duration as proof that the underlying recorded work was accurate. Review unusual or missing time records before using their history for planning.
 
-| Component | Quantity per bag |
-|---|---|
-| Green coffee, house blend | 0.300 kg |
-| Valve bag, 250 g | 1 unit |
-| Front label | 1 unit |
+The [19.0 reference](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html) uses different duration labels, including **Set duration manually** and **Compute based on tracked time**. Follow the target-version interface rather than relabelling old screenshots.
 
-- **Quantity** on the BoM: 1 unit.
-- **Operations:** *Roast* at work centre *Roaster 1*, and *Pack* at *Packing table*.
-- **Flexible Consumption:** **Allowed with Warning**, because roast loss varies from batch to batch.
+## What changed in the instructions about consumption?
 
-A manufacturing order for 40 bags therefore reserves 12 kg of green coffee, 40 bags and 40 labels. If an operator
-records 12.4 kg used, Odoo warns rather than blocks, and the extra consumption shows in the order's cost.
+The earlier version of this guide carried the 19.0 **Flexible Consumption** selector into its 20.0 instructions. That has been corrected.
 
-## What you should see
+The current 19.0 reference describes Blocked, Allowed and Allowed with Warning. The reviewed 20.0 BoM reference and standard BoM model do not expose that same selector in the same way. Do not assume that a 19.0 setting creates an equivalent restriction after upgrading.
 
-- A new manufacturing order for the product (**Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ New**) fills its
-  components from the BoM, scaled to the quantity you produce.
-- The order's component status shows whether everything needed is available.
-- When the order is marked done, components leave stock and finished units arrive in stock.
-- With work orders enabled, each operation becomes a work order at its work centre.
+For the installed 20.0 build, demonstrate how excess consumption, missing quantities and authorised corrections behave. Record the actual result and the control the business requires. A prompt or a training note is not evidence that excess use will be blocked.
 
-## Troubleshooting
+## How should readiness, timing and batch size be understood?
 
-**No Operations tab.** Enable **Work Orders** in Manufacturing settings.
+On **Miscellaneous**, the documented **Manufacturing Readiness** choice distinguishes having all components from having those required for the first operation. Map components to operations when relying on that distinction.
 
-**Reordering rules never create manufacturing orders.** The product has no BoM, or the **Manufacture** route isn't
-enabled on its Inventory tab. If it has both Buy and Manufacture routes, set the preferred route on the rule.
+Readiness indicates whether work can begin according to the configured rule. It does not create missing stock or establish a quality release.
 
-**Component quantities look wrong on orders.** Check the BoM **Quantity**: components are per the BoM's quantity, not
-per single unit, so a BoM for a batch of 50 needs batch-level component quantities.
+Also distinguish these quantities and times:
 
-**Operators get a consumption warning.** **Manual Consumption** is ticked for that component, or the recorded
-quantity differs from the BoM under **Allowed with Warning**. Check the setting matches how the floor really works.
+* **BoM Quantity:** the recipe's output basis.
+* **Batch Size Value:** the documented size used when demand is split into manufacturing batches. Test the intended automatically generated orders; do not assume every manual order is split identically.
+* **Manufacturing Lead Time:** expected time to manufacture.
+* **Days to prepare:** advance time for components or sub-assemblies.
 
-**Orders show as not ready though some components are in stock.** **Manufacturing Readiness** is set to wait for all
-components. Change it if work can start once the first operation's components are available.
+For overlapping work on partial quantities, see [continuous production](/blog/2026/11/12/odoo-20-continuous-production/). It is a separate workflow decision from the recipe's output quantity.
 
-**A product sold as a set never gets a manufacturing order.** It uses a **Kit** BoM. Kits are delivered as their
-components and aren't manufactured.
+## How do instructions and by-products fit?
 
-## Related setup
+The Odoo 20 reference describes operation instructions as quality control points, including the required type and any attached material. Confirm the relevant application and access before adding these steps.
 
-- [How to set up work centres and work orders in Odoo 20](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
-- [How to set up reordering rules in Odoo](/blog/2026/09/23/how-to-set-up-reordering-rules-odoo/)
-- [Subcontracting in Odoo manufacturing](/blog/2026/08/16/subcontracting-in-odoo-manufacturing/)
-- Setting up manufacturing for the first time? See [Odoo implementation](/services/odoo-implementation/).
+Where production creates a residual product that should be tracked, enable **By-Products** in Manufacturing settings and enter the product, quantity, unit and producing operation where applicable.
 
-## Official references
+A by-product quantity and a cost share answer different questions. Record both intentionally, and review the resulting cost explanation rather than assuming every residual material receives the same treatment.
 
-- Odoo 20 documentation: [Bill of materials](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html)
-- Odoo 20 documentation: [Manufacturing product configuration](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/management/configure_manufacturing_product.html)
-- Odoo 20 documentation: [Manufacturing](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing.html)
+## What should be checked in BoM Overview?
 
-*Updated on 17 November 2026 using the official Odoo 20 bill of materials and manufacturing documentation. The
-worked example is illustrative and was not run on a live database. Labels can vary with installed apps and language.*
+Open the **BoM Overview** smart button and inspect the intended output quantity, components, sub-assemblies, operations and cost basis.
+
+The 20.0 reference distinguishes grey costs read from a product record from computed costs where the report can expand a sub-BoM or use operation rates. A displayed total is therefore not proof that every purchased component's value was freshly recalculated.
+
+Check the forecast information against the relevant location and reservation context. A component shown on hand may already be committed to another order.
+
+## How should common setup problems be diagnosed?
+
+| Symptom | Evidence to inspect | Correct next question |
+| --- | --- | --- |
+| Wrong component quantities | BoM output, component units and order quantity | Was the recipe entered per unit or per batch? |
+| Unexpected component or variant | Selected product variant, BoM reference and restrictions | Did the intended recipe actually apply? |
+| Missing Operations tab | Work Orders setting and access | Is the required feature available to this user? |
+| Work cannot start | Readiness choice and first-operation component mapping | Which exact component blocks the intended start? |
+| No automatic manufacturing order | Product route, rule, warehouse and matching BoM | Which procurement route was selected? |
+| Expected cost looks wrong | Component values, sub-assemblies and work centre/time setup | Which input explains the difference? |
+
+Avoid changing several settings together merely to make an order appear ready. Keep one reproducible case so a correction can be attributed to its cause.
+
+## What should acceptance demonstrate?
+
+Use the ten-kit recipe above to compare a ten-kit and a thirty-kit order. Add a variant case, an unavailable component and a recorded consumption difference. Inspect the resulting operations and output records as well as the BoM screen.
+
+Record expected quantities before running the cases, then the observed result and any unresolved restriction. The [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/) provides a place for that record. The examples here have not been executed on a live customer database.
+
+## Sources and review
+
+Reviewed on 27 November 2026: the linked 19.0 and 20.0 BoM references, the [current manufacturing-product configuration page](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.html), [20.0 by-products](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/workflows/byproducts.html) and the [standard 20.0 BoM model](https://github.com/odoo/odoo/blob/20.0/addons/mrp/models/mrp_bom.py). Source review does not certify every installed module or customisation.
+
+For help translating a production recipe into a verified operating workflow, see [Odoo implementation](/services/odoo-implementation/).

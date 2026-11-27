@@ -4,177 +4,104 @@ title: "GST E-Invoicing and E-Way Bills in Odoo 19: Setup and Daily Use"
 date: 2026-10-10 09:00:00 +0530
 tags: [Odoo, Odoo 19, India, GST, Invoicing, Compliance, Logistics, Setup]
 hub: accounting
-description: "Set up GST e-invoicing and e-way bills in Odoo 19: NIC API users, IRN and QR codes, cancelling, transport details and fixing rejected submissions."
+description: "Set up Odoo 19 GST e-invoicing and e-way bills, verify portal results, and diagnose credential errors, duplicate IRNs and cancellation mismatches."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "Which invoices does Odoo send for GST e-invoicing?"
-    a: "Posted invoices in a sales journal whose lines fall in the B2B, export, SEZ or deemed export sections of GSTR-1, plus credit and debit notes on them. Invoices to consumers are not sent. Whether your business must e-invoice at all depends on the turnover limit in force, so check the official e-invoice portal."
-  - q: "Does e-invoicing in Odoo cost anything?"
-    a: "The Indian e-invoice, e-way bill and GSTIN status services use Odoo In-App Purchase (IAP) credits. In Odoo 19 the tooltip on the Buy credits link says each transaction costs one credit."
-  - q: "Can I cancel an e-invoice from Odoo?"
-    a: "Yes. Click Request Cancel on the invoice, choose a reason and add remarks. The portal only accepts cancellations within its own time window; if it refuses, Odoo offers Force Cancel, which cancels the invoice in Odoo only."
+  - q: "Does a timeout mean the e-invoice was not registered?"
+    a: "No. The request may have reached the portal. Check the document reference, response and any existing IRN before retrying or creating another invoice."
+  - q: "Does Force Cancel cancel an IRN on the government portal?"
+    a: "No. In the reviewed Odoo 19 implementation, the force-cancel route changes the local invoice without performing the normal portal cancellation request. Verify the portal status separately."
+  - q: "Is every e-invoicing action charged a fixed number of credits?"
+    a: "Do not assume a fixed charge from this guide. Check the current service balance, displayed terms and applicable provider pricing. The reviewed code can report insufficient credits."
 ---
 
-**Short answer:** in Odoo 19, create an API user for the BVM IT Consulting GSP on the NIC e-invoice and e-way bill
-portals, then tick **E-Invoicing** and **E-Way bill** in **Accounting ‣ Configuration ‣ Settings** and enter those
-credentials. After you post a B2B invoice, **Send** it with **E-invoicing** ticked: Odoo gets the IRN, acknowledgement
-and signed QR code from the portal and prints them on the invoice. Then click **Create e-Waybill**, add the transport
-details and click **Generate e-Waybill**. Each call uses Odoo IAP credits.
+**Short answer:** In Odoo 19, configure the Indian localisation, the documented GSP and separate e-invoice and e-way bill API credentials. Submit an eligible posted document, then verify the portal response and resulting references. A local status, timeout or cancellation action alone does not establish what happened on the government portal.
 
-This guide assumes GST itself already works. If it doesn't, start with
-[how to set up GST in Odoo](/blog/2026/10/10/how-to-set-up-gst-odoo/).
+Start with [GST setup](/blog/2026/10/10/how-to-set-up-gst-odoo/) if company and tax configuration are not ready. This guide concerns the software workflow; the responsible tax specialist must establish which obligations apply.
 
-## Applies to
+## Which version and applications does this cover?
 
-- **Odoo version:** Odoo 19. The Odoo 20 India documentation currently reads the same as the Odoo 19 page. In the Odoo
-  20 code, the **E-Invoicing** setting is hidden when the company's GST registration type is Composition.
-- **Edition:** Community and Enterprise. The **Indian E-invoicing**, **Indian E-waybill** and **Indian E-waybill Stock**
-  modules are in Odoo's open-source code. **Fetch Vendor E-Invoiced Document**, which drafts bills from your
-  suppliers' e-invoices, is Enterprise only. All of these services need IAP credits.
-- **Apps:** Invoicing or Accounting, plus Inventory for e-way bills from deliveries and receipts.
+The operating steps below follow the [Odoo 19 India documentation](https://www.odoo.com/documentation/19.0/applications/finance/fiscal_localizations/india.html). The [Odoo 20 India reference](https://www.odoo.com/documentation/20.0/applications/finance/fiscal_localizations/india.html) was reviewed separately. It retains the main connection and submission concepts but contains additional localisation material, so the pages should not be described as identical.
 
-## Who must e-invoice, and what are the IRN and QR code?
+The relevant modules include **Indian - Accounting**, **Indian E-invoicing** and **Indian E-waybill**. Creating an e-way bill from a stock operation additionally needs **Indian E-waybill Stock**. Verify the installed modules and permissions rather than inferring availability from the Accounting menu alone.
 
-E-invoicing means registering each qualifying invoice on a government Invoice Registration Portal (IRP), which
-validates and signs it. Whether you must do it depends on your turnover against a limit set by government
-notification. Check the current position on the official [e-invoice portal](https://einvoice1.gst.gov.in/) or with
-your tax adviser, not in a blog post.
+API credentials, provider access and any service charges are separate from installing a module. This article does not publish current statutory thresholds, portal cancellation deadlines or a universal transaction price.
 
-When the IRP accepts an invoice, it returns an **IRN** (Invoice Reference Number, unique to that invoice), an
-acknowledgement number and date, and a digitally signed QR code. Odoo prints all of them on the invoice PDF.
+## What should be checked before connecting the portals?
 
-In Odoo 19, an invoice is eligible when it's in a sales journal and its lines fall in the B2B, export, SEZ or
-deemed-export sections of GSTR-1, including credit and debit notes on those. Invoices to consumers aren't sent.
+Confirm the intended company, address, PAN and GSTIN. Review the customer, delivery address, product classifications and applicable taxes with finance. Resolve master-data problems before attempting a production submission.
 
-An **e-way bill** is a separate document for moving goods, generated on the NIC e-way bill portal. Odoo creates it from
-an invoice or bill, or from a delivery or receipt with the **E-waybill Stock** module.
+Keep the API credentials in the appropriate configuration fields. Do not copy passwords into a support ticket or the public evidence worksheet. Record the company, provider and environment without recording the secret itself.
 
-## Before you start
+Odoo documents a **Production Environment** choice. Inspect its actual state in the installed database and the credentials used. Do not assume a copied database or an unfamiliar default points to a safe test service.
 
-1. **GST is set up:** GSTIN on the company, HSN/SAC codes on products and a GST tax on every invoice line.
-2. **Addresses are complete.** Before sending, Odoo checks that the company, customer and delivery addresses have a
-   street and city of 3 to 100 characters, a state with a two-digit GST state code, and a six-digit PIN code.
-3. **Invoice numbers have 16 characters or fewer.** Odoo blocks longer ones.
-4. **You can log in** to the NIC e-invoice and e-way bill portals for your GSTIN.
+## How is the documented connection configured?
 
-## Step by step
+1. In **Accounting ‣ Configuration ‣ Settings**, find the GSP configuration. The reviewed documentation specifies **BVM IT Consulting** for these integrations.
+2. On the NIC e-invoice portal, follow **API Registration ‣ User Credentials ‣ Create API User**. Complete the portal's verification, select **Through GSP** and the documented provider, then create the API credentials.
+3. Configure the e-way bill portal access separately through its documented **Registration ‣ For GSP** process. Check whether the provider is already registered before creating another entry.
+4. Enable **E-Invoicing** and **E-Way bill** in Odoo's Indian integration settings and enter the corresponding credentials.
+5. Verify the intended test or production environment and the connection using a controlled, authorised case.
 
-### Connect Odoo to the portals
+The official India reference explains both portal routes. Confirm the interface shown for your account if labels differ; avoid repeatedly changing credentials to work around an unexplained response.
 
-1. **E-invoice API user.** On the NIC e-invoice portal, go to **API Registration ‣ User Credentials ‣ Create API
-   User** and verify the OTP sent to your registered mobile. Choose **Through GSP**, select **BVM IT Consulting
-   Services India Private Limited**, set an API username and password, and click **Submit**.
-2. **E-way bill API user.** On the NIC e-way bill portal, go to **Registration ‣ For GSP**, click **Send OTP**, then
-   **Verify OTP**. If BVM is already on your GSP list, reuse your portal login. Otherwise click **Add/New**, choose BVM,
-   create a username and password, and click **Add**.
-3. **GSP in Odoo.** In **Accounting ‣ Configuration ‣ Settings**, under **Indian Integration**, set **GSP** to **BVM IT
-   Consulting**. The other option, Tera, is marked deprecated.
-4. **Switch the features on.** Tick **E-Invoicing** and **E-Way bill**, save, and come back to the page. Enter each
-   **Username** and **Password**, then click **Verify Username and Password**.
-5. **Production or test.** The **Production Environment** checkbox only shows in developer mode, and in Odoo 19's code
-   it starts ticked. Untick it only while you test against the government sandbox.
-6. **Credits.** With production on, a **Buy credits** link appears. Its tooltip says each transaction costs one credit.
+## How do you generate an e-invoice and prove the result?
 
-### Generate or cancel an e-invoice
+Post the eligible invoice, select **Send**, choose **E-Invoicing** and use **Generate**. Inspect the returned status and the attachments recorded in the chatter.
 
-7. **Post the invoice.** Its **India E-Invoice Status** shows **To Send**.
-8. **Send it.** Click **Send**, tick **E-invoicing** and click **Generate**. Odoo checks the data first and shows any
-   problem as an alert. On success the status becomes **Sent**, and the chatter holds the request and the signed
-   response as JSON files.
-9. **Discount lines.** The portal rejects negative lines, so Odoo turns a negative discount line into a discount on the
-   positive line with the same HSN code and GST rate.
-10. **Cancel if needed.** Click **Request Cancel**, choose a **Cancel Reason** (Duplicate, Data Entry Mistake, Order
-    Cancelled or Others), add **Cancel Remarks** and confirm. The e-invoice status and the invoice both become
-    **Cancelled**. The Odoo documentation doesn't give a time limit, but the portal only accepts cancellations within
-    its own window, so check the current rule there.
+On success, review the IRN, acknowledgement information and signed QR code on the output. Check that they relate to the intended document, customer and amount. A PDF containing a code should be checked against its source response, rather than accepted solely because it looks complete.
 
-### Generate an e-way bill
+Odoo documents a verification route: download the relevant signed JSON from the invoice chatter and use **Search ‣ Verify Signed Invoice** on the [NIC e-invoice portal](https://einvoice1.gst.gov.in/). Keep the resulting evidence in the authorised project location.
 
-11. On the posted invoice or bill, click **Create e-Waybill** and complete:
-    - **Document Type**, for example **Tax Invoice**.
-    - **Address Details**: **Bill From**, **Bill To**, **Dispatch From** and **Ship To**, pre-filled from the invoice.
-    - **Transporter**, if a transport company moves the goods.
-    - **Transportation Details (Part B)**: **Transportation Mode** (By Road, Rail, Air, or Ship or Ship Cum Road/Rail),
-      **Vehicle Type** and **Vehicle Number** for road, **Distance** in km, and the transport document number and date
-      (labelled RR No, Airway Bill or Bill of lading No for the other modes).
-12. Click **Generate e-Waybill**. Odoo fills in **e-Waybill Number**, **e-Waybill Date** and **e-Waybill Valid Upto**.
-    If the invoice already has an IRN, Odoo generates the e-way bill through the IRN (except for credit and debit
-    notes).
-13. **From Inventory:** with **Indian E-waybill Stock** installed, open **Inventory ‣ Operations ‣ Deliveries** or
-    **Receipts** and click **Create E-waybill/Challan**. A delivery must be **Done**; a receipt **Ready** or **Done**.
-    **Use as Challan** prints a delivery challan without sending anything to the portal.
-14. **Cancel:** click the **e-Waybill** smart button, then **Cancel e-Waybill**, and give a reason and remarks. Odoo's
-    e-way bill module includes the portal's error for late requests: "You can cancel the ewaybill within 24 hours from
-    Part B entry".
+## How is an e-way bill different?
 
-## Worked example: an inter-state delivery from Ludhiana
+An e-way bill supports the movement of goods and has its own reference and status. Successful e-invoice registration does not prove that an e-way bill was generated.
 
-The Ludhiana distributor from the GST guide invoices a registered dealer in Panchkula, Haryana, for ₹50,000 plus IGST,
-and sends the goods on its contracted truck.
+From the relevant posted invoice or bill, use **Create e-Waybill**, check the source and destination addresses, transport mode and required transport details, then generate it. Review the returned number and validity information.
 
-- The invoice posts as **INV/2026/00042**, which is 14 characters. Status: **To Send**.
-- **Send** with **E-invoicing** ticked returns the IRN, acknowledgement and QR code. Status: **Sent**.
-- **Create e-Waybill:** **Tax Invoice**, **By Road**, **Regular** vehicle, the truck's registration number, and
-  **Distance** left at 0. If the portal works the distance out from the two PIN codes, Odoo copies it into the field.
-- Because the invoice has an IRN, **Generate e-Waybill** goes through the IRN. The e-way bill number and validity date
-  then appear on the invoice PDF.
-- A delivery to a customer with the same PIN code as the warehouse is different: Odoo asks for a distance before sending.
+For stock operations, the documented route is **Inventory ‣ Operations ‣ Deliveries** or **Receipts**, followed by **Create E-waybill/Challan**. The reference requires a delivery to be **Done**, and a receipt to be **Ready** or **Done**. A printed challan and a portal-generated e-way bill are different outputs.
 
-## What you should see
+## What should you do when submission fails?
 
-- On the invoice: **India E-Invoice Status** and an **e-Waybill** smart button. The invoice list has an optional
-  e-invoice status column.
-- On the PDF: the IRN, acknowledgement number and date, the QR code, and the e-way bill number and validity date.
-- To prove an invoice is signed, download its JSON from the chatter and upload it on the NIC e-invoice portal under
-  **Search ‣ Verify Signed Invoice**.
+Start with the exact response, document reference, company and environment. Use this diagnostic sequence before changing the invoice.
 
-## Troubleshooting
+| Symptom | Evidence to inspect | Appropriate next step |
+| --- | --- | --- |
+| Feature absent from the send flow | Installed module, document eligibility, company and existing status | Resolve configuration or eligibility with the responsible owner |
+| Address or classification validation error | Named field on the company, customer, delivery address or invoice line | Correct that field and review the resulting payload |
+| Authentication failure | Intended GSTIN, provider, environment and API user | Verify the correct account through the supported configuration |
+| Insufficient-credit message | Actual service account and balance | Confirm current service terms and arrange authorised replenishment |
+| Timeout or duplicate IRN | Original document identity, portal lookup and returned signed details | Establish the existing result before a controlled retry |
+| Cancellation refused | Portal response and current IRN or e-way bill status | Escalate the permitted correction; do not assume local cancellation is sufficient |
 
-**E-invoicing isn't offered in the Send window.**
-The invoice isn't eligible (a consumer sale, or not a sales journal) or was already sent. Check **GST Treatment** and
-the customer's GSTIN.
+The reviewed [Odoo 19 e-invoice implementation](https://github.com/odoo/odoo/blob/19.0/addons/l10n_in_edi/models/account_move.py) attempts an IRN lookup when it receives duplicate error 2150. It also checks returned buyer and invoice-value details where available and can retain an error when they differ.
 
-**"Partners should have a complete address" or "ZIP code required 6 digits".**
-Fix the contact or company address, then send again.
+That behaviour supports investigation; it is not a guarantee that every timeout is recovered automatically. If the existing response belongs to different details, stop and resolve the discrepancy instead of changing the invoice number to force another submission.
 
-**"Missing or invalid HSN/SAC code" or "Set an appropriate GST tax on invoice lines".**
-Every line needs a 4, 6 or 8-digit code and a GST, nil-rated, exempt or non-GST tax.
+## What should happen after a refused cancellation?
 
-**"Incorrect username or password, or the GST number on company does not match."**
-Recheck the API user you created and the company's GSTIN.
+Use the documented **Request Cancel** route with the reason and remarks, then inspect the actual response. Check e-invoice and e-way bill cancellation independently where both exist.
 
-**Error 2150, duplicate IRN.**
-Usually a request that timed out but reached the portal. Odoo fetches the existing IRN and posts a note; verify it on
-the portal.
+The Odoo 19 source distinguishes the normal portal request from **Force Cancel**. The latter changes local records without making that normal cancellation request. A locally cancelled invoice can therefore require separate portal investigation.
 
-**A message about buying credits.**
-The IAP balance is empty. Top it up and send again.
+Have the finance or tax owner determine the permitted correction. This guide does not prescribe a credit note, deletion or backdated change as a universal answer.
 
-**The portal refuses a cancellation.**
-The error shows in a red banner with a **Force Cancel** link. That cancels the invoice in Odoo only; the IRN stays live
-on the portal, so agree the correction, often a credit note, with your adviser.
+## What does a useful acceptance example look like?
 
-**"Transporter ... does not have a valid GST Number".**
-Add the transporter's GSTIN, or for road transport enter the vehicle number.
+Consider a proposed test using a fictional invoice reference, an approved customer and a taxable value of ₹50,000. Finance supplies the expected tax treatment; the example does not assume a statutory rate.
 
-**Wrong details on a generated e-way bill.**
-It can't be edited. Cancel it, click **Reset to Pending**, correct the details and generate again.
+Run these cases in an appropriate controlled environment:
 
-## Related setup
+* Complete a valid submission and trace the returned reference to the document and output.
+* Use an incomplete address and confirm the reported field can be identified and corrected.
+* Investigate a simulated timeout by checking whether the portal already holds the document.
+* Review a duplicate response and confirm mismatched buyer or value details reach a person.
+* Review a refused cancellation without treating a local state change as portal acceptance.
 
-- [How to set up GST in Odoo 19](/blog/2026/10/10/how-to-set-up-gst-odoo/)
-- [Customer invoicing in Odoo](/blog/2026/08/21/customer-invoicing-in-odoo/)
-- [How to set up taxes and fiscal positions in Odoo](/blog/2026/09/22/how-to-set-up-taxes-fiscal-positions-odoo/)
-- Want e-invoicing and e-way bills checked before your first live invoice? See
-  [Odoo consulting](/services/odoo-consulting/).
+Record expected and observed outcomes separately in the [ERP acceptance evidence worksheet](/resources/erp-acceptance-evidence/). These cases have not been executed on a customer database or portal for this article.
 
-## Official references
+## Sources and review
 
-- Odoo 19 documentation: [India (fiscal localisation)](https://www.odoo.com/documentation/19.0/applications/finance/fiscal_localizations/india.html)
-- Odoo 19 documentation: [In-app purchase (IAP)](https://www.odoo.com/documentation/19.0/applications/essentials/in_app_purchase.html)
-- Government of India: [NIC e-invoice portal](https://einvoice1.gst.gov.in/)
-- Government of India: [NIC e-way bill portal](https://ewaybillgst.gov.in/)
+Reviewed on 27 November 2026: the Odoo 19 and 20 India references linked above, the official Odoo 19 e-invoice source, and [Odoo's IAP explanation](https://www.odoo.com/documentation/19.0/applications/essentials/in_app_purchase.html). The [NIC e-way bill portal](https://ewaybillgst.gov.in/) remains the relevant government service for its current requirements.
 
-*How this guide was checked: portal steps, menu paths and field names were checked against the Odoo 19 documentation
-and the Indian e-invoicing and e-way bill modules in Odoo 19 (settings, validations, error messages and the e-way bill
-form) in October 2026. The worked example is illustrative and wasn't run on a live database or portal, so there are no
-screenshots; labels can vary slightly with your installed apps and language.*
+This is a documentation and source-code review, not a statutory certification or live portal test. For help tracing configuration and transaction evidence, see [Odoo consulting](/services/odoo-consulting/).

@@ -2,168 +2,124 @@
 layout: post
 title: "Odoo Manufacturing Costs: Components, Operations and Real Cost"
 date: 2026-10-16 09:00:00 +0530
-last_modified_at: 2026-11-25
 tags: [Odoo, Odoo 20, Odoo 19, Manufacturing, MRP, Accounting, Finance, Inventory Management]
 hub: manufacturing
-description: "Understand Odoo 20 manufacturing costs: component value, work centre and employee cost, expected versus real cost, BoM price, WIP and variances."
+description: "Explain Odoo 20 manufacturing cost differences with a planned-to-real cost bridge, component and time checks, valuation boundaries and a worksheet."
+last_modified_at: 2026-11-27
 faqs:
-  - q: "What does Compute Price from BoM do in Odoo?"
-    a: "It sets the product's Cost to the expected cost from its bill of materials: each component's Cost times its quantity, plus each operation's time at the work centre's cost per hour, divided by the BoM quantity, less any by-product cost share."
-  - q: "Why doesn't a manufacturing order change the cost of a standard-cost product?"
-    a: "With the Standard Price costing method, finished goods always enter stock at the product's standard Cost. The difference between that and the order's real cost isn't added to stock, so you update the standard deliberately."
-  - q: "Are employee wages included in Odoo manufacturing costs?"
-    a: "In Community, operations are costed at the work centre's cost per hour only. Enterprise adds a per-employee rate on the work centre for the expected cost and uses each employee's hourly cost for the real cost."
+  - q: "Why do MO Cost and Real Cost match after completion?"
+    a: "Odoo's manufacturing-cost documentation says the MO Cost column updates to the Real Cost when the order is completed. Preserve the original estimate beforehand if you need a variance baseline."
+  - q: "Is Compute Price from BoM a correction for every cost difference?"
+    a: "No. It recalculates expected product cost from the BoM in the documented workflow. It does not explain incorrect consumption, operation time or financial valuation."
+  - q: "Do manufacturing costs automatically create and reverse WIP entries?"
+    a: "No. The reviewed WIP documentation describes manually posting entries for incurred costs, with reversal arrangements that must also be checked. An open manufacturing order is not itself a posted WIP journal."
 ---
 
-**Short answer:** Odoo 20 calculates manufacturing costs from component quantities and values, operation time, work
-centre operating cost and, where configured, employee cost. The manufacturing order shows an expected **MO Cost**
-from the bill of materials and a **Real Cost** based on what was actually consumed and recorded. Differences in
-component use, operation duration and employee rates explain why the two figures can diverge.
+**Short answer:** Odoo 20 manufacturing costs combine components and operations, with work centre and employee costs where configured. Explain a difference by comparing quantities, values, time and rates against a recorded baseline. Keep that production-cost explanation separate from the inventory valuation method and the accounting entries.
 
-This article also explains how the product costing method affects inventory value. Start with the manufacturing
-order overview before deciding whether a difference is a data error, a production variance or an expected outcome.
+[Download the blank manufacturing cost review worksheet](/assets/downloads/manufacturing-cost-review.csv) to build a traceable explanation instead of changing a product cost merely to make two totals agree.
 
-## Applies to
+## What do MO Cost and Real Cost mean?
 
-- **Odoo version:** Odoo 20, with Odoo 19 terminology retained where the accounting explanation still applies.
-  Odoo 20 documents expected MO cost, real cost, work centre cost, employee cost and average manufacturing cost.
-- **Edition:** costing methods, Compute Price from BoM, the BoM Overview and the MO Overview are in Community and
-  Enterprise. Employee costs on operations and the **Production Analysis** report are Enterprise only.
-- **Apps:** Manufacturing, Inventory, and Invoicing or Accounting.
+The [Odoo 20 manufacturing-cost reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html) describes **MO Cost** as the expected cost from the BoM and **Real Cost** as the cost of recorded production. Different consumption, component values, operation durations or employee rates can create a difference.
 
-## Why are MO Cost and Real Cost different in Odoo?
+Open **Manufacturing ‣ Operations ‣ Manufacturing Orders**, select the order and use **Overview**. Inspect the component and operation lines before interpreting the total.
 
-MO Cost starts from the planned component quantities and operation costs. Real Cost reflects recorded consumption,
-time and applicable employee rates. Extra material, longer operations or a different employee rate can explain a
-difference while production is running. Check those inputs before changing the product cost to make the figures agree.
+The same broad distinction appears in the reviewed 19.0 reference. This guide follows the 20.0 documentation; it does not claim that every cost field was first introduced in version 20.
 
-In Odoo's [manufacturing order cost documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html),
-the MO Cost column updates to the Real Cost when production is completed. Matching columns on a finished order do
-not prove the original plan was accurate. If your review needs the original estimate, retain that baseline before
-completion and compare it with the recorded outcome. This is a review recommendation, not a claim that the overview
-preserves an unchanged historical estimate.
+## Why must the original estimate be retained?
 
-## Which costing method does a manufactured product use?
+Odoo documents that, after completion with **Produce**, the MO Cost column updates to match Real Cost. Matching columns on the completed order therefore do not establish that the original plan was accurate.
 
-The one on its product category (**Inventory ‣ Configuration ‣ Product Categories**): **Costing Method** is
-**Standard Price**, **First In First Out (FIFO)** or **Average Cost (AVCO)**, and **Inventory Valuation** is
-**Periodic (at closing)** or **Perpetual (at invoicing)**, the Odoo 19 names. In the 19 code, a finished order values
-its output like this:
+If the business needs a plan-versus-outcome review, record the estimate, date, BoM reference and intended output before completion. Retain the relevant source report or approved snapshot. That is a recommended review method, rather than a claim that the screen preserves an unchanged original estimate.
 
-- **Standard Price:** finished units enter stock at the product's **Cost**, whatever the order really cost.
-- **AVCO:** the order's real unit cost is averaged with the stock already on hand.
-- **FIFO:** each order's units carry that order's real cost until used or sold; the **Cost** field shows an average.
+Also keep the quantity basis. Comparing the planned cost of one table with the total cost of ten makes an apparent variance that is entirely a denominator error.
 
-Components leave stock at their *own* costing method. For the basics of each method, see
-[inventory valuation and landed costs](/blog/2026/08/14/inventory-valuation-and-landed-costs-in-odoo/).
+## Which inputs should be checked first?
 
-## How does Odoo work out the cost from the bill of materials?
+| Input | Where to investigate | Why it can explain the difference |
+| --- | --- | --- |
+| Component quantity | BoM requirement and recorded consumption | Extra use, substitution, scrap or incorrect entry |
+| Component value | Product cost and relevant valuation records | Changed values or an inappropriate comparison basis |
+| Operation duration | Expected duration and recorded work | Additional work or missing time |
+| Work centre rate | Work centre cost configuration | Zero, stale or incorrectly defined rates |
+| Employee rate | Configured employee cost where applicable | Actual worker rate differs from the estimate |
+| Output quantity | Completed good output, scrap and by-products | Unit cost cannot be compared on different output bases |
 
-**Compute Price from BoM** sits next to the **Cost** field on the product form, for Manufacturing administrators and
-products with a BoM (the 19 code hides it for FIFO products under perpetual valuation). It adds up:
+Check the installed applications and permissions for detailed employee and accounting functionality. Do not assume all cost fields are present simply because an overview is visible.
 
-- each component's **Cost** times its quantity on the BoM;
-- each operation's time times its work centre's **Cost per hour**: setup, cleanup and the operation's duration per
-  cycle, adjusted for time efficiency. With no capacity set on the work centre, one cycle is the BoM quantity;
+## How do work centre and employee costs differ?
 
-then takes off any by-product cost share and divides by the BoM **Quantity**. The BoM's **BoM Overview** smart button
-shows the same cost line by line.
+Under **Manufacturing ‣ Configuration ‣ Work Centers**, the cost documentation describes hourly values for the work centre and for an employee estimate.
 
-The button uses each component's *current* **Cost**, so a stale sub-assembly cost passes straight up. To roll up a
-multi-level BoM, select the sub-assembly and the finished product in the product list and run **Actions ‣ Compute
-Price from BoM**, which recalculates a selected sub-assembly from its own BoM. Under AVCO the result isn't permanent:
-later orders keep averaging into it.
+The **per employee** work centre value supports the expected MO cost. The documented real employee cost uses the relevant employee's **Hourly Cost** instead. Therefore, an order can show a labour difference even when actual hours match expected hours.
 
-## What does a manufacturing order actually cost?
+The [BoM reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html) also distinguishes **Cost based on** from **Duration Computation**. Review whether an operation uses actual or theoretical cost, and whether its estimate is fixed or computed from previous work.
 
-Open the order's **Overview** smart button. **MO Cost** is what it *should* cost from the BoM; **Real Cost** is the
-components actually consumed plus each work order's time at the work centre's hourly cost. Once the order is done,
-the two columns match.
+Those are separate settings. Do not describe every figure labelled real as an independent measurement without inspecting how time and cost were configured.
 
-Each operation's **Cost based on** field picks **Actual time** (the default) or the estimate, labelled **Theorical
-time** in Odoo 19 and **Theoretical time** in Odoo 20. If an order is closed with no time recorded, the 19 code fills
-in the expected duration, so the real cost quietly equals the estimate.
+## What does an auditable cost bridge look like?
 
-On Enterprise, the work centre also has a **per employee** rate for the expected cost, and the real cost uses each
-employee's **Hourly Cost**. Enterprise also adds **Manufacturing ‣ Reporting ‣ Production Analysis**, with measures
-such as **Cost/Unit**, **Total Operation Cost** and **Yield Percentage (%)** to compare orders over time.
+The following is an illustrative calculation, not a customer result or market-price quotation. It assumes ten good tables, one currency, the shown component values and operation rates, no separate employee-cost line, and no by-product allocation.
 
-## How do by-products share the cost?
+| Cost line for ten tables | Planned basis | Planned cost | Recorded basis | Recorded cost |
+| --- | --- | ---: | --- | ---: |
+| Panels | 10 at ₹6,000 | ₹60,000 | 10 at ₹6,000 | ₹60,000 |
+| Legs | 40 at ₹500 | ₹20,000 | 41 at ₹500 | ₹20,500 |
+| Hardware kits | 10 at ₹300 | ₹3,000 | 10 at ₹300 | ₹3,000 |
+| Assembly | 15 hours at ₹600 | ₹9,000 | 17 hours at ₹600 | ₹10,200 |
+| Polishing | 10 hours at ₹800 | ₹8,000 | 10 hours at ₹800 | ₹8,000 |
+| **Total** | | **₹100,000** | | **₹101,700** |
 
-With **By-Products** enabled in Manufacturing settings, the BoM's **By-products** tab has an optional **Cost Share
-(%)** column, hidden by default; the shares can't total more than 100. In the 19 code, the main product's cost is
-reduced by the total share, and each by-product receives its share divided by its quantity, but only if it uses FIFO
-or AVCO. A standard-cost by-product enters stock at its own **Cost**.
+The bridge is:
 
-## Where do variances go with standard cost?
+* Extra leg: **₹500**.
+* Two additional assembly hours: **₹1,200**.
+* Explained difference: **₹1,700**, agreeing with ₹101,700 minus ₹100,000.
+* At the same ten-good-table output, the illustrative unit costs are **₹10,000 planned** and **₹10,170 recorded**.
 
-Under **Perpetual (at invoicing)**, the documentation describes a **Cost of Production** account on the production
-location, set through the **locations** link in the Accounting settings. In the 19 code, consumed components are
-moved into that account, work centre time is posted to it from the work centre's **Expense Account** (or the
-product's expense account), and the finished product is taken out of it at its stock value. Under FIFO or AVCO that
-nets to roughly zero; under Standard Price, what remains is your variance.
+If a line cannot be supported by a component move, work record or approved rate, leave that part unexplained and assign an owner. Do not invent an overhead entry to force agreement.
 
-## Can Odoo show work in progress in the accounts?
+If output, currency, subcontracting or by-product treatment differs, revise the comparison basis first. This simple example is not a universal inventory-valuation formula.
 
-Yes, by hand. On an open order, click the gear icon and choose **Post WIP Accounting Entry**. Odoo proposes the
-components consumed and work centre time so far, debited to the **WIP Account** and credited to stock valuation and
-the **WIP Overhead Account** (both set in the Accounting settings), then click **Post WIP**. The **Reversal Date**
-defaults to the next day, which suits a month-end entry for orders that run across it.
+## Why can the production cost differ from inventory value?
 
-## Worked example: a dining table (illustrative numbers)
+Production costing asks what the order consumed and incurred. Financial valuation also depends on the configured costing method, valuation method, category overrides and posting process.
 
-| BoM line for 1 table | Basis | Cost |
-|---|---|---|
-| Tabletop panel | 1 × ₹6,000 | ₹6,000 |
-| Legs | 4 × ₹500 | ₹2,000 |
-| Hardware kit | 1 × ₹300 | ₹300 |
-| Assemble, at ₹600 per hour | 90 minutes | ₹900 |
-| Polish, at ₹800 per hour | 60 minutes | ₹800 |
-| **Compute Price from BoM** | | **₹10,000** |
+The [Odoo 20 inventory valuation guide](https://www.odoo.com/documentation/20.0/applications/finance/accounting/get_started/inventory_valuation.html) documents company-level defaults under **Accounting ‣ Configuration ‣ Settings**, including inventory cost and valuation methods, with product-category overrides.
 
-An order for 10 tables is expected to cost ₹100,000. On the floor, a leg splits and the operator records 41 legs
-consumed (+₹500), and assembly takes 17 hours instead of 15 (+₹1,200). **Real Cost: ₹101,700, or ₹10,170 a table.**
+**Standard Price**, **FIFO** and **Average Cost** are different valuation bases. Do not expect changing an estimate on the BoM to make every stock or ledger figure equal to the MO total. Ask finance to reconcile the applicable valuation records and journal entries.
 
-- **Standard Price at ₹10,000:** the ten tables enter stock at ₹100,000; the ₹1,700 is the variance.
-- **AVCO, with five tables already in stock at ₹10,000:** (₹50,000 + ₹101,700) ÷ 15 = **₹10,113.33** a table.
-- **FIFO:** these ten carry ₹10,170 each; the older five stay at ₹10,000 and are used first.
-- **A 2% cost share on an offcuts by-product** would lower the table's BoM cost to ₹9,800.
+The same reference distinguishes operational stock valuation from accounting updates and closing. A correct quantity or MO overview is not, by itself, a reconciled balance sheet.
 
-## When it fits and when it doesn't
+## What does Compute Price from BoM change?
 
-It fits makers whose cost is materials plus machine and labour time per operation. Standard cost suits stable costs
-and a finance team that reviews variances; AVCO is the simplest for most small manufacturers. It fits less well when
-overhead is absorbed per kilogram or as a percentage of material, or when joint products need more than a fixed
-percentage split. Those usually mean periodic journal entries or customisation.
+The documented product-form action resets expected cost from components and operations on the BoM. It is useful for reviewing the planned cost basis, but it is not a substitute for investigating actual consumption or time.
 
-## Common mistakes
+Check component and sub-assembly values before recalculating a parent. Record the original value and reason for any authorised change.
 
-- **Cost per hour left at zero:** operations cost nothing, so every product looks cheaper than it is.
-- **Computing only the top level:** the parent picks up a stale sub-assembly cost.
-- **Expecting a standard cost to move after an order:** it won't; update it on purpose.
-- **A cost share on a standard-cost by-product:** the main product is reduced, but the by-product still enters at
-  its own standard cost.
-- **No time tracking:** the real cost becomes a copy of the estimate.
+The manufacturing-cost reference's averaging example should not be treated as a universal replacement for the separate valuation-method documentation. Verify the actual method and category settings before predicting how a future order affects product or stock value.
 
-## Related
+## How should by-products and WIP be reviewed?
 
-- [How to use the Master Production Schedule in Odoo](/blog/2026/10/16/master-production-schedule-odoo/)
-- [How to set up a bill of materials in Odoo 20](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/)
-- [How to set up work centres and work orders in Odoo 20](/blog/2026/09/27/how-to-set-up-work-orders-odoo/)
-- [Inventory valuation and landed costs in Odoo](/blog/2026/08/14/inventory-valuation-and-landed-costs-in-odoo/)
-- Want product costs your finance team trusts? See [Odoo implementation](/services/odoo-implementation/).
+The BoM documentation supports a **Cost Share** for by-products, with a total no greater than 100 percent. Check the intended output quantities and allocation before comparing the main product's cost with a calculation that assumes all cost belongs to it.
 
-## Official references
+For unfinished work, the [Odoo 20 WIP reference](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.html) describes manually posting incurred costs through **Post WIP Accounting Entry**. Verify the journal, date, accounts and reversal arrangement with finance.
 
-- Odoo 20 documentation: [Manufacturing order costs](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html)
-- Odoo 20 documentation: [Production analysis](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/manufacturing/workflows/production_analysis.html)
-- Odoo 19 documentation: [Work-in-progress costs](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.html)
-- Odoo 19 documentation: [By-products](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/workflows/byproducts.html)
-- Odoo 19 documentation: [Inventory valuation (Accounting)](https://www.odoo.com/documentation/19.0/applications/finance/accounting/get_started/inventory_valuation.html)
-- Odoo 19 documentation: [Valuation of stock movements](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/inventory_valuation/operations_valuation.html)
-- Odoo 19 documentation: [Production analysis](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.html)
-- Odoo 19 source code: [Accounting - MRP (mrp_account) module](https://github.com/odoo/odoo/tree/19.0/addons/mrp_account)
+WIP entries reflect the costs at posting. They are not automatically tied to every subsequent change in manufacturing progress. Check the period-end balance and reversal rather than assuming the order state manages the entire accounting outcome.
 
-*Updated on 17 November 2026 using the official Odoo 20 manufacturing cost and production analysis documentation,
-with the accounting explanation compared with the earlier Odoo 19 review. The worked example uses illustrative
-numbers and was not run on a live database.*
+## How should the review worksheet be completed?
+
+Use one row per component or operation. Record the currency, unit, baseline date, planned quantity or hours, rate and amount, followed by the corresponding recorded figures and evidence.
+
+Compute each line's difference as recorded amount minus planned amount. Sum the differences and compare that total with the order-level difference. Keep planned and actual output quantities so unit-cost calculations can be checked.
+
+The download is blank, with no formulas or client records. It supports an explanation and review decision; it does not post accounting entries or select the correct costing policy.
+
+For the input blueprint, see [BoM setup](/blog/2026/09/24/how-to-set-up-bill-of-materials-odoo/). Use the [ERP acceptance evidence method](/resources/erp-acceptance-evidence/) to distinguish proposed checks from observed results.
+
+## Sources and review
+
+Reviewed on 27 November 2026: the linked 20.0 manufacturing cost, BoM, valuation and WIP references, plus the [19.0 manufacturing-cost page](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.html) for version context. No live database, valuation or accounting test is claimed.
+
+For help defining a production-cost review that finance and operations can both explain, see [Odoo implementation](/services/odoo-implementation/).
