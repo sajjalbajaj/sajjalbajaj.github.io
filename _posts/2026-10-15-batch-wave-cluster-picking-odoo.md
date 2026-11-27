@@ -2,174 +2,105 @@
 layout: post
 title: "Batch, Wave and Cluster Picking in Odoo 19 (Step by Step)"
 date: 2026-10-15 09:00:00 +0530
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, Setup, Inventory, Warehouse Management, Logistics, Distribution, Barcode]
 hub: inventory
-description: "Set up batch, wave and cluster picking in Odoo 19: settings, manual and automatic batches, waves from move lines, totes for cluster picks and Barcode."
+description: "Choose and set up batch, wave or cluster picking in Odoo 19, compare Odoo 20 changes, and diagnose missing lines, tote errors and incomplete deliveries."
 faqs:
-  - q: "What is the difference between batch, wave and cluster picking in Odoo?"
-    a: "A batch groups whole transfers so one person picks several orders in one trip, then sorts them. A wave takes only some lines from several transfers, such as everything in one zone or category, by splitting the transfers first. Cluster picking is a batch where each order goes into its own tote as it's picked, so there's no sorting afterwards."
-  - q: "Why isn't Odoo creating automatic batches?"
-    a: "Odoo only batches transfers that are Ready, meaning their stock is reserved, and the operation type needs Automatic Batches plus at least one grouping option. The Maximum lines and Maximum transfers limits can also keep a transfer out of a batch."
-  - q: "Is batch picking available in Odoo Community?"
-    a: "Yes. Batch, wave and cluster transfers are part of Inventory in both editions of Odoo 19. Only the Barcode app, which lets pickers scan a batch on a mobile device, is Enterprise only."
+  - q: "What is the difference between batch, wave and cluster picking?"
+    a: "A batch groups transfers for shared picking. A wave groups selected lines after splitting transfers. Cluster picking separates orders into their own packages during the pick. Choose according to product overlap, available containers and the handoff to packing, rather than order count alone."
+  - q: "Why are products missing from the batch's detailed operations?"
+    a: "Compare the complete demand with reserved stock first. The Odoo 19 batch guide explains that unavailable products can remain in Operations without appearing in Detailed Operations. Check the linked transfer, reservation and source location before reducing demand or validating the batch."
+  - q: "Does completing a pick batch mean the customer order has shipped?"
+    a: "Only if that operation is the final outgoing delivery in your configured flow. In a two-step warehouse, completing Pick moves goods towards dispatch; the Delivery Orders operation still needs processing. Follow the sales order through all linked transfers and outstanding quantities."
 ---
 
-**Short answer:** in Odoo 19, tick **Batch, Wave & Cluster Transfers** (with **Storage Locations** and **Multi-Step
-Routes**) in **Inventory ‣ Configuration ‣ Settings**. Group whole transfers into a batch with **Prepare Batch** or
-**Actions ‣ Add to batch**, or let the operation type build batches automatically. Build a wave from individual lines
-with **Prepare Wave**. For cluster picking, also turn on **Packages** and give each order its own reusable tote as you
-pick. All of this is in Community; scanning batches in the Barcode app is Enterprise only.
+**Short answer:** Use a batch to pick several transfers together, a wave to group selected lines from transfers, and cluster picking to place each order into its own package while picking. In Odoo 19, enable Batch, Wave & Cluster Transfers in Inventory settings; cluster picking also needs Packages. Start with a small manual batch, confirm reservation and order separation, then assess automation. Validate the final delivery separately when your warehouse has more than one outgoing step.
 
-This is the setup guide. For why picking strategy matters at all, start with my explainer on
-[warehouse management with ERP](/blog/2026/07/24/warehouse-management-with-erp/).
+## Which picking method solves your bottleneck?
 
-## Applies to
+Order count alone does not identify the best method. Check where time and mistakes occur: travel between shelves, sorting at packing, bulky items or waiting for incomplete orders.
 
-- **Odoo version:** Odoo 19. I also checked the Odoo 20 documentation and code. In Odoo 20, batch transfers are part
-  of the core Inventory module instead of a separate one, operation types get a **Batch Creation** field (**Manual
-  Only** or **Automatic**) in place of the **Automatic Batches** tick box, waves can also be grouped by date, the
-  documentation calls the batch's **Check Availability** button **Reserve**, and **Dispatch Management System** is
-  renamed **Transport Management**.
-- **Edition:** Community and Enterprise for batch, wave and cluster transfers. The **Barcode** app is Enterprise only;
-  in Community its setting shows an upgrade prompt.
-- **Apps:** Inventory; Barcode if you scan; Fleet if you use dispatch management.
+| Method | Useful situation | Work that remains |
+| --- | --- | --- |
+| Individual transfer | Large, unusual or priority order | Plan its route and keep its dispatch deadline visible |
+| Batch | Several orders share frequently picked items | Sort collected items into the correct orders |
+| Cluster | Orders fit separate totes on one cart | Maintain the order-to-tote mapping and check completeness |
+| Wave | Selected products or zones need a separate picking task | Reunite split work with the correct orders before dispatch |
 
-## Before you start
+These are operational choices, not guaranteed performance results. Compare actual picking time, sorting time and errors before and after a controlled trial.
 
-1. **Use multi-step delivery.** Batches and waves are designed for the pick step, so set the warehouse's **Outgoing
-   Shipments** to two or three steps in **Inventory ‣ Configuration ‣ Warehouses**. Cluster batches also work with
-   one-step delivery.
-2. **Name locations in walking order.** A batch's detailed lines are sorted by location name, so racks named `A-01`,
-   `A-02` and so on give pickers a sensible route.
-3. **Reservation matters.** Automatic batching only picks up transfers that are **Ready**, so check that stock is
-   reserved when you expect it to be.
-4. **Decide the method per operation type** before switching on any automation.
+The [batch reference](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.html), [wave reference](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.html) and [cluster reference](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.html) describe the underlying workflows. This guide applies those distinctions to release, packing and quantity checks.
 
-## Step by step
+## Prepare the warehouse flow first
 
-1. **Turn on the features.** In **Inventory ‣ Configuration ‣ Settings**, under **Operations**, tick **Batch, Wave &
-   Cluster Transfers** (and **Packages** for cluster picking). Under **Warehouse**, tick **Storage Locations** and
-   **Multi-Step Routes**. Click **Save**.
-2. **Create a batch by hand.** On the Inventory Overview, open the vertical ellipsis on an operation card such as
-   **Pick** and choose **Prepare Batch**. Set **Responsible** (leave it blank if anyone can pick), **Operation Type**
-   and **Scheduled Date**, then use **Add a line** on the **Transfers** tab to choose transfers. Click **Confirm**.
-   From any transfers list you can also select transfers and use **Actions ‣ Add to batch**, choosing a new or
-   existing batch, a **Responsible**, a **Description** and, if it isn't ready yet, **Draft**.
-3. **Let Odoo build batches.** Open **Inventory ‣ Configuration ‣ Operation Types**, then **Pick** (or **Delivery
-   Orders**). In **Batch & Wave Transfers**, tick **Automatic Batches** and choose a **Batch Grouping**: **Contact**,
-   **Destination Country**, **Source Location**, **Destination Location**, or **Carrier** once delivery methods are
-   installed. Set **Maximum lines** and/or **Maximum transfers**. **Auto-confirm**, on by default, makes new batches
-   ready to work; untick it to keep them in draft. When a transfer becomes Ready, Odoo adds it to an open batch
-   that matches, or starts a new one.
-4. **Create a wave.** On the operation card's ellipsis menu, choose **Prepare Wave**. The pop-up lists move lines
-   grouped by source location; filter by product or location, tick the lines and click **Add to Wave**, then choose
-   a new or existing wave and a **Responsible**. Odoo splits the transfers so only those lines go into the wave. A
-   wave can only hold lines from one operation type. For automatic waves, tick **Automatic Batches** on the operation
-   type and choose a **Wave Grouping**: **Product**, **Product Category** (pick the categories) or, in the 19.0 code
-   though not yet in the documentation, **Location**.
-5. **Prepare totes for cluster picking.** In **Inventory ‣ Configuration ‣ Package Types**, create a type such as
-   "Picking tote" with **Package Use** set to **Reusable Box (totes)**. Then create one package per tote in
-   **Inventory ‣ Products ‣ Packages**, for example `TOTE-01`.
-6. **Process the batch.** Open **Inventory ‣ Operations ‣ Batch Transfers** and the batch. The **Operations** tab lists
-   products and quantities; the **Moves** smart button opens the detailed operations, one line per product and
-   location. For cluster picking, set each line's **Destination Package** to that order's tote. Click **Validate**.
-   If you picked less than was reserved, Odoo asks whether to **Create Backorder**; transfers you didn't validate
-   leave the batch.
-7. **Or scan it (Enterprise).** In the **Barcode** app, go to **Operations**, choose the operation type and open the
-   batch. Lines are grouped by location and colour-coded by order, and a tote assigned to an order shows in italics
-   under the product. Scan the location, product and tote, then **Validate**.
+In **Inventory ‣ Configuration ‣ Settings**, enable **Batch, Wave & Cluster Transfers**. The documented pick-step setup also uses **Storage Locations** and **Multi-Step Routes**. Enable **Packages** for cluster picking, then save.
 
-## Which method fits?
+Confirm whether outgoing shipments use one, two or three steps. Cluster batches can work with each, but the operation you group changes. In two-step delivery, distinguish **Pick** from **Delivery Orders**. A completed internal pick does not prove goods have left the warehouse.
 
-| Method | Fits | Trade-off |
-|---|---|---|
-| One transfer at a time | Few orders, or big orders with many lines | The most walking |
-| Batch | Many small orders for popular products, stable demand | A sorting step after picking |
-| Cluster | Many small orders of items that fit a tote | Totes and carts; batches prepared in advance; urgent orders can't jump the queue |
-| Wave | High volume where orders share products, categories or zones | Transfers are split, then sorted |
+Give locations recognisable names and verify that products are physically where the system expects them. Agree who releases work, who owns exceptions and when the batch is handed to packing. Grouping by a common source location is not, by itself, evidence of an optimised walking route or a carrier schedule.
 
-## Worked example: a distributor's morning picking
+## Create and process a manual batch
 
-An illustrative food and drinks distributor uses two-step delivery (**Pick**, then **Delivery Orders**). By 7:00 about
-60 orders are confirmed, most with four to eight lines, and four vans leave at 10:00.
+1. From Inventory Overview, open the operation card's menu and choose **Prepare Batch**. Select the appropriate operation type, responsible person and scheduled date.
+2. Add the intended transfers. Alternatively, select transfers in their list and use **Actions ‣ Add to batch**. Use a description that makes the picking and handoff instruction clear.
+3. Confirm the batch. Compare demand with reserved quantities before releasing it to the picker.
+4. Record what was actually picked. In the Odoo 19 documentation, the detailed view uses **Done** and **Reserved** quantities; the Operations view retains the wider demand picture.
+5. Review shortages, packages and linked transfers, then validate. If a backorder decision appears, check which quantity remains due before choosing an option.
 
-| Setting | Value |
-|---|---|
-| Pick: Automatic Batches | Ticked |
-| Batch Grouping | Source Location |
-| Maximum transfers | 8 |
-| Auto-confirm | Ticked |
-| Package type | Picking tote, **Reusable Box (totes)** |
-| Packages | `TOTE-01` to `TOTE-08` |
+Labels can vary with installed modules. Use the record's quantity and state to confirm its meaning rather than assuming a similarly named column represents demand, reservation and completion at once.
 
-- **Why Source Location:** every pick starts in `WH/Stock`, so this grouping fills the open batch with Ready picks until
-  it holds eight, then starts the next. Sixty orders make eight batches: seven of eight and one of four.
-- **Cluster picking:** each picker takes a cart with eight totes, opens their batch and walks the lines in location
-  order, putting each order's items in its own tote. That's eight walks round the racks instead of sixty.
-- **A wave for the heavy items:** 20-litre water jars sit in a floor bay. The supervisor uses **Prepare Wave**,
-  filters by the jar product and sends every jar line to the pallet-truck driver as one wave. Odoo splits those lines
-  out of each pick; the rest stays in its batch.
-- **Loading:** at packing, items are already separated by order. For loading, the dispatcher can set each delivery's
-  carrier to its van and add each van's deliveries to a batch, as the dispatch documentation describes.
+## Use waves for selected lines
 
-## What you should see
+Choose **Prepare Wave** from the operation card, select the relevant product lines and use **Add to Wave**. The documented workflow groups lines from the same operation type and splits transfers before grouping their selected parts.
 
-- The **Pick** card on the Inventory Overview shows a **Batches** button with a count, and a **Waves** count once
-  waves exist.
-- **Inventory ‣ Operations ‣ Batch Transfers** and **Wave Transfers** list them, with each one's responsible person.
-- Each pick in a batch has a **Batch** smart button.
-- In the batch's detailed operations, each line shows its tote under **Destination Package**.
+For example, a separate team might handle bulky water containers while another picks shelf items. Plan the split before releasing competing tasks. After creating the wave, inspect the resulting transfer references, reservations and remaining lines. Do not assume a later wave will seamlessly extract work from a batch that someone is already processing.
 
-## Troubleshooting
+At packing, confirm that both portions of each affected order have arrived. A finished wave only establishes the status of its selected work; it does not establish that every order included in it is complete.
 
-**"If the Automatic Batches feature is enabled, at least one 'Group by' option must be selected."**
-Tick at least one batch or wave grouping on the operation type.
+## Keep each cluster tote tied to an order
 
-**Transfers don't join automatic batches.**
-Only Ready transfers are batched. Check reservation, that the grouping field matches (two picks for different
-contacts never share a **Contact** batch), and the **Maximum lines** and **Maximum transfers** limits.
+In **Inventory ‣ Configuration ‣ Package Types**, create a tote type and set **Package Use** to **Reusable Box**. Create identifiable packages under **Inventory ‣ Products ‣ Packages** and use that type for the totes. Then assign the correct **Destination Package** to each order's lines. The [package configuration reference](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/package.html) explains the package-type setting; enable Packages and Batch, Wave & Cluster Transfers if it is not visible.
 
-**A batch grows while someone is picking it.**
-With **Auto-confirm** on, Odoo also adds Ready transfers to batches already in progress. Set a limit, or untick
-**Auto-confirm** so transfers only join draft batches.
+Before the first pick, write down a simple mapping such as Order A to TOTE-01, Order B to TOTE-02. If one order needs two totes, identify both. A tote identifier without an order association does not prevent mixing.
 
-**Source Location or Destination Location grouping is missing.**
-These need **Storage Locations** and a default source or destination location on the operation type.
+The [Barcode batch workflow](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/barcode/operations/process_transfers.html) can support scanning products and assigned packages where that app is available. Check the package suggestion against the physical cart. Reusing a tote after packing requires a clear handoff so it is not still carrying another order's contents.
 
-**Carrier grouping is missing.**
-It appears once delivery methods are installed (**Delivery Methods** in the Inventory settings).
+## Worked example: capacity is not the same as completed work
 
-**Lines are missing from the detailed operations.**
-Only reserved quantities appear there. Check the **Operations** tab and click **Check Availability**.
+This is a proposed planning example, not a measured warehouse result. Assume **60 eligible orders**, one pick transfer per order, all satisfying the chosen grouping criteria. The cart can hold **eight single-order totes**, and none of the orders exceeds a tote's capacity.
 
-**No Batch & Wave Transfers section on an operation type.**
-It only shows on receipt, delivery and internal operation types, and only with the setting enabled.
+| Question | Illustrative answer | Check before release |
+| --- | --- | --- |
+| How many groups of up to eight? | Seven groups of eight and one of four: eight groups | Eligibility and any line limits may create more groups |
+| How many orders in a full cart? | Eight | Bulky or fragile items may require fewer |
+| What identifies each order? | Its assigned tote and linked transfer | Confirm every line has the right destination |
+| What if one order has a shortage? | Hold, split or partially fulfil under an agreed instruction | Record remaining demand and dispatch decision |
+| What proves shipment in two-step delivery? | The final outgoing delivery record | Completing Pick alone is insufficient |
 
-## Related setup
+Eight groups does **not** establish eight walks instead of sixty. Replenishment trips, split locations, cart limits and packing work can change the total. For a trial, record release time, pick start and finish, packing finish, exceptions and final dispatch. Measure the entire flow so faster picking does not hide a longer packing queue.
 
-- [How to set up a warehouse and storage locations in Odoo 19](/blog/2026/09/23/how-to-set-up-warehouse-locations-odoo/)
-- [Shipping and receiving in Odoo](/blog/2026/08/14/shipping-and-receiving-in-odoo/)
-- [Barcode in Odoo](/blog/2026/09/10/odoo-barcode/)
-- [Backorders in Odoo 19](/blog/2026/10/13/backorders-odoo/)
-- [Moving stock between branches: inter-warehouse resupply in Odoo](/blog/2026/10/15/inter-warehouse-resupply-odoo/)
-- [Removal strategies in Odoo: FIFO, LIFO and FEFO](/blog/2026/08/14/removal-strategies-fifo-lifo-fefo-in-odoo/)
-- Redesigning picking for a busy warehouse? See [Odoo implementation](/services/odoo-implementation/).
+## Automatic batching and Odoo 20 differences
 
-## Official references
+In Odoo 19, open **Inventory ‣ Configuration ‣ Operation Types**, select the operation and enable **Automatic Batches**. Select the appropriate **Batch Grouping** criteria, which include contact, carrier, destination country, source location and destination location. Decide which business constraint each selected criterion serves. A common source location alone does not keep different carrier deadlines separate.
 
-- Odoo 19 documentation: [Batch picking](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.html)
-- Odoo 19 documentation: [Wave transfers](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.html)
-- Odoo 19 documentation: [Cluster picking](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.html)
-- Odoo 19 documentation: [Packages](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/package.html)
-- Odoo 19 documentation: [Operation types](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.html)
-- Odoo 19 documentation: [Two-step delivery](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.html)
-- Odoo 19 documentation: [Process batch transfers in Barcode](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/barcode/operations/process_transfers.html)
-- Odoo 19 documentation: [Dispatch management system](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.html)
+The [Odoo 20 batch documentation](https://www.odoo.com/documentation/20.0/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.html) uses **Batch Creation: Automatic** and documents limits by transfers, lines or kg, plus **Auto-confirm**. It also distinguishes general and product source locations and adds date-based grouping. Its processing instructions use **Reserve** where the older guide uses **Check Availability**.
 
-*How this guide was checked: menu paths, field names and behaviour were checked against the Odoo 19 documentation
-and the batch transfer code in Odoo 19 (operation type grouping, automatic batching and waves, the batch form and the
-carrier grouping) in October 2026. The worked example is illustrative and wasn't run on a live database, so there are
-no screenshots; labels can vary slightly with your installed apps and language.*
+Use the instructions matching the installed version. Test one grouping condition at a time before combining them. Confirm how new work joins a batch and how a supervisor freezes the released worklist; do not discover that behaviour while a picker is already travelling.
 
-If picking is the bottleneck in your mornings, I can help you choose the method and set it up around your
-warehouse. See [Odoo implementation](/services/odoo-implementation/).
+## Diagnose the exception before changing quantities
+
+| Symptom | Evidence to inspect | Appropriate next action |
+| --- | --- | --- |
+| Batch is missing an expected transfer | Operation type, state, grouping values and configured limits | Resolve the mismatched condition; retain the order's demand |
+| Detailed view omits a product | Operations demand, reservation and source stock | Check availability and the linked transfer before validation |
+| Picked total is right but an order is wrong | Each order's lines and destination package | Reconcile contents per order, not only the batch total |
+| Same goods appear in overlapping work | Wave split references and current batch assignments | Assign each remaining task once and confirm its reservation |
+| Batch is done but dispatch is incomplete | Downstream delivery, packing and outstanding quantities | Finish the remaining operation or record the agreed partial delivery |
+| Urgent order misses its deadline | Released worklist and carrier cutoff | Apply an explicit priority or separate release decision |
+
+Do not use **No Backorder** simply to obtain a completed status. See [backorders and remaining demand](/blog/2026/10/13/backorders-odoo/) for the shipping and commercial consequences.
+
+For prerequisites, read [warehouse locations](/blog/2026/09/23/how-to-set-up-warehouse-locations-odoo/), [shipping and receiving](/blog/2026/08/14/shipping-and-receiving-in-odoo/) and [Barcode](/blog/2026/09/10/odoo-barcode/). For help choosing and verifying a picking flow, see [Odoo implementation](/services/odoo-implementation/).
+
+*Reviewed on 27 November 2026 against the linked Odoo 19 batch, wave, cluster, package and Barcode documentation, and the Odoo 20 picking references. The capacity example and trial checks are proposed, not results from a live warehouse or database. Installed modules can change labels and grouping behaviour.*

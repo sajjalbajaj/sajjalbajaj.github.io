@@ -2,165 +2,105 @@
 layout: post
 title: "Catch Weight in Odoo: Sell by the Piece, Invoice by the Kilo"
 date: 2026-10-17 08:00:00 +0530
+last_modified_at: 2026-11-27
 tags: [Odoo, Odoo 19, Inventory, Inventory Management, Stock Control, Invoicing, Food and Beverage, Distribution]
 hub: inventory
-description: "Catch weight in Odoo 19: what works natively, from kilo pricing and weighed deliveries to POS scales, and what needs customising for pieces and kilos."
+description: "Handle catch weight in Odoo: actual kilo invoicing, piece counts, partial returns and credit notes, with a worked example and dual-unit design checks."
 faqs:
-  - q: "Does Odoo 19 have a catch weight feature?"
-    a: "Not as a named feature. A sales order line, a stock move and an invoice line each hold one quantity in one unit, so Odoo can't record 10 pieces and 46.8 kg on the same line. Stocking and selling in kilos and invoicing delivered quantities gets you most of the way; tracking both units at once needs customisation."
-  - q: "How do I invoice the weighed quantity instead of the ordered one?"
-    a: "Sell the product in kg, set its Invoicing Policy to Delivered quantities, and have the warehouse enter the weighed kilos in the Quantity column of the delivery before validating. The invoice then uses what was delivered, not what was ordered."
-  - q: "Can Odoo Point of Sale weigh products at the till?"
-    a: "Yes. Tick To Weigh With Scale on the product's Point of Sale tab and connect a supported scale through an IoT box or Windows virtual IoT. The cashier puts the item on the scale and Point of Sale works out the price from the price per kilo."
+  - q: "Can Odoo track pieces and actual kilograms together?"
+    a: "Standard unit conversions use a fixed ratio. They do not independently maintain a variable piece count and measured weight for each transaction. Stocking and invoicing in kg can cover weight-priced sales; a piece count in the description is informational. Operational stock balances in both units require an assessed extension or custom design."
+  - q: "Should I close a backorder when the measured weight is below the estimate?"
+    a: "Only after confirming the customer has received the agreed goods and no balance is still due. A lower weight can mean normal variation, a missing piece or a genuine short delivery. Check the count and commercial instruction before choosing whether to retain the outstanding demand."
+  - q: "How should a partial catch weight return be credited?"
+    a: "Measure the actual returned weight and link the stock return to the original delivery. If the original invoice is already posted, review a separate credit note against that invoice. Use the agreed credit basis; do not infer the returned kilograms from the original average weight per piece."
 ---
 
-**Short answer:** Odoo 19 has no catch-weight feature as such. Every sales order line, stock move and invoice line
-carries one quantity in one unit, so "10 fish, 46.8 kg" can't live on a single line. The native route is to stock and
-price the product in kilos, let the warehouse type the weighed kilos into the delivery, and invoice delivered
-quantities. Counter sales can be weighed on a scale through Point of Sale. Keeping the piece count and the weight side
-by side, in stock and on the invoice, needs customisation.
+**Short answer:** Odoo can stock goods in kilograms and invoice the measured delivered quantity. That works when weight determines the price and piece count is informational. A fixed unit conversion does not provide independent balances for pieces and variable kilograms. When both matter, assess a dual-unit extension across dispatch, returns and invoicing. For partial returns, weigh what actually comes back and reconcile the stock return and any credit note separately.
 
-For the basics of units and packagings, start with my explainer on
-[product types, units of measure and packaging in Odoo](/blog/2026/08/12/odoo-product-types-units-of-measure-packaging/).
+## What does catch weight mean in practice?
 
-## Applies to
+A customer orders ten cheese wheels, but pays for their actual weight. Ten wheels might weigh 46.8 kg on one delivery and 44.6 kg on another. The count tells the picker what to handle; the kilograms determine the charge.
 
-- **Odoo version:** Odoo 19. I also checked the Odoo 20 documentation: the units of measure page is unchanged, and
-  neither version documents a catch-weight feature. In Odoo 20 the Point of Sale scale page adds a direct USB
-  connection that needs no IoT system, and the product option is renamed **To Weigh**.
-- **Edition:** Community and Enterprise for units of measure, invoicing policies, deliveries and lot properties.
-  Connecting a scale through the IoT app, and scanning weight barcodes with the Barcode app, are Enterprise only.
-- **Apps:** Inventory, Sales and Invoicing; Point of Sale for counter sales.
+This differs from a sealed carton that always contains 12 kg. A fixed conversion is appropriate for that carton. Defining one wheel as 4.5 kg only records an estimate. It cannot establish the actual weight of the next wheel or preserve an independent piece balance.
 
-## What is catch weight, and why is it awkward?
+The standard [Odoo 19 units of measure documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/uom.html) describes inventory units, sales packagings and reference-unit conversions. It does not document a complete variable dual-quantity ledger. An installed industry module may add one; assess its actual behaviour rather than assuming every Odoo database has the same capabilities.
 
-Catch weight applies to goods whose weight varies piece by piece: whole fish, a wheel of cheese, a leg of lamb, a crate
-of chicken, a coil of steel. The customer orders a count ("ten whole fish"), you price by the kilo, and the real weight
-is only known when someone puts the goods on a scale.
+## Which setup fits your business?
 
-So each line needs two quantities: the count, for picking and handling, and the weight, for the price. Most ERPs, Odoo
-included, hold one.
+| Requirement | Starting point | Limitation to resolve |
+| --- | --- | --- |
+| Charge for actual kg; count is a picking note | Inventory and price in kg; invoice delivered quantities | The note does not maintain stock in pieces |
+| Buy and sell a genuinely fixed-weight pack | Configure its fixed unit conversion | Confirm the pack is consistently that weight |
+| Check available pieces and kg independently | Assess dual-unit functionality | Both quantities must survive every movement |
+| Weigh products at the till | Point of Sale with a supported scale setup | A POS connection does not automatically weigh warehouse deliveries |
+| Credit selected returned pieces by their actual weight | Linked stock return plus invoice review | Original average piece weight is insufficient |
 
-## What does Odoo 19 give you natively?
+This guide uses the Odoo 19 Sales and Inventory workflow. Relevant Odoo 20 differences are noted below. Scale connections, Barcode processing and additional industry features depend on installed apps and supported hardware.
 
-### Units with fixed conversions
+## How do you invoice the actual delivered kilograms?
 
-Odoo 19 dropped unit categories. Each unit, under **Inventory ‣ Configuration ‣ Units & Packagings**, has a
-**Quantity** and a **Reference Unit**, so a sealed case can be defined as 12 kg. The ratio is fixed. That's perfect for
-the case and no use for a whole fish, whose weight changes every time.
+Use a representative test product before changing an established live stock unit.
 
-### Stock and sell in kilos, invoice what was delivered
+1. Set the product's inventory unit to **kg**, and verify that its selling price is a price per kg. In Odoo 19 the inventory unit appears beside the product's Sales Price and Cost.
+2. On the product, select **Delivered quantities** as the invoicing policy. Changing the Sales default does not update every existing product automatically.
+3. Enter the estimated kilograms on the order. If useful, add the requested piece count to the description, clearly identifying it as a handling instruction.
+4. At dispatch, record the measured net kilograms on the delivery. Keep the weighing record and count available to the person checking the transaction.
+5. Review any difference from the order. Confirm whether it is ordinary weight variation or goods still owed before deciding on a backorder.
+6. Validate the actual delivery, then create and check the invoice. Reconcile its quantity, price basis, discounts and taxes before posting.
 
-This is the setup I'd start with for most weight-priced goods:
+The [invoicing policy reference](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html) explains why delivered-quantity billing suits bulk goods with quantities that differ from the order. It does not remove the need to agree the commercial tolerance with the customer.
 
-1. Make **kg** the product's inventory unit (the unit next to **Sales Price** and **Cost**) and enter the price per
-   kilo.
-2. On the **General Information** tab, set **Invoicing Policy** to **Delivered quantities**. Odoo's own documentation
-   gives food and materials sold in bulk as the typical case, because the delivered quantity differs from the order.
-3. On the quotation, enter the estimated kilos and put the piece count in the line description.
-4. At dispatch, the picker weighs the goods and types the actual kilos in the **Quantity** column of the delivery. A
-   quantity above the **Demand** shows in red but can still be validated. A lower one opens the backorder question by
-   default: choose **No Backorder** when the difference is only weight.
-5. Create the invoice from the sales order. It uses the delivered kilos.
+If ten wheels were promised and only nine left the warehouse, a difference is not merely a rounding issue. Keep the remaining obligation visible or record the customer's agreement to close it. The [backorders guide](/blog/2026/10/13/backorders-odoo/) explains that decision separately from invoicing.
 
-Buying works the same way in reverse. For goods, the **Control Policy** defaults to **On received quantities**, so
-vendor bills follow the weighed receipt.
+## Worked example: delivery followed by a partial return
 
-One setting to check: Odoo 19 rounds every unit to the same **Product Unit** decimal accuracy, two decimals by default.
-To record grams on a kilo, raise it to three under **Settings ‣ Technical ‣ Database Structure ‣ Decimal Accuracy**
-(developer mode). It affects all units, so agree it before go-live.
+These figures are illustrative arithmetic, not a customer case or a tested database result. Assume a price of **₹420 per kg**, no discount, and all amounts shown before tax. The rate is an arbitrary example.
 
-### A nominal-weight packaging, to order by the piece
+| Record | Pieces, informational in the native kg setup | Measured kg | Amount at the assumed rate |
+| --- | ---: | ---: | ---: |
+| Order estimate | 10 | 45.0 | ₹18,900.00 |
+| Actual dispatch and original invoice | 10 | 46.8 | ₹19,656.00 |
+| Accepted partial return | 2 | 9.1 | ₹3,822.00 credit |
+| Goods retained after that return | 8 | 37.7 | ₹15,834.00 net charge |
 
-If customers insist on ordering pieces, create a unit such as "Fish, about 4.5 kg" with **Quantity** 4.5 and
-**Reference Unit** kg, and add it to **Packagings** on the product's **Sales** tab. An order for 10 pieces becomes a
-delivery demand of 45 kg; the picker enters the real weight, and Odoo converts it back into the packaging. The invoice
-is right in money terms but shows a fractional number of pieces, which customers find odd.
+The returned two wheels do not necessarily weigh one fifth of the original delivery. Applying the original average would give **46.8 ÷ 10 × 2 = 9.36 kg**, producing a credit of **₹3,931.20**. That is **₹109.20** above the credit for the measured 9.1 kg.
 
-### Weighing at the counter
+The count helps confirm which goods returned. The actual net weight supports the quantity to credit under this example's agreement. If the commercial agreement uses a different return price or deduction, document that explicitly instead of silently reusing the dispatch rate.
 
-For counter sales, tick **To Weigh With Scale** on the product's **Point of Sale** tab and connect a supported scale
-through an IoT box or Windows virtual IoT. The cashier places the item on the scale and Point of Sale prices it from the
-weight, with a **Tare** button for containers. Odoo's documentation says production use needs an IoT subscription, and
-EU member states require a certified scale.
+## What changes when the customer has already been invoiced?
 
-Goods weighed and labelled elsewhere can carry the weight in the barcode: the default nomenclature's **Weighted
-Barcodes 3 Decimals** rule (prefix 21) is read by Point of Sale, and with GS1 nomenclature the Barcode app reads a net
-weight in kilograms (application identifier 310) as the quantity.
+Odoo's [returns and refunds instructions](https://www.odoo.com/documentation/19.0/applications/sales/sales/products_prices/returns.html) distinguish a reverse stock transfer from a credit note.
 
-### Recording each piece's weight
+- **Before invoicing:** create the return from the validated delivery, enter the returned quantity in the correct unit and validate receipt when the goods arrive. Check the resulting delivered balance before creating the invoice.
+- **After a posted invoice:** process the stock return and review a credit note from the original invoice. A reverse transfer alone does not amend the posted invoice. Check the draft credit quantities and amounts before confirming it.
 
-For lot-tracked goods you can add a property such as "Net weight" to lots for traceability. Odoo stores it but doesn't
-use it for stock or pricing.
+For the example, the proposed reconciliation is original delivery **46.8 kg**, received return **9.1 kg**, remaining delivered balance **37.7 kg**. The separate commercial reconciliation is original invoice **₹19,656**, approved credit **₹3,822**, net **₹15,834** before tax. Verify both chains rather than assuming one screen proves both.
 
-## What usually needs customisation?
+Keep returned goods subject to the appropriate inspection and location process. Receiving them back does not itself establish that they are suitable for resale. See [sales returns and credit notes](/blog/2026/10/13/sales-returns-rma-odoo/) for the broader workflow.
 
-When the count and the weight both matter, the standard data model runs out. Usual additions:
+## Scale connections and precision checks
 
-- **Two quantities per line** on sales orders, deliveries and invoices, with the price applied to the weight and the
-  count printed alongside.
-- **Stock in both units**, so the warehouse sees 40 wheels and 512 kg, reordering works on the count and valuation
-  follows the weight.
-- **An estimated weight per piece** on the order, replaced by the real weight when the delivery is validated.
-- **Weighing stations in the warehouse** that write straight into the delivery, and labels printed with each piece's
-  weight.
+The [Odoo 19 POS scale guide](https://www.odoo.com/documentation/19.0/applications/sales/point_of_sale/hardware_network/scale.html) uses an IoT connection and the **To Weigh With Scale** product option. The [Odoo 20 guide](https://www.odoo.com/documentation/20.0/applications/sales/point_of_sale/hardware_network/scale.html) also documents direct USB connection and calls the product option **To Weigh**. Confirm compatibility with the actual device before purchasing hardware.
 
-Done well, this is a contained module that adds a second quantity next to Odoo's own, leaving core quantities alone.
+Test zeroing and tare with the container you use. Verify that displayed, stored and printed weights retain the precision the business needs, including a small quantity such as 0.125 kg. Review database-wide precision changes before applying them. Hardware integration alone does not establish compliance with local commercial weighing requirements.
 
-## When it fits and when it doesn't
+## Diagnose a weight or invoice mismatch
 
-- **Native is enough** when the customer pays for weight and the count is only for information: produce by the kilo,
-  metal by the tonne, cheese cut to order.
-- **Customise** when you must manage stock in pieces and kilos at the same time, show both on every invoice, or meet
-  labelling rules that need each piece's weight.
+| Symptom | Evidence to compare | Next check |
+| --- | --- | --- |
+| Invoice uses estimated kg | Order, validated delivery and invoice quantity | Product invoicing policy and invoice creation sequence |
+| Returned kg look too high | Actual return weight against original average | Replace an inferred quantity with verified measurement before posting |
+| Small weights disappear | Scale reading, recorded quantity and printed document | Precision, unit and rounding configuration |
+| Unexpected fractional pieces | Transaction unit against packaging conversion | Whether a nominal weight was treated as a fixed ratio |
+| Stock returned but charge unchanged | Return receipt and original invoice references | Separate credit-note status and approved commercial treatment |
+| Delivery closed with pieces still owed | Requested count, dispatched count and customer instruction | Outstanding-demand decision, not just the weight difference |
 
-## Worked example: a fish wholesaler supplying hotels
+## What must a dual-unit extension demonstrate?
 
-A Kochi wholesaler sells whole seer fish to hotels at a price per kilo. The product is stocked in **kg** with
-**Delivered quantities** as its invoicing policy. The figures are illustrative.
+Ask for proposed acceptance cases covering receipts, split lots, partial dispatch, internal transfers, returns, credit notes, scrap and corrections. For each, define which quantity drives reservation, replenishment, pricing and valuation, and how the other quantity is maintained. Include exports, labels and integrations that currently assume one quantity.
 
-| Step | What happens |
-|---|---|
-| Order | A hotel orders 10 fish. The salesperson enters **45 kg** (about 4.5 kg each) with "10 pcs" in the description. |
-| Dispatch | The picker weighs the 10 fish at **46.8 kg** and enters that in **Quantity**. It shows in red, above the demand, and is validated. |
-| Invoice | The sales order shows **46.8 kg** delivered, and the invoice charges 46.8 kg at the price per kilo. |
+A convincing demonstration traces both balances through a partial return and explains how an error is corrected without losing the original record. A second field visible on an order is not enough evidence of a complete dual-unit workflow.
 
-The next week only 9 fish are available, weighing 41.2 kg. The picker enters 41.2 and chooses **No Backorder**, because
-the hotel doesn't want the tenth fish later. The invoice is for 41.2 kg.
+For related setup, read [products and units of measure](/blog/2026/09/22/how-to-set-up-products-in-odoo/) and [ordered versus delivered invoicing](/blog/2026/08/19/invoicing-policies-in-odoo-sales/). If you need help defining the scope, see [Odoo implementation](/services/odoo-implementation/).
 
-## Common mistakes
-
-- **Leaving Invoicing Policy on Ordered quantities**, so customers are billed the estimate.
-- **Treating a nominal weight as exact**, for example valuing stock at 1.5 kg per chicken when no two weigh the same.
-- **Losing grams to rounding** because the Product Unit decimal accuracy is still two.
-- **Creating backorders for weight shortfalls**, which leaves tiny open deliveries behind.
-- **Changing the inventory unit once stock exists**: Odoo converts one to one rather than recalculating.
-
-## Related
-
-- [How to set up products and units of measure in Odoo 19](/blog/2026/09/22/how-to-set-up-products-in-odoo/)
-- [Invoicing policies in Odoo Sales: ordered vs delivered](/blog/2026/08/19/invoicing-policies-in-odoo-sales/)
-- [How to set up Point of Sale in Odoo](/blog/2026/09/25/how-to-set-up-point-of-sale-odoo/)
-- [IoT in Odoo: connecting hardware to your system](/blog/2026/09/11/odoo-iot/)
-- [Backorders in Odoo 19: partial deliveries and receipts](/blog/2026/10/13/backorders-odoo/)
-- [Process manufacturing in Odoo: recipes, yields and batches](/blog/2026/10/16/process-manufacturing-recipes-yields-odoo/)
-
-## Official references
-
-- Odoo 19 documentation: [Units of measure](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/configure/uom.html)
-- Odoo 19 documentation: [Invoicing policies](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html)
-- Odoo 19 documentation: [Operation types](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.html), for the Create Backorder option
-- Odoo 19 documentation: [Point of Sale scale](https://www.odoo.com/documentation/19.0/applications/sales/point_of_sale/hardware_network/scale.html)
-- Odoo 19 documentation: [Internet of Things (IoT)](https://www.odoo.com/documentation/19.0/applications/general/iot.html)
-- Odoo 19 documentation: [Default barcode nomenclature](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.html)
-- Odoo 19 documentation: [GS1 barcode nomenclature](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.html)
-- Odoo 19 documentation: [Lot numbers](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.html)
-
-*How this article was checked: menu paths, field names and behaviour were checked against the Odoo 19 documentation
-and the Odoo 19 code for units of measure, delivered quantities, deliveries, purchase control policies and Point of
-Sale weighing in October 2026. The IoT and Barcode apps are Enterprise only, absent from Odoo 19 Community. The worked
-example is illustrative and wasn't run on a live database, so there are no screenshots; labels can vary slightly with
-your installed apps and language.*
-
-Selling by weight and need pieces and kilos on the same line? See [Odoo implementation](/services/odoo-implementation/)
-to work out how far the standard setup takes you before anything is customised.
+*Reviewed on 27 November 2026 against the linked Odoo 19 documentation and the corresponding Odoo 20 units, returns and scale pages. The calculation and acceptance cases are illustrative; no live database or commercial scale was tested. Installed extensions can change the workflow.*
